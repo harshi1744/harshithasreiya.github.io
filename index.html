@@ -558,6 +558,112 @@ footer.footer-copyright {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+ /* Optional for non-Tailwind projects or Tailwind extension */
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .education-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.education-card {
+  background-color: #f5f3ff; /* violet-50 */
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.education-card img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+}
+
+.education-card h3 {
+  color: #6d28d9; /* violet-700 */
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.education-card p {
+  color: #4b5563; /* gray-700 */
+  margin-bottom: 0.5rem;
+}
+
+.education-card .text-violet-600 {
+  color: #7c3aed;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+ .education-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .education-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.education-card {
+  background-color: #f5f3ff; /* Tailwind's violet-50 */
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.education-card img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+}
+
+.education-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6d28d9; /* Tailwind's violet-700 */
+  margin-bottom: 0.5rem;
+}
+
+.education-card p {
+  color: #374151; /* Tailwind's gray-700 */
+  margin-bottom: 0.5rem;
+}
+
+.education-card .date {
+  color: #7c3aed; /* Tailwind's violet-600 */
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
   </style>
 </head>
 
@@ -600,33 +706,16 @@ footer.footer-copyright {
       Behind every dataset lies a story, and within every line of code, a spark of creativity. This portfolio is an invitation to witness the fusion of business and programming, where passion drives progress, and every challenge is an opportunity to innovate. Welcome to the future I’m building, one idea at a time.
     </p> 
   </div>
-
-
 </section>
-  <!-- Follow Me -->
-<!-- Social Links Sidebar -->
-<div class="fixed left-0 top-1/2 transform -translate-y-1/2 flex flex-col items-center space-y-6 z-50">
-  <a href="https://www.linkedin.com/in/harshithasreiya" title="LinkedIn" target="_blank" class="social-icon">
-    <i class="fab fa-linkedin"></i>
-  </a>
-  <a href="https://github.com/harshi1744" title="GitHub" target="_blank" class="social-icon">
-    <i class="fab fa-github"></i>
-  </a>
-  <a href="mailto:harshithasrieya@gmail.com" title="Email" class="social-icon">
-    <i class="fas fa-envelope"></i>
-  </a>
-</div>
 
   <!-- Reamining Sections -->
  <section id="about" class="relative hero-section flex flex-col md:flex-row items-center justify-center p-8 overflow-hidden min-h-screen">
   <!-- Background GIF -->
   <!-- Dark overlay -->
   <div class="absolute inset-0 bg-gray-900 bg-opacity-60 z-0"></div>
-
   <!-- Main content -->
 <div class="relative z-10 text-center md:text-center md:w-1/2 p-4 md:pr-12 mt-8 md:mt-0 order-2 md:order-1">
       <h3 class="text-3xl md:text-4xl font-semibold text-black-300 mb-4">About Me</h3>
-
       <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 text-black-400 animate-glow-pulse">
       Hi 👋 I'm Harshitha!
     </h1>
@@ -655,29 +744,39 @@ footer.footer-copyright {
   <section id="education-infographic" class="py-16 px-6 md:px-20 bg-white text-gray-800">
   <h2 class="text-3xl md:text-4xl font-bold mb-16 text-black-700 text-center">Education</h2>
 
-  <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-12 md:space-y-0 md:space-x-16">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
 
-    <!-- UNT Infographic -->
-    <div class="flex flex-col items-center bg-violet-50 rounded-lg p-8 shadow-lg w-full md:w-1/2">
+    <!-- University of North Texas -->
+    <div class="flex flex-col items-center bg-violet-50 rounded-lg p-8 shadow-lg">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk6nsth-dM_LlSDgCV8kS3817LWGRyJKWTJY9hg93mpuCVL-r3LDD2ybfENmnhRCDM4xA&usqp=CAU" alt="University of North Texas" class="w-24 h-24 mb-6 object-contain" />
-
       <h3 class="text-2xl font-bold text-violet-700 mb-2">University of North Texas</h3>
       <p class="text-sm text-gray-600 mb-4">Texas, United States</p>
       <div class="text-violet-600 font-semibold mb-4">Jan 2024 – Dec 2025</div>
       <p class="text-center text-gray-700">Master of Science in Business Analytics</p>
     </div>
 
-    <!-- Osmania University Infographic -->
-    <div class="flex flex-col items-center bg-violet-50 rounded-lg p-8 shadow-lg w-full md:w-1/2">
-    <img src="https://www.osmania.ac.in/images/ou.png" alt="Osmania University Logo" class="w-24 h-24 mb-6 object-contain" />
+    <!-- Osmania University -->
+    <div class="flex flex-col items-center bg-violet-50 rounded-lg p-8 shadow-lg">
+      <img src="https://www.osmania.ac.in/images/ou.png" alt="Osmania University Logo" class="w-24 h-24 mb-6 object-contain" />
       <h3 class="text-2xl font-bold text-violet-700 mb-2">Osmania University</h3>
       <p class="text-sm text-gray-600 mb-4">Hyderabad, India</p>
       <div class="text-violet-600 font-semibold mb-4">Jun 2020 – Apr 2023</div>
       <p class="text-center text-gray-700">Bachelor of Commerce in Computer Science</p>
     </div>
 
+    <!-- Johnson Grammar School -->
+    <div class="flex flex-col items-center bg-violet-50 rounded-lg p-8 shadow-lg">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO4ytxOUwRQWK5ESMbbsqzI18M8Ti3z0e57A&s" alt="Johnson Grammar School" class="w-24 h-24 mb-6 object-contain" />
+      <h3 class="text-2xl font-bold text-violet-700 mb-2">Johnson Grammar School</h3>
+      <p class="text-sm text-gray-600 mb-4">Hyderabad, India</p>
+      <div class="text-violet-600 font-semibold mb-4">June 2005 – May 2018</div>
+      <p class="text-center text-gray-700">High School – CBSE (Central Board of Secondary Education)</p>
+    </div>
+
   </div>
 </section>
+
+  
 
   <section id="experience" class="py-16 px-6 md:px-20 bg-white text-gray-800">
   <h2 class="text-4xl font-bold text-center text-black-600 mb-12">Professional Experience</h2>
