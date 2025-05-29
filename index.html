@@ -121,6 +121,64 @@ body {
       left: 0;
       background-color: #7c3aed;
     }
+
+  /* Base setup */
+body {
+  font-family: 'Source Code Pro', monospace;
+  background-color: #0f0f0f;
+  margin: 0;
+  padding: 0;
+}
+
+/* Glowing animated heading */
+.glowing-text {
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+  text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 40px #00f7ff;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 40px #00f7ff;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #1e90ff, 0 0 60px #1e90ff;
+  }
+}
+
+/* Typewriter-style quote */
+blockquote {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.1rem;
+  color: #ffffff;
+  border-left: 4px solid #7f5af0;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  position: relative;
+  overflow: hidden;
+}
+
+blockquote p {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid #7f5af0;
+  animation: typing 8s steps(100, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #7f5af0 }
+}
+
   
 </style>
 </head> 
@@ -171,7 +229,7 @@ body {
 </nav>
 
   <!-- Main Section -->
- <section 
+<section 
   id="home"
   class="relative min-h-screen flex flex-col md:flex-row items-center justify-center py-20 px-8 space-y-10 md:space-y-0 md:space-x-12 overflow-hidden">
 
@@ -179,11 +237,22 @@ body {
   <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
 
   <div class="relative z-10 text-center md:text-left max-w-xl">
-    <p class="text-white text-lg mb-6 glowing-text">
-      Behind every dataset lies a story, and within every line of code, a spark of creativity. This portfolio is an invitation to witness the fusion of business and programming, where passion drives progress, and every challenge is an opportunity to innovate. Welcome to the future I’m building, one idea at a time.
-    </p> 
+
+    <!-- Custom Styled Heading -->
+    <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-wide mb-6 glowing-text animate-pulse shadow-lg">
+      Harshitha's <span class="text-indigo-400">Portfolio</span>
+    </h1>
+
+    <!-- Quote with Unique Styling -->
+    <blockquote class="text-white text-lg italic border-l-4 border-indigo-400 pl-6 pr-4 py-4 bg-white/10 rounded-lg shadow-md backdrop-blur-sm">
+      <p>
+        “Behind every dataset lies a story, and within every line of code, a spark of creativity. This portfolio is an invitation to witness the fusion of business and programming, where passion drives progress, and every challenge is an opportunity to innovate. Welcome to the future I’m building, one idea at a time.”
+      </p>
+    </blockquote>
+
   </div>
 </section>
+
 
   <!-- Reamining Sections -->
  <section id="about" class="relative hero-section flex flex-col md:flex-row items-center justify-center p-8 overflow-hidden min-h-screen">
