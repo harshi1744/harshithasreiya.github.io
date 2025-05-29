@@ -434,7 +434,37 @@ footer.footer-copyright {
   100% {
     transform: translateX(-50%);
   }
+}.skill-bar-container {
+  width: 100%;
+  height: 8px;
+  background-color: #e5e7eb; /* Tailwind's gray-200 */
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 4px;
 }
+
+.skill-bar {
+  height: 100%;
+  border-radius: 4px;
+  background-color: #3b82f6; /* Tailwind's blue-500 */
+  transition: width 0.4s ease;
+}
+
+/* Width modifiers */
+.bar-80 {
+  width: 80%;
+}
+
+.bar-85 {
+  width: 85%;
+}
+
+.bar-90 {
+  width: 90%;
+}
+
+
+
 
   </style>
 </head>
@@ -481,11 +511,6 @@ footer.footer-copyright {
     </p> 
   </div>
 
-  <img 
-    src="https://thumbs.dreamstime.com/b/d-icon-avatar-cartoon-cute-freelancer-woman-working-online-learning-laptop-transparent-png-background-works-embodying-345422695.jpg" 
-    alt="Professional photo of Harshitha" 
-    class="relative z-10 w-60 h-60 rounded-full object-cover shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
-  />
 
 </section>
   <!-- Follow Me -->
@@ -609,7 +634,10 @@ footer.footer-copyright {
 </section>
 
 
-  <section id="skills" class="py-16 px-6 md:px-20 bg-gray-50 text-gray-800">
+<!-- Add this inside your <head> if not already present -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<section id="skills" class="py-16 px-6 md:px-20 bg-gray-50 text-gray-800">
   <h2 class="text-3xl md:text-4xl font-bold mb-10 text-black-600 text-center">Technical Skills</h2>
 
   <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
@@ -618,29 +646,59 @@ footer.footer-copyright {
     <div class="skill-card">
       <h3 class="skill-title mb-4">Programming Languages</h3>
       <ul class="skill-list grid grid-cols-2 gap-4">
-        <li class="flex items-center space-x-3">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-6 h-6" />
-          <span>Python</span>
+        <li class="space-y-1">
+          <div class="flex items-center space-x-3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-6 h-6" alt="Python" />
+            <span>Python</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-full bg-blue-500 rounded w-[90%]"></div>
+          </div>
         </li>
-        <li class="flex items-center space-x-3">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="w-6 h-6" />
-          <span>Java</span>
+        <li class="space-y-1">
+          <div class="flex items-center space-x-3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-6 h-6" alt="Java" />
+            <span>Java</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-full bg-blue-500 rounded w-[85%]"></div>
+          </div>
         </li>
-        <li class="flex items-center space-x-3">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-6 h-6" />
-          <span>JavaScript</span>
+        <li class="space-y-1">
+          <div class="flex items-center space-x-3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-6 h-6" alt="JavaScript" />
+            <span>JavaScript</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-full bg-blue-500 rounded w-[85%]"></div>
+          </div>
         </li>
-        <li class="flex items-center space-x-3">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQL" class="w-6 h-6" />
-          <span>SQL</span>
+        <li class="space-y-1">
+          <div class="flex items-center space-x-3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" class="w-6 h-6" alt="SQL" />
+            <span>SQL</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-full bg-blue-500 rounded w-[90%]"></div>
+          </div>
         </li>
-        <li class="flex items-center space-x-3">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="w-6 h-6" />
-          <span>HTML</span>
+        <li class="space-y-1">
+          <div class="flex items-center space-x-3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-6 h-6" alt="HTML" />
+            <span>HTML</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-full bg-blue-500 rounded w-[90%]"></div>
+          </div>
         </li>
-        <li class="flex items-center space-x-3">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="w-6 h-6" />
-          <span>CSS</span>
+        <li class="space-y-1">
+          <div class="flex items-center space-x-3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-6 h-6" alt="CSS" />
+            <span>CSS</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-full bg-blue-500 rounded w-[85%]"></div>
+          </div>
         </li>
       </ul>
     </div>
@@ -649,21 +707,41 @@ footer.footer-copyright {
     <div class="skill-card">
       <h3 class="skill-title mb-4">Tools</h3>
       <ul class="skill-list grid grid-cols-2 gap-4">
-        <li class="flex items-center space-x-3">
-          <i class="fab fa-git-alt text-violet-600 w-6 h-6"></i>
-          <span>Git</span>
+        <li class="space-y-1">
+          <div class="flex items-center space-x-3">
+            <i class="fab fa-git-alt text-violet-600 w-6 h-6"></i>
+            <span>Git</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-full bg-violet-500 rounded w-[85%]"></div>
+          </div>
         </li>
-        <li class="flex items-center space-x-3">
-          <i class="fab fa-github text-violet-600 w-6 h-6"></i>
-          <span>GitHub</span>
+        <li class="space-y-1">
+          <div class="flex items-center space-x-3">
+            <i class="fab fa-github text-violet-600 w-6 h-6"></i>
+            <span>GitHub</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-full bg-violet-500 rounded w-[90%]"></div>
+          </div>
         </li>
-        <li class="flex items-center space-x-3">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8I6j_R1FjD_Ar8GF7DxAzA9gpKyROmx7MqA&s" alt="MS Excel" class="w-6 h-6" />
-          <span>MS Excel</span>
+        <li class="space-y-1">
+          <div class="flex items-center space-x-3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8I6j_R1FjD_Ar8GF7DxAzA9gpKyROmx7MqA&s" class="w-6 h-6" alt="Excel" />
+            <span>MS Excel</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-full bg-violet-500 rounded w-[85%]"></div>
+          </div>
         </li>
-        <li class="flex items-center space-x-3">
-          <img src="https://raw.githubusercontent.com/github/explore/a4691f04ff219c1c2aa02fc61fda41aa43f1459a/topics/jupyter-notebook/jupyter-notebook.png" alt="Jupyter Notebook" class="w-6 h-6" />
-          <span>Jupyter Notebook</span>
+        <li class="space-y-1">
+          <div class="flex items-center space-x-3">
+            <img src="https://raw.githubusercontent.com/github/explore/a4691f04ff219c1c2aa02fc61fda41aa43f1459a/topics/jupyter-notebook/jupyter-notebook.png" class="w-6 h-6" alt="Jupyter" />
+            <span>Jupyter Notebook</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-full bg-violet-500 rounded w-[90%]"></div>
+          </div>
         </li>
       </ul>
     </div>
@@ -672,43 +750,42 @@ footer.footer-copyright {
     <div class="skill-card">
       <h3 class="skill-title mb-4">Technologies</h3>
       <ul class="skill-list grid grid-cols-2 gap-4">
-        <li class="flex items-center space-x-3">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-6 h-6" />
-          <span>MySQL</span>
+        <li class="space-y-1">
+          <div class="flex items-center space-x-3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-6 h-6" alt="MySQL" />
+            <span>MySQL</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-full bg-green-500 rounded w-[90%]"></div>
+          </div>
         </li>
-        <li class="flex items-center space-x-3">
-          <img src="https://www.svgrepo.com/show/7344/sql-file-format-symbol.svg" alt="MySQL" class="w-6 h-6" />
-          <span>MySQL</span>
+        <li class="space-y-1">
+          <div class="flex items-center space-x-3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-6 h-6" alt="MongoDB" />
+            <span>MongoDB</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-full bg-green-500 rounded w-[85%]"></div>
+          </div>
         </li>
-        <li class="flex items-center space-x-3">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-6 h-6" />
-          <span>MongoDB</span>
+        <li class="space-y-1">
+          <div class="flex items-center space-x-3">
+            <img src="https://numpy.org/images/logo.svg" class="w-6 h-6" alt="Numpy" />
+            <span>Numpy</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-full bg-green-500 rounded w-[90%]"></div>
+          </div>
         </li>
-        <li class="flex items-center space-x-3">
-          <img src="https://numpy.org/images/logo.svg" alt="Numpy" class="w-6 h-6" />
-          <span>Numpy</span>
+        <li class="space-y-1">
+          <div class="flex items-center space-x-3">
+            <img src="https://pandas.pydata.org/static/img/pandas_mark.svg" class="w-6 h-6" alt="Pandas" />
+            <span>Pandas</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-full bg-green-500 rounded w-[90%]"></div>
+          </div>
         </li>
-        <li class="flex items-center space-x-3">
-          <img src="https://pandas.pydata.org/static/img/pandas_mark.svg" alt="Pandas" class="w-6 h-6" />
-          <span>Pandas</span>
-        </li>
-        <li class="flex items-center space-x-3">
-          <img src="https://azure.microsoft.com/svghandler/azure-icon.svg" alt="Microsoft Azure" class="w-6 h-6" />
-          <span>Microsoft Azure</span>
-        </li>
-        <li class="flex items-center space-x-3">
-          <img src="https://logos-world.net/wp-content/uploads/2021/10/Tableau-Symbol.png" alt="Tableau" class="w-6 h-6" />
-          <span>Tableau</span>
-        </li>
-        <li class="flex items-center space-x-3">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/1200px-New_Power_BI_Logo.svg.png" alt="Power BI" class="w-6 h-6" />
-          <span>Power BI</span>
-        </li>
-          <li class="flex items-center space-x-3">
-          <img src="https://cdn-icons-png.flaticon.com/512/1349/1349217.png" alt="Big Data" class="w-6 h-6" />
-          <span>Big Data</span>
-        </li> 
-
       </ul>
     </div>
 
@@ -716,32 +793,29 @@ footer.footer-copyright {
     <div class="skill-card">
       <h3 class="skill-title mb-4">Others</h3>
       <ul class="skill-list grid grid-cols-2 gap-4">
-        <li class="flex items-center space-x-3">
-          <img src="https://cdn.iconscout.com/icon/free/png-256/free-google-cloud-logo-icon-download-in-svg-png-gif-file-formats--weather-storage-data-pack-logos-icons-1721675.png?f=webp&w=256" alt="GCP" class="w-6 h-6" />
-          <span>Google Cloud Platform (GCP)</span>
+        <li class="space-y-1">
+          <div class="flex items-center space-x-3">
+            <img src="https://cdn.iconscout.com/icon/free/png-256/free-google-cloud-logo-icon-download-in-svg-png-gif-file-formats--weather-storage-data-pack-logos-icons-1721675.png?f=webp&w=256" class="w-6 h-6" alt="GCP" />
+            <span>GCP</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-full bg-yellow-500 rounded w-[85%]"></div>
+          </div>
         </li>
-        <li class="flex items-center space-x-3">
-          <i class="fas fa-database text-violet-600 w-6 h-6"></i>
-          <span>DBMS</span>
-        </li>
-        <li class="flex items-center space-x-3">
-          <i class="fas fa-robot text-violet-600 w-6 h-6"></i>
-          <span>Machine Learning</span>
-        </li>
-        <li class="flex items-center space-x-3">
-          <i class="fas fa-tasks text-violet-600 w-6 h-6"></i>
-          <span>Agile</span>
-        </li>
-        <li class="flex items-center space-x-3">
-          <i class="fas fa-users-cog text-violet-600 w-6 h-6"></i>
-          <span>Scrum</span>
+        <li class="space-y-1">
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-database text-yellow-600 w-6 h-6"></i>
+            <span>DBMS</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded">
+            <div class="h-full bg-yellow-500 rounded w-[85%]"></div>
+          </div>
         </li>
       </ul>
     </div>
 
   </div>
 </section>
-
 
 
   
