@@ -1,3 +1,4 @@
+<!-- Updated HTML with Testimonials section removed -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,26 +22,6 @@
     }
     .nav-link {
       @apply text-sm text-gray-300 hover:text-white transition;
-    }
-    .fade-in {
-      animation: fadeIn 1s ease-in-out forwards;
-      opacity: 0;
-    }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-    .slide-up {
-      animation: slideUp 1s ease-out forwards;
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    @keyframes slideUp {
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
     }
     footer {
       @apply bg-black text-gray-400 py-6 text-center text-sm;
@@ -69,71 +50,154 @@
 </head>
 <body x-data="{ dark: true }" :class="dark ? 'bg-black text-white' : 'bg-white text-black'">
   <div id="progress" class="progress-bar w-0"></div>
-
   <button class="theme-toggle" @click="dark = !dark">Toggle Theme</button>
 
-  <header class="text-center py-20 fade-in">
+  <!-- Navigation -->
+  <nav class="bg-black py-4 shadow-md sticky top-0 z-50">
+    <ul class="flex justify-center space-x-10">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#career" class="nav-link">Career</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="text-center py-20">
     <h1 class="text-5xl font-bold mb-4">Harshitha Sreiya Palaparthi</h1>
     <p class="text-lg">Business Analyst | Financial Data Enthusiast | AI Innovator</p>
     <a href="resume.pdf" download class="mt-6 inline-block px-6 py-2 border border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white transition rounded-full">Download Resume</a>
   </header>
 
-  <!-- Animated Skills Section -->
-  <section class="px-6 py-16 slide-up">
-    <h2 class="section-title">Skills Overview</h2>
-    <div class="max-w-3xl mx-auto space-y-6">
-      <div>
-        <p>Python</p>
-        <div class="w-full bg-gray-700 h-2 rounded-full">
-          <div class="bg-violet-500 h-2 rounded-full animate-pulse" style="width: 90%;"></div>
-        </div>
+  <!-- About Section -->
+  <section id="about" class="px-6 py-16">
+    <h2 class="section-title">About Me</h2>
+    <p class="max-w-3xl mx-auto text-center">
+      I am a results-driven Business Analyst currently pursuing a Master's in Business Analytics at the University of North Texas. My strengths include data modeling, data visualization, front-end reporting, and building AI-powered solutions. With strong communication and analytical skills, I translate data insights into strategic decisions.
+    </p>
+  </section>
+
+  <!-- Career Section -->
+  <section id="career" class="px-6 py-16 bg-gray-800">
+  <h2 class="section-title">Career Summary</h2>
+  <div class="max-w-4xl mx-auto space-y-10">
+    <div class="card">
+      <h3 class="text-xl font-semibold mb-2">Business Development Intern – NSIC, Hyderabad</h3>
+      <p class="text-sm">May 2022 – Mar 2023</p>
+      <ul class="list-disc list-inside text-sm mt-3 space-y-1">
+        <li>Conducted in-depth market research and financial feasibility analysis to identify growth opportunities for small and medium enterprises.</li>
+        <li>Created business models and strategic reports to support data-driven decision-making by senior leadership.</li>
+        <li>Utilized Excel and analytics tools to assess customer demand, sales performance, and key business drivers.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 class="text-xl font-semibold mb-2">Counselor / Data Mentor – Voice 4 Girls, Hyderabad</h3>
+      <p class="text-sm">Aug 2021 – Mar 2022</p>
+      <ul class="list-disc list-inside text-sm mt-3 space-y-1">
+        <li>Mentored students on academic goals while tracking engagement through structured data collection and analysis.</li>
+        <li>Collected, interpreted, and reported feedback to improve content delivery and learning effectiveness.</li>
+        <li>Led data-informed workshops and assessments focused on personal development and educational outcomes.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="px-6 py-16">
+    <h2 class="section-title">Experience</h2>
+    <div class="max-w-4xl mx-auto space-y-10">
+      <div class="card">
+        <h3 class="text-xl font-semibold mb-2">Business Development Intern – NSIC, Hyderabad</h3>
+        <p class="text-sm">May 2022 – Mar 2023</p>
+        <ul class="list-disc list-inside text-sm mt-3 space-y-1">
+          <li>Analyzed market trends and financial viability to guide business strategy and growth for small and medium enterprises.</li>
+          <li>Built financial and business models to support strategic decision-making using data-driven insights.</li>
+          <li>Utilized Excel and analytics tools to study customer demand, sales performance, and growth projections.</li>
+        </ul>
       </div>
-      <div>
-        <p>SQL</p>
-        <div class="w-full bg-gray-700 h-2 rounded-full">
-          <div class="bg-violet-500 h-2 rounded-full animate-pulse" style="width: 85%;"></div>
-        </div>
-      </div>
-      <div>
-        <p>Power BI</p>
-        <div class="w-full bg-gray-700 h-2 rounded-full">
-          <div class="bg-violet-500 h-2 rounded-full animate-pulse" style="width: 80%;"></div>
-        </div>
+      <div class="card">
+        <h3 class="text-xl font-semibold mb-2">Counselor / Data Mentor – Voice 4 Girls, Hyderabad</h3>
+        <p class="text-sm">Aug 2021 – Mar 2022</p>
+        <ul class="list-disc list-inside text-sm mt-3 space-y-1">
+          <li>Guided students in academic and personal development while analyzing engagement patterns to optimize learning experiences.</li>
+          <li>Performed structured data collection and feedback analysis to assess program effectiveness and retention rates.</li>
+          <li>Led workshops using survey-driven insights to enhance educational delivery and impact.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section class="px-6 py-16 bg-gray-800 slide-up">
-    <h2 class="section-title">What People Say</h2>
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+  $1
+  <section id="education" class="px-6 py-16">
+    <h2 class="section-title">Education</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
       <div class="card">
-        <p class="text-lg italic">“Harshitha has a sharp analytical mind and a real eye for detail. Her work on our dashboard was transformative.”</p>
-        <p class="mt-4 font-semibold text-sm">— Dr. Anna Sidorova, Professor, UNT</p>
+        <h3 class="text-xl font-semibold mb-2">University of North Texas</h3>
+        <p class="text-sm">MS in Business Analytics<br/>Jan 2024 – Dec 2025</p>
       </div>
       <div class="card">
-        <p class="text-lg italic">“A committed learner and exceptional team player. Her resume screening AI helped us save countless hours.”</p>
-        <p class="mt-4 font-semibold text-sm">— Project Supervisor</p>
+        <h3 class="text-xl font-semibold mb-2">Osmania University</h3>
+        <p class="text-sm">B.Com in Computer Science<br/>Jun 2020 – Apr 2023</p>
+      </div>
+      <div class="card">
+        <h3 class="text-xl font-semibold mb-2">Johnson Grammar School</h3>
+        <p class="text-sm">High School – ICSE<br/>Jun 2005 – May 2018</p>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio Carousel Section -->
-  <section class="px-6 py-16 slide-up">
-    <h2 class="section-title">Portfolio Highlights</h2>
-    <div class="overflow-x-auto whitespace-nowrap flex gap-6 px-2">
-      <div class="min-w-[300px] bg-gray-800 rounded-lg p-4 shadow-lg">
-        <h3 class="text-xl font-semibold mb-2">Project 1</h3>
-        <p class="text-sm text-gray-300">A detailed look at my Hiring Assistant AI with RAG and offline LLM features.</p>
+  <!-- Projects Section -->
+  <section id="projects" class="px-6 py-16 bg-gray-800">
+    <h2 class="section-title">Projects</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="card">
+        <h3 class="text-lg font-semibold mb-2">Hiring Assistant AI</h3>
+        <p class="text-sm">AI-driven resume screener using RAG, semantic matching, and LLMs for privacy-compliant, offline hiring solutions.</p>
       </div>
-      <div class="min-w-[300px] bg-gray-800 rounded-lg p-4 shadow-lg">
-        <h3 class="text-xl font-semibold mb-2">Project 2</h3>
-        <p class="text-sm text-gray-300">Dashboard insights from the Malnutrition Visualizer project using Tableau.</p>
+      <div class="card">
+        <h3 class="text-lg font-semibold mb-2">Child Malnutrition Visualizer</h3>
+        <p class="text-sm">Interactive dashboards in Tableau for analyzing global malnutrition trends across gender and regions.</p>
       </div>
-      <div class="min-w-[300px] bg-gray-800 rounded-lg p-4 shadow-lg">
-        <h3 class="text-xl font-semibold mb-2">Project 3</h3>
-        <p class="text-sm text-gray-300">Banking Fraud Detection system using SHAP and real-time feedback loop.</p>
+      <div class="card">
+        <h3 class="text-lg font-semibold mb-2">AI-Powered Fraud Detection</h3>
+        <p class="text-sm">Built a real-time system with SHAP/LIME explainability, fraud scoring, and compliance with GDPR/PCI DSS.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="px-6 py-16">
+    <h2 class="section-title">Skills</h2>
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div>
+        <ul class="space-y-2">
+          <li>Programming: Python, R, Java, JavaScript</li>
+          <li>Visualization: Tableau, Power BI, Excel</li>
+          <li>Databases: MySQL, MongoDB, SQL</li>
+          <li>Cloud: GCP, BigQuery</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="space-y-2">
+          <li>Tools: Git, GitHub, Jupyter Notebook</li>
+          <li>Libraries: NumPy, Pandas, Scikit-learn</li>
+          <li>Concepts: Data Modeling, KPI, BI</li>
+          <li>Other: HTML, CSS, DBMS</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="px-6 py-16">
+    <h2 class="section-title">Contact</h2>
+    <div class="text-center">
+      <p>Email: <a href="mailto:harshithasrieya@gmail.com" class="text-blue-400 hover:underline">harshithasrieya@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" class="text-blue-400 hover:underline">/harshitha-sreiya-palaparthi</a></p>
+      <p>GitHub: <a href="https://github.com/harshi1744" class="text-blue-400 hover:underline">/harshi1744</a></p>
     </div>
   </section>
 
