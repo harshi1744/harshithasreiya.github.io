@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harshitha Sreiya Portfolio</title>
+  <title>Harshitha Sreiya | Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
@@ -17,99 +17,137 @@
       @apply text-3xl md:text-4xl font-bold text-center mb-10 text-gray-200;
     }
     .card {
-      @apply bg-gray-900 text-gray-200 p-6 rounded-lg shadow-lg;
+      @apply bg-gray-900 text-gray-200 p-6 rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105;
     }
     .nav-link {
       @apply text-sm text-gray-300 hover:text-white transition;
     }
+    .fade-in {
+      animation: fadeIn 1s ease-in-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    .slide-up {
+      animation: slideUp 1s ease-out forwards;
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    @keyframes slideUp {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
     footer {
       @apply bg-black text-gray-400 py-6 text-center text-sm;
     }
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background-color: #7c3aed;
+      z-index: 9999;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: #222;
+      border: 1px solid #444;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      z-index: 9999;
+    }
   </style>
 </head>
-<body>
-  <nav class="bg-black py-4 shadow-md sticky top-0 z-50">
-    <ul class="flex justify-center space-x-10">
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#career" class="nav-link">Career</a></li>
-      <li><a href="#education" class="nav-link">Education</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
-  </nav>
+<body x-data="{ dark: true }" :class="dark ? 'bg-black text-white' : 'bg-white text-black'">
+  <div id="progress" class="progress-bar w-0"></div>
 
-  <header class="text-center py-20">
-    <h1 class="text-5xl font-bold text-white mb-4">Harshitha Sreiya Palaparthi</h1>
-    <p class="text-gray-400 text-lg">Business Analyst | Financial Data Enthusiast | AI Innovator</p>
+  <button class="theme-toggle" @click="dark = !dark">Toggle Theme</button>
+
+  <header class="text-center py-20 fade-in">
+    <h1 class="text-5xl font-bold mb-4">Harshitha Sreiya Palaparthi</h1>
+    <p class="text-lg">Business Analyst | Financial Data Enthusiast | AI Innovator</p>
+    <a href="resume.pdf" download class="mt-6 inline-block px-6 py-2 border border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white transition rounded-full">Download Resume</a>
   </header>
 
-  <section id="about" class="px-6 py-16">
-    <h2 class="section-title">About Me</h2>
-    <p class="max-w-3xl mx-auto text-center text-gray-300">
-      I am a results-driven Business Analyst with a passion for data and innovation. With a background in commerce and a Master's in Business Analytics from UNT, I specialize in data modeling, visualization, and delivering actionable insights to improve business performance.
-    </p>
-  </section>
-
-  <section id="career" class="px-6 py-16 bg-gray-800">
-    <h2 class="section-title">Career Summary</h2>
-    <p class="max-w-3xl mx-auto text-center">
-      Proven experience in AI-driven analytics, business development, and mentoring. Available from December 2025 for full-time roles. Strong technical foundation in Python, SQL, Tableau, and GCP.
-    </p>
-  </section>
-
-  <section id="education" class="px-6 py-16">
-    <h2 class="section-title">Education</h2>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <div class="card">
-        <h3 class="text-xl font-semibold mb-2">University of North Texas</h3>
-        <p class="text-sm">MS in Business Analytics<br/>Jan 2024 – Dec 2025</p>
+  <!-- Animated Skills Section -->
+  <section class="px-6 py-16 slide-up">
+    <h2 class="section-title">Skills Overview</h2>
+    <div class="max-w-3xl mx-auto space-y-6">
+      <div>
+        <p>Python</p>
+        <div class="w-full bg-gray-700 h-2 rounded-full">
+          <div class="bg-violet-500 h-2 rounded-full animate-pulse" style="width: 90%;"></div>
+        </div>
       </div>
-      <div class="card">
-        <h3 class="text-xl font-semibold mb-2">Osmania University</h3>
-        <p class="text-sm">B.Com in Computer Science<br/>Jun 2020 – Apr 2023</p>
+      <div>
+        <p>SQL</p>
+        <div class="w-full bg-gray-700 h-2 rounded-full">
+          <div class="bg-violet-500 h-2 rounded-full animate-pulse" style="width: 85%;"></div>
+        </div>
       </div>
-      <div class="card">
-        <h3 class="text-xl font-semibold mb-2">Johnson Grammar School</h3>
-        <p class="text-sm">High School – ICSE<br/>Jun 2005 – May 2018</p>
+      <div>
+        <p>Power BI</p>
+        <div class="w-full bg-gray-700 h-2 rounded-full">
+          <div class="bg-violet-500 h-2 rounded-full animate-pulse" style="width: 80%;"></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="projects" class="px-6 py-16 bg-gray-800">
-    <h2 class="section-title">Projects</h2>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  <!-- Testimonials Section -->
+  <section class="px-6 py-16 bg-gray-800 slide-up">
+    <h2 class="section-title">What People Say</h2>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
       <div class="card">
-        <h3 class="text-lg font-semibold mb-2">Hiring Assistant AI</h3>
-        <p class="text-sm text-gray-400">
-          AI-driven resume screener using RAG, semantic matching, and LLMs for offline privacy-compliant hiring solutions.
-        </p>
+        <p class="text-lg italic">“Harshitha has a sharp analytical mind and a real eye for detail. Her work on our dashboard was transformative.”</p>
+        <p class="mt-4 font-semibold text-sm">— Dr. Anna Sidorova, Professor, UNT</p>
       </div>
       <div class="card">
-        <h3 class="text-lg font-semibold mb-2">Child Malnutrition Visualizer</h3>
-        <p class="text-sm text-gray-400">
-          Created interactive dashboards using Tableau to explore malnutrition trends across gender, region, and time.
-        </p>
-      </div>
-      <div class="card">
-        <h3 class="text-lg font-semibold mb-2">AI-Powered Fraud Detection</h3>
-        <p class="text-sm text-gray-400">
-          Real-time fraud detection using explainable AI, SHAP/LIME, and microservices architecture for banking use cases.
-        </p>
+        <p class="text-lg italic">“A committed learner and exceptional team player. Her resume screening AI helped us save countless hours.”</p>
+        <p class="mt-4 font-semibold text-sm">— Project Supervisor</p>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="px-6 py-16">
-    <h2 class="section-title">Contact</h2>
-    <div class="text-center">
-      <p>Email: <a href="mailto:harshithasrieya@gmail.com" class="text-blue-400 hover:underline">harshithasrieya@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" class="text-blue-400 hover:underline">/harshitha-sreiya-palaparthi</a></p>
-      <p>GitHub: <a href="https://github.com/harshi1744" class="text-blue-400 hover:underline">/harshi1744</a></p>
+  <!-- Portfolio Carousel Section -->
+  <section class="px-6 py-16 slide-up">
+    <h2 class="section-title">Portfolio Highlights</h2>
+    <div class="overflow-x-auto whitespace-nowrap flex gap-6 px-2">
+      <div class="min-w-[300px] bg-gray-800 rounded-lg p-4 shadow-lg">
+        <h3 class="text-xl font-semibold mb-2">Project 1</h3>
+        <p class="text-sm text-gray-300">A detailed look at my Hiring Assistant AI with RAG and offline LLM features.</p>
+      </div>
+      <div class="min-w-[300px] bg-gray-800 rounded-lg p-4 shadow-lg">
+        <h3 class="text-xl font-semibold mb-2">Project 2</h3>
+        <p class="text-sm text-gray-300">Dashboard insights from the Malnutrition Visualizer project using Tableau.</p>
+      </div>
+      <div class="min-w-[300px] bg-gray-800 rounded-lg p-4 shadow-lg">
+        <h3 class="text-xl font-semibold mb-2">Project 3</h3>
+        <p class="text-sm text-gray-300">Banking Fraud Detection system using SHAP and real-time feedback loop.</p>
+      </div>
     </div>
   </section>
 
   <footer>
     &copy; 2025 Harshitha Sreiya Palaparthi. All rights reserved.
   </footer>
+
+  <script>
+    window.onscroll = function () {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById("progress").style.width = scrolled + "%";
+    };
+  </script>
 </body>
 </html>
