@@ -1,969 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harshitha's Portfolio</title>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harshitha Sreiya | Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
- <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
-
-<style>
-/* Global Styles */
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Times New Roman', Times, serif;
-  background:  #000000 !important; /* black background */
-  color: #ffffff !important; /* white text */
-  font-family: 'Montserrat', sans-serif;
-  min-height: 100vh;
-}
-
-/* Animations */
-@keyframes glowPulse {
-  0%, 100% {
-    text-shadow: 0 0 10px #9f7aea, 0 0 20px #9f7aea;
-  }
-  50% {
-    text-shadow: 0 0 20px #d6bcfa, 0 0 40px #d6bcfa;
-  }
-}
-.animate-glow-pulse {
-  animation: glowPulse 3s infinite ease-in-out;
-}
-
-@keyframes iconBounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
-/* CSS */
-.fixed-sidebar {
-  position: fixed;
-  top: 40%;
-  left: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  z-index: 1000;
-}
-
-.social-icon {
-  position: relative;
-  color: #fff;
-  background: #333;
-  padding: 12px;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 20px;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.social-icon:hover {
-  background: #0077b5; /* Default LinkedIn blue — can vary per icon */
-  transform: scale(1.1);
-}
-
-.social-icon .tooltip {
-  visibility: hidden;
-  opacity: 0;
-  width: max-content;
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  padding: 5px 10px;
-  border-radius: 5px;
-  position: absolute;
-  left: 60px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: opacity 0.3s ease, left 0.3s ease;
-  font-size: 12px;
-  white-space: nowrap;
-}
-
-.social-icon:hover .tooltip {
-  visibility: visible;
-  opacity: 1;
-  left: 50px;
-}
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background-color: #7c3aed; /* Black-600 */
-      transition: width 0.3s ease-in-out;
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0f0f0f;
+      color: #e5e5e5;
     }
-
-    .nav-link:hover::after {
-      width: 100%;
+    .section-title {
+      @apply text-3xl md:text-4xl font-bold text-center mb-10 text-gray-200;
     }
-
-    .nav-link-active::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background-color: #7c3aed;
+    .card {
+      @apply bg-gray-900 text-gray-200 p-6 rounded-lg shadow-lg;
     }
+    .nav-link {
+      @apply text-sm text-gray-300 hover:text-white transition;
+    }
+    footer {
+      @apply bg-black text-gray-400 py-6 text-center text-sm;
+    }
+  </style>
+</head>
+<body>
+  <nav class="bg-black py-4 shadow-md sticky top-0 z-50">
+    <ul class="flex justify-center space-x-10">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#career" class="nav-link">Career</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
 
-  /* Base setup */
-body {
-  font-family: 'Source Code Pro', monospace;
-  background-color: #0f0f0f;
-  margin: 0;
-  padding: 0;
-}
+  <header class="text-center py-20">
+    <h1 class="text-5xl font-bold text-white mb-4">Harshitha Sreiya Palaparthi</h1>
+    <p class="text-gray-400 text-lg">Business Analyst | Financial Data Enthusiast | AI Innovator</p>
+  </header>
 
-/* Glowing animated heading */
-.glowing-text {
-  font-family: 'Pacifico', cursive;
-  color: #fff;
-  text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 40px #00f7ff;
-  animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 40px #00f7ff;
-  }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #1e90ff, 0 0 60px #1e90ff;
-  }
-}
-
-/* Typewriter-style quote */
-blockquote {
-  font-family: 'Source Code Pro', monospace;
-  font-size: 1.1rem;
-  color: #ffffff;
-  border-left: 4px solid #7f5af0;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
-  position: relative;
-  overflow: hidden;
-}
-
-blockquote p {
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 0.15em solid #7f5af0;
-  animation: typing 8s steps(100, end), blink-caret 0.75s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #7f5af0 }
-}
-
-  
-</style>
-</head> 
-  <body>
-<!-- Font Awesome CDN (required for icons) -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
-<nav class="bg-white shadow-md py-4 sticky top-0 z-50">
-  <ul class="flex justify-center space-x-12 text-gray-700 font-medium text-sm sm:text-base">
-    <li class="group relative flex flex-col items-center">
-      <a href="#home" class="hover:text-violet-600 transition-colors">
-        <i class="fas fa-home text-lg mb-1"></i>
-        Home
-      </a>
-      <span class="absolute bottom-0 w-0 h-0.5 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
-    </li>
-    <li class="group relative flex flex-col items-center">
-      <a href="#about" class="hover:text-violet-600 transition-colors">
-        <i class="fas fa-user text-lg mb-1"></i>
-        About
-      </a>
-      <span class="absolute bottom-0 w-0 h-0.5 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
-    </li>
-    <li class="group relative flex flex-col items-center">
-      <a href="#career" class="hover:text-violet-600 transition-colors">
-        <i class="fas fa-briefcase text-lg mb-1"></i>
-        Career
-      </a>
-      <span class="absolute bottom-0 w-0 h-0.5 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
-    </li>
-    <li class="group relative flex flex-col items-center">
-      <a href="#education" class="hover:text-violet-600 transition-colors">
-        <i class="fas fa-graduation-cap text-lg mb-1"></i>
-        Education
-      </a>
-      <span class="absolute bottom-0 w-0 h-0.5 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
-    </li>
-    <li class="group relative flex flex-col items-center">
-      <a href="#projects" class="hover:text-violet-600 transition-colors">
-        <i class="fas fa-code text-lg mb-1"></i>
-        Projects
-      </a>
-      <span class="absolute bottom-0 w-0 h-0.5 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
-    </li>
-  </ul>
-</nav>
-
-  <!-- Main Section -->
-<section 
-  id="home"
-  class="relative min-h-screen flex flex-col md:flex-row items-center justify-center py-20 px-8 space-y-10 md:space-y-0 md:space-x-12 overflow-hidden">
-
-  <!-- Dark overlay -->
-  <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
-
-  <div class="relative z-10 text-center md:text-left max-w-xl">
-
-    <!-- Custom Styled Heading -->
-    <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-wide mb-6 glowing-text animate-pulse shadow-lg">
-      Harshitha's <span class="text-indigo-400">Portfolio</span>
-    </h1>
-
-    <!-- Quote with Unique Styling -->
-    <blockquote class="text-white text-lg italic border-l-4 border-indigo-400 pl-6 pr-4 py-4 bg-white/10 rounded-lg shadow-md backdrop-blur-sm">
-      <p>
-        “Behind every dataset lies a story, and within every line of code, a spark of creativity. This portfolio is an invitation to witness the fusion of business and programming, where passion drives progress, and every challenge is an opportunity to innovate. Welcome to the future I’m building, one idea at a time.”
-      </p>
-    </blockquote>
-
-  </div>
-</section>
-
-
-  <!-- Reamining Sections -->
- <section id="about" class="relative hero-section flex flex-col md:flex-row items-center justify-center p-8 overflow-hidden min-h-screen">
-  <!-- Background GIF -->
-  <!-- Dark overlay -->
-  <div class="absolute inset-0 bg-gray-900 bg-opacity-60 z-0"></div>
-  <!-- Main content -->
-<div class="relative z-10 text-center md:text-center md:w-1/2 p-4 md:pr-12 mt-8 md:mt-0 order-2 md:order-1">
-      <h3 class="text-3xl md:text-4xl font-semibold text-black-300 mb-4">About Me</h3>
-      <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 text-black-400 animate-glow-pulse">
-      Hi 👋 I'm Harshitha!
-    </h1>
-    <p class="text-lg text-black-200 mb-10 max-w-xl mx-auto md:mx-0">
-      A passionate Financial Scientist and Business Analyst blending innovation with insights to solve real-world problems. Behind every dataset lies a story; within every line of code, a spark of creativity.
+  <section id="about" class="px-6 py-16">
+    <h2 class="section-title">About Me</h2>
+    <p class="max-w-3xl mx-auto text-center text-gray-300">
+      I am a results-driven Business Analyst with a passion for data and innovation. With a background in commerce and a Master's in Business Analytics from UNT, I specialize in data modeling, visualization, and delivering actionable insights to improve business performance.
     </p>
-    <!-- Buttons -->
-    <div class="flex flex-col sm:flex-row items-center sm:justify-start gap-4">
-      <a href="#projects" class="btn border-2 border-violet-500 bg-violet-500 hover:bg-violet-600 text-white py-2 px-6 rounded shadow transition duration-300">
-        View Projects
-      </a>
-      <a href="/resume.pdf" download class="btn border-2 border-violet-400 hover:bg-violet-500 hover:text-white text-violet-300 py-2 px-6 rounded transition duration-300">
-        Download Resume
-      </a>
-    </div>
-  </div>
-</section>
-  
-  <section id="career" class="py-16 px-6 md:px-20 bg-gray-50 text-gray-800 animate-fade-in-up">
-  <h2 class="text-4xl font-bold text-center text-black-600 mb-12">Career Summary</h2> 
-  <p class="text-center max-w-3xl mx-auto text-gray-700 text-lg mb-8">
-    Master’s student in Business Analytics with strong skills in data modeling, data visualization, and business intelligence tools. Experienced in AI-driven applications, front-end reporting, and KPI tracking. Available from December 2025 for full-time roles across the U.S.
-  </p>
   </section>
 
- <section id="education-infographic" class="py-16 px-6 md:px-20 bg-gradient-to-br from-white via-violet-50 to-white text-gray-800">
-  <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center text-violet-700">Education</h2>
+  <section id="career" class="px-6 py-16 bg-gray-800">
+    <h2 class="section-title">Career Summary</h2>
+    <p class="max-w-3xl mx-auto text-center">
+      Proven experience in AI-driven analytics, business development, and mentoring. Available from December 2025 for full-time roles. Strong technical foundation in Python, SQL, Tableau, and GCP.
+    </p>
+  </section>
 
-  <div class="education-grid max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
-
-    <!-- University of North Texas -->
-    <div class="education-card flex flex-col items-center bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition duration-300 ease-in-out">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk6nsth-dM_LlSDgCV8kS3817LWGRyJKWTJY9hg93mpuCVL-r3LDD2ybfENmnhRCDM4xA&usqp=CAU" alt="University of North Texas Logo" class="w-24 h-24 mb-6 object-contain rounded-full" />
-      <h3 class="text-2xl font-semibold text-violet-700 mb-1">University of North Texas</h3>
-      <p class="text-sm text-gray-600 mb-2">Texas, United States</p>
-      <div class="date text-violet-600 font-medium mb-3">Jan 2024 – Dec 2025</div>
-      <p class="text-center text-gray-700">Master of Science in Business Analytics</p>
-    </div>
-
-    <!-- Osmania University -->
-    <div class="education-card flex flex-col items-center bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition duration-300 ease-in-out">
-      <img src="https://www.osmania.ac.in/images/ou.png" alt="Osmania University Logo" class="w-24 h-24 mb-6 object-contain rounded-full" />
-      <h3 class="text-2xl font-semibold text-violet-700 mb-1">Osmania University</h3>
-      <p class="text-sm text-gray-600 mb-2">Hyderabad, India</p>
-      <div class="date text-violet-600 font-medium mb-3">Jun 2020 – Apr 2023</div>
-      <p class="text-center text-gray-700">Bachelor of Commerce in Computer Science</p>
-    </div>
-
-    <!-- Johnson Grammar School -->
-    <div class="education-card flex flex-col items-center bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition duration-300 ease-in-out">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO4ytxOUwRQWK5ESMbbsqzI18M8Ti3z0e57A&s" alt="Johnson Grammar School Logo" class="w-24 h-24 mb-6 object-contain rounded-full" />
-      <h3 class="text-2xl font-semibold text-violet-700 mb-1">Johnson Grammar School</h3>
-      <p class="text-sm text-gray-600 mb-2">Hyderabad, India</p>
-      <div class="date text-violet-600 font-medium mb-3">Jun 2005 – May 2018</div>
-      <p class="text-center text-gray-700">High School Diploma – ICSE Curriculum</p>
-    </div>
-
-  </div>
-</section>
-
-  
-
-  <section id="experience" class="py-16 px-6 md:px-20 bg-white text-gray-800">
-  <h2 class="text-4xl font-bold text-center text-black-600 mb-12">Professional Experience</h2>
-
-  <!-- Container for text + image side-by-side -->
-  <div class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-start gap-10">
-
-    <!-- Left Side: Experience Content -->
-    <div class="md:w-2/3 space-y-10">
-
-      <!-- Internship -->
-      <div class="experience-card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 opacity-0 translate-y-8 animate-fade-in">
-        <h3 class="text-2xl font-semibold text-violet-600 mb-3">Entrepreneurship/Business Development Intern</h3>
-        <p class="font-medium text-gray-700 mb-1">NSIC – Hyderabad, India | May 2022 – March 2023</p>
-        <ul class="list-disc list-inside text-gray-600 space-y-2">
-          <li>Analyzed market trends, financial feasibility, and industrial awareness to support small business growth.</li>
-          <li>Collected and interpreted market data to evaluate business patterns and develop actionable insights.</li>
-          <li>Built financial models to assess business viability based on sales, demand, and industry growth trends.</li>
-        </ul>
+  <section id="education" class="px-6 py-16">
+    <h2 class="section-title">Education</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="card">
+        <h3 class="text-xl font-semibold mb-2">University of North Texas</h3>
+        <p class="text-sm">MS in Business Analytics<br/>Jan 2024 – Dec 2025</p>
       </div>
-
-      <!-- Mentor Role -->
-      <div class="experience-card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 opacity-0 translate-y-8 animate-fade-in delay-150">
-        <h3 class="text-2xl font-semibold text-violet-600 mb-3">Counselor/Data Insights Mentor</h3>
-        <p class="font-medium text-gray-700 mb-1">Voice 4 Girls – India | August 2021 – March 2022</p>
-        <ul class="list-disc list-inside text-gray-600 space-y-2">
-          <li>Mentored students to develop personal and academic skills, improving engagement and knowledge retention.</li>
-          <li>Analyzed learning patterns and adapted mentoring techniques based on qualitative and quantitative insights.</li>
-          <li>Used surveys and feedback to identify learning gaps and enhance counseling effectiveness.</li>
-          <li>Improved student confidence and problem-solving skills through data-driven approaches.</li>
-        </ul>
+      <div class="card">
+        <h3 class="text-xl font-semibold mb-2">Osmania University</h3>
+        <p class="text-sm">B.Com in Computer Science<br/>Jun 2020 – Apr 2023</p>
       </div>
-    </div>
-
-    <!-- Right Side: Animated Profile Image -->
-    
-    </div>
-  </div>
-</section>
-
-
-
-<section id="skills" class="py-16 px-6 md:px-20 bg-gray-50 text-gray-800">
-  <h2 class="text-3xl md:text-4xl font-bold mb-10 text-black-600 text-center">Technical Skills</h2>
-
-  <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-
-    <!-- Programming Languages -->
-    <div class="skill-card">
-      <h3 class="skill-title mb-4">Programming Languages</h3>
-      <ul class="skill-list grid grid-cols-2 gap-4">
-        <li class="space-y-1">
-          <div class="flex items-center space-x-3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-6 h-6" alt="Python" />
-            <span>Python</span>
-          </div>
-          <div class="w-full h-2 bg-gray-200 rounded">
-            <div class="h-full bg-blue-500 rounded w-[90%]"></div>
-          </div>
-        </li>
-        <li class="space-y-1">
-          <div class="flex items-center space-x-3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-6 h-6" alt="Java" />
-            <span>Java</span>
-          </div>
-          <div class="w-full h-2 bg-gray-200 rounded">
-            <div class="h-full bg-blue-500 rounded w-[85%]"></div>
-          </div>
-        </li>
-        <li class="space-y-1">
-          <div class="flex items-center space-x-3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-6 h-6" alt="JavaScript" />
-            <span>JavaScript</span>
-          </div>
-          <div class="w-full h-2 bg-gray-200 rounded">
-            <div class="h-full bg-blue-500 rounded w-[85%]"></div>
-          </div>
-        </li>
-        <li class="space-y-1">
-          <div class="flex items-center space-x-3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" class="w-6 h-6" alt="SQL" />
-            <span>SQL</span>
-          </div>
-          <div class="w-full h-2 bg-gray-200 rounded">
-            <div class="h-full bg-blue-500 rounded w-[90%]"></div>
-          </div>
-        </li>
-        <li class="space-y-1">
-          <div class="flex items-center space-x-3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-6 h-6" alt="HTML" />
-            <span>HTML</span>
-          </div>
-          <div class="w-full h-2 bg-gray-200 rounded">
-            <div class="h-full bg-blue-500 rounded w-[90%]"></div>
-          </div>
-        </li>
-        <li class="space-y-1">
-          <div class="flex items-center space-x-3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-6 h-6" alt="CSS" />
-            <span>CSS</span>
-          </div>
-          <div class="w-full h-2 bg-gray-200 rounded">
-            <div class="h-full bg-blue-500 rounded w-[85%]"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Tools -->
-    <div class="skill-card">
-      <h3 class="skill-title mb-4">Tools</h3>
-      <ul class="skill-list grid grid-cols-2 gap-4">
-        <li class="space-y-1">
-          <div class="flex items-center space-x-3">
-            <i class="fab fa-git-alt text-violet-600 w-6 h-6"></i>
-            <span>Git</span>
-          </div>
-          <div class="w-full h-2 bg-gray-200 rounded">
-            <div class="h-full bg-violet-500 rounded w-[85%]"></div>
-          </div>
-        </li>
-        <li class="space-y-1">
-          <div class="flex items-center space-x-3">
-            <i class="fab fa-github text-violet-600 w-6 h-6"></i>
-            <span>GitHub</span>
-          </div>
-          <div class="w-full h-2 bg-gray-200 rounded">
-            <div class="h-full bg-violet-500 rounded w-[90%]"></div>
-          </div>
-        </li>
-        <li class="space-y-1">
-          <div class="flex items-center space-x-3">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8I6j_R1FjD_Ar8GF7DxAzA9gpKyROmx7MqA&s" class="w-6 h-6" alt="Excel" />
-            <span>MS Excel</span>
-          </div>
-          <div class="w-full h-2 bg-gray-200 rounded">
-            <div class="h-full bg-violet-500 rounded w-[85%]"></div>
-          </div>
-        </li>
-        <li class="space-y-1">
-          <div class="flex items-center space-x-3">
-            <img src="https://raw.githubusercontent.com/github/explore/a4691f04ff219c1c2aa02fc61fda41aa43f1459a/topics/jupyter-notebook/jupyter-notebook.png" class="w-6 h-6" alt="Jupyter" />
-            <span>Jupyter Notebook</span>
-          </div>
-          <div class="w-full h-2 bg-gray-200 rounded">
-            <div class="h-full bg-violet-500 rounded w-[90%]"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Technologies -->
-    <div class="skill-card">
-      <h3 class="skill-title mb-4">Technologies</h3>
-      <ul class="skill-list grid grid-cols-2 gap-4">
-        <li class="space-y-1">
-          <div class="flex items-center space-x-3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-6 h-6" alt="MySQL" />
-            <span>MySQL</span>
-          </div>
-          <div class="w-full h-2 bg-gray-200 rounded">
-            <div class="h-full bg-green-500 rounded w-[90%]"></div>
-          </div>
-        </li>
-        <li class="space-y-1">
-          <div class="flex items-center space-x-3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-6 h-6" alt="MongoDB" />
-            <span>MongoDB</span>
-          </div>
-          <div class="w-full h-2 bg-gray-200 rounded">
-            <div class="h-full bg-green-500 rounded w-[85%]"></div>
-          </div>
-        </li>
-        <li class="space-y-1">
-          <div class="flex items-center space-x-3">
-            <img src="https://numpy.org/images/logo.svg" class="w-6 h-6" alt="Numpy" />
-            <span>Numpy</span>
-          </div>
-          <div class="w-full h-2 bg-gray-200 rounded">
-            <div class="h-full bg-green-500 rounded w-[90%]"></div>
-          </div>
-        </li>
-        <li class="space-y-1">
-          <div class="flex items-center space-x-3">
-            <img src="https://pandas.pydata.org/static/img/pandas_mark.svg" class="w-6 h-6" alt="Pandas" />
-            <span>Pandas</span>
-          </div>
-          <div class="w-full h-2 bg-gray-200 rounded">
-            <div class="h-full bg-green-500 rounded w-[90%]"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Others -->
-    <div class="skill-card">
-      <h3 class="skill-title mb-4">Others</h3>
-      <ul class="skill-list grid grid-cols-2 gap-4">
-        <li class="space-y-1">
-          <div class="flex items-center space-x-3">
-            <img src="https://cdn.iconscout.com/icon/free/png-256/free-google-cloud-logo-icon-download-in-svg-png-gif-file-formats--weather-storage-data-pack-logos-icons-1721675.png?f=webp&w=256" class="w-6 h-6" alt="GCP" />
-            <span>GCP</span>
-          </div>
-          <div class="w-full h-2 bg-gray-200 rounded">
-            <div class="h-full bg-yellow-500 rounded w-[85%]"></div>
-          </div>
-        </li>
-        <li class="space-y-1">
-          <div class="flex items-center space-x-3">
-            <i class="fas fa-database text-yellow-600 w-6 h-6"></i>
-            <span>DBMS</span>
-          </div>
-          <div class="w-full h-2 bg-gray-200 rounded">
-            <div class="h-full bg-yellow-500 rounded w-[85%]"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-      <section id="technical-analytical-skills" class="py-20 px-6 bg-gray-100">
-  <div class="container mx-auto">
-    <h2 class="text-3xl font-bold text-violet-600 text-center mb-12">Technical & Analytical Skills</h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-
-      <!-- Programming Languages -->
-      <div>
-        <h3 class="text-xl font-bold text-blue-700 mb-4">Programming Languages</h3>
-        <div class="mb-4">
-          <div class="flex justify-between items-center mb-1">
-            <span class="flex items-center gap-2">
-              <i class="fab fa-python text-blue-500"></i> Python
-            </span>
-            <span class="font-semibold">90%</span>
-          </div>
-          <div class="w-full bg-gray-300 rounded-full h-2">
-            <div class="bg-blue-500 h-2 rounded-full" style="width: 90%;"></div>
-          </div>
-        </div>
-        <div class="mb-4">
-          <div class="flex justify-between items-center mb-1">
-            <span class="flex items-center gap-2">
-              <i class="fab fa-r-project text-blue-600"></i> R
-            </span>
-            <span class="font-semibold">85%</span>
-          </div>
-          <div class="w-full bg-gray-300 rounded-full h-2">
-            <div class="bg-blue-500 h-2 rounded-full" style="width: 85%;"></div>
-          </div>
-        </div>
+      <div class="card">
+        <h3 class="text-xl font-semibold mb-2">Johnson Grammar School</h3>
+        <p class="text-sm">High School – ICSE<br/>Jun 2005 – May 2018</p>
       </div>
-
-      <!-- Data Analysis Libraries -->
-      <div>
-        <h3 class="text-xl font-bold text-blue-700 mb-4">Data Analysis Libraries</h3>
-        <div class="mb-4">
-          <div class="flex justify-between items-center mb-1">
-            <span class="flex items-center gap-2">
-              <i class="fas fa-cube text-indigo-600"></i> NumPy
-            </span>
-            <span class="font-semibold">88%</span>
-          </div>
-          <div class="w-full bg-gray-300 rounded-full h-2">
-            <div class="bg-blue-500 h-2 rounded-full" style="width: 88%;"></div>
-          </div>
-        </div>
-        <div class="mb-4">
-          <div class="flex justify-between items-center mb-1">
-            <span class="flex items-center gap-2">
-              <i class="fas fa-database text-green-600"></i> Pandas
-            </span>
-            <span class="font-semibold">89%</span>
-          </div>
-          <div class="w-full bg-gray-300 rounded-full h-2">
-            <div class="bg-blue-500 h-2 rounded-full" style="width: 89%;"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- BI & Visualization -->
-      <div>
-        <h3 class="text-xl font-bold text-blue-700 mb-4">BI & Visualization Tools</h3>
-        <div class="mb-4">
-          <div class="flex justify-between items-center mb-1">
-            <span class="flex items-center gap-2">
-              <i class="fab fa-microsoft text-teal-600"></i> Power BI
-            </span>
-            <span class="font-semibold">82%</span>
-          </div>
-          <div class="w-full bg-gray-300 rounded-full h-2">
-            <div class="bg-blue-500 h-2 rounded-full" style="width: 82%;"></div>
-          </div>
-        </div>
-        <div class="mb-4">
-          <div class="flex justify-between items-center mb-1">
-            <span class="flex items-center gap-2">
-              <i class="fas fa-chart-bar text-blue-600"></i> Tableau
-            </span>
-            <span class="font-semibold">87%</span>
-          </div>
-          <div class="w-full bg-gray-300 rounded-full h-2">
-            <div class="bg-blue-500 h-2 rounded-full" style="width: 87%;"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Databases -->
-      <div>
-        <h3 class="text-xl font-bold text-blue-700 mb-4">Databases</h3>
-        <div class="mb-4">
-          <div class="flex justify-between items-center mb-1">
-            <span class="flex items-center gap-2">
-              <i class="fas fa-database text-blue-700"></i> MySQL
-            </span>
-            <span class="font-semibold">86%</span>
-          </div>
-          <div class="w-full bg-gray-300 rounded-full h-2">
-            <div class="bg-blue-500 h-2 rounded-full" style="width: 86%;"></div>
-          </div>
-        </div>
-        <div class="mb-4">
-          <div class="flex justify-between items-center mb-1">
-            <span class="flex items-center gap-2">
-              <i class="fas fa-leaf text-green-700"></i> MongoDB
-            </span>
-            <span class="font-semibold">80%</span>
-          </div>
-          <div class="w-full bg-gray-300 rounded-full h-2">
-            <div class="bg-blue-500 h-2 rounded-full" style="width: 80%;"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Big Data & Cloud -->
-      <div>
-        <h3 class="text-xl font-bold text-blue-700 mb-4">Cloud & Big Data</h3>
-        <div class="mb-4">
-          <div class="flex justify-between items-center mb-1">
-            <span class="flex items-center gap-2">
-              <i class="fas fa-database text-yellow-700"></i> Big Data
-            </span>
-            <span class="font-semibold">80%</span>
-          </div>
-          <div class="w-full bg-gray-300 rounded-full h-2">
-            <div class="bg-blue-500 h-2 rounded-full" style="width: 80%;"></div>
-          </div>
-        </div>
-        <div class="mb-4">
-          <div class="flex justify-between items-center mb-1">
-            <span class="flex items-center gap-2">
-              <i class="fab fa-google text-blue-600"></i> GCP
-            </span>
-            <span class="font-semibold">80%</span>
-          </div>
-          <div class="w-full bg-gray-300 rounded-full h-2">
-            <div class="bg-blue-500 h-2 rounded-full" style="width: 80%;"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Productivity Tools -->
-      <div>
-        <h3 class="text-xl font-bold text-blue-700 mb-4">Productivity Tools</h3>
-        <div class="mb-4">
-          <div class="flex justify-between items-center mb-1">
-            <span class="flex items-center gap-2">
-              <i class="fas fa-file-excel text-green-600"></i> MS Excel
-            </span>
-            <span class="font-semibold">90%</span>
-          </div>
-          <div class="w-full bg-gray-300 rounded-full h-2">
-            <div class="bg-blue-500 h-2 rounded-full" style="width: 90%;"></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-    <section class="bg-gray-100 py-12 px-4 sm:px-8 lg:px-16">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">Projects</h2>
-
-    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-
-      <!-- Project 1: Hiring Assistant AI -->
-      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col p-6">
-        <img src="https://miro.medium.com/v2/resize:fit:1200/1*bTctD2Ub51R_k594veWS7A.jpeg" alt="Hiring Assistant AI" class="w-full h-48 object-cover">
-        <h3 class="text-xl font-semibold mb-2 text-gray-800">Hiring Assistant AI – Resume Screening System</h3>
-        <p class="text-sm text-gray-600 mb-3">An intelligent offline-first RAG-powered system that screens and ranks resumes with fairness and adaptability.</p>
-        <button class="text-blue-600 hover:underline text-sm mb-3" onclick="toggleDetails(this)">View Details</button>
-        <div class="hidden text-sm text-gray-700 space-y-2">
-          <p><strong>Core Features:</strong></p>
-          <ul class="list-disc list-inside">
-            <li>Resume Parsing (PyMuPDF), Semantic Matching (SentenceTransformers)</li>
-            <li>Hybrid Scoring: Rubric + Semantic logic using Pandas</li>
-            <li>Quantized Mistral-7B-Instruct for recruiter chats (local)</li>
-            <li>RAG architecture with feedback-based scoring evolution</li>
-            <li>Fully offline, privacy-compliant with transparent ranking</li>
-          </ul>
-          <p><strong>Stack:</strong> Python, Streamlit, SentenceTransformers, ctransformers, Pandas</p>
-          <p><strong>Outcome:</strong> Reduced time-to-hire, ensured transparency, and evolved with recruiter input—all offline.</p>
-        </div>
-      </div>
-
-      <!-- Project 2: Child Malnutrition Dashboard -->
-      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col p-6">
-        <img src="https://www.researchgate.net/publication/346138561/figure/fig2/AS:961278126325771@1606197973848/Global-status-of-malnutrition-in-different-regions-Source-UNICEF-2018.ppm" alt="Global Malnutrition" class="w-full h-48 object-cover">
-        <h3 class="text-xl font-semibold mb-2 text-gray-800">Visualizing Global Trends in Child Malnutrition</h3>
-        <p class="text-sm text-gray-600 mb-3">Interactive dashboards analyzing child malnutrition across regions, genders, and time periods (1970–2022).</p>
-        <button class="text-blue-600 hover:underline text-sm mb-3" onclick="toggleDetails(this)">View Details</button>
-        <div class="hidden text-sm text-gray-700 space-y-2">
-          <p><strong>Deliverables:</strong></p>
-          <ul class="list-disc list-inside">
-            <li>Filterable severity dashboard by region, gender, year</li>
-            <li>Geospatial heatmaps + time series + scatter/box plots</li>
-            <li>Hotspot analysis: Yemen, Papua New Guinea, etc.</li>
-          </ul>
-          <p><strong>Stack:</strong> Python, Pandas, Tableau, Power BI, Google Sheets</p>
-          <p><strong>Impact:</strong> Translated raw WHO/UNICEF/World Bank data into actionable public health insights.</p>
-        </div>
-      </div>
-
-      <!-- Project 3: AI-Powered Fraud Detection -->
-      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col p-6"> 
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvh2-3AramNpWWYBorjQ6J18lFZjn0hzlI1w&s" alt=">AI-Powered Fraud Detection in Banking" class="w-full h-48 object-cover">
-        <h3 class="text-xl font-semibold mb-2 text-gray-800">AI-Powered Fraud Detection in Banking</h3>
-        <p class="text-sm text-gray-600 mb-3">Designed a real-time AI system to detect and respond to financial fraud with transparency and scalability.</p>
-        <button class="text-blue-600 hover:underline text-sm mb-3" onclick="toggleDetails(this)">View Details</button>
-        <div class="hidden text-sm text-gray-700 space-y-2">
-          <p><strong>Features:</strong></p>
-          <ul class="list-disc list-inside">
-            <li>Latency &lt;300ms, Risk scoring & real-time alerts</li>
-            <li>Supervised + Unsupervised ML, SHAP/LIME explainability</li>
-            <li>Investigation module + feedback loop + retraining</li>
-          </ul>
-          <p><strong>Tech Highlights:</strong> Microservices, 99.99% uptime, AES-256, TLS 1.3, RBAC, ethical AI</p>
-          <p><strong>Value:</strong> Enhanced fraud prediction, auditability, and compliance (GDPR, AML, PCI DSS)</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-
-      <!-- Project Section -->
-  <section id="projects" class="py-20 px-6">
-    <div class="text-center mb-12">
-      <p class="text-green-500 uppercase text-sm font-semibold">Our Work</p>
-      <h2 class="text-3xl md:text-4xl font-bold">Look at our projects</h2>
-      <div class="w-16 h-1 bg-green-500 mx-auto mt-4 mb-6"></div>
-    </div>
-
-    <!-- Filter Buttons -->
-    <div class="flex flex-wrap justify-center gap-4 mb-12">
-      <button class="filter-btn px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition" data-filter="all">Show All</button>
-      <button class="filter-btn px-6 py-2 border border-gray-300 rounded-full hover:bg-gray-100 transition" data-filter="ai">AI</button>
-      <button class="filter-btn px-6 py-2 border border-gray-300 rounded-full hover:bg-gray-100 transition" data-filter="data">Data</button>
-      <button class="filter-btn px-6 py-2 border border-gray-300 rounded-full hover:bg-gray-100 transition" data-filter="ml">ML</button>
-    </div>
-
-    <!-- Projects Grid -->
-    <div class="grid md:grid-cols-3 gap-8" id="project-grid">
-      
-      <!-- Project 1: AI -->
-      <div class="project-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition" data-category="ai ml">
-        <h3 class="text-xl font-semibold mb-2">Hiring Assistant AI</h3>
-        <p class="text-green-500 text-sm mb-2">AI, NLP, RAG</p>
-        <p class="text-sm mb-4">Agentic AI resume screener using RAG, semantic matching, recruiter chat, and full offline mode with Mistral-7B.</p>
-        <ul class="text-sm text-gray-600 list-disc list-inside">
-          <li>Streamlit + SentenceTransformers</li>
-          <li>Privacy-first architecture</li>
-          <li>Real-time recruiter feedback loop</li>
-        </ul>
-      </div>
-
-      <!-- Project 2: Data -->
-      <div class="project-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition" data-category="data">
-        <h3 class="text-xl font-semibold mb-2">Child Malnutrition Visualizer</h3>
-        <p class="text-green-500 text-sm mb-2">Data Analytics, Visualization</p>
-        <p class="text-sm mb-4">Interactive dashboards and geospatial analysis to identify malnutrition patterns from 1970–2022 using WHO and UNICEF data.</p>
-        <ul class="text-sm text-gray-600 list-disc list-inside">
-          <li>Power BI / Tableau dashboards</li>
-          <li>Mapped critical hotspots</li>
-          <li>Age & gender-based trends</li>
-        </ul>
-      </div>
-
-      <!-- Project 3: AI + ML -->
-      <div class="project-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition" data-category="ai ml">
-        <h3 class="text-xl font-semibold mb-2">AI-Powered Fraud Detection</h3>
-        <p class="text-green-500 text-sm mb-2">AI, ML, Cybersecurity</p>
-        <p class="text-sm mb-4">Real-time fraud detection system with explainable ML, behavioral scoring, and GDPR-compliant workflows.</p>
-        <ul class="text-sm text-gray-600 list-disc list-inside">
-          <li>SHAP / LIME for explainability</li>
-          <li>Continuous learning via feedback</li>
-          <li>PCI DSS + GDPR ready</li>
-        </ul>
-      </div>
-
     </div>
   </section>
- 
-<!-- Footer HTML -->
-<footer class="footer">
-  <!-- Column 1: Intro -->
-  <div style="flex: 1; min-width: 280px; margin-bottom: 20px;">
-    <h3>Harshitha's Portfolio</h3>
-    <p>Thank you for visiting my personal portfolio website. Connect with me over socials.</p>
-  </div>
-  <!-- Column 3: Contact Info -->
-<div style="flex: 1; min-width: 280px; margin-bottom: 20px;">
-  <h3>Contact Info</h3>
-  <div class="contact-section mb-4">
-    <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" target="_blank" aria-label="LinkedIn" class="social-icon">
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/harshi1744" target="_blank" aria-label="GitHub" class="social-icon">
-      <i class="fab fa-github"></i>
-    </a>
-    <a href="mailto:harshithasrieya@gmail.com" aria-label="Email" class="social-icon">
-      <i class="fas fa-envelope"></i>
-    </a>
-  </div>
 
-  <!-- Live Date and Time -->
-  <div id="live-date-time" style="font-size: 0.9rem; color: #555;"></div>
-  <div id="live-date-time" style="font-size: 0.9rem; color: white;"></div>
+  <section id="projects" class="px-6 py-16 bg-gray-800">
+    <h2 class="section-title">Projects</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="card">
+        <h3 class="text-lg font-semibold mb-2">Hiring Assistant AI</h3>
+        <p class="text-sm text-gray-400">
+          AI-driven resume screener using RAG, semantic matching, and LLMs for offline privacy-compliant hiring solutions.
+        </p>
+      </div>
+      <div class="card">
+        <h3 class="text-lg font-semibold mb-2">Child Malnutrition Visualizer</h3>
+        <p class="text-sm text-gray-400">
+          Created interactive dashboards using Tableau to explore malnutrition trends across gender, region, and time.
+        </p>
+      </div>
+      <div class="card">
+        <h3 class="text-lg font-semibold mb-2">AI-Powered Fraud Detection</h3>
+        <p class="text-sm text-gray-400">
+          Real-time fraud detection using explainable AI, SHAP/LIME, and microservices architecture for banking use cases.
+        </p>
+      </div>
+    </div>
+  </section>
 
-</div>  
-</footer>
+  <section id="contact" class="px-6 py-16">
+    <h2 class="section-title">Contact</h2>
+    <div class="text-center">
+      <p>Email: <a href="mailto:harshithasrieya@gmail.com" class="text-blue-400 hover:underline">harshithasrieya@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" class="text-blue-400 hover:underline">/harshitha-sreiya-palaparthi</a></p>
+      <p>GitHub: <a href="https://github.com/harshi1744" class="text-blue-400 hover:underline">/harshi1744</a></p>
+    </div>
+  </section>
 
-   <!-- Social Links Sidebar (fixed on left) -->
-<div class="fixed-sidebar" aria-label="Social media links">
-  <a
-    href="https://www.linkedin.com/in/harshithasreiya"
-    title="LinkedIn"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="social-icon"
-    aria-label="LinkedIn"
-  >
-    <i class="fab fa-linkedin"></i>
-    <span class="tooltip">LinkedIn</span>
-  </a>
-
-  <a
-    href="https://github.com/harshi1744"
-    title="GitHub"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="social-icon"
-    aria-label="GitHub"
-  >
-    <i class="fab fa-github"></i>
-    <span class="tooltip">GitHub</span>
-  </a>
-
-  <a
-    href="mailto:harshithasrieya@gmail.com"
-    title="Email"
-    class="social-icon"
-    aria-label="Email"
-  >
-    <i class="fas fa-envelope"></i>
-    <span class="tooltip">Email</span>
-  </a>
-</div>
-
-
-
-    <script>
-  document.querySelectorAll('.view-button').forEach(button => {
-    button.addEventListener('click', () => {
-      const card = button.closest('.project-card');
-      card.classList.toggle('expanded');
-    });
-  });
-
-  function updateDateTime() {
-    const now = new Date();
-    const dateTimeStr = now.toLocaleString('en-IN', {
-      weekday: 'short',
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit'
-    });
-    document.getElementById('live-date-time').textContent = `Current Date & Time: ${dateTimeStr}`;
-  }
-  // Initial call and interval setup
-  updateDateTime();
-  setInterval(updateDateTime, 1000);
-  
-<!-- Toggle script -->
-
-  function toggleDetails(button) {
-    const detailSection = button.nextElementSibling;
-    detailSection.classList.toggle('hidden');
-    button.textContent = detailSection.classList.contains('hidden') ? 'View Details' : 'Hide Details';
-  }
-
-  <!-- Filter Script -->
-
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const filter = button.getAttribute('data-filter');
-
-        projectCards.forEach(card => {
-          const categories = card.getAttribute('data-category');
-          if (filter === 'all' || categories.includes(filter)) {
-            card.classList.remove('hidden');
-          } else {
-            card.classList.add('hidden');
-          }
-        });
-
-        // Optional: Highlight active button
-        filterButtons.forEach(btn => btn.classList.remove('bg-green-500', 'text-white'));
-        button.classList.add('bg-green-500', 'text-white');
-      });
-    });
-
-</script>
-    
+  <footer>
+    &copy; 2025 Harshitha Sreiya Palaparthi. All rights reserved.
+  </footer>
 </body>
-
 </html>
