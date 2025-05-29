@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harshitha's Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
+<!-- Tailwind CSS -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+<!-- Montserrat Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+<!-- Font Awesome (latest stable v6.5) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<!-- Alpine.js -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 <style>
-
 /* Global Styles */
 html {
   scroll-behavior: smooth;
@@ -51,98 +47,93 @@ body {
   }
 }
 
-/* Footer Styling */
-footer {
-  background-color: #ede9fe; /* Light violet */
-  color: #4c1d95;
-  padding: 2rem 1rem;
-  text-align: center;
-  font-size: 0.875rem;
-  margin-top: 3rem;
-}
-
-.footer-icons {
-  margin-top: 1rem;
+/* CSS */
+.fixed-sidebar {
+  position: fixed;
+  top: 40%;
+  left: 20px;
   display: flex;
-  justify-content: center;
-  gap: 1.25rem;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
 }
 
-.footer-icons a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #7c3aed;
-  color: white;
-  width: 40px;
-  height: 40px;
-  border-radius: 9999px;
-  font-size: 1.25rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 8px #a78bfa;
-  animation: iconBounce 2.5s infinite;
+.social-icon {
+  position: relative;
+  color: #fff;
+  background: #333;
+  padding: 12px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 20px;
+  transition: background 0.3s, transform 0.3s;
 }
 
-.footer-icons a:hover {
-  background-color: #6d28d9;
-  box-shadow: 0 0 14px #6d28d9;
+.social-icon:hover {
+  background: #0077b5; /* Default LinkedIn blue — can vary per icon */
   transform: scale(1.1);
 }
+
+.social-icon .tooltip {
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease, left 0.3s ease;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.social-icon:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  left: 50px;
+}
+
   
-  </style>
+</style>
 </head>
-
-<body class="bg-gray-900 text-white">
-  <!-- Top corner decoration -->
-  <div class="fixed top-0 left-0">
-    <div class="corner-shape border-b-[70px] border-r-[70px] border-orange-500"></div>
-  </div>
-
-  <!-- Bottom corner decoration -->
-  <div class="fixed bottom-0 right-0">
-    <div class="corner-shape border-t-[70px] border-l-[70px] border-orange-500"></div>
-  </div>
-
+  
   <!-- Navigation -->
 
-<nav  x-data="{ open: false }" class="bg-gradient-to-r from-purple-700 to-indigo-800 py-4 px-6 flex justify-between items-center shadow-lg sticky top-0 z-50">
+  <nav x-data="{ open: false }" class="bg-violet-300 text-gray-900 shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+    
+    <!-- Logo -->
+    <a href="#home" class="text-xl font-bold tracking-wider">Harshitha</a>
 
-  <!-- Desktop Navigation -->
-  <ul class="hidden md:flex space-x-6 text-white font-medium">
-    <li><a href="#home" class="hover:text-orange-400 hover:underline underline-offset-4">Home</a></li>
-    <li><a href="#about" class="hover:text-orange-400 hover:underline underline-offset-4">About Me</a></li>
-    <li><a href="#career" class="hover:text-orange-400 hover:underline underline-offset-4">Career Summary</a></li>
-    <li><a href="#education" class="hover:text-orange-400 hover:underline underline-offset-4">Education</a></li>
-    <li><a href="#experience" class="hover:text-orange-400 hover:underline underline-offset-4">Experience</a></li>
-    <li><a href="#skills" class="hover:text-orange-400 hover:underline underline-offset-4">Skills</a></li>
-    <li><a href="#projects" class="hover:text-orange-400 hover:underline underline-offset-4">Projects</a></li>
-  </ul>
+    <!-- Desktop Nav -->
+    <ul class="hidden md:flex gap-6 font-medium">
+      <li><a href="#about" class="hover:text-indigo-700 transition">About</a></li>
+      <li><a href="#career" class="hover:text-indigo-700 transition">Career</a></li>
+      <li><a href="#education" class="hover:text-indigo-700 transition">Education</a></li>
+      <li><a href="#projects" class="hover:text-indigo-700 transition">Projects</a></li>
+    </ul>
 
-  <!-- Mobile Toggle Button -->
-  <button @click="open = !open" class="md:hidden text-white focus:outline-none">
-    <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-        d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
-    <svg x-show="open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-        d="M6 18L18 6M6 6l12 12" />
-    </svg>
-  </button>
+    <!-- Hamburger -->
+    <button @click="open = !open" class="md:hidden focus:outline-none">
+      <i class="fas" :class="open ? 'fa-times' : 'fa-bars'"></i>
+    </button>
+  </div>
 
-  <!-- Mobile Dropdown Menu -->
-  <ul x-show="open" @click.away="open = false" 
-      class="absolute top-full left-0 w-full bg-gradient-to-r from-purple-700 to-indigo-800 flex flex-col items-center text-white py-4 space-y-3 md:hidden shadow-md z-40">
-    <li><a href="#home" class="hover:text-orange-400">Home</a></li>
-    <li><a href="#about" class="hover:text-orange-400">About Me</a></li>
-    <li><a href="#career" class="hover:text-orange-400">Career Summary</a></li>
-    <li><a href="#education" class="hover:text-orange-400">Education</a></li>
-    <li><a href="#experience" class="hover:text-orange-400">Experience</a></li>
-    <li><a href="#skills" class="hover:text-orange-400">Skills</a></li>
-    <li><a href="#projects" class="hover:text-orange-400">Projects</a></li>
-  </ul>
+  <!-- Mobile Nav -->
+  <div x-show="open" x-transition class="md:hidden bg-violet-200 text-center py-4 space-y-2">
+    <a href="#about" class="block hover:text-indigo-600">About</a>
+    <a href="#career" class="block hover:text-indigo-600">Career</a>
+    <a href="#education" class="block hover:text-indigo-600">Education</a>
+    <a href="#projects" class="block hover:text-indigo-600">Projects</a>
+  </div>
 </nav>
 
+  
   <!-- Main Section -->
  <section 
   id="home"
@@ -764,42 +755,43 @@ footer {
 </div>  
 </footer>
 
-  <footer class="bg-gray-800 text-center py-4">
-    <p class="text-white text-sm">&copy; 2025 Harshitha. All rights reserved.</p>
-  </footer>
-
-
    <!-- Social Links Sidebar (fixed on left) -->
-  <div class="fixed-sidebar" aria-label="Social media links">
-    <a
-      href="https://www.linkedin.com/in/harshithasreiya"
-      title="LinkedIn"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="social-icon"
-      aria-label="LinkedIn"
-    >
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a
-      href="https://github.com/harshi1744"
-      title="GitHub"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="social-icon"
-      aria-label="GitHub"
-    >
-      <i class="fab fa-github"></i>
-    </a>
-    <a
-      href="mailto:harshithasrieya@gmail.com"
-      title="Email"
-      class="social-icon"
-      aria-label="Email"
-    >
-      <i class="fas fa-envelope"></i>
-    </a>
-  </div>
+<div class="fixed-sidebar" aria-label="Social media links">
+  <a
+    href="https://www.linkedin.com/in/harshithasreiya"
+    title="LinkedIn"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="social-icon"
+    aria-label="LinkedIn"
+  >
+    <i class="fab fa-linkedin"></i>
+    <span class="tooltip">LinkedIn</span>
+  </a>
+
+  <a
+    href="https://github.com/harshi1744"
+    title="GitHub"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="social-icon"
+    aria-label="GitHub"
+  >
+    <i class="fab fa-github"></i>
+    <span class="tooltip">GitHub</span>
+  </a>
+
+  <a
+    href="mailto:harshithasrieya@gmail.com"
+    title="Email"
+    class="social-icon"
+    aria-label="Email"
+  >
+    <i class="fas fa-envelope"></i>
+    <span class="tooltip">Email</span>
+  </a>
+</div>
+
 
 
     <script>
