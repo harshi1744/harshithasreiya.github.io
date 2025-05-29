@@ -127,39 +127,13 @@ body {
     }
   
 </style>
-</head>
-  
-<nav class="bg-violet-100 py-4 shadow-md sticky top-0 z-50">
-  <ul class="flex justify-center space-x-10 font-medium text-violet-800 text-lg">
-    <li class="relative group">
-      <a href="#home" class="hover:text-violet-600 transition">Home</a>
-      <span class="absolute left-0 -bottom-1 h-0.5 w-0 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
-    </li>
-    <li class="relative group">
-      <a href="#about" class="hover:text-violet-600 transition">About</a>
-      <span class="absolute left-0 -bottom-1 h-0.5 w-0 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
-    </li>
-    <li class="relative group">
-      <a href="#career" class="hover:text-violet-600 transition">Career</a>
-      <span class="absolute left-0 -bottom-1 h-0.5 w-0 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
-    </li>
-    <li class="relative group">
-      <a href="#education" class="hover:text-violet-600 transition">Education</a>
-      <span class="absolute left-0 -bottom-1 h-0.5 w-0 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
-    </li>
-    <li class="relative group">
-      <a href="#projects" class="hover:text-violet-600 transition">Projects</a>
-      <span class="absolute left-0 -bottom-1 h-0.5 w-0 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
-    </li>
-  </ul>
-</nav>
-
+</head> 
+  <body>
 <!-- Font Awesome CDN (required for icons) -->
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 />
-
 <nav class="bg-white shadow-md py-4 sticky top-0 z-50">
   <ul class="flex justify-center space-x-12 text-gray-700 font-medium text-sm sm:text-base">
     <li class="group relative flex flex-col items-center">
@@ -200,35 +174,6 @@ body {
   </ul>
 </nav>
 
-<body x-data="scrollSpy()" x-init="init()" @scroll.window="onScroll">
-
-  <!-- Navigation Bar -->
-  <nav class="bg-white shadow-md py-4 sticky top-0 z-50">
-    <ul class="flex justify-center space-x-12 text-gray-700 font-medium text-sm sm:text-base">
-      <template x-for="item in navItems" :key="item.id">
-        <li class="group relative flex flex-col items-center">
-          <a :href="'#' + item.id"
-             :class="active === item.id ? 'text-violet-600 font-semibold' : 'hover:text-violet-600'"
-             class="transition-colors flex flex-col items-center">
-            <i :class="item.icon + ' text-lg mb-1'"></i>
-            <span x-text="item.label"></span>
-          </a>
-          <span class="absolute bottom-0 w-0 h-0.5 bg-violet-600 transition-all duration-300 group-hover:w-full"
-                :class="active === item.id ? 'w-full' : ''"></span>
-        </li>
-      </template>
-    </ul>
-  </nav>
-
-  <!-- Sections -->
-  <section id="home" class="h-screen bg-gray-100">🏠 Home Section</section>
-  <section id="about" class="h-screen bg-gray-200">👤 About Section</section>
-  <section id="career" class="h-screen bg-gray-100">💼 Career Section</section>
-  <section id="education" class="h-screen bg-gray-200">🎓 Education Section</section>
-  <section id="projects" class="h-screen bg-gray-100">💻 Projects Section</section>
-
-
- 
   <!-- Main Section -->
  <section 
   id="home"
