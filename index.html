@@ -977,39 +977,6 @@ body {
   // Initial call and interval setup
   updateDateTime();
   setInterval(updateDateTime, 1000);
-
-        //Alpine.js Scroll Spy Logic
-    function scrollSpy() {
-      return {
-        active: 'home',
-        navItems: [
-          { id: 'home', label: 'Home', icon: 'fas fa-home' },
-          { id: 'about', label: 'About', icon: 'fas fa-user' },
-          { id: 'career', label: 'Career', icon: 'fas fa-briefcase' },
-          { id: 'education', label: 'Education', icon: 'fas fa-graduation-cap' },
-          { id: 'projects', label: 'Projects', icon: 'fas fa-code' }
-        ],
-        init() {
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                this.active = entry.target.id;
-              }
-            });
-          }, {
-            threshold: 0.6
-          });
-
-          this.navItems.forEach(item => {
-            const section = document.getElementById(item.id);
-            if (section) observer.observe(section);
-          });
-        },
-        onScroll() {
-          // Optional: Debounce or add custom scroll behavior
-        }
-      }
-    }
   
 </script>
     
