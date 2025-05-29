@@ -133,6 +133,81 @@ body {
   </div>
 </nav>
 
+
+  <!-- Tab Navigation -->
+  <div x-data="{ activeTab: 'home' }" class="bg-violet-200 text-gray-900 py-4 shadow-md sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-6">
+      <button
+        @click="activeTab = 'home'"
+        :class="activeTab === 'home' ? 'border-b-4 border-indigo-600 text-indigo-700' : 'hover:text-indigo-500'"
+        class="pb-1 font-medium transition"
+        type="button"
+      >
+        Home
+      </button>
+      <button
+        @click="activeTab = 'about'"
+        :class="activeTab === 'about' ? 'border-b-4 border-indigo-600 text-indigo-700' : 'hover:text-indigo-500'"
+        class="pb-1 font-medium transition"
+        type="button"
+      >
+        About
+      </button>
+      <button
+        @click="activeTab = 'career'"
+        :class="activeTab === 'career' ? 'border-b-4 border-indigo-600 text-indigo-700' : 'hover:text-indigo-500'"
+        class="pb-1 font-medium transition"
+        type="button"
+      >
+        Career
+      </button>
+      <button
+        @click="activeTab = 'education'"
+        :class="activeTab === 'education' ? 'border-b-4 border-indigo-600 text-indigo-700' : 'hover:text-indigo-500'"
+        class="pb-1 font-medium transition"
+        type="button"
+      >
+        Education
+      </button>
+      <button
+        @click="activeTab = 'projects'"
+        :class="activeTab === 'projects' ? 'border-b-4 border-indigo-600 text-indigo-700' : 'hover:text-indigo-500'"
+        class="pb-1 font-medium transition"
+        type="button"
+      >
+        Projects
+      </button>
+    </div>
+  </div>
+
+  <!-- Tab Content -->
+  <div x-data="{ activeTab: 'home' }" class="p-6 max-w-5xl mx-auto">
+    <div x-show="activeTab === 'home'" x-transition>
+      <h2 class="text-3xl font-bold mb-4">🏠 Welcome to Home</h2>
+      <p>This is the homepage content. Add a welcome message or introduction here.</p>
+    </div>
+
+    <div x-show="activeTab === 'about'" x-transition>
+      <h2 class="text-3xl font-bold mb-4">👩‍💻 About Me</h2>
+      <p>Information about you — skills, background, interests, etc.</p>
+    </div>
+
+    <div x-show="activeTab === 'career'" x-transition>
+      <h2 class="text-3xl font-bold mb-4">💼 Career Summary</h2>
+      <p>Summary of your professional career, roles, achievements, and experience.</p>
+    </div>
+
+    <div x-show="activeTab === 'education'" x-transition>
+      <h2 class="text-3xl font-bold mb-4">🎓 Education</h2>
+      <p>Details about your academic background, degrees, and certifications.</p>
+    </div>
+
+    <div x-show="activeTab === 'projects'" x-transition>
+      <h2 class="text-3xl font-bold mb-4">📂 Projects</h2>
+      <p>Showcase your projects, portfolios, links, and descriptions here.</p>
+    </div>
+  </div>
+
   
   <!-- Main Section -->
  <section 
