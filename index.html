@@ -762,119 +762,67 @@ body {
 </section>
 
 
+    <section class="bg-gray-100 py-12 px-4 sm:px-8 lg:px-16">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">Academic Projects</h2>
 
-  <section id="projects" class="py-20 px-8 bg-gray-50">
-  <div class="container mx-auto max-w-7xl">
-    <h2 class="text-4xl font-extrabold text-center text-violet-600 mb-12">My Projects</h2>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-      <!-- Project 1 -->
-      <article x-data="{ open: false }" class="project-card flex flex-col overflow-hidden rounded-lg shadow-md bg-white">
+      <!-- Project 1: Hiring Assistant AI -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col p-6">
         <img src="https://miro.medium.com/v2/resize:fit:1200/1*bTctD2Ub51R_k594veWS7A.jpeg" alt="Hiring Assistant AI" class="w-full h-48 object-cover">
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-2xl font-bold text-gray-800 mb-3">Hiring Assistant AI – Agentic Resume Screening System</h3>
-          <p class="text-gray-600 text-sm mb-6 flex-grow">
-            Built a privacy-first, fully offline AI assistant using RAG, SentenceTransformers, and Streamlit. Parses resumes, semantically ranks them, and evolves dynamically with recruiter feedback.
-          </p>
-          <div class="flex space-x-4 mb-4">
-            <button class="bg-violet-600 hover:bg-violet-700 text-white font-semibold py-2 px-4 rounded" @click="open = !open">
-              {{ open ? 'Hide Details' : 'View Details' }}
-            </button>
-            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded border border-gray-300">
-              View Code &lt;/&gt;
-            </a>
-          </div>
-          <div x-show="open" class="project-details mt-2 text-sm text-gray-700 space-y-4" x-transition>
-            <p>This intelligent hiring assistant integrates agentic AI with Retrieval-Augmented Generation (RAG). It screens and ranks resumes, interacts dynamically with recruiters, and adapts based on feedback.</p>
-            <p><strong>Objective:</strong> Develop a lightweight, offline-ready AI assistant that enhances fairness and reduces hiring friction.</p>
-            <h4 class="font-semibold mt-4 mb-2">Core Features:</h4>
-            <ul class="list-disc list-inside">
-              <li>Resume Parsing with PyMuPDF</li>
-              <li>Semantic Matching via SentenceTransformers</li>
-              <li>Hybrid Scoring: semantic + rubric-based</li>
-              <li>Recruiter chat with Mistral-7B-Instruct</li>
-              <li>Real-time feedback updating rankings</li>
-            </ul>
-            <h4 class="font-semibold mt-4 mb-2">Technologies:</h4>
-            <ul class="list-disc list-inside">
-              <li>Python, Streamlit, PyMuPDF, Pandas</li>
-              <li>ctransformers, SentenceTransformers</li>
-              <li>Privacy-first architecture (offline-ready)</li>
-            </ul>
-          </div>
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">Hiring Assistant AI – Resume Screening System</h3>
+        <p class="text-sm text-gray-600 mb-3">An intelligent offline-first RAG-powered system that screens and ranks resumes with fairness and adaptability.</p>
+        <button class="text-blue-600 hover:underline text-sm mb-3" onclick="toggleDetails(this)">View Details</button>
+        <div class="hidden text-sm text-gray-700 space-y-2">
+          <p><strong>Core Features:</strong></p>
+          <ul class="list-disc list-inside">
+            <li>Resume Parsing (PyMuPDF), Semantic Matching (SentenceTransformers)</li>
+            <li>Hybrid Scoring: Rubric + Semantic logic using Pandas</li>
+            <li>Quantized Mistral-7B-Instruct for recruiter chats (local)</li>
+            <li>RAG architecture with feedback-based scoring evolution</li>
+            <li>Fully offline, privacy-compliant with transparent ranking</li>
+          </ul>
+          <p><strong>Stack:</strong> Python, Streamlit, SentenceTransformers, ctransformers, Pandas</p>
+          <p><strong>Outcome:</strong> Reduced time-to-hire, ensured transparency, and evolved with recruiter input—all offline.</p>
         </div>
-      </article>
+      </div>
 
-      <!-- Project 2 -->
-      <article x-data="{ open: false }" class="project-card flex flex-col overflow-hidden rounded-lg shadow-md bg-white">
-        <img src="https://user-images.githubusercontent.com/yourusername/project2-image.png" alt="Music Discoverer" class="w-full h-48 object-cover">
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-2xl font-bold text-gray-800 mb-3">Music Discoverer</h3>
-          <p class="text-gray-600 text-sm mb-6 flex-grow">
-            Created an intuitive music discovery platform powered by collaborative filtering and audio feature analysis to recommend fresh tracks personalized to your tastes.
-          </p>
-          <div class="flex space-x-4 mb-4">
-            <button class="bg-violet-600 hover:bg-violet-700 text-white font-semibold py-2 px-4 rounded" @click="open = !open">
-              {{ open ? 'Hide Details' : 'View Details' }}
-            </button>
-            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded border border-gray-300">
-              View Code &lt;/&gt;
-            </a>
-          </div>
-          <div x-show="open" class="project-details mt-2 text-sm text-gray-700 space-y-4" x-transition>
-            <p>Music Discoverer combines collaborative filtering with advanced audio analysis to recommend tracks that match your listening habits and mood.</p>
-            <p><strong>Objective:</strong> Deliver personalized, serendipitous music recommendations that evolve with user preferences.</p>
-            <h4 class="font-semibold mt-4 mb-2">Core Features:</h4>
-            <ul class="list-disc list-inside">
-              <li>Collaborative Filtering using user behavior</li>
-              <li>Audio Feature Extraction with Librosa</li>
-              <li>Personalized playlists and recommendations</li>
-              <li>Responsive and user-friendly UI</li>
-            </ul>
-            <h4 class="font-semibold mt-4 mb-2">Technologies:</h4>
-            <ul class="list-disc list-inside">
-              <li>Python, Flask, React</li>
-              <li>Librosa, Pandas, PostgreSQL</li>
-            </ul>
-          </div>
+      <!-- Project 2: Child Malnutrition Dashboard -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col p-6">
+        <img src="https://www.researchgate.net/publication/346138561/figure/fig2/AS:961278126325771@1606197973848/Global-status-of-malnutrition-in-different-regions-Source-UNICEF-2018.ppm" alt="Global Malnutrition" class="w-full h-48 object-cover">
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">Visualizing Global Trends in Child Malnutrition</h3>
+        <p class="text-sm text-gray-600 mb-3">Interactive dashboards analyzing child malnutrition across regions, genders, and time periods (1970–2022).</p>
+        <button class="text-blue-600 hover:underline text-sm mb-3" onclick="toggleDetails(this)">View Details</button>
+        <div class="hidden text-sm text-gray-700 space-y-2">
+          <p><strong>Deliverables:</strong></p>
+          <ul class="list-disc list-inside">
+            <li>Filterable severity dashboard by region, gender, year</li>
+            <li>Geospatial heatmaps + time series + scatter/box plots</li>
+            <li>Hotspot analysis: Yemen, Papua New Guinea, etc.</li>
+          </ul>
+          <p><strong>Stack:</strong> Python, Pandas, Tableau, Power BI, Google Sheets</p>
+          <p><strong>Impact:</strong> Translated raw WHO/UNICEF/World Bank data into actionable public health insights.</p>
         </div>
-      </article>
+      </div>
 
-      <!-- Project 3 -->
-      <article x-data="{ open: false }" class="project-card flex flex-col overflow-hidden rounded-lg shadow-md bg-white">
-        <img src="https://user-images.githubusercontent.com/yourusername/project3-image.png" alt="Smart Home Automation" class="w-full h-48 object-cover">
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-2xl font-bold text-gray-800 mb-3">Smart Home Automation</h3>
-          <p class="text-gray-600 text-sm mb-6 flex-grow">
-            Developed a modular smart home system integrating IoT devices, voice control, and AI-based energy optimization for comfort and savings.
-          </p>
-          <div class="flex space-x-4 mb-4">
-            <button class="bg-violet-600 hover:bg-violet-700 text-white font-semibold py-2 px-4 rounded" @click="open = !open">
-              {{ open ? 'Hide Details' : 'View Details' }}
-            </button>
-            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded border border-gray-300">
-              View Code &lt;/&gt;
-            </a>
-          </div>
-          <div x-show="open" class="project-details mt-2 text-sm text-gray-700 space-y-4" x-transition>
-            <p>The Smart Home Automation project connects various IoT devices, enabling voice commands and learning user habits to optimize energy use.</p>
-            <p><strong>Objective:</strong> Create a scalable, AI-powered system for smarter and energy-efficient homes.</p>
-            <h4 class="font-semibold mt-4 mb-2">Core Features:</h4>
-            <ul class="list-disc list-inside">
-              <li>Voice control integration (Alexa, Google Assistant)</li>
-              <li>AI energy usage prediction and optimization</li>
-              <li>Modular IoT device connectivity</li>
-              <li>User habit learning and automation</li>
-            </ul>
-            <h4 class="font-semibold mt-4 mb-2">Technologies:</h4>
-            <ul class="list-disc list-inside">
-              <li>Node.js, MQTT, TensorFlow Lite</li>
-              <li>Raspberry Pi, AWS IoT</li>
-            </ul>
-          </div>
+      <!-- Project 3: AI-Powered Fraud Detection -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col p-6"> 
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvh2-3AramNpWWYBorjQ6J18lFZjn0hzlI1w&s" alt=">AI-Powered Fraud Detection in Banking" class="w-full h-48 object-cover">
+        <h3 class="text-xl font-semibold mb-2 text-gray-800">AI-Powered Fraud Detection in Banking</h3>
+        <p class="text-sm text-gray-600 mb-3">Designed a real-time AI system to detect and respond to financial fraud with transparency and scalability.</p>
+        <button class="text-blue-600 hover:underline text-sm mb-3" onclick="toggleDetails(this)">View Details</button>
+        <div class="hidden text-sm text-gray-700 space-y-2">
+          <p><strong>Features:</strong></p>
+          <ul class="list-disc list-inside">
+            <li>Latency &lt;300ms, Risk scoring & real-time alerts</li>
+            <li>Supervised + Unsupervised ML, SHAP/LIME explainability</li>
+            <li>Investigation module + feedback loop + retraining</li>
+          </ul>
+          <p><strong>Tech Highlights:</strong> Microservices, 99.99% uptime, AES-256, TLS 1.3, RBAC, ethical AI</p>
+          <p><strong>Value:</strong> Enhanced fraud prediction, auditability, and compliance (GDPR, AML, PCI DSS)</p>
         </div>
-      </article>
+      </div>
 
     </div>
   </div>
@@ -974,6 +922,14 @@ body {
   updateDateTime();
   setInterval(updateDateTime, 1000);
   
+<!-- Toggle script -->
+
+  function toggleDetails(button) {
+    const detailSection = button.nextElementSibling;
+    detailSection.classList.toggle('hidden');
+    button.textContent = detailSection.classList.contains('hidden') ? 'View Details' : 'Hide Details';
+  }
+
 </script>
     
 </body>
