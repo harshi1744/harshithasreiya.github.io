@@ -12,6 +12,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 <!-- Alpine.js -->
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+ <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
 <style>
 /* Global Styles */
 html {
@@ -97,118 +101,134 @@ body {
   opacity: 1;
   left: 50px;
 }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #7c3aed; /* Violet-600 */
+      transition: width 0.3s ease-in-out;
+    }
 
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-link-active::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #7c3aed;
+    }
   
 </style>
 </head>
   
-  <!-- Navigation -->
-
-  <nav x-data="{ open: false }" class="bg-violet-300 text-gray-900 shadow-md sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-    
-    <!-- Logo -->
-    <a href="#home" class="text-xl font-bold tracking-wider">Harshitha</a>
-
-    <!-- Desktop Nav -->
-    <ul class="hidden md:flex gap-6 font-medium">
-      <li><a href="#about" class="hover:text-indigo-700 transition">About</a></li>
-      <li><a href="#career" class="hover:text-indigo-700 transition">Career</a></li>
-      <li><a href="#education" class="hover:text-indigo-700 transition">Education</a></li>
-      <li><a href="#projects" class="hover:text-indigo-700 transition">Projects</a></li>
-    </ul>
-
-    <!-- Hamburger -->
-    <button @click="open = !open" class="md:hidden focus:outline-none">
-      <i class="fas" :class="open ? 'fa-times' : 'fa-bars'"></i>
-    </button>
-  </div>
-
-  <!-- Mobile Nav -->
-  <div x-show="open" x-transition class="md:hidden bg-violet-200 text-center py-4 space-y-2">
-    <a href="#about" class="block hover:text-indigo-600">About</a>
-    <a href="#career" class="block hover:text-indigo-600">Career</a>
-    <a href="#education" class="block hover:text-indigo-600">Education</a>
-    <a href="#projects" class="block hover:text-indigo-600">Projects</a>
-  </div>
+<nav class="bg-violet-100 py-4 shadow-md sticky top-0 z-50">
+  <ul class="flex justify-center space-x-10 font-medium text-violet-800 text-lg">
+    <li class="relative group">
+      <a href="#home" class="hover:text-violet-600 transition">Home</a>
+      <span class="absolute left-0 -bottom-1 h-0.5 w-0 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
+    </li>
+    <li class="relative group">
+      <a href="#about" class="hover:text-violet-600 transition">About</a>
+      <span class="absolute left-0 -bottom-1 h-0.5 w-0 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
+    </li>
+    <li class="relative group">
+      <a href="#career" class="hover:text-violet-600 transition">Career</a>
+      <span class="absolute left-0 -bottom-1 h-0.5 w-0 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
+    </li>
+    <li class="relative group">
+      <a href="#education" class="hover:text-violet-600 transition">Education</a>
+      <span class="absolute left-0 -bottom-1 h-0.5 w-0 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
+    </li>
+    <li class="relative group">
+      <a href="#projects" class="hover:text-violet-600 transition">Projects</a>
+      <span class="absolute left-0 -bottom-1 h-0.5 w-0 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
+    </li>
+  </ul>
 </nav>
 
+<!-- Font Awesome CDN (required for icons) -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
 
-  <!-- Tab Navigation -->
-  <div x-data="{ activeTab: 'home' }" class="bg-violet-200 text-gray-900 py-4 shadow-md sticky top-0 z-50">
-    <div class="max-w-5xl mx-auto px-4 flex justify-center gap-6">
-      <button
-        @click="activeTab = 'home'"
-        :class="activeTab === 'home' ? 'border-b-4 border-indigo-600 text-indigo-700' : 'hover:text-indigo-500'"
-        class="pb-1 font-medium transition"
-        type="button"
-      >
+<nav class="bg-white shadow-md py-4 sticky top-0 z-50">
+  <ul class="flex justify-center space-x-12 text-gray-700 font-medium text-sm sm:text-base">
+    <li class="group relative flex flex-col items-center">
+      <a href="#home" class="hover:text-violet-600 transition-colors">
+        <i class="fas fa-home text-lg mb-1"></i>
         Home
-      </button>
-      <button
-        @click="activeTab = 'about'"
-        :class="activeTab === 'about' ? 'border-b-4 border-indigo-600 text-indigo-700' : 'hover:text-indigo-500'"
-        class="pb-1 font-medium transition"
-        type="button"
-      >
+      </a>
+      <span class="absolute bottom-0 w-0 h-0.5 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
+    </li>
+    <li class="group relative flex flex-col items-center">
+      <a href="#about" class="hover:text-violet-600 transition-colors">
+        <i class="fas fa-user text-lg mb-1"></i>
         About
-      </button>
-      <button
-        @click="activeTab = 'career'"
-        :class="activeTab === 'career' ? 'border-b-4 border-indigo-600 text-indigo-700' : 'hover:text-indigo-500'"
-        class="pb-1 font-medium transition"
-        type="button"
-      >
+      </a>
+      <span class="absolute bottom-0 w-0 h-0.5 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
+    </li>
+    <li class="group relative flex flex-col items-center">
+      <a href="#career" class="hover:text-violet-600 transition-colors">
+        <i class="fas fa-briefcase text-lg mb-1"></i>
         Career
-      </button>
-      <button
-        @click="activeTab = 'education'"
-        :class="activeTab === 'education' ? 'border-b-4 border-indigo-600 text-indigo-700' : 'hover:text-indigo-500'"
-        class="pb-1 font-medium transition"
-        type="button"
-      >
+      </a>
+      <span class="absolute bottom-0 w-0 h-0.5 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
+    </li>
+    <li class="group relative flex flex-col items-center">
+      <a href="#education" class="hover:text-violet-600 transition-colors">
+        <i class="fas fa-graduation-cap text-lg mb-1"></i>
         Education
-      </button>
-      <button
-        @click="activeTab = 'projects'"
-        :class="activeTab === 'projects' ? 'border-b-4 border-indigo-600 text-indigo-700' : 'hover:text-indigo-500'"
-        class="pb-1 font-medium transition"
-        type="button"
-      >
+      </a>
+      <span class="absolute bottom-0 w-0 h-0.5 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
+    </li>
+    <li class="group relative flex flex-col items-center">
+      <a href="#projects" class="hover:text-violet-600 transition-colors">
+        <i class="fas fa-code text-lg mb-1"></i>
         Projects
-      </button>
-    </div>
-  </div>
+      </a>
+      <span class="absolute bottom-0 w-0 h-0.5 bg-violet-600 transition-all duration-300 group-hover:w-full"></span>
+    </li>
+  </ul>
+</nav>
 
-  <!-- Tab Content -->
-  <div x-data="{ activeTab: 'home' }" class="p-6 max-w-5xl mx-auto">
-    <div x-show="activeTab === 'home'" x-transition>
-      <h2 class="text-3xl font-bold mb-4">🏠 Welcome to Home</h2>
-      <p>This is the homepage content. Add a welcome message or introduction here.</p>
-    </div>
+<body x-data="scrollSpy()" x-init="init()" @scroll.window="onScroll">
 
-    <div x-show="activeTab === 'about'" x-transition>
-      <h2 class="text-3xl font-bold mb-4">👩‍💻 About Me</h2>
-      <p>Information about you — skills, background, interests, etc.</p>
-    </div>
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-md py-4 sticky top-0 z-50">
+    <ul class="flex justify-center space-x-12 text-gray-700 font-medium text-sm sm:text-base">
+      <template x-for="item in navItems" :key="item.id">
+        <li class="group relative flex flex-col items-center">
+          <a :href="'#' + item.id"
+             :class="active === item.id ? 'text-violet-600 font-semibold' : 'hover:text-violet-600'"
+             class="transition-colors flex flex-col items-center">
+            <i :class="item.icon + ' text-lg mb-1'"></i>
+            <span x-text="item.label"></span>
+          </a>
+          <span class="absolute bottom-0 w-0 h-0.5 bg-violet-600 transition-all duration-300 group-hover:w-full"
+                :class="active === item.id ? 'w-full' : ''"></span>
+        </li>
+      </template>
+    </ul>
+  </nav>
 
-    <div x-show="activeTab === 'career'" x-transition>
-      <h2 class="text-3xl font-bold mb-4">💼 Career Summary</h2>
-      <p>Summary of your professional career, roles, achievements, and experience.</p>
-    </div>
+  <!-- Sections -->
+  <section id="home" class="h-screen bg-gray-100">🏠 Home Section</section>
+  <section id="about" class="h-screen bg-gray-200">👤 About Section</section>
+  <section id="career" class="h-screen bg-gray-100">💼 Career Section</section>
+  <section id="education" class="h-screen bg-gray-200">🎓 Education Section</section>
+  <section id="projects" class="h-screen bg-gray-100">💻 Projects Section</section>
 
-    <div x-show="activeTab === 'education'" x-transition>
-      <h2 class="text-3xl font-bold mb-4">🎓 Education</h2>
-      <p>Details about your academic background, degrees, and certifications.</p>
-    </div>
 
-    <div x-show="activeTab === 'projects'" x-transition>
-      <h2 class="text-3xl font-bold mb-4">📂 Projects</h2>
-      <p>Showcase your projects, portfolios, links, and descriptions here.</p>
-    </div>
-  </div>
-
-  
+ 
   <!-- Main Section -->
  <section 
   id="home"
@@ -800,6 +820,125 @@ body {
   </div>
 </section>
 
+
+
+  <section id="projects" class="py-20 px-8 bg-gray-50">
+  <div class="container mx-auto max-w-7xl">
+    <h2 class="text-4xl font-extrabold text-center text-violet-600 mb-12">My Projects</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Project 1 -->
+      <article x-data="{ open: false }" class="project-card flex flex-col overflow-hidden rounded-lg shadow-md bg-white">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/1*bTctD2Ub51R_k594veWS7A.jpeg" alt="Hiring Assistant AI" class="w-full h-48 object-cover">
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-2xl font-bold text-gray-800 mb-3">Hiring Assistant AI – Agentic Resume Screening System</h3>
+          <p class="text-gray-600 text-sm mb-6 flex-grow">
+            Built a privacy-first, fully offline AI assistant using RAG, SentenceTransformers, and Streamlit. Parses resumes, semantically ranks them, and evolves dynamically with recruiter feedback.
+          </p>
+          <div class="flex space-x-4 mb-4">
+            <button class="bg-violet-600 hover:bg-violet-700 text-white font-semibold py-2 px-4 rounded" @click="open = !open">
+              {{ open ? 'Hide Details' : 'View Details' }}
+            </button>
+            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded border border-gray-300">
+              View Code &lt;/&gt;
+            </a>
+          </div>
+          <div x-show="open" class="project-details mt-2 text-sm text-gray-700 space-y-4" x-transition>
+            <p>This intelligent hiring assistant integrates agentic AI with Retrieval-Augmented Generation (RAG). It screens and ranks resumes, interacts dynamically with recruiters, and adapts based on feedback.</p>
+            <p><strong>Objective:</strong> Develop a lightweight, offline-ready AI assistant that enhances fairness and reduces hiring friction.</p>
+            <h4 class="font-semibold mt-4 mb-2">Core Features:</h4>
+            <ul class="list-disc list-inside">
+              <li>Resume Parsing with PyMuPDF</li>
+              <li>Semantic Matching via SentenceTransformers</li>
+              <li>Hybrid Scoring: semantic + rubric-based</li>
+              <li>Recruiter chat with Mistral-7B-Instruct</li>
+              <li>Real-time feedback updating rankings</li>
+            </ul>
+            <h4 class="font-semibold mt-4 mb-2">Technologies:</h4>
+            <ul class="list-disc list-inside">
+              <li>Python, Streamlit, PyMuPDF, Pandas</li>
+              <li>ctransformers, SentenceTransformers</li>
+              <li>Privacy-first architecture (offline-ready)</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article x-data="{ open: false }" class="project-card flex flex-col overflow-hidden rounded-lg shadow-md bg-white">
+        <img src="https://user-images.githubusercontent.com/yourusername/project2-image.png" alt="Music Discoverer" class="w-full h-48 object-cover">
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-2xl font-bold text-gray-800 mb-3">Music Discoverer</h3>
+          <p class="text-gray-600 text-sm mb-6 flex-grow">
+            Created an intuitive music discovery platform powered by collaborative filtering and audio feature analysis to recommend fresh tracks personalized to your tastes.
+          </p>
+          <div class="flex space-x-4 mb-4">
+            <button class="bg-violet-600 hover:bg-violet-700 text-white font-semibold py-2 px-4 rounded" @click="open = !open">
+              {{ open ? 'Hide Details' : 'View Details' }}
+            </button>
+            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded border border-gray-300">
+              View Code &lt;/&gt;
+            </a>
+          </div>
+          <div x-show="open" class="project-details mt-2 text-sm text-gray-700 space-y-4" x-transition>
+            <p>Music Discoverer combines collaborative filtering with advanced audio analysis to recommend tracks that match your listening habits and mood.</p>
+            <p><strong>Objective:</strong> Deliver personalized, serendipitous music recommendations that evolve with user preferences.</p>
+            <h4 class="font-semibold mt-4 mb-2">Core Features:</h4>
+            <ul class="list-disc list-inside">
+              <li>Collaborative Filtering using user behavior</li>
+              <li>Audio Feature Extraction with Librosa</li>
+              <li>Personalized playlists and recommendations</li>
+              <li>Responsive and user-friendly UI</li>
+            </ul>
+            <h4 class="font-semibold mt-4 mb-2">Technologies:</h4>
+            <ul class="list-disc list-inside">
+              <li>Python, Flask, React</li>
+              <li>Librosa, Pandas, PostgreSQL</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article x-data="{ open: false }" class="project-card flex flex-col overflow-hidden rounded-lg shadow-md bg-white">
+        <img src="https://user-images.githubusercontent.com/yourusername/project3-image.png" alt="Smart Home Automation" class="w-full h-48 object-cover">
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-2xl font-bold text-gray-800 mb-3">Smart Home Automation</h3>
+          <p class="text-gray-600 text-sm mb-6 flex-grow">
+            Developed a modular smart home system integrating IoT devices, voice control, and AI-based energy optimization for comfort and savings.
+          </p>
+          <div class="flex space-x-4 mb-4">
+            <button class="bg-violet-600 hover:bg-violet-700 text-white font-semibold py-2 px-4 rounded" @click="open = !open">
+              {{ open ? 'Hide Details' : 'View Details' }}
+            </button>
+            <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded border border-gray-300">
+              View Code &lt;/&gt;
+            </a>
+          </div>
+          <div x-show="open" class="project-details mt-2 text-sm text-gray-700 space-y-4" x-transition>
+            <p>The Smart Home Automation project connects various IoT devices, enabling voice commands and learning user habits to optimize energy use.</p>
+            <p><strong>Objective:</strong> Create a scalable, AI-powered system for smarter and energy-efficient homes.</p>
+            <h4 class="font-semibold mt-4 mb-2">Core Features:</h4>
+            <ul class="list-disc list-inside">
+              <li>Voice control integration (Alexa, Google Assistant)</li>
+              <li>AI energy usage prediction and optimization</li>
+              <li>Modular IoT device connectivity</li>
+              <li>User habit learning and automation</li>
+            </ul>
+            <h4 class="font-semibold mt-4 mb-2">Technologies:</h4>
+            <ul class="list-disc list-inside">
+              <li>Node.js, MQTT, TensorFlow Lite</li>
+              <li>Raspberry Pi, AWS IoT</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
  
 <!-- Footer HTML -->
 <footer class="footer">
@@ -893,6 +1032,40 @@ body {
   // Initial call and interval setup
   updateDateTime();
   setInterval(updateDateTime, 1000);
+
+        //Alpine.js Scroll Spy Logic
+    function scrollSpy() {
+      return {
+        active: 'home',
+        navItems: [
+          { id: 'home', label: 'Home', icon: 'fas fa-home' },
+          { id: 'about', label: 'About', icon: 'fas fa-user' },
+          { id: 'career', label: 'Career', icon: 'fas fa-briefcase' },
+          { id: 'education', label: 'Education', icon: 'fas fa-graduation-cap' },
+          { id: 'projects', label: 'Projects', icon: 'fas fa-code' }
+        ],
+        init() {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                this.active = entry.target.id;
+              }
+            });
+          }, {
+            threshold: 0.6
+          });
+
+          this.navItems.forEach(item => {
+            const section = document.getElementById(item.id);
+            if (section) observer.observe(section);
+          });
+        },
+        onScroll() {
+          // Optional: Debounce or add custom scroll behavior
+        }
+      }
+    }
+  
 </script>
     
 </body>
