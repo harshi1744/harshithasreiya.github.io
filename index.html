@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harshitha | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN for icons -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    rel="stylesheet"
+  />
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Corner Shape (unused, but kept) */
+.corner-shape {
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* Glow Pulse Animation */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 10px #9f7aea, 0 0 20px #9f7aea;
+  }
+  50% {
+    text-shadow: 0 0 20px #d6bcfa, 0 0 40px #d6bcfa;
+  }
+}
+.animate-glow-pulse {
+  animation: glowPulse 3s infinite ease-in-out;
+}
+
+/* Slow Zoom Background Animation */
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+section.relative {
+  animation: slowZoom 30s ease-in-out infinite;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Float Up Down Animation */
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0) rotate(-90deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-90deg);
+  }
+}
+.animate-float {
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+/* Delays for Staggered Animations */
+.delay-150 {
+  animation-delay: 0.15s;
+}
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fadeInUp 0.8s ease forwards;
+}
+.animate-fade-in.delay-150 {
+  animation-delay: 0.15s;
+}
+
+/* Badge Styling */
+.badge {
+  background-color: #ede9fe; /* Light Violet */
+  color: #6d28d9;            /* Violet text */
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* Section: Skills */
+#skills {
+  background-color: #f9fafb;
+  padding: 4rem 1.5rem;
+  color: #1f2937;
+  font-family: 'Segoe UI', sans-serif;
+}
+.skill-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(100, 100, 111, 0.1);
+  transition: all 0.3s ease;
+}
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(100, 100, 111, 0.15);
+}
+.skill-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #7c3aed;
+  margin-bottom: 1rem;
+}
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  columns: 2;
+  column-gap: 1.5rem;
+}
+.skill-list li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Section: Education */
+#education {
+  background-color: #ffffff;
+  padding: 4rem 1.5rem;
+  color: #1f2937;
+  font-family: 'Segoe UI', sans-serif;
+}
+#education h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #7c3aed; /* violet-600 */
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 768px) {
+  #education h2 {
+    font-size: 2.5rem;
+  }
+}
+#education .space-y-10 {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#education .bg-gray-50 {
+  background-color: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(100, 100, 111, 0.08);
+  transition: all 0.3s ease;
+}
+#education .bg-gray-50:hover {
+  box-shadow: 0 8px 20px rgba(100, 100, 111, 0.15);
+}
+#education h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #6d28d9; /* violet-700 */
+  margin-bottom: 0.5rem;
+}
+#education p.text-sm {
+  font-size: 0.875rem;
+  color: #6b7280; /* gray-500 */
+  margin-bottom: 0.5rem;
+}
+#education p.text-gray-700 {
+  color: #374151; /* gray-700 */
+  font-size: 1rem;
+}
+
+/* Section: Projects */
+#projects {
+  background-color: #f9fafb;
+  padding: 5rem 2rem;
+}
+#projects h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #7c3aed; /* Tailwind's violet-600 */
+  text-align: center;
+  margin-bottom: 3rem;
+}
+#projects .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+@media (min-width: 768px) {
+  #projects .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  #projects .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.project-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+.project-card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+.project-card .p-6 {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.project-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937; /* Gray-800 */
+  margin-bottom: 0.75rem;
+}
+.project-card p {
+  font-size: 0.875rem;
+  color: #4b5563; /* Gray-600 */
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+.view-button, .code-button {
+  background-color: #7c3aed;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+.code-button {
+  background-color: #4f46e5; /* Indigo-600 */
+}
+.view-button:hover {
+  background-color: #6d28d9; /* Violet-700 */
+}
+.code-button:hover {
+  background-color: #4338ca; /* Indigo-700 */
+}
+.project-details {
+  display: none;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: #374151; /* Gray-700 */
+}
+.project-card.expanded .project-details {
+  display: block;
+}
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                 0 0 20px rgba(255, 255, 255, 0.6), 
+                 0 0 30px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 1), 
+                 0 0 25px rgba(255, 255, 255, 0.8), 
+                 0 0 35px rgba(255, 255, 255, 0.6);
+  }
+}
+
+.glowing-text {
+  animation: glow 2.5s ease-in-out infinite;
+}
+  .fixed-sidebar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  z-index: 9999;
+  padding: 8px 0;
+}
+
+.social-icon {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  width: 44px;
+  height: 44px;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+
+/* Footer Styling */
+footer.footer {
+  background-color: #1f2937; /* Tailwind's gray-800 */
+  color: #f9fafb; /* Tailwind's gray-100 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  text-align: left;
+}
+footer.footer h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #e5e7eb; /* Tailwind's gray-200 */
+}
+footer.footer p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d1d5db; /* Tailwind's gray-300 */
+}
+.footer-note {
+  margin-top: 1rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #a78bfa; /* Tailwind's violet-400 */
+}
+
+/* Social Icons */
+.social-icon {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.social-icon:hover {
+  color: #a78bfa; /* violet-400 */
+}
+
+/* Live Date and Time Override */
+#live-date-time {
+  color: black !important;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  footer.footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .social-icon {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Copyright footer */
+footer.footer-copyright {
+  background-color: #1f2937; /* Tailwind gray-800 */
+  color: white;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+#career .scrolling-skills {
+  display: flex;
+  gap: 4rem; /* space between skill groups */
+  animation: scroll-left 30s linear infinite;
+  white-space: nowrap;
+  padding: 1rem 0;
+}
+
+#career .scrolling-skills:hover {
+  animation-play-state: paused; /* pause on hover */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+  <!-- Top corner decoration -->
+  <div class="fixed top-0 left-0">
+    <div class="corner-shape border-b-[70px] border-r-[70px] border-orange-500"></div>
+  </div>
+
+  <!-- Bottom corner decoration -->
+  <div class="fixed bottom-0 right-0">
+    <div class="corner-shape border-t-[70px] border-l-[70px] border-orange-500"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="bg-gray-800 py-4 px-6 flex justify-between items-center shadow-md z-50 sticky top-0">
+    <h1 class="text-2xl font-bold text-orange-500">HARSHITHA'S PORTFOLIO</h1>
+    <ul class="hidden md:flex space-x-6 text-white">
+    <li><a href="#home" class="hover:text-orange-400">Home</a></li>
+    <li><a href="#about" class="hover:text-orange-400">About Me</a></li>
+    <li><a href="#career" class="hover:text-orange-400">Career Summary</a></li>
+    <li><a href="#education" class="hover:text-orange-400">Education</a></li>
+    <li><a href="#experience" class="hover:text-orange-400">Experience</a></li>
+    <li><a href="#skills" class="hover:text-orange-400">Skills</a></li>
+    <li><a href="#projects" class="hover:text-orange-400">Projects</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Main Section -->
+ <section 
+  id="home"
+  class="relative min-h-screen flex flex-col md:flex-row items-center justify-center py-20 px-8 space-y-10 md:space-y-0 md:space-x-12 overflow-hidden"
+  style="background-image: url('https://wallpapers.com/blog/wp-content/uploads/2023/06/Web-development-concept-with-person-using-a-laptop-computer.jpeg'); background-size: cover; background-position: center;"
+>
+
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+
+  <div class="relative z-10 text-center md:text-left max-w-xl">
+    <p class="text-white text-lg mb-6 glowing-text">
+      Behind every dataset lies a story, and within every line of code, a spark of creativity. This portfolio is an invitation to witness the fusion of business and programming, where passion drives progress, and every challenge is an opportunity to innovate. Welcome to the future I’m building, one idea at a time.
+    </p> 
+  </div>
+
+  <img 
+    src="https://thumbs.dreamstime.com/b/d-icon-avatar-cartoon-cute-freelancer-woman-working-online-learning-laptop-transparent-png-background-works-embodying-345422695.jpg" 
+    alt="Professional photo of Harshitha" 
+    class="relative z-10 w-60 h-60 rounded-full object-cover shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
+  />
+
+</section>
+  <!-- Follow Me -->
+<!-- Social Links Sidebar -->
+<div class="fixed left-0 top-1/2 transform -translate-y-1/2 flex flex-col items-center space-y-6 z-50">
+  <a href="https://www.linkedin.com/in/harshithasreiya" title="LinkedIn" target="_blank" class="social-icon">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="https://github.com/harshi1744" title="GitHub" target="_blank" class="social-icon">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="mailto:harshithasrieya@gmail.com" title="Email" class="social-icon">
+    <i class="fas fa-envelope"></i>
+  </a>
+</div>
+
+  <!-- Reamining Sections -->
+ <section id="about" class="relative hero-section flex flex-col md:flex-row items-center justify-center p-8 overflow-hidden min-h-screen">
+
+  <!-- Background GIF -->
+  <img 
+    src="https://cdn.dribbble.com/userupload/35540897/file/original-7b9335903fdfa34d29222e2b4faccd5b.gif" 
+    alt="Background Animation" 
+    class="absolute inset-0 w-full h-full object-cover opacity-40 z-0"
+  />
+
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-gray-900 bg-opacity-60 z-0"></div>
+
+  <!-- Main content -->
+<div class="relative z-10 text-center md:text-center md:w-1/2 p-4 md:pr-12 mt-8 md:mt-0 order-2 md:order-1">
+      <h3 class="text-3xl md:text-4xl font-semibold text-black-300 mb-4">About Me</h3>
+
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 text-black-400 animate-glow-pulse">
+      Hi 👋 I'm Harshitha!
+    </h1>
+    <p class="text-lg text-black-200 mb-10 max-w-xl mx-auto md:mx-0">
+      A passionate Data Scientist and Business Analyst blending innovation with insights to solve real-world problems. Behind every dataset lies a story; within every line of code, a spark of creativity.
+    </p>
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row items-center sm:justify-start gap-4">
+      <a href="#projects" class="btn border-2 border-violet-500 bg-violet-500 hover:bg-violet-600 text-white py-2 px-6 rounded shadow transition duration-300">
+        View Projects
+      </a>
+      <a href="/resume.pdf" download class="btn border-2 border-violet-400 hover:bg-violet-500 hover:text-white text-violet-300 py-2 px-6 rounded transition duration-300">
+        Download Resume
+      </a>
+    </div>
+  </div>
+</section>
+  
+  <section id="career" class="py-16 px-6 md:px-20 bg-gray-50 text-gray-800 animate-fade-in-up">
+  <h2 class="text-4xl font-bold text-center text-black-600 mb-12">Career Summary</h2> 
+  <p class="text-center max-w-3xl mx-auto text-gray-700 text-lg mb-8">
+    Master’s student in Business Analytics with strong skills in data modeling, data visualization, and business intelligence tools. Experienced in AI-driven applications, front-end reporting, and KPI tracking. Available from December 2025 for full-time roles across the U.S.
+  </p>
+
+  <div class="scrolling-skills max-w-5xl mx-auto border-t border-b border-gray-300 py-4 overflow-x-auto whitespace-nowrap space-x-10 flex items-center">
+    
+    <!-- Programming Languages -->
+    <div class="inline-block text-center">
+      <h3 class="font-semibold text-violet-600 mb-2">Programming Languages</h3>
+      <ul class="flex space-x-4">
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-10 h-10" /></li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="w-10 h-10" /></li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-10 h-10" /></li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQL" class="w-10 h-10" /></li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="w-10 h-10" /></li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="w-10 h-10" /></li>
+      </ul>
+    </div>
+
+    <!-- Tools -->
+    <div class="inline-block text-center">
+      <h3 class="font-semibold text-violet-600 mb-2">Tools</h3>
+      <ul class="flex space-x-4">
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8I6j_R1FjD_Ar8GF7DxAzA9gpKyROmx7MqA&s" alt="MS Excel" class="w-10 h-10" /></li>
+        <li><img src="https://raw.githubusercontent.com/github/explore/a4691f04ff219c1c2aa02fc61fda41aa43f1459a/topics/jupyter-notebook/jupyter-notebook.png" alt="Jupyter Notebook" class="w-10 h-10" /></li>
+      </ul>
+    </div>
+
+    <!-- Technologies -->
+    <div class="inline-block text-center">
+      <h3 class="font-semibold text-violet-600 mb-2">Technologies</h3>
+      <ul class="flex space-x-4">
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-10 h-10" /></li>
+        <li><img src="https://www.svgrepo.com/show/7344/sql-file-format-symbol.svg" alt="MySQL File Icon" class="w-10 h-10" /></li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-10 h-10" /></li>
+        <li><img src="https://numpy.org/images/logo.svg" alt="Numpy" class="w-10 h-10" /></li>
+        <li><img src="https://pandas.pydata.org/static/img/pandas_mark.svg" alt="Pandas" class="w-10 h-10" /></li>
+        <li><img src="https://azure.microsoft.com/svghandler/azure-icon.svg" alt="Microsoft Azure" class="w-10 h-10" /></li>
+        <li><img src="https://logos-world.net/wp-content/uploads/2021/10/Tableau-Symbol.png" alt="Tableau" class="w-10 h-10" /></li>
+        <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/1200px-New_Power_BI_Logo.svg.png" alt="Power BI" class="w-10 h-10" /></li>
+      </ul>
+    </div>
+
+    <!-- Others -->
+    <div class="inline-block text-center">
+      <h3 class="font-semibold text-violet-600 mb-2">Others</h3>
+      <ul class="flex space-x-4">
+        <li><img src="https://cdn.iconscout.com/icon/free/png-256/free-google-cloud-logo-icon-download-in-svg-png-gif-file-formats--weather-storage-data-pack-logos-icons-1721675.png?f=webp&w=256" alt="GCP" class="w-10 h-10" /></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <section id="education-infographic" class="py-16 px-6 md:px-20 bg-white text-gray-800">
+  <h2 class="text-3xl md:text-4xl font-bold mb-16 text-black-700 text-center">Education</h2>
+
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-12 md:space-y-0 md:space-x-16">
+
+    <!-- UNT Infographic -->
+    <div class="flex flex-col items-center bg-violet-50 rounded-lg p-8 shadow-lg w-full md:w-1/2">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk6nsth-dM_LlSDgCV8kS3817LWGRyJKWTJY9hg93mpuCVL-r3LDD2ybfENmnhRCDM4xA&usqp=CAU" alt="University of North Texas" class="w-24 h-24 mb-6 object-contain" />
+
+      <h3 class="text-2xl font-bold text-violet-700 mb-2">University of North Texas</h3>
+      <p class="text-sm text-gray-600 mb-4">Texas, United States</p>
+      <div class="text-violet-600 font-semibold mb-4">Jan 2024 – Dec 2025</div>
+      <p class="text-center text-gray-700">Master of Science in Business Analytics</p>
+    </div>
+
+    <!-- Osmania University Infographic -->
+    <div class="flex flex-col items-center bg-violet-50 rounded-lg p-8 shadow-lg w-full md:w-1/2">
+    <img src="https://www.osmania.ac.in/images/ou.png" alt="Osmania University Logo" class="w-24 h-24 mb-6 object-contain" />
+      <h3 class="text-2xl font-bold text-violet-700 mb-2">Osmania University</h3>
+      <p class="text-sm text-gray-600 mb-4">Hyderabad, India</p>
+      <div class="text-violet-600 font-semibold mb-4">Jun 2020 – Apr 2023</div>
+      <p class="text-center text-gray-700">Bachelor of Commerce in Computer Science</p>
+    </div>
+
+  </div>
+</section>
+
+  <section id="experience" class="py-16 px-6 md:px-20 bg-white text-gray-800">
+  <h2 class="text-4xl font-bold text-center text-black-600 mb-12">Professional Experience</h2>
+
+  <!-- Container for text + image side-by-side -->
+  <div class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-start gap-10">
+
+    <!-- Left Side: Experience Content -->
+    <div class="md:w-2/3 space-y-10">
+
+      <!-- Internship -->
+      <div class="experience-card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 opacity-0 translate-y-8 animate-fade-in">
+        <h3 class="text-2xl font-semibold text-violet-600 mb-3">Entrepreneurship/Business Development Intern</h3>
+        <p class="font-medium text-gray-700 mb-1">NSIC – Hyderabad, India | May 2022 – March 2023</p>
+        <ul class="list-disc list-inside text-gray-600 space-y-2">
+          <li>Analyzed market trends, financial feasibility, and industrial awareness to support small business growth.</li>
+          <li>Collected and interpreted market data to evaluate business patterns and develop actionable insights.</li>
+          <li>Built financial models to assess business viability based on sales, demand, and industry growth trends.</li>
+        </ul>
+      </div>
+
+      <!-- Mentor Role -->
+      <div class="experience-card bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 opacity-0 translate-y-8 animate-fade-in delay-150">
+        <h3 class="text-2xl font-semibold text-violet-600 mb-3">Counselor/Data Insights Mentor</h3>
+        <p class="font-medium text-gray-700 mb-1">Voice 4 Girls – India | August 2021 – March 2022</p>
+        <ul class="list-disc list-inside text-gray-600 space-y-2">
+          <li>Mentored students to develop personal and academic skills, improving engagement and knowledge retention.</li>
+          <li>Analyzed learning patterns and adapted mentoring techniques based on qualitative and quantitative insights.</li>
+          <li>Used surveys and feedback to identify learning gaps and enhance counseling effectiveness.</li>
+          <li>Improved student confidence and problem-solving skills through data-driven approaches.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right Side: Animated Profile Image -->
+    <div class="md:w-1/3 flex justify-center md:justify-end">
+      <img 
+        src="https://assets-v2.lottiefiles.com/a/1f961e82-116c-11ee-8354-2303d3b71743/vw6LrzVLM8.gif" 
+        alt="Animated Harshitha Profile" 
+        class="w-64 h-64 rounded-full border-4 border-violet-500 shadow-lg object-cover"
+      />
+    </div>
+  </div>
+</section>
+
+
+  <section id="skills" class="py-16 px-6 md:px-20 bg-gray-50 text-gray-800">
+  <h2 class="text-3xl md:text-4xl font-bold mb-10 text-black-600 text-center">Technical Skills</h2>
+
+  <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+
+    <!-- Programming Languages -->
+    <div class="skill-card">
+      <h3 class="skill-title mb-4">Programming Languages</h3>
+      <ul class="skill-list grid grid-cols-2 gap-4">
+        <li class="flex items-center space-x-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-6 h-6" />
+          <span>Python</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="w-6 h-6" />
+          <span>Java</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-6 h-6" />
+          <span>JavaScript</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQL" class="w-6 h-6" />
+          <span>SQL</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="w-6 h-6" />
+          <span>HTML</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="w-6 h-6" />
+          <span>CSS</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Tools -->
+    <div class="skill-card">
+      <h3 class="skill-title mb-4">Tools</h3>
+      <ul class="skill-list grid grid-cols-2 gap-4">
+        <li class="flex items-center space-x-3">
+          <i class="fab fa-git-alt text-violet-600 w-6 h-6"></i>
+          <span>Git</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <i class="fab fa-github text-violet-600 w-6 h-6"></i>
+          <span>GitHub</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8I6j_R1FjD_Ar8GF7DxAzA9gpKyROmx7MqA&s" alt="MS Excel" class="w-6 h-6" />
+          <span>MS Excel</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <img src="https://raw.githubusercontent.com/github/explore/a4691f04ff219c1c2aa02fc61fda41aa43f1459a/topics/jupyter-notebook/jupyter-notebook.png" alt="Jupyter Notebook" class="w-6 h-6" />
+          <span>Jupyter Notebook</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Technologies -->
+    <div class="skill-card">
+      <h3 class="skill-title mb-4">Technologies</h3>
+      <ul class="skill-list grid grid-cols-2 gap-4">
+        <li class="flex items-center space-x-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-6 h-6" />
+          <span>MySQL</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <img src="https://www.svgrepo.com/show/7344/sql-file-format-symbol.svg" alt="MySQL" class="w-6 h-6" />
+          <span>MySQL</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-6 h-6" />
+          <span>MongoDB</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <img src="https://numpy.org/images/logo.svg" alt="Numpy" class="w-6 h-6" />
+          <span>Numpy</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <img src="https://pandas.pydata.org/static/img/pandas_mark.svg" alt="Pandas" class="w-6 h-6" />
+          <span>Pandas</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <img src="https://azure.microsoft.com/svghandler/azure-icon.svg" alt="Microsoft Azure" class="w-6 h-6" />
+          <span>Microsoft Azure</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <img src="https://logos-world.net/wp-content/uploads/2021/10/Tableau-Symbol.png" alt="Tableau" class="w-6 h-6" />
+          <span>Tableau</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/1200px-New_Power_BI_Logo.svg.png" alt="Power BI" class="w-6 h-6" />
+          <span>Power BI</span>
+        </li>
+          <li class="flex items-center space-x-3">
+          <img src="https://cdn-icons-png.flaticon.com/512/1349/1349217.png" alt="Big Data" class="w-6 h-6" />
+          <span>Big Data</span>
+        </li> 
+
+      </ul>
+    </div>
+
+    <!-- Others -->
+    <div class="skill-card">
+      <h3 class="skill-title mb-4">Others</h3>
+      <ul class="skill-list grid grid-cols-2 gap-4">
+        <li class="flex items-center space-x-3">
+          <img src="https://cdn.iconscout.com/icon/free/png-256/free-google-cloud-logo-icon-download-in-svg-png-gif-file-formats--weather-storage-data-pack-logos-icons-1721675.png?f=webp&w=256" alt="GCP" class="w-6 h-6" />
+          <span>Google Cloud Platform (GCP)</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <i class="fas fa-database text-violet-600 w-6 h-6"></i>
+          <span>DBMS</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <i class="fas fa-robot text-violet-600 w-6 h-6"></i>
+          <span>Machine Learning</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <i class="fas fa-tasks text-violet-600 w-6 h-6"></i>
+          <span>Agile</span>
+        </li>
+        <li class="flex items-center space-x-3">
+          <i class="fas fa-users-cog text-violet-600 w-6 h-6"></i>
+          <span>Scrum</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+
+  
+<section id="projects" class="py-20 px-8 bg-gray-50">
+  <div class="container mx-auto">
+    <h2 class="text-4xl font-extrabold text-center text-black-600 mb-12">My Projects</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto justify-items-center">
+
+      <!-- Project 1 -->
+      <div class="project-card flex flex-col overflow-hidden rounded-lg shadow-md bg-white">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/1*bTctD2Ub51R_k594veWS7A.jpeg" alt="Hiring Assistant AI" class="w-full h-48 object-cover">
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-2xl font-bold text-black-800 mb-3">Hiring Assistant AI – Agentic Resume Screening System</h3>
+          <p class="text-gray-600 text-sm mb-6 flex-grow">
+            Built a privacy-first, fully offline AI assistant using RAG, SentenceTransformers, and Streamlit. Parses resumes, semantically ranks them, and evolves dynamically with recruiter feedback.
+          </p>
+          <div class="flex space-x-4 mt-auto">
+            <button class="view-button">View Project</button>
+            <a href="#" class="code-button">View Code &lt;/&gt;</a>
+          </div>
+          <div class="project-details mt-6 hidden text-sm text-gray-700 space-y-4">
+            <p>
+              This intelligent hiring assistant integrates agentic AI with Retrieval-Augmented Generation (RAG). It screens and ranks resumes, interacts dynamically with recruiters, and adapts based on feedback.
+            </p>
+            <p><strong>Objective:</strong> Develop a lightweight, offline-ready AI assistant that enhances fairness and reduces hiring friction.</p>
+            <h4 class="font-semibold mt-4 mb-2">Core Features:</h4>
+            <ul class="list-disc list-inside">
+              <li>Resume Parsing with PyMuPDF</li>
+              <li>Semantic Matching via SentenceTransformers</li>
+              <li>Hybrid Scoring: semantic + rubric-based</li>
+              <li>Recruiter chat with Mistral-7B-Instruct</li>
+              <li>Real-time feedback updating rankings</li>
+            </ul>
+            <h4 class="font-semibold mt-4 mb-2">Technologies:</h4>
+            <ul class="list-disc list-inside">
+              <li>Python, Streamlit, PyMuPDF, Pandas</li>
+              <li>ctransformers, SentenceTransformers</li>
+              <li>Privacy-first architecture (offline-ready)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card flex flex-col overflow-hidden rounded-lg shadow-md bg-white">
+        <img src="https://www.researchgate.net/publication/346138561/figure/fig2/AS:961278126325771@1606197973848/Global-status-of-malnutrition-in-different-regions-Source-UNICEF-2018.ppm" alt="Global Malnutrition" class="w-full h-48 object-cover">
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-2xl font-bold text-black-800 mb-3">Visualizing Global Trends in Child Malnutrition</h3>
+          <p class="text-gray-600 text-sm mb-6 flex-grow">
+            Created interactive dashboards using Tableau and Python to visualize child malnutrition data (1970–2022) across countries, genders, and age groups.
+          </p>
+          <div class="flex space-x-4 mt-auto">
+            <button class="view-button">View Project</button>
+            <a href="#" class="code-button">View Code &lt;/&gt;</a>
+          </div>
+          <div class="project-details mt-6 hidden text-sm text-gray-700 space-y-4">
+            <p>
+              Leveraging global datasets from WHO, UNICEF, and the World Bank, this project analyzes stunting, wasting, underweight, and overweight metrics using visual storytelling and insights.
+            </p>
+            <h4 class="font-semibold mt-4 mb-2">Key Deliverables:</h4>
+            <ul class="list-disc list-inside">
+              <li>Malnutrition Severity Dashboard</li>
+              <li>Child Patterns Dashboard (age trends)</li>
+              <li>Geospatial Heatmaps of disparities</li>
+            </ul>
+            <h4 class="font-semibold mt-4 mb-2">Data Insights:</h4>
+            <ul class="list-disc list-inside">
+              <li>Standardized datasets from 1970–2022</li>
+              <li>Mapped trends across regions and genders</li>
+              <li>Identified high-risk areas for intervention</li>
+            </ul>
+            <h4 class="font-semibold mt-4 mb-2">Tech Stack:</h4>
+            <ul class="list-disc list-inside">
+              <li>Python (Pandas, NumPy), Tableau, Power BI</li>
+              <li>Advanced data visualization techniques</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+     
+    </div>
+  </div>
+</section>
+
+
+ 
+<!-- Footer HTML -->
+<footer class="footer">
+  <!-- Column 1: Intro -->
+  <div style="flex: 1; min-width: 280px; margin-bottom: 20px;">
+    <h3>Harshitha's Portfolio</h3>
+    <p>Thank you for visiting my personal portfolio website. Connect with me over socials.</p>
+    <p class="footer-note">Elevate Illuminate Accelerate 🚀</p>
+  </div>
+  <!-- Column 3: Contact Info -->
+<div style="flex: 1; min-width: 280px; margin-bottom: 20px;">
+  <h3>Contact Info</h3>
+  <div class="contact-section mb-4">
+    <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" target="_blank" aria-label="LinkedIn" class="social-icon">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/harshi1744" target="_blank" aria-label="GitHub" class="social-icon">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="mailto:harshithasrieya@gmail.com" aria-label="Email" class="social-icon">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+
+  <!-- Live Date and Time -->
+  <div id="live-date-time" style="font-size: 0.9rem; color: #555;"></div>
+  <div id="live-date-time" style="font-size: 0.9rem; color: white;"></div>
+
+</div>  
+</footer>
+
+  <footer class="bg-gray-800 text-center py-4">
+    <p class="text-white text-sm">&copy; 2025 Harshitha. All rights reserved.</p>
+  </footer>
+
+
+   <!-- Social Links Sidebar (fixed on left) -->
+  <div class="fixed-sidebar" aria-label="Social media links">
+    <a
+      href="https://www.linkedin.com/in/harshithasreiya"
+      title="LinkedIn"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-icon"
+      aria-label="LinkedIn"
+    >
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a
+      href="https://github.com/harshi1744"
+      title="GitHub"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-icon"
+      aria-label="GitHub"
+    >
+      <i class="fab fa-github"></i>
+    </a>
+    <a
+      href="mailto:harshithasrieya@gmail.com"
+      title="Email"
+      class="social-icon"
+      aria-label="Email"
+    >
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+
+
+    <script>
+  document.querySelectorAll('.view-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const card = button.closest('.project-card');
+      card.classList.toggle('expanded');
+    });
+  });
+
+  function updateDateTime() {
+    const now = new Date();
+    const dateTimeStr = now.toLocaleString('en-IN', {
+      weekday: 'short',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    });
+    document.getElementById('live-date-time').textContent = `Current Date & Time: ${dateTimeStr}`;
+  }
+
+  // Initial call and interval setup
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
+</script>
+    
+</body>
+
+</html>
