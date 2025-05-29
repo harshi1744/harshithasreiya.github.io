@@ -8,16 +8,87 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome CDN for icons -->
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 <style>
 
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background: linear-gradient(to bottom right, #7c3aed, #c084fc); /* Violet gradient */
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Animations */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 10px #9f7aea, 0 0 20px #9f7aea;
+  }
+  50% {
+    text-shadow: 0 0 20px #d6bcfa, 0 0 40px #d6bcfa;
+  }
+}
+.animate-glow-pulse {
+  animation: glowPulse 3s infinite ease-in-out;
+}
+
+@keyframes iconBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Footer Styling */
+footer {
+  background-color: #ede9fe; /* Light violet */
+  color: #4c1d95;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  margin-top: 3rem;
+}
+
+.footer-icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.footer-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7c3aed;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px #a78bfa;
+  animation: iconBounce 2.5s infinite;
+}
+
+.footer-icons a:hover {
+  background-color: #6d28d9;
+  box-shadow: 0 0 14px #6d28d9;
+  transform: scale(1.1);
+}
+  
   </style>
 </head>
 
@@ -33,25 +104,8 @@
   </div>
 
   <!-- Navigation -->
-  
-<nav class="bg-gray-800 py-4 px-6 flex justify-between items-center shadow-md z-50 sticky top-0">
-  <h1 class="text-2xl font-bold text-orange-500"></h1>
-  <ul class="hidden md:flex space-x-6 text-white">
-    <li><a href="#home" class="hover:text-orange-400">Home</a></li>
-    <li><a href="#about" class="hover:text-orange-400">About Me</a></li>
-    <li><a href="#career" class="hover:text-orange-400">Career Summary</a></li>
-    <li><a href="#education" class="hover:text-orange-400">Education</a></li>
-    <li><a href="#experience" class="hover:text-orange-400">Experience</a></li>
-    <li><a href="#skills" class="hover:text-orange-400">Skills</a></li>
-    <li><a href="#projects" class="hover:text-orange-400">Projects</a></li>
-  </ul>
-</nav>
 
-
-<nav 
-  x-data="{ open: false }" 
-  class="bg-gradient-to-r from-purple-700 to-indigo-800 py-4 px-6 flex justify-between items-center shadow-lg sticky top-0 z-50"
->
+<nav  x-data="{ open: false }" class="bg-gradient-to-r from-purple-700 to-indigo-800 py-4 px-6 flex justify-between items-center shadow-lg sticky top-0 z-50">
 
   <!-- Desktop Navigation -->
   <ul class="hidden md:flex space-x-6 text-white font-medium">
@@ -88,8 +142,6 @@
     <li><a href="#projects" class="hover:text-orange-400">Projects</a></li>
   </ul>
 </nav>
-
-
 
   <!-- Main Section -->
  <section 
@@ -139,36 +191,36 @@
   </p>
   </section>
 
-  <section id="education-infographic" class="py-16 px-6 md:px-20 bg-white text-gray-800">
-  <h2 class="text-3xl md:text-4xl font-bold mb-16 text-black-700 text-center">Education</h2>
+ <section id="education-infographic" class="py-16 px-6 md:px-20 bg-gradient-to-br from-white via-violet-50 to-white text-gray-800">
+  <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center text-violet-700">Education</h2>
 
-  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+  <div class="education-grid max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
 
     <!-- University of North Texas -->
-    <div class="flex flex-col items-center bg-violet-50 rounded-lg p-8 shadow-lg">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk6nsth-dM_LlSDgCV8kS3817LWGRyJKWTJY9hg93mpuCVL-r3LDD2ybfENmnhRCDM4xA&usqp=CAU" alt="University of North Texas" class="w-24 h-24 mb-6 object-contain" />
-      <h3 class="text-2xl font-bold text-violet-700 mb-2">University of North Texas</h3>
-      <p class="text-sm text-gray-600 mb-4">Texas, United States</p>
-      <div class="text-violet-600 font-semibold mb-4">Jan 2024 – Dec 2025</div>
+    <div class="education-card flex flex-col items-center bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition duration-300 ease-in-out">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk6nsth-dM_LlSDgCV8kS3817LWGRyJKWTJY9hg93mpuCVL-r3LDD2ybfENmnhRCDM4xA&usqp=CAU" alt="University of North Texas Logo" class="w-24 h-24 mb-6 object-contain rounded-full" />
+      <h3 class="text-2xl font-semibold text-violet-700 mb-1">University of North Texas</h3>
+      <p class="text-sm text-gray-600 mb-2">Texas, United States</p>
+      <div class="date text-violet-600 font-medium mb-3">Jan 2024 – Dec 2025</div>
       <p class="text-center text-gray-700">Master of Science in Business Analytics</p>
     </div>
 
     <!-- Osmania University -->
-    <div class="flex flex-col items-center bg-violet-50 rounded-lg p-8 shadow-lg">
-      <img src="https://www.osmania.ac.in/images/ou.png" alt="Osmania University Logo" class="w-24 h-24 mb-6 object-contain" />
-      <h3 class="text-2xl font-bold text-violet-700 mb-2">Osmania University</h3>
-      <p class="text-sm text-gray-600 mb-4">Hyderabad, India</p>
-      <div class="text-violet-600 font-semibold mb-4">Jun 2020 – Apr 2023</div>
+    <div class="education-card flex flex-col items-center bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition duration-300 ease-in-out">
+      <img src="https://www.osmania.ac.in/images/ou.png" alt="Osmania University Logo" class="w-24 h-24 mb-6 object-contain rounded-full" />
+      <h3 class="text-2xl font-semibold text-violet-700 mb-1">Osmania University</h3>
+      <p class="text-sm text-gray-600 mb-2">Hyderabad, India</p>
+      <div class="date text-violet-600 font-medium mb-3">Jun 2020 – Apr 2023</div>
       <p class="text-center text-gray-700">Bachelor of Commerce in Computer Science</p>
     </div>
 
     <!-- Johnson Grammar School -->
-    <div class="flex flex-col items-center bg-violet-50 rounded-lg p-8 shadow-lg">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO4ytxOUwRQWK5ESMbbsqzI18M8Ti3z0e57A&s" alt="Johnson Grammar School" class="w-24 h-24 mb-6 object-contain" />
-      <h3 class="text-2xl font-bold text-violet-700 mb-2">Johnson Grammar School</h3>
-      <p class="text-sm text-gray-600 mb-4">Hyderabad, India</p>
-      <div class="text-violet-600 font-semibold mb-4">June 2005 – May 2018</div>
-      <p class="text-center text-gray-700">High School – CBSE (Central Board of Secondary Education)</p>
+    <div class="education-card flex flex-col items-center bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition duration-300 ease-in-out">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO4ytxOUwRQWK5ESMbbsqzI18M8Ti3z0e57A&s" alt="Johnson Grammar School Logo" class="w-24 h-24 mb-6 object-contain rounded-full" />
+      <h3 class="text-2xl font-semibold text-violet-700 mb-1">Johnson Grammar School</h3>
+      <p class="text-sm text-gray-600 mb-2">Hyderabad, India</p>
+      <div class="date text-violet-600 font-medium mb-3">Jun 2005 – May 2018</div>
+      <p class="text-center text-gray-700">High School Diploma – CBSE Curriculum</p>
     </div>
 
   </div>
@@ -216,8 +268,6 @@
 </section>
 
 
-<!-- Add this inside your <head> if not already present -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 <section id="skills" class="py-16 px-6 md:px-20 bg-gray-50 text-gray-800">
   <h2 class="text-3xl md:text-4xl font-bold mb-10 text-black-600 text-center">Technical Skills</h2>
@@ -776,8 +826,6 @@
   // Initial call and interval setup
   updateDateTime();
   setInterval(updateDateTime, 1000);
-      <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-
 </script>
     
 </body>
