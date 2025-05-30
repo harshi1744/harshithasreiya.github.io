@@ -247,10 +247,34 @@
       <p>GitHub: <a href="https://github.com/harshi1744" class="text-blue-400 hover:underline">/harshi1744</a></p>
     </div>
   </section>
+    
+  <!-- Footer Section-->
+  
+  <footer class="footer">
+  <!-- Column 1: Intro -->
+  <div style="flex: 1; min-width: 280px; margin-bottom: 20px;">
+    <h3>Harshitha's Portfolio</h3>
+    <p>Thank you for visiting my personal portfolio website. Connect with me over socials.</p>
+  </div>
 
-  <footer>
-    &copy; 2025 Harshitha Sreiya Palaparthi. All rights reserved.
-  </footer>
+  <!-- Column 2: Contact Info -->
+  <div style="flex: 1; min-width: 280px; margin-bottom: 20px;">
+    <h3>Contact Info</h3>
+    <div class="contact-section mb-2">
+      <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" target="_blank" aria-label="LinkedIn" class="social-icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/harshi1744" target="_blank" aria-label="GitHub" class="social-icon">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:harshithasrieya@gmail.com" aria-label="Email" class="social-icon">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+    <div style="font-size: 0.9rem; color: white;">&copy; 2025 Harshitha Sreiya Palaparthi. All rights reserved.</div>
+  </div>
+</footer>
+
 
   <script>
     window.onscroll = function () {
@@ -259,6 +283,24 @@
       const scrolled = (winScroll / height) * 100;
       document.getElementById("progress").style.width = scrolled + "%";
     };
+    
+     function updateDateTime() {
+    const now = new Date();
+    const dateTimeStr = now.toLocaleString('en-IN', {
+      weekday: 'short',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    });
+    document.getElementById('live-date-time').textContent = `Current Date & Time: ${dateTimeStr}`;
+  }
+
+  // Initial call and interval setup
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
   </script>
 </body>
 </html>
