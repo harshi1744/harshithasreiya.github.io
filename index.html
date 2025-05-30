@@ -103,20 +103,10 @@
     opacity: 1;
   }
 }
-  .skill-badge {
-    display: inline-block;
-    background: #3b82f6; /* Tailwind blue-500 */
-    color: white;
-    font-weight: 600;
-    padding: 0.4em 1em;
-    border-radius: 9999px; /* fully rounded */
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
-    cursor: default;
-  }
-  .skill-badge:hover {
-    background-color: #2563eb; /* Tailwind blue-600 */
-  }
+    .owl-carousel .card {
+  border: 1px solid red;
+}
+
   </style>
 </head>
 <body x-data="{ dark: true }" :class="dark ? 'bg-black text-white' : 'bg-white text-black'">
@@ -134,14 +124,6 @@
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
   </nav>
-
-
-  <!-- Hero Section -->
-  <header class="text-center py-20">
-    <h1 class="text-5xl font-bold mb-4">Harshitha Sreiya Palaparthi</h1>
-    <p class="text-lg">Business Analyst | Financial Analyst</p>
-    <a href="resume.pdf" download class="mt-6 inline-block px-6 py-2 border border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white transition rounded-full">Download Resume</a>
-  </header>
 
   <!-- Hero Section -->
 <header class="flex items-center justify-between py-20 px-10">
@@ -164,7 +146,7 @@
 
   <!-- About Section -->
   <section id="about" class="min-h-screen px-6 py-16">
-    <h2 class="section-title">About Me</h2>
+    <h3 class="section-title">About Me</h3>
     <p class="max-w-3xl mx-auto text-center">
       I am a results-driven Business Analyst currently pursuing a Master's in Business Analytics at the University of North Texas. My strengths include data modeling, data visualization, front-end reporting, and building AI-powered solutions. With strong communication and analytical skills, I translate data insights into strategic decisions.
     </p>
@@ -173,7 +155,7 @@
 
   <!-- About Section -->
 <section id="about" class="min-h-screen px-6 py-16 bg-gray-900 text-gray-200">
-  <h2 class="section-title text-white mb-8">About Me</h2>
+  <h3 class="section-title text-white mb-8">About Me</h3>
   <div class="max-w-4xl mx-auto space-y-6 text-center text-lg leading-relaxed">
     <p>
       Hi, I’m <strong>Harshitha Sreiya Palaparthi</strong>, a Business Analytics graduate student pursuing my Master’s at the University of North Texas. I specialize in AI applications, data visualization, and business development, with strong technical skills in <span class="text-blue-400 font-semibold">Python, SQL, Tableau</span>, and cloud platforms including <span class="text-blue-400 font-semibold">Google Cloud</span>.
@@ -194,7 +176,7 @@
    <!-- Education Section -->
 
   <section id="education" class="min-h-screen px-6 py-16">
-    <h2 class="section-title">Education</h2>
+    <h1 class="section-title">Education</h3>
     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
       <div class="card">
         <h3 class="text-xl font-semibold mb-2">University of North Texas</h3>
@@ -211,7 +193,7 @@
   
   <!-- Projects Section -->
   <section id="projects" class="min-h-screen px-6 py-16 bg-gray-800">
-  <h2 class="section-title">Projects</h2>
+  <h3 class="section-title">Projects</h3>
   <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
     <div class="card">
       <h3 class="text-lg font-semibold mb-2">Hiring Assistant AI</h3>
@@ -231,9 +213,9 @@
   
   <!-- Projects Section -->
 
-  <section id="projects" class="min-h-screen px-6 py-16 bg-gray-800">
+<section id="projects" class="min-h-screen px-6 py-16 bg-black">
   <h2 class="section-title text-white text-3xl mb-10">Projects</h2>
-  <div class="owl-carousel max-w-6xl mx-auto">
+  <div class="owl-carousel max-w-6xl mx-auto overflow-visible">
     <div class="card bg-gray-700 p-6 rounded-lg shadow-md">
       <h3 class="text-lg font-semibold mb-2 text-white">Hiring Assistant AI</h3>
       <p class="text-sm text-gray-300">Developed a privacy-compliant AI system that screens resumes using RAG-based techniques and semantic similarity. The solution operates offline using open-source LLMs, streamlining hiring workflows by 50% and enhancing candidate-job alignment through contextual matching.</p>
@@ -248,6 +230,7 @@
     </div>
   </div>
 </section>
+
 <div class="divider"></div>
 
 
@@ -276,46 +259,63 @@
   <div class="divider"></div>
 
   <!-- Skills Section -->
-<section id="skills" class="min-h-screen px-6 py-16 bg-gray-900 text-gray-200">
-  <h2 class="section-title text-white mb-12 text-center">Skills</h2>
-  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
-    
-    <div>
-      <h3 class="text-xl font-semibold mb-6 text-blue-400 border-b border-blue-400 pb-2">Technical Skills</h3>
-      <div class="flex flex-wrap gap-3">
-        <span class="skill-badge">Python</span>
-        <span class="skill-badge">R</span>
-        <span class="skill-badge">Java</span>
-        <span class="skill-badge">JavaScript</span>
-        <span class="skill-badge">Tableau</span>
-        <span class="skill-badge">Power BI</span>
-        <span class="skill-badge">Excel</span>
-        <span class="skill-badge">MySQL</span>
-        <span class="skill-badge">MongoDB</span>
-        <span class="skill-badge">SQL</span>
-        <span class="skill-badge">GCP</span>
-        <span class="skill-badge">BigQuery</span>
-      </div>
+<section id="skills" class="min-h-screen px-6 py-16 bg-black text-white">
+  <h2 class="section-title text-4xl font-bold mb-12 text-center">Skills</h2>
+
+  <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+    <!-- Left column -->
+    <div class="bg-gray-800 rounded-lg shadow-lg p-8">
+      <h3 class="text-2xl font-semibold mb-6 border-b border-gray-700 pb-3">Technical Skills</h3>
+      <ul class="space-y-5">
+        <li class="flex items-center">
+          <i class="fas fa-code text-indigo-400 w-6"></i>
+          <span class="ml-4 font-medium">Programming:</span>
+          <span class="ml-2 text-gray-300">Python, R, Java, JavaScript</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-chart-bar text-indigo-400 w-6"></i>
+          <span class="ml-4 font-medium">Visualization:</span>
+          <span class="ml-2 text-gray-300">Tableau, Power BI, Excel</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-database text-indigo-400 w-6"></i>
+          <span class="ml-4 font-medium">Databases:</span>
+          <span class="ml-2 text-gray-300">MySQL, MongoDB, SQL</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-cloud text-indigo-400 w-6"></i>
+          <span class="ml-4 font-medium">Cloud:</span>
+          <span class="ml-2 text-gray-300">GCP, BigQuery</span>
+        </li>
+      </ul>
     </div>
 
-    <div>
-      <h3 class="text-xl font-semibold mb-6 text-blue-400 border-b border-blue-400 pb-2">Tools & Concepts</h3>
-      <div class="flex flex-wrap gap-3">
-        <span class="skill-badge">Git</span>
-        <span class="skill-badge">GitHub</span>
-        <span class="skill-badge">Jupyter Notebook</span>
-        <span class="skill-badge">NumPy</span>
-        <span class="skill-badge">Pandas</span>
-        <span class="skill-badge">Scikit-learn</span>
-        <span class="skill-badge">Data Modeling</span>
-        <span class="skill-badge">KPI</span>
-        <span class="skill-badge">Business Intelligence</span>
-        <span class="skill-badge">HTML</span>
-        <span class="skill-badge">CSS</span>
-        <span class="skill-badge">DBMS</span>
-      </div>
+    <!-- Right column -->
+    <div class="bg-gray-800 rounded-lg shadow-lg p-8">
+      <h3 class="text-2xl font-semibold mb-6 border-b border-gray-700 pb-3">Additional Skills</h3>
+      <ul class="space-y-5">
+        <li class="flex items-center">
+          <i class="fas fa-tools text-indigo-400 w-6"></i>
+          <span class="ml-4 font-medium">Tools:</span>
+          <span class="ml-2 text-gray-300">Git, GitHub, Jupyter Notebook</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-book text-indigo-400 w-6"></i>
+          <span class="ml-4 font-medium">Libraries:</span>
+          <span class="ml-2 text-gray-300">NumPy, Pandas, Scikit-learn</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-lightbulb text-indigo-400 w-6"></i>
+          <span class="ml-4 font-medium">Concepts:</span>
+          <span class="ml-2 text-gray-300">Data Modeling, KPI, BI</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-code-branch text-indigo-400 w-6"></i>
+          <span class="ml-4 font-medium">Other:</span>
+          <span class="ml-2 text-gray-300">HTML, CSS, DBMS</span>
+        </li>
+      </ul>
     </div>
-
   </div>
 </section>
     <div class="divider"></div>
@@ -346,18 +346,6 @@
     </div>
   </section>
   
- <div class="divider"></div>
-
-
-  <!-- Contact Section -->
-  <section id="contact" class="min-h-screen px-6 py-16">
-    <h2 class="section-title">Contact</h2>
-    <div class="text-center">
-      <p>Email: <a href="mailto:harshithasrieya@gmail.com" class="text-blue-400 hover:underline">harshithasrieya@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" class="text-blue-400 hover:underline">/harshitha-sreiya-palaparthi</a></p>
-      <p>GitHub: <a href="https://github.com/harshi1744" class="text-blue-400 hover:underline">/harshi1744</a></p>
-    </div>
-  </section>
  <div class="divider"></div>
 
     <!-- Contact Section -->
@@ -392,44 +380,6 @@
 </section>
 
    <div class="divider"></div>
-
-    
-  <!-- Footer Section-->
-<!-- Contact Section -->
-<section id="contact" class="min-h-screen px-6 py-16 bg-black">
-  <h2 class="section-title text-white">Contact</h2>
-  <div class="max-w-xl mx-auto text-center space-y-6">
-    <p class="text-lg text-gray-300">
-      Feel free to reach out through any of the platforms below. I'm always open to connecting!
-    </p>
-
-    <!-- Email -->
-    <p class="text-gray-400">
-      <i class="fas fa-envelope mr-2 text-blue-400"></i>
-      <a href="mailto:harshithasrieya@gmail.com" class="text-blue-400 hover:underline">
-        harshithasrieya@gmail.com
-      </a>
-    </p>
-
-    <!-- Social Media Icons -->
-    <div class="flex justify-center space-x-8 mt-6">
-      <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" target="_blank" aria-label="LinkedIn"
-         class="text-white hover:text-blue-500 text-3xl transition duration-300">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/harshi1744" target="_blank" aria-label="GitHub"
-         class="text-white hover:text-blue-500 text-3xl transition duration-300">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="mailto:harshithasrieya@gmail.com" aria-label="Email"
-         class="text-white hover:text-blue-500 text-3xl transition duration-300">
-        <i class="fas fa-envelope"></i>
-      </a>
-    </div>
-  </div>
-</section>
-
-
 
   <script>
 // Function to update the width of the progress bar based on page scroll
