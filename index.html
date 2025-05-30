@@ -110,64 +110,144 @@
   50% { text-shadow: 0 0 6px #00C0A0, 0 0 12px #00C0A0, 0 0 22px #CC33FF, 0 0 30px #0099CC; }
 }
 
-/* Holographic shard glow softened and subtle */
-.holographic-shard {
-  border: 1px solid rgba(0, 192, 160, 0.25);
-  box-shadow: 0 0 8px rgba(0, 192, 160, 0.25);
-  background-color: rgba(15, 15, 15, 0.85);
-  transition: all 0.5s ease;
+
+/*contact*/
+ /* Base section styles */
+#contact {
+  background-color: #000; /* Pure black */
+  color: #a0f0ea;
+  min-height: 100vh;
+  padding: 4rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
-.holographic-shard:hover {
-  border-color: #00A090; /* Softer electric blue */
-  box-shadow: 0 0 15px #00A090, 0 0 30px #CC33FF;
-  background-color: rgba(25, 25, 25, 0.95);
-  transform: skewX(0deg) scale(1.04);
-}
-
-.holographic-shard:hover .shard-icon {
-  color: #CC33FF; /* Magenta hover */
-  font-size: 2.8rem;
-  transition: color 0.4s ease, font-size 0.4s ease;
-}
-
-.holographic-shard::before {
-  background: linear-gradient(to bottom, transparent, rgba(0, 192, 160, 0.12), transparent);
-  opacity: 0;
-  animation-duration: 2.5s;
-}
-
-.holographic-shard:hover::before {
-  opacity: 1;
-  animation-play-state: running;
-}
-
-/* Text color tweaks */
-.shard-label {
-  color: #00A080;
-  opacity: 0;
-  transition: opacity 0.35s ease;
-}
-
-.shard-detail {
-  color: #88CCBB;
-  opacity: 0;
-  transition: opacity 0.35s ease;
-}
-
-.holographic-shard:hover .shard-label,
-.holographic-shard:hover .shard-detail {
-  opacity: 1;
-}
-
-/* Animated Background */
+/* Hide animated background */
 .animated-bg {
-  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 1) 100%),
-              linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)) no-repeat center/cover;
-  animation: bg-pan 45s infinite alternate linear;
+  display: none;
 }
 
-/* Responsive tweaks remain the same */
+/* Center container */
+#contact > div.w-full {
+  max-width: 64rem; /* 1024px */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* Title styling */
+#contact h2 {
+  color: #00d1c1;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+}
+
+/* Subtitle paragraph */
+#contact p {
+  color: #7a8a91; /* muted gray */
+  font-size: 1.125rem;
+  max-width: 40rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Grid layout for cards */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Card styles */
+.contact-card {
+  background-color: #0b1615; /* very dark teal-black */
+  border: 1.5px solid #00d1c1;
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 209, 193, 0.2);
+  color: #a0f0ea;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Remove any before/after pseudo-elements if present */
+.contact-card::before,
+.contact-card::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Hover effect: subtle scale and shadow, no glitter */
+.contact-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  background-color: #103833; /* slightly lighter teal */
+  box-shadow: 0 8px 20px rgba(0, 209, 193, 0.35);
+}
+
+/* Icon styling */
+.card-icon {
+  font-size: 2.6rem;
+  color: #00d1c1;
+  margin-right: 1.2rem;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+/* Icon hover color */
+.contact-card:hover .card-icon {
+  color: #00fff5;
+}
+
+/* Card text container */
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label text */
+.card-label {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #00d1c1;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.25rem;
+  user-select: none;
+}
+
+/* Detail text */
+.card-detail {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #a0f0ea;
+  line-height: 1.4;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .contact-card {
+    padding: 1.4rem 1.6rem;
+  }
+  .card-icon {
+    font-size: 2.2rem;
+    margin-right: 1rem;
+  }
+  .card-detail {
+    font-size: 1rem;
+  }
+}
 
 
   </style>
@@ -514,6 +594,77 @@
           <i class="fas fa-file-download shard-icon"></i>
           <div class="shard-label data-font">DATA_PACKET_RETRIEVAL</div>
           <div class="shard-detail data-font">Access my professional data packet.</div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+</section>
+
+
+  <section id="contact" class="min-h-screen px-6 py-16 bg-black text-white relative overflow-hidden">
+  <div class="animated-bg"></div> <!-- subtle animated background -->
+
+  <div class="w-full max-w-5xl flex flex-col items-center justify-center relative z-10">
+    <h2 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 text-center" style="color:#00D1C1;">
+      Transmitting Contact Data
+    </h2>
+    <p class="mt-4 text-lg sm:text-xl text-gray-400 text-center mb-12 max-w-2xl">
+      Access encrypted channels. Intercept data shards for details.
+    </p>
+
+    <div class="contact-grid">
+      <!-- Location -->
+      <a href="#" class="contact-card" aria-label="Location">
+        <div class="card-content">
+          <i class="fas fa-map-marker-alt card-icon"></i>
+          <div class="card-label">LOCATION_COORDS</div>
+          <div class="card-detail">Denton, TX, USA</div>
+        </div>
+      </a>
+
+      <!-- Phone -->
+      <a href="tel:+16368299199" class="contact-card" aria-label="Phone">
+        <div class="card-content">
+          <i class="fas fa-phone card-icon"></i>
+          <div class="card-label">VOICE_COMM_LINK</div>
+          <div class="card-detail">+1 (636) 829-9199</div>
+        </div>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:harshithasreiya@gmail.com" class="contact-card" aria-label="Email">
+        <div class="card-content">
+          <i class="fas fa-envelope card-icon"></i>
+          <div class="card-label">SECURE_MESSAGE_ID</div>
+          <div class="card-detail">harshithasreiya@gmail.com</div>
+        </div>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="LinkedIn">
+        <div class="card-content">
+          <i class="fab fa-linkedin card-icon"></i>
+          <div class="card-label">LINKEDIN_PROFILE</div>
+          <div class="card-detail">Connect with me on LinkedIn.</div>
+        </div>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="GitHub">
+        <div class="card-content">
+          <i class="fab fa-github card-icon"></i>
+          <div class="card-label">GITHUB_REPOSITORIES</div>
+          <div class="card-detail">Explore my projects on GitHub.</div>
+        </div>
+      </a>
+
+      <!-- Resume -->
+      <a href="https://example.com/your-resume.pdf" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="Resume">
+        <div class="card-content">
+          <i class="fas fa-file-download card-icon"></i>
+          <div class="card-label">DATA_PACKET_RETRIEVAL</div>
+          <div class="card-detail">Access my professional data packet.</div>
         </div>
       </a>
       
