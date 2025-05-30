@@ -51,22 +51,30 @@
 </head>
 
   <style>
-   /* Base Styles */
+/* ============================================================= */
+/* ======================== 🌐 BASE STYLES ====================== */
+/* ============================================================= */
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #000000;
-  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+/* ============================================================= */
+/* ======================== 🔚 FOOTER STYLES ==================== */
+/* ============================================================= */
 footer {
   @apply bg-black text-gray-400 py-6 text-center text-sm;
 }
 
-/* Section Title */
+/* ============================================================= */
+/* ====================== 📝 SECTION TITLE ====================== */
+/* ============================================================= */
 .section-title {
   color: #00d1c1;
   font-weight: 700;
@@ -76,22 +84,28 @@ footer {
   text-align: center;
 }
 
-/* Navigation */
+/* ============================================================= */
+/* ======================== 🧭 NAVIGATION ======================= */
+/* ============================================================= */
 .nav-link {
   @apply text-sm text-gray-300 hover:text-white transition;
 }
 
-/* Card Base */
+/* ============================================================= */
+/* ======================= 🧾 CARD STYLES ======================= */
+/* ============================================================= */
 .card {
   @apply bg-gray-800 text-gray-200 p-6 rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105;
 }
 
-/* Owl carousel adjustment */
+/* Owl Carousel Specific Styling */
 .owl-carousel .card {
   border: 1px solid red;
 }
 
-/* Progress Bar */
+/* ============================================================= */
+/* ====================== 📊 PROGRESS BAR ======================= */
+/* ============================================================= */
 .progress-bar {
   height: 4px;
   background-color: #8b5cf6;
@@ -102,7 +116,9 @@ footer {
   transition: width 0.3s ease-in-out;
 }
 
-/* Theme Toggle Button */
+/* ============================================================= */
+/* =================== 🌙 THEME TOGGLE BUTTON =================== */
+/* ============================================================= */
 .theme-toggle {
   position: fixed;
   bottom: 20px;
@@ -117,7 +133,9 @@ footer {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* Glitch Heading */
+/* ============================================================= */
+/* ===================== ⚡ GLITCH HEADING ====================== */
+/* ============================================================= */
 .glitch-heading {
   color: #00C0A0;
   text-shadow:
@@ -134,7 +152,9 @@ footer {
   50% { text-shadow: 0 0 6px #00C0A0, 0 0 12px #00C0A0, 0 0 22px #CC33FF, 0 0 30px #0099CC; }
 }
 
-/* ================= Contact Section ================= */
+/* ============================================================= */
+/* ==================== 📞 CONTACT SECTION ====================== */
+/* ============================================================= */
 #contact {
   background-color: #000;
   color: #a0f0ea;
@@ -203,12 +223,6 @@ footer {
   box-shadow: 0 8px 20px rgba(0, 209, 193, 0.35);
 }
 
-.contact-card::before,
-.contact-card::after {
-  content: none !important;
-  display: none !important;
-}
-
 .card-icon {
   font-size: 2.6rem;
   color: #00d1c1;
@@ -256,19 +270,15 @@ footer {
   }
 }
 
-/* ================= Experience Section ================= */
+/* ============================================================= */
+/* ================== 💼 EXPERIENCE SECTION ===================== */
+/* ============================================================= */
 #experience {
   background-color: #000;
   color: #fff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 4rem 1.5rem;
   min-height: 100vh;
-}
-
-.max-w-4xl {
-  max-width: 56rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .experience-card {
@@ -323,16 +333,6 @@ footer {
   margin-top: 0.6rem;
 }
 
-@media (max-width: 640px) {
-  .experience-header {
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-  .experience-date {
-    font-size: 0.8rem;
-  }
-}
-
 .experience-timeline {
   position: relative;
   border-left: 2px solid #444;
@@ -350,7 +350,9 @@ footer {
   border-radius: 50%;
 }
 
-/* ================= Projects Section ================= */
+/* ============================================================= */
+/* =================== 🧠 PROJECTS SECTION ====================== */
+/* ============================================================= */
 #projects {
   background-color: #000;
   color: #e0e0e0;
@@ -367,58 +369,122 @@ footer {
   text-align: center;
 }
 
-#projects .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.project-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin-bottom: 3rem;
 }
 
-#projects .card {
-  background-color: #1f2937;
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  box-shadow: 0 4px 8px rgb(0 0 0 / 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.project-block {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex: 1 1 450px;
+  max-width: 500px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#projects .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgb(139 92 246 / 0.6);
+.project-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+  z-index: 1;
 }
 
-#projects .card i {
-  font-size: 1.5rem;
-  color: #8b5cf6;
-  margin-right: 0.75rem;
+.project-block > * {
+  position: relative;
+  z-index: 2;
 }
 
-#projects .card .flex {
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-#projects .card h3 {
-  font-size: 1.125rem;
+.project-block h3 {
+  font-size: 1.75rem;
   font-weight: 600;
-  color: #ddd;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-#projects .card p {
-  font-size: 0.875rem;
-  color: #cbd5e1;
-  line-height: 1.5;
+.project-block p,
+.project-block ul {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* ================= Skills Section (Icon Animation) ================= */
-#skills h3.flex, 
+.project-block ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+.project-block ul li {
+  margin-bottom: 0.5rem;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.btn-transparent {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.btn-transparent:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+/* === Specific Backgrounds for Project Blocks === */
+.project-hiring {
+  background-image: url('https://i.pinimg.com/originals/12/b7/87/12b7877ea50bc630d3c2367553a4e1a3.gif');
+}
+
+.project-malnutrition {
+  background-image: url('https://cdn.dribbble.com/users/19455/screenshots/5808898/loader.gif');
+}
+
+.project-fraud {
+  background-image: url('https://imgflip.com/gif/9v1jeb');
+}
+
+/* ============================================================= */
+/* ==================== 🧩 SKILLS SECTION ======================= */
+/* ============================================================= */
+#skills h3.flex,
 #skills h4.flex {
   transition: color 0.3s ease;
   cursor: default;
 }
 
-#skills h3.flex:hover, 
+#skills h3.flex:hover,
 #skills h4.flex:hover {
   color: #14b8a6;
 }
@@ -444,703 +510,432 @@ footer {
     font-size: 1.5rem;
   }
 }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .page-section {
-            padding: 4rem 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #1a202c;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .project-flex {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem; /* Space between project blocks */
-            margin-bottom: 3rem; /* Space between rows of projects */
-        }
-
-        .project-block {
-            position: relative; /* For absolute positioning of overlay and buttons */
-            background-color: #ffffff;
-            border-radius: 1rem; /* Rounded corners */
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden; /* Ensures background image and overlay respect border-radius */
-            flex: 1 1 450px; /* Allows blocks to grow/shrink, max width 450px */
-            max-width: 500px;
-            min-height: 400px; /* Minimum height to ensure space for content and buttons */
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end; /* Pushes content to the bottom */
-            padding: 2rem;
-            color: white; /* Text color over background image */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        /* Overlay for text readability over background images */
-        .project-block::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
-            z-index: 1; /* Ensure overlay is below text but above background */
-        }
-
-        .project-block > * {
-            position: relative; /* Ensure content is above the overlay */
-            z-index: 2;
-        }
-
-        .project-block h3 {
-            font-size: 1.75rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
-        }
-
-        .project-block p,
-        .project-block ul {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        }
-
-        .project-block ul {
-            list-style: disc;
-            margin-left: 1.5rem;
-        }
-
-        .project-block ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .project-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-            justify-content: center; /* Center buttons horizontally */
-        }
-
-        .btn-transparent {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            border-radius: 9999px; /* Fully rounded */
-            background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
-            border: 1px solid rgba(255, 255, 255, 0.4); /* Slightly visible border */
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
-            backdrop-filter: blur(5px); /* Frosted glass effect */
-            -webkit-backdrop-filter: blur(5px); /* For Safari */
-        }
-
-        .btn-transparent:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            border-color: rgba(255, 255, 255, 0.7);
-            transform: translateY(-2px); /* Slight lift effect */
-        }
-
-        /* Specific background images for each project block */
-        .project-hiring {
-            background-image: url('https://i.pinimg.com/originals/12/b7/87/12b7877ea50bc630d3c2367553a4e1a3.gif');
-        }
-
-        .project-malnutrition {
-            background-image: url('https://cdn.dribbble.com/users/19455/screenshots/5808898/loader.gif');
-        }
-
-        .project-fraud {
-            background-image: url('https://imgflip.com/gif/9v1jeb');
-        }
-
-            body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .page-section {
-            padding: 4rem 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #1a202c;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .project-flex {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem; /* Space between project blocks */
-            margin-bottom: 3rem; /* Space between rows of projects */
-        }
-
-        .project-block {
-            position: relative; /* For absolute positioning of overlay and buttons */
-            background-color: #ffffff;
-            border-radius: 1rem; /* Rounded corners */
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden; /* Ensures background image and overlay respect border-radius */
-            flex: 1 1 450px; /* Allows blocks to grow/shrink, max width 450px */
-            max-width: 500px;
-            min-height: 400px; /* Minimum height to ensure space for content and buttons */
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end; /* Pushes content to the bottom */
-            padding: 2rem;
-            color: white; /* Text color over background image */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        /* Overlay for text readability over background images */
-        .project-block::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
-            z-index: 1; /* Ensure overlay is below text but above background */
-        }
-
-        .project-block > * {
-            position: relative; /* Ensure content is above the overlay */
-            z-index: 2;
-        }
-
-        .project-block h3 {
-            font-size: 1.75rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
-        }
-
-        .project-block p {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        }
-
-        .project-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-            justify-content: center; /* Center buttons horizontally */
-        }
-
-        .btn-transparent {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            border-radius: 9999px; /* Fully rounded */
-            background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
-            border: 1px solid rgba(255, 255, 255, 0.4); /* Slightly visible border */
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
-            backdrop-filter: blur(5px); /* Frosted glass effect */
-            -webkit-backdrop-filter: blur(5px); /* For Safari */
-        }
-
-        .btn-transparent:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            border-color: rgba(255, 255, 255, 0.7);
-            transform: translateY(-2px); /* Slight lift effect */
-        }
-
-        /* Specific background images for each project block */
-        .project-hiring {
-            background-image: url('https://i.pinimg.com/originals/12/b7/87/12b7877ea50bc630d3c2367553a4e1a3.gif');
-        }
-
-        .project-malnutrition {
-            background-image: url('https://cdn.dribbble.com/users/19455/screenshots/5808898/loader.gif');
-        }
-
-        .project-fraud {
-            background-image: url('https://imgflip.com/gif/9v1jeb');
-        }
-
-        /* Modal Styles */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-
-        .modal-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .modal-content {
-            background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 1rem;
-            max-width: 700px;
-            width: 90%;
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-            position: relative;
-            transform: translateY(20px);
-            transition: transform 0.3s ease;
-            color: #333; /* Ensure modal text is readable */
-        }
-
-        .modal-overlay.active .modal-content {
-            transform: translateY(0);
-        }
-
-        .modal-content h3 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: #1a202c;
-        }
-
-        .modal-content p {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .modal-close-btn {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #666;
-            transition: color 0.2s ease;
-        }
-
-        .modal-close-btn:hover {
-            color: #333;
-        }
-
-    #experience-gallery {
-  background-color: #000000; /* black */
+/* ===================================================================================
+   🔳 OVERLAY EFFECT FOR PROJECT BLOCKS
+   PURPOSE: Enhances text readability over background images using gradient overlay
+   TECHNIQUE: Uses ::before pseudo-element layered between image and text content
+=================================================================================== */
+.project-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.1) 100%
+    );
+    z-index: 1;
 }
 
-#experience-gallery h2 {
-  color: #7c3aed; /* Tailwind's violet-600 */
+.project-block > * {
+    position: relative;
+    z-index: 2;
 }
 
-#experience-gallery h3,
-#experience-gallery h4 {
-  color: #ffffff; /* white */
+/* ===================================================================================
+   🏷️ PROJECT TEXT STYLING (TITLES & DESCRIPTIONS)
+=================================================================================== */
+.project-block h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-#experience-gallery p {
-  color: #ffffff; /* white */
-}
-#projects {
-  background-color: #000000; /* Black background */
-  padding: 2rem;
+.project-block p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-#projects h2 {
-  color: #7c3aed; /* Violet heading */
-  text-align: center;
-  margin-bottom: 2rem;
+/* ===================================================================================
+   🔘 PROJECT BUTTONS (TRANSPARENT, GLOW EFFECT, HOVER STATES)
+=================================================================================== */
+.project-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    justify-content: center;
 }
 
-#projects h3 {
-  color: #ffffff; /* White subheadings */
+.btn-transparent {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
-#projects p,
-#projects li {
-  color: #ffffff; /* White text */
+.btn-transparent:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.7);
+    transform: translateY(-2px);
 }
 
-.project-block {
-  background-color: #1a1a1a; /* Optional: Dark card background for contrast */
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
+/* ===================================================================================
+   🖼️ PROJECT BACKGROUND IMAGES (ASSOCIATED BY CATEGORY)
+=================================================================================== */
+.project-hiring {
+    background-image: url('https://i.pinimg.com/originals/12/b7/87/12b7877ea50bc630d3c2367553a4e1a3.gif');
 }
 
-.project-buttons a {
-  color: #7c3aed; /* Violet button text */
-  border-color: #7c3aed;
-}
-/* Projects section background */
-#projects {
-  background-color: #000000; /* Black */
-  padding: 4rem 1.5rem;
+.project-malnutrition {
+    background-image: url('https://cdn.dribbble.com/users/19455/screenshots/5808898/loader.gif');
 }
 
-/* Section heading */
-#projects h2 {
-  color: #7c3aed; /* Violet (Tailwind's violet-600) */
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 3rem;
+.project-fraud {
+    background-image: url('https://imgflip.com/gif/9v1jeb');
 }
 
-/* Subheadings (project titles) */
-#projects h3 {
-  color: #ffffff; /* White */
-  font-size: 1.75rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-/* Paragraph text */
-#projects p {
-  color: #ffffff; /* White */
-  margin-bottom: 1rem;
-  line-height: 1.7;
-}
-
-/* Project blocks */
-.project-block {
-  background-color: #1a1a1a; /* Dark gray for contrast */
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 3rem;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Project buttons */
-.project-buttons a {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  margin-right: 1rem;
-  color: #7c3aed; /* Violet */
-  border: 2px solid #7c3aed;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.project-buttons a:hover {
-  background-color: #7c3aed;
-  color: #ffffff;
-}
-    
-#projects ul,
-#projects li {
-  list-style: none;
-  padding-left: 0;
-  margin-left: 0;
-}
-.project-block {
-  position: relative;
-  color: white;
-}
-
-/* Overlay for transparency */
-.project-block .overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: black;
-  opacity: 0.5; /* Adjust transparency here */
-  z-index: 0;
-}
-
-/* Content stays on top */
-.project-block .content {
-  position: relative;
-  z-index: 1;
-}
-
-/* Background images */
-.project-bg-hiring {
-  background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80');
-  background-size: cover;
-  background-position: center;
-}
-
-.project-bg-malnutrition {
-  background-image: url('https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80');
-  background-size: cover;
-  background-position: center;
-}
-
-.project-bg-fraud {
-  background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80');
-  background-size: cover;
-  background-position: center;
-}
-/* === GENERAL BODY & TYPOGRAPHY === */
-body {
-  background: #161616;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  margin: 0;
-  padding: 0;
-  color: #eee;
-  overflow-x: hidden;
-}
-
-/* === CONTAINER === */
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
-
-/* === HEADER === */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #161616;
-  border-bottom: 1px solid #333;
-  z-index: 10;
-  padding: 15px 0;
-  text-align: center;
-  font-family: 'Dancing Script', cursive;
-  font-size: 40px;
-  color: #eee;
-}
-
-/* === NAVIGATION === */
-nav {
-  margin-top: 80px;
-  text-align: center;
-}
-
-nav a {
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 22px;
-  color: #eee;
-  margin: 0 30px;
-  padding: 5px 15px;
-  border-radius: 10px;
-  transition: all 0.4s ease;
-}
-
-nav a:hover {
-  background-color: #eee;
-  color: #161616;
-  box-shadow: 0 0 6px 1px #eee;
-  border-radius: 10px;
-}
-
-/* === MAIN CONTENT === */
-main {
-  padding-top: 130px; /* Space for fixed header */
-  margin-bottom: 60px;
-}
-
-/* === PROJECTS CONTAINER === */
-.projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  padding: 40px 0;
-  justify-items: center;
-}
-
-/* === PROJECT CARD === */
-.project {
-  background-color: #222;
-  border-radius: 20px;
-  width: 280px;
-  height: 430px;
-  padding: 20px;
-  box-sizing: border-box;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 10px 4px #eee;
-}
-
-/* Project content */
-.project .project-name {
-  font-size: 20px;
-  font-weight: 700;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  color: #eee;
-}
-
-.project img {
-  width: 100%;
-  height: 180px;
-  border-radius: 15px;
-  object-fit: cover;
-  box-shadow: 0 0 6px 2px #fff;
-  transition: box-shadow 0.3s ease;
-}
-
-.project:hover img {
-  box-shadow: 0 0 20px 4px #eee;
-}
-
-/* === PROJECT DETAILS === */
-.project-details {
-  font-size: 18px;
-  font-weight: 500;
-  color: #eee;
-  margin-top: auto;
-  text-align: center;
-}
-
-/* === BUTTONS === */
-.btn {
-  border: none;
-  padding: 10px 15px;
-  border-radius: 12px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 15px;
-}
-
-.btn-code {
-  background-color: #ddd;
-  color: #161616;
-}
-
-.btn-code:hover {
-  background-color: #bbb;
-}
-
-/* === MODAL === */
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 700px;
-  max-width: 90%;
-  background-color: #222;
-  border-radius: 20px;
-  padding: 30px 30px 30px 40px;
-  box-sizing: border-box;
-  transform: translate(-50%, -50%);
-  z-index: 100;
-  display: none; /* Hidden by default */
-  color: #eee;
-}
-
-.modal.show {
-  display: block;
-}
-
-/* Modal header */
-.modal h2 {
-  font-family: 'Dancing Script', cursive;
-  font-weight: 700;
-  font-size: 34px;
-  margin-bottom: 20px;
-}
-
-/* Modal content */
-.modal-content {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-/* Modal buttons */
-.modal-buttons {
-  text-align: center;
-}
-
-.modal-buttons .btn {
-  margin: 0 15px;
-}
-
-/* Modal overlay (optional for dimming background) */
+/* ===================================================================================
+   🪟 MODAL WINDOW STYLING (OVERLAY, CONTENT, CLOSE BUTTON)
+=================================================================================== */
 .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(22, 22, 22, 0.8);
-  z-index: 99;
-  display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.modal-overlay.show {
-  display: block;
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
-/* === FOOTER === */
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #161616;
-  border-top: 1px solid #333;
-  text-align: center;
-  padding: 10px 0;
-  font-size: 14px;
-  color: #666;
-  font-weight: 600;
+.modal-content {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 700px;
+    width: 90%;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    color: #333;
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 720px) {
-  nav a {
-    margin: 0 15px;
-    font-size: 18px;
-  }
-
-  .project {
-    width: 90vw;
-    height: auto;
-  }
-
-  .modal {
-    width: 95vw;
-    padding: 20px;
-  }
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
 }
+
+.modal-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #1a202c;
+}
+
+.modal-content p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+    color: #333;
+}
+
+/* ===================================================================================
+   🌐 BASE STYLES — BODY, HTML, TYPOGRAPHY
+=================================================================================== */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===================================================================================
+   🔚 FOOTER STYLES
+=================================================================================== */
+footer {
+    @apply bg-black text-gray-400 py-6 text-center text-sm;
+}
+
+/* ===================================================================================
+   📝 SECTION TITLE (Shared Across Pages)
+=================================================================================== */
+.section-title {
+    color: #00d1c1;
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* ===================================================================================
+   🧭 NAVIGATION LINKS (Header/Sidebar)
+=================================================================================== */
+.nav-link {
+    @apply text-sm text-gray-300 hover:text-white transition;
+}
+
+/* ===================================================================================
+   🧾 CARD STYLES (Generic + Owl Carousel Specific)
+=================================================================================== */
+.card {
+    @apply bg-gray-800 text-gray-200 p-6 rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105;
+}
+
+.owl-carousel .card {
+    border: 1px solid red;
+}
+
+/* ===================================================================================
+   📊 PROGRESS BAR AT TOP OF PAGE
+=================================================================================== */
+.progress-bar {
+    height: 4px;
+    background-color: #8b5cf6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    transition: width 0.3s ease-in-out;
+}
+
+/* ===================================================================================
+   🌙 THEME TOGGLE BUTTON (Floating Button Bottom Right)
+=================================================================================== */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #8b5cf6;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ===================================================================================
+   ⚡ GLITCH EFFECT FOR HEADINGS
+=================================================================================== */
+.glitch-heading {
+    color: #00C0A0;
+    text-shadow:
+        0 0 3px #00C0A0,
+        0 0 8px #00C0A0,
+        0 0 15px #00C0A0,
+        0 0 25px #CC33FF,
+        0 0 40px #0099CC;
+    animation: glitch 2s infinite alternate, pulse-heading-glow 3s infinite alternate;
+}
+
+@keyframes pulse-heading-glow {
+    0%, 100% { text-shadow: 0 0 3px #00C0A0, 0 0 8px #00C0A0; }
+    50% { text-shadow: 0 0 6px #00C0A0, 0 0 12px #00C0A0, 0 0 22px #CC33FF, 0 0 30px #0099CC; }
+}
+
+/* ===================================================================================
+   📞 CONTACT SECTION (Cards with Hover Effects)
+=================================================================================== */
+#contact {
+    background-color: #000;
+    color: #a0f0ea;
+    min-height: 100vh;
+    padding: 4rem 1.5rem;
+    font-family: 'IBM Plex Mono', monospace;
+    overflow: hidden;
+}
+
+.animated-bg {
+    display: none;
+}
+
+#contact > div.w-full {
+    max-width: 64rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+#contact h2 {
+    color: #00d1c1;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 0.03em;
+    line-height: 1.1;
+}
+
+#contact p {
+    color: #7a8a91;
+    font-size: 1.125rem;
+    max-width: 40rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Contact Card Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.contact-card {
+    background-color: #0b1615;
+    border: 1.5px solid #00d1c1;
+    border-radius: 12px;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 209, 193, 0.2);
+    color: #a0f0ea;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px) scale(1.04);
+    background-color: #103833;
+    box-shadow: 0 8px 20px rgba(0, 209, 193, 0.35);
+}
+
+.card-icon {
+    font-size: 2.6rem;
+    color: #00d1c1;
+    margin-right: 1.2rem;
+    flex-shrink: 0;
+    transition: color 0.3s ease;
+}
+
+.contact-card:hover .card-icon {
+    color: #00fff5;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-label {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #00d1c1;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.25rem;
+    user-select: none;
+}
+
+.card-detail {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #a0f0ea;
+    line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+    .contact-card {
+        padding: 1.4rem 1.6rem;
+    }
+    .card-icon {
+        font-size: 2.2rem;
+        margin-right: 1rem;
+    }
+    .card-detail {
+        font-size: 1rem;
+    }
+}
+
+/* ===================================================================================
+   💼 EXPERIENCE TIMELINE & DETAILS SECTION
+=================================================================================== */
+#experience {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 4rem 1.5rem;
+    min-height: 100vh;
+}
+
+/* === Continued styles for .experience-card, .experience-timeline etc. === */
+/* ... (you already had the rest of this section styled properly) */
+
+/* ===================================================================================
+   🧠 SKILLS INTERACTIONS + RESPONSIVE TWEAKS
+=================================================================================== */
+#skills h3.flex,
+#skills h4.flex {
+    transition: color 0.3s ease;
+    cursor: default;
+}
+
+#skills h3.flex:hover,
+#skills h4.flex:hover {
+    color: #14b8a6;
+}
+
+#skills i {
+    transition: transform 0.3s ease;
+    color: #14b8a6;
+}
+
+#skills h3.flex:hover i,
+#skills h4.flex:hover i {
+    transform: scale(1.2);
+    color: #0d9488;
+}
+
+@media (max-width: 768px) {
+    #skills .max-w-5xl {
+        grid-template-columns: 1fr !important;
+    }
+
+    #skills h3.flex i,
+    #skills h4.flex i {
+        font-size: 1.5rem;
+    }
+}
+
+
 
   </style>
 
@@ -1667,93 +1462,6 @@ document.addEventListener('keydown', (e) => {
       smooth: true
     });
   </script>
-
-
-
-    <body data-scroll-container class="bg-gray-100 text-gray-900 font-sans">
-  <!-- Preloader included above -->
-
-  <div data-scroll-section id="about" class="min-h-screen p-10">
-    <h1 data-scroll data-scroll-speed="2" class="text-4xl font-bold mb-6">About Me</h1>
-    <p data-scroll data-scroll-speed="1" class="text-lg w-2/3">Creative professional with a vision for data-driven design and a heart for innovation.</p>
-  </div>
-
-  <div data-scroll-section id="skills" class="min-h-screen p-10 bg-white">
-    <h2 class="text-3xl font-semibold mb-4">Skills Overview</h2>
-    <canvas id="skillsChart" class="max-w-lg"></canvas>
-    <script>
-      const ctx = document.getElementById('skillsChart').getContext('2d');
-      const skillsChart = new Chart(ctx, {
-        type: 'radar',
-        data: {
-          labels: ['Python', 'SQL', 'Tableau', 'ML', 'React', 'DataViz'],
-          datasets: [{
-            label: 'Proficiency',
-            data: [90, 80, 70, 85, 60, 75],
-            backgroundColor: 'rgba(59, 130, 246, 0.2)',
-            borderColor: 'rgba(59, 130, 246, 1)',
-            borderWidth: 2
-          }]
-        },
-        options: {
-          scale: {
-            ticks: { beginAtZero: true }
-          }
-        }
-      });
-    </script>
-  </div>
-
-  <div data-scroll-section id="education" class="min-h-screen p-10">
-    <h2 class="text-3xl font-semibold mb-4">Education</h2>
-    <div class="space-y-4">
-      <div class="p-6 bg-white rounded-lg shadow-md" data-scroll data-scroll-speed="1">
-        <h3 class="text-xl font-bold">M.S. in Data Science</h3>
-        <p class="text-sm">University Name | 2023</p>
-      </div>
-      <div class="p-6 bg-white rounded-lg shadow-md" data-scroll data-scroll-speed="1.5">
-        <h3 class="text-xl font-bold">B.Tech in Computer Science</h3>
-        <p class="text-sm">Institute Name | 2020</p>
-      </div>
-    </div>
-  </div>
-
-  <div data-scroll-section id="experience" class="min-h-screen p-10 bg-gray-50">
-    <h2 class="text-3xl font-semibold mb-4">Experience</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-white p-6 rounded-lg shadow-lg" data-scroll data-scroll-speed="2">
-        <h3 class="font-bold text-lg">Data Analyst – Genpact</h3>
-        <p class="text-sm">2024 – Present</p>
-        <ul class="list-disc pl-5 mt-2 text-sm text-gray-700">
-          <li>Built dashboards using Power BI and Tableau</li>
-          <li>Conducted deep statistical analysis for finance operations</li>
-        </ul>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow-lg" data-scroll data-scroll-speed="1">
-        <h3 class="font-bold text-lg">Research Intern – AI Robotics Lab</h3>
-        <p class="text-sm">2023 – 2024</p>
-        <ul class="list-disc pl-5 mt-2 text-sm text-gray-700">
-          <li>Worked on surgical instrument segmentation using deep learning</li>
-          <li>Improved IoU by 15% using U-Net + attention blocks</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div data-scroll-section id="projects" class="min-h-screen p-10">
-    <h2 class="text-3xl font-semibold mb-4">Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="p-6 bg-white rounded-lg shadow-lg" data-scroll data-scroll-speed="2">
-        <h3 class="text-xl font-bold">Smart Healthcare Dashboard</h3>
-        <p class="text-sm text-gray-700">Real-time data visualization using patient health records, anomaly detection via ML models.</p>
-      </div>
-      <div class="p-6 bg-white rounded-lg shadow-lg" data-scroll data-scroll-speed="1.5">
-        <h3 class="text-xl font-bold">Agentic AI for Test Data</h3>
-        <p class="text-sm text-gray-700">Simulated data using LLMs for agile software testing and benchmarking in Microsoft DevOps pipelines.</p>
-      </div>
-    </div>
-  </div>
-
 </body>
 </html>
 
