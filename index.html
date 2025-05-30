@@ -755,6 +755,117 @@ footer {
         .modal-close-btn:hover {
             color: #333;
         }
+
+    #experience-gallery {
+  background-color: #000000; /* black */
+}
+
+#experience-gallery h2 {
+  color: #7c3aed; /* Tailwind's violet-600 */
+}
+
+#experience-gallery h3,
+#experience-gallery h4 {
+  color: #ffffff; /* white */
+}
+
+#experience-gallery p {
+  color: #ffffff; /* white */
+}
+#projects {
+  background-color: #000000; /* Black background */
+  padding: 2rem;
+}
+
+#projects h2 {
+  color: #7c3aed; /* Violet heading */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#projects h3 {
+  color: #ffffff; /* White subheadings */
+}
+
+#projects p,
+#projects li {
+  color: #ffffff; /* White text */
+}
+
+.project-block {
+  background-color: #1a1a1a; /* Optional: Dark card background for contrast */
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.project-buttons a {
+  color: #7c3aed; /* Violet button text */
+  border-color: #7c3aed;
+}
+/* Projects section background */
+#projects {
+  background-color: #000000; /* Black */
+  padding: 4rem 1.5rem;
+}
+
+/* Section heading */
+#projects h2 {
+  color: #7c3aed; /* Violet (Tailwind's violet-600) */
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+
+/* Subheadings (project titles) */
+#projects h3 {
+  color: #ffffff; /* White */
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Paragraph text */
+#projects p {
+  color: #ffffff; /* White */
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+/* Project blocks */
+.project-block {
+  background-color: #1a1a1a; /* Dark gray for contrast */
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Project buttons */
+.project-buttons a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  color: #7c3aed; /* Violet */
+  border: 2px solid #7c3aed;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.project-buttons a:hover {
+  background-color: #7c3aed;
+  color: #ffffff;
+}
+    
+#projects ul,
+#projects li {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
   </style>
 
 <body class="min-h-screen flex flex-col">
@@ -1017,6 +1128,71 @@ footer {
         </div>
     </div>
 
+  <section id="projects" class="projects-section page-section bg-black py-16 px-6">
+  <h2 class="text-4xl font-extrabold text-violet-600 text-center mb-12">Projects</h2>
+
+  <div class="project-flex space-y-12">
+      <!-- Projects Section -->
+
+    <!-- Project 1 -->
+    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg">
+      <h3 class="text-2xl font-semibold text-white mb-4">
+        1. Hiring Assistant AI – Agentic Resume Screening System (Academic Project)
+      </h3>
+      <p class="text-white mb-4">
+        This intelligent hiring assistant was built to transform traditional recruitment by integrating agentic AI with Retrieval-Augmented Generation (RAG). It autonomously screens and ranks resumes, engages recruiters through dynamic chat, and evolves based on continuous feedback—all in a privacy-first, offline-ready architecture.
+      </p>
+      <p class="text-white mb-4">
+        <strong>Objective:</strong> To develop a lightweight, privacy-compliant, fully offline RAG-powered AI assistant that reduces hiring friction, enhances fairness, and adapts to evolving recruiter criteria in real-time.
+      </p>
+      <div class="project-buttons space-x-4">
+        <a href="#" class="btn-transparent text-violet-500 border border-violet-500 px-4 py-2 rounded hover:bg-violet-500 hover:text-white transition">View Project</a>
+        <a href="#" class="btn-transparent text-violet-500 border border-violet-500 px-4 py-2 rounded hover:bg-violet-500 hover:text-white transition">View Code</a>
+      </div>
+    </article>
+
+    <!-- Project 2 -->
+    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg">
+      <h3 class="text-2xl font-semibold text-white mb-4">
+        2. Visualizing Global Trends in Child Malnutrition (Academic Project)
+      </h3>
+      <p class="text-white mb-4">
+        Leveraging global health datasets from WHO, UNICEF, and the World Bank, this project offered a deep dive into malnutrition trends—analyzing stunting, wasting, underweight, and overweight metrics across geography, gender, and age. By transforming complex raw data into interactive dashboards, the project empowered global stakeholders to make informed decisions targeting child health inequalities.
+      </p>
+      <p class="text-white mb-2 font-semibold">Key Deliverables:</p>
+      <p class="text-white mb-2">Malnutrition Severity Dashboard: Filterable by country, region, gender, and year—offering a 360° view of malnutrition prevalence.</p>
+      <p class="text-white mb-2">Child Patterns Dashboard: Trend analysis by age, visualized through scatter plots, time-series, box plots, and stacked area charts.</p>
+      <p class="text-white mb-4">Geospatial Heatmaps: Interactive mapping to highlight regional malnutrition disparities.</p>
+      <div class="project-buttons space-x-4">
+        <a href="#" class="btn-transparent text-violet-500 border border-violet-500 px-4 py-2 rounded hover:bg-violet-500 hover:text-white transition">View Project</a>
+        <a href="#" class="btn-transparent text-violet-500 border border-violet-500 px-4 py-2 rounded hover:bg-violet-500 hover:text-white transition">View Code</a>
+      </div>
+    </article>
+
+    <!-- Project 3 -->
+    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg">
+      <h3 class="text-2xl font-semibold text-white mb-4">
+        3. Financial Fraud Detection — Machine Learning Model (Academic Project)
+      </h3>
+      <p class="text-white mb-4">
+        This project addressed the escalating challenge of financial fraud using supervised machine learning. By applying multiple models on a labeled dataset, the system aimed to detect suspicious transactions effectively, prioritizing recall to minimize undetected fraud and integrating fairness metrics to reduce bias.
+      </p>
+      <p class="text-white mb-2 font-semibold">Approach & Methodology:</p>
+      <p class="text-white mb-2">Dataset: Publicly available transaction data with fraud labels.</p>
+      <p class="text-white mb-2">Preprocessing: Balanced classes using SMOTE, handled missing values, and applied feature scaling.</p>
+      <p class="text-white mb-2">Models Trained: Logistic Regression, Random Forest, XGBoost, and Neural Networks.</p>
+      <p class="text-white mb-2">Evaluation Metrics: Precision, Recall, F1-score, ROC-AUC—with a focus on minimizing false negatives.</p>
+      <p class="text-white mb-4">Fairness Checks: Monitored model bias across demographics to ensure equitable outcomes.</p>
+      <div class="project-buttons space-x-4">
+        <a href="#" class="btn-transparent text-violet-500 border border-violet-500 px-4 py-2 rounded hover:bg-violet-500 hover:text-white transition">View Project</a>
+        <a href="#" class="btn-transparent text-violet-500 border border-violet-500 px-4 py-2 rounded hover:bg-violet-500 hover:text-white transition">View Code</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
 
   <!-- Skills Section -->
   <section id="skills" class="min-h-screen px-6 py-16 bg-black text-white">
@@ -1089,9 +1265,9 @@ footer {
     </div>
   </section>
 
-  <!-- Experience Section -->
+    <!-- Experience Section -->
 
-  <section id="experience-gallery" class="py-20 px-6 bg-gray-50">
+<section id="experience-gallery" class="py-20 px-6 bg-black">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-4xl font-extrabold text-violet-600 text-center mb-16 tracking-wide">
       <span class="oi oi-briefcase mr-2"></span>Experience
@@ -1104,17 +1280,17 @@ footer {
         <div class="w-1/3 bg-violet-100 flex items-center justify-center p-6">
           <img src="https://media.licdn.com/dms/image/v2/C560BAQG0Ovre6zdqQg/company-logo_200_200/company-logo_200_200/0/1630665972770?e=2147483647&v=beta&t=zaT3b2K8Qf6nKSwvzmF4RUssHplbmHMOQiPX4adPsOs" alt="NSIC Logo" class="h-20 object-contain">
         </div>
-        <div class="w-2/3 p-8 flex flex-col justify-center">
-          <h4 class="text-lg font-medium text-violet-600 mb-1">
+        <div class="w-2/3 p-8 flex flex-col justify-center bg-black">
+          <h4 class="text-lg font-medium text-white mb-1">
             <i class="ion-ios-briefcase-outline mr-1"></i>NSIC
           </h4>
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">
+          <h3 class="text-xl font-semibold text-white mb-2">
             <i class="ion-ios-person mr-1 text-violet-600"></i>Business Development Intern
           </h3>
           <time class="text-sm text-gray-500 mb-4" datetime="2022-05">
             <i class="oi oi-calendar mr-1"></i>May 2022 – Mar 2023
           </time>
-          <p class="text-gray-700 text-base leading-relaxed">
+          <p class="text-white text-base leading-relaxed">
             <i class="ion-ios-analytics-outline text-violet-600 mr-1"></i>
             Analyzed market trends and financial feasibility to help small businesses grow. Developed financial models and provided data insights for strategic support.
           </p>
@@ -1126,17 +1302,17 @@ footer {
         <div class="w-1/3 bg-violet-100 flex items-center justify-center p-6">
           <img src="https://www.ciee.org/sites/default/files/styles/960w/public/blog/2019-06/voice-4-girls-logo.jpg?itok=asrKSN75" alt="Voice 4 Girls Logo" class="h-20 object-contain">
         </div>
-        <div class="w-2/3 p-8 flex flex-col justify-center">
-          <h4 class="text-lg font-medium text-violet-600 mb-1">
+        <div class="w-2/3 p-8 flex flex-col justify-center bg-black">
+          <h4 class="text-lg font-medium text-white mb-1">
             <i class="ion-ios-people-outline mr-1"></i>Voice 4 Girls
           </h4>
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">
+          <h3 class="text-xl font-semibold text-white mb-2">
             <i class="ion-ios-person mr-1 text-violet-600"></i>Data Insights Mentor
           </h3>
           <time class="text-sm text-gray-500 mb-4" datetime="2021-08">
             <i class="oi oi-calendar mr-1"></i>Aug 2021 – Mar 2022
           </time>
-          <p class="text-gray-700 text-base leading-relaxed">
+          <p class="text-white text-base leading-relaxed">
             <i class="ion-ios-lightbulb-outline text-violet-600 mr-1"></i>
             Mentored students in communication and personal development. Used survey data to optimize teaching strategies and create impactful learning sessions.
           </p>
