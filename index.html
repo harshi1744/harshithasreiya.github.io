@@ -31,7 +31,13 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/felipefialho/flaticon.css@1.0.0/css/flaticon.min.css" />
 
 <link rel="stylesheet" href="css/style.css" />
-
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  integrity="sha512-dyZt+ZwPU8R9bSy6qphD9eV+3EChPNLpX3F/NNxIb0b4b0U9E9KV/3tVbFdqJ4fZzEdqaF4V3SqLv8h6zR43Iw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -87,6 +93,82 @@
       font-weight: 600;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     }
+    /* Lower glow intensity and soften colors */
+.glitch-heading {
+  color: #00C0A0; /* Softer neon green */
+  text-shadow: 
+    0 0 3px #00C0A0, 
+    0 0 8px #00C0A0, 
+    0 0 15px #00C0A0,
+    0 0 25px #CC33FF, /* toned down magenta */
+    0 0 40px #0099CC; /* toned down blue */
+  animation: glitch 2s infinite alternate, pulse-heading-glow 3s infinite alternate;
+}
+
+@keyframes pulse-heading-glow {
+  0%, 100% { text-shadow: 0 0 3px #00C0A0, 0 0 8px #00C0A0; }
+  50% { text-shadow: 0 0 6px #00C0A0, 0 0 12px #00C0A0, 0 0 22px #CC33FF, 0 0 30px #0099CC; }
+}
+
+/* Holographic shard glow softened and subtle */
+.holographic-shard {
+  border: 1px solid rgba(0, 192, 160, 0.25);
+  box-shadow: 0 0 8px rgba(0, 192, 160, 0.25);
+  background-color: rgba(15, 15, 15, 0.85);
+  transition: all 0.5s ease;
+}
+
+.holographic-shard:hover {
+  border-color: #00A090; /* Softer electric blue */
+  box-shadow: 0 0 15px #00A090, 0 0 30px #CC33FF;
+  background-color: rgba(25, 25, 25, 0.95);
+  transform: skewX(0deg) scale(1.04);
+}
+
+.holographic-shard:hover .shard-icon {
+  color: #CC33FF; /* Magenta hover */
+  font-size: 2.8rem;
+  transition: color 0.4s ease, font-size 0.4s ease;
+}
+
+.holographic-shard::before {
+  background: linear-gradient(to bottom, transparent, rgba(0, 192, 160, 0.12), transparent);
+  opacity: 0;
+  animation-duration: 2.5s;
+}
+
+.holographic-shard:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+/* Text color tweaks */
+.shard-label {
+  color: #00A080;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.shard-detail {
+  color: #88CCBB;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.holographic-shard:hover .shard-label,
+.holographic-shard:hover .shard-detail {
+  opacity: 1;
+}
+
+/* Animated Background */
+.animated-bg {
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 1) 100%),
+              linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)) no-repeat center/cover;
+  animation: bg-pan 45s infinite alternate linear;
+}
+
+/* Responsive tweaks remain the same */
+
 
   </style>
 
@@ -368,6 +450,77 @@
     </div>
   </div>
 </section>
+
+  <section id="contact" class="min-h-screen px-6 py-16 bg-black text-white relative overflow-hidden">
+  <div class="animated-bg"></div> <!-- subtle animated background -->
+
+  <div class="w-full max-w-5xl flex flex-col items-center justify-center relative z-10">
+    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight glitch-heading mb-8 text-center">
+      Transmitting Contact Data
+    </h1>
+    <p class="mt-4 text-lg sm:text-xl text-gray-400 text-center mb-12 max-w-2xl">
+      Access encrypted channels. Intercept data shards for details.
+    </p>
+
+    <div class="contact-grid">
+      <!-- Location -->
+      <a href="#" class="holographic-shard" aria-label="Location">
+        <div class="shard-content">
+          <i class="fas fa-map-marker-alt shard-icon"></i>
+          <div class="shard-label data-font">LOCATION_COORDS</div>
+          <div class="shard-detail data-font">Denton, TX, USA</div>
+        </div>
+      </a>
+
+      <!-- Phone -->
+      <a href="tel:+16368299199" class="holographic-shard" aria-label="Phone">
+        <div class="shard-content">
+          <i class="fas fa-phone shard-icon"></i>
+          <div class="shard-label data-font">VOICE_COMM_LINK</div>
+          <div class="shard-detail data-font">+1 (636) 829-9199</div>
+        </div>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:harshithasreiya@gmail.com" class="holographic-shard" aria-label="Email">
+        <div class="shard-content">
+          <i class="fas fa-envelope shard-icon"></i>
+          <div class="shard-label data-font">SECURE_MESSAGE_ID</div>
+          <div class="shard-detail data-font">harshithasreiya@gmail.com</div>
+        </div>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" class="holographic-shard" aria-label="LinkedIn">
+        <div class="shard-content">
+          <i class="fab fa-linkedin shard-icon"></i>
+          <div class="shard-label data-font">LINKEDIN_PROFILE</div>
+          <div class="shard-detail data-font">Connect with me on LinkedIn.</div>
+        </div>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="holographic-shard" aria-label="GitHub">
+        <div class="shard-content">
+          <i class="fab fa-github shard-icon"></i>
+          <div class="shard-label data-font">GITHUB_REPOSITORIES</div>
+          <div class="shard-detail data-font">Explore my projects on GitHub.</div>
+        </div>
+      </a>
+
+      <!-- Resume -->
+      <a href="https://example.com/your-resume.pdf" target="_blank" rel="noopener noreferrer" class="holographic-shard" aria-label="Resume">
+        <div class="shard-content">
+          <i class="fas fa-file-download shard-icon"></i>
+          <div class="shard-label data-font">DATA_PACKET_RETRIEVAL</div>
+          <div class="shard-detail data-font">Access my professional data packet.</div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+</section>
+
 
   <footer class="w-full bg-black text-gray-400 py-6 text-center text-sm">
     <p>&copy; 2025 Harshitha Sreiya Palaparthi. All rights reserved.</p>
