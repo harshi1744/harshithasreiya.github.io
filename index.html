@@ -570,6 +570,191 @@ footer {
         .project-fraud {
             background-image: url('https://imgflip.com/gif/9v1jeb');
         }
+
+            body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .page-section {
+            padding: 4rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .project-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem; /* Space between project blocks */
+            margin-bottom: 3rem; /* Space between rows of projects */
+        }
+
+        .project-block {
+            position: relative; /* For absolute positioning of overlay and buttons */
+            background-color: #ffffff;
+            border-radius: 1rem; /* Rounded corners */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Ensures background image and overlay respect border-radius */
+            flex: 1 1 450px; /* Allows blocks to grow/shrink, max width 450px */
+            max-width: 500px;
+            min-height: 400px; /* Minimum height to ensure space for content and buttons */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Pushes content to the bottom */
+            padding: 2rem;
+            color: white; /* Text color over background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Overlay for text readability over background images */
+        .project-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+            z-index: 1; /* Ensure overlay is below text but above background */
+        }
+
+        .project-block > * {
+            position: relative; /* Ensure content is above the overlay */
+            z-index: 2;
+        }
+
+        .project-block h3 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+        }
+
+        .project-block p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            justify-content: center; /* Center buttons horizontally */
+        }
+
+        .btn-transparent {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px; /* Fully rounded */
+            background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+            border: 1px solid rgba(255, 255, 255, 0.4); /* Slightly visible border */
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+            backdrop-filter: blur(5px); /* Frosted glass effect */
+            -webkit-backdrop-filter: blur(5px); /* For Safari */
+        }
+
+        .btn-transparent:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.7);
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        /* Specific background images for each project block */
+        .project-hiring {
+            background-image: url('https://i.pinimg.com/originals/12/b7/87/12b7877ea50bc630d3c2367553a4e1a3.gif');
+        }
+
+        .project-malnutrition {
+            background-image: url('https://cdn.dribbble.com/users/19455/screenshots/5808898/loader.gif');
+        }
+
+        .project-fraud {
+            background-image: url('https://imgflip.com/gif/9v1jeb');
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 1rem;
+            max-width: 700px;
+            width: 90%;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+            position: relative;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+            color: #333; /* Ensure modal text is readable */
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-content h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1a202c;
+        }
+
+        .modal-content p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.2s ease;
+        }
+
+        .modal-close-btn:hover {
+            color: #333;
+        }
   </style>
 
 <body class="min-h-screen flex flex-col">
@@ -788,7 +973,49 @@ footer {
             </article>
         </div>
     </section>
+  
+  <!-- Projects Section -->
 
+   <section id="projects" class="projects-section page-section">
+        <h2>Projects</h2>
+
+        <div class="project-flex">
+            <article class="project-block project-hiring">
+                <h3>1. Hiring Assistant AI – Agentic Resume Screening System (Academic Project)</h3>
+                <p>This intelligent hiring assistant was built to transform traditional recruitment by integrating agentic AI with Retrieval-Augmented Generation (RAG). It autonomously screens and ranks resumes, engages recruiters through dynamic chat, and evolves based on continuous feedback—all in a privacy-first, offline-ready architecture.</p>
+                <div class="project-buttons">
+                    <a href="#" class="btn-transparent view-project-btn" data-project-id="hiring">View Project</a>
+                    <a href="#" class="btn-transparent">View Code</a>
+                </div>
+            </article>
+
+            <article class="project-block project-malnutrition">
+                <h3>2. Visualizing Global Trends in Child Malnutrition (Academic Project)</h3>
+                <p>Leveraging global health datasets from WHO, UNICEF, and the World Bank, this project offered a deep dive into malnutrition trends—analyzing stunting, wasting, underweight, and overweight metrics across geography, gender, and age. By transforming complex raw data into interactive dashboards, the project empowered global stakeholders to make informed decisions targeting child health inequalities.</p>
+                <div class="project-buttons">
+                    <a href="#" class="btn-transparent view-project-btn" data-project-id="malnutrition">View Project</a>
+                    <a href="#" class="btn-transparent">View Code</a>
+                </div>
+            </article>
+
+            <article class="project-block project-fraud">
+                <h3>3. Financial Fraud Detection — Machine Learning Model (Academic Project)</h3>
+                <p>This project addressed the escalating challenge of financial fraud using supervised machine learning. By applying multiple models on a labeled dataset, the system aimed to detect suspicious transactions effectively, prioritizing recall to minimize undetected fraud and integrating fairness metrics to reduce bias.</p>
+                <div class="project-buttons">
+                    <a href="#" class="btn-transparent view-project-btn" data-project-id="fraud">View Project</a>
+                    <a href="#" class="btn-transparent">View Code</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <div id="projectModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-btn">&times;</button>
+            <h3 id="modalProjectTitle"></h3>
+            <p id="modalProjectContent"></p>
+        </div>
+    </div>
 
 
   <!-- Skills Section -->
@@ -1040,6 +1267,80 @@ document.addEventListener('DOMContentLoaded', function() {
       ]
     });
   });
+
+   // Store detailed project content in a JavaScript object
+        const projectDetails = {
+            'hiring': {
+                title: '1. Hiring Assistant AI – Agentic Resume Screening System (Academic Project)',
+                content: `
+                    <p>This intelligent hiring assistant was built to transform traditional recruitment by integrating agentic AI with Retrieval-Augmented Generation (RAG). It autonomously screens and ranks resumes, engages recruiters through dynamic chat, and evolves based on continuous feedback—all in a privacy-first, offline-ready architecture.</p>
+                    <p><strong>Objective:</strong> To develop a lightweight, privacy-compliant, fully offline RAG-powered AI assistant that reduces hiring friction, enhances fairness, and adapts to evolving recruiter criteria in real-time.</p>
+                    <p><strong>Core Features:</strong> Resume Parsing (PyMuPDF-based extraction from PDFs), Semantic Matching (SentenceTransformers embeddings + in-memory similarity for context-rich matching), Hybrid Scoring (combines semantic similarity with rubric-based skill match using Pandas), Recruiter Interaction (dynamic conversations powered by quantized Mistral-7B-Instruct model), Feedback Loop (updates scoring logic and rubric based on recruiter input).</p>
+                    <p><strong>Technologies:</strong> Python 3.x for backend logic and processing, Streamlit (interface for recruiter interaction), PyMuPDF (for text extraction), SentenceTransformers (all-MiniLM-L6-v2 embeddings), Pandas (skill rubric matching & hybrid ranking), ctransformers (for local inference using quantized Mistral-7B-Instruct), RAG (integrated retrieval + reasoning for enhanced explainability), Offline Mode (fully local, secure, and cloud-free operation).</p>
+                    <p><strong>Key Outcomes:</strong> Efficiency (reduced time-to-hire by automating resume triage and ranking), Transparency (provided clear explanations behind matches and rankings), Adaptability (evolved in real-time based on recruiter input and feedback), Privacy-Focused (local inference ensured no external dependencies).</p>
+                `
+            },
+            'malnutrition': {
+                title: '2. Visualizing Global Trends in Child Malnutrition (Academic Project)',
+                content: `
+                    <p>Leveraging global health datasets from WHO, UNICEF, and the World Bank, this project offered a deep dive into malnutrition trends—analyzing stunting, wasting, underweight, and overweight metrics across geography, gender, and age. By transforming complex raw data into interactive dashboards, the project empowered global stakeholders to make informed decisions targeting child health inequalities.</p>
+                    <p><strong>Key Deliverables:</strong> Malnutrition Severity Dashboard (filterable by country, region, gender, and year—offering a 360° view of malnutrition prevalence), Child Patterns Dashboard (trend analysis by age, visualized through scatter plots, time-series, box plots, and stacked area charts), and Geospatial Heatmaps (interactive mapping to highlight regional malnutrition disparities).</p>
+                    <p><strong>Data Engineering & Insights:</strong> Cleaned & standardized massive health datasets, resolving missing and inconsistent values. Mapped historical data (1970–2022) to expose evolving trends across urban-rural lines and genders. Identified critical hotspots like Papua New Guinea and Yemen demanding urgent intervention.</p>
+                    <p><strong>Tools & Tech Stack:</strong> Python (Pandas, NumPy) for data cleaning, transformation, and wrangling. Tableau / Power BI to build interactive, high-impact dashboards. Excel / Google Sheets for initial validation and exploration. Visualization Techniques included Geospatial mapping, trend & comparative analysis, and interactive filters.</p>
+                `
+            },
+            'fraud': {
+                title: '3. Financial Fraud Detection — Machine Learning Model (Academic Project)',
+                content: `
+                    <p>This project addressed the escalating challenge of financial fraud using supervised machine learning. By applying multiple models on a labeled dataset, the system aimed to detect suspicious transactions effectively, prioritizing recall to minimize undetected fraud and integrating fairness metrics to reduce bias.</p>
+                    <p><strong>Approach & Methodology:</strong> Utilized a publicly available transaction dataset with fraud labels. Preprocessing involved balancing classes using SMOTE, handling missing values, and feature scaling. Models trained included Logistic Regression, Random Forest, XGBoost, and Neural Networks. Evaluation focused on Precision, Recall, F1-score, ROC-AUC, with a strong emphasis on minimizing false negatives. Fairness checks were also implemented to monitor model bias across demographics.</p>
+                    <p><strong>Tools & Technologies:</strong> Python (scikit-learn, imbalanced-learn), Jupyter Notebook for exploratory data analysis and prototyping, Matplotlib & Seaborn for visualization.</p>
+                    <p><strong>Outcomes:</strong> Achieved high recall (>0.9) with acceptable precision. Reduced false negatives by 15% compared to baseline models. Implemented fairness-aware model evaluation to ensure equitable detection.</p>
+                `
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const viewProjectButtons = document.querySelectorAll('.view-project-btn');
+            const modal = document.getElementById('projectModal');
+            const modalTitle = document.getElementById('modalProjectTitle');
+            const modalContent = document.getElementById('modalProjectContent');
+            const modalCloseBtn = document.querySelector('.modal-close-btn');
+
+            // Function to open the modal
+            const openModal = (projectId) => {
+                const details = projectDetails[projectId];
+                if (details) {
+                    modalTitle.innerHTML = details.title;
+                    modalContent.innerHTML = details.content;
+                    modal.classList.add('active'); // Show modal
+                }
+            };
+
+            // Function to close the modal
+            const closeModal = () => {
+                modal.classList.remove('active'); // Hide modal
+            };
+
+            // Add click listeners to all "View Project" buttons
+            viewProjectButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent default link behavior
+                    const projectId = button.dataset.projectId;
+                    openModal(projectId);
+                });
+            });
+
+            // Add click listener to the close button
+            modalCloseBtn.addEventListener('click', closeModal);
+
+            // Close modal if clicked outside content (on overlay)
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+        });
   </script>
 </body>
 </html>
