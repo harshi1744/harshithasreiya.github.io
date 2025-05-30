@@ -69,43 +69,7 @@
     footer {
       @apply bg-black text-gray-400 py-6 text-center text-sm;
     }
-    .progress-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 4px;
-      background-color: #7c3aed;
-      z-index: 9999;
-    }
-    .theme-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background: #222;
-      border: 1px solid #444;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 9999px;
-      cursor: pointer;
-      z-index: 9999;
-    }
-    .divider {
-  height: 2px;
-  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.2), rgba(255,255,255,0));
-  margin: 3rem auto;
-  width: 80%;
-  animation: glow 3s infinite ease-in-out;
-  border-radius: 9999px;
-}
-
-@keyframes glow {
-  0%, 100% {
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 1;
-  }
-}
+  
     .owl-carousel .card {
   border: 1px solid red;
 }
@@ -134,7 +98,6 @@
       font-weight: 600;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     }
-
 
   </style>
   
@@ -225,6 +188,7 @@
 
 
   <!-- About Section -->
+  <!--
   <section id="about" class="min-h-screen px-6 py-16">
     <h3 class="section-title">About Me</h3>
     <p class="max-w-3xl mx-auto text-center">
@@ -232,9 +196,10 @@
     </p>
   </section>
   <div class="divider"></div>
+      -->
 
   <!-- About Section -->
-<section id="about" class="min-h-screen px-6 py-16 bg-gray-900 text-gray-200">
+<section id="about" class="min-h-screen px-6 py-16 bg-black-900 text-grey-200">
   <h3 class="section-title text-white mb-8">About Me</h3>
   <div class="max-w-4xl mx-auto space-y-6 text-center text-lg leading-relaxed">
     <p>
@@ -311,7 +276,6 @@
   </div>
 </section>
 
-<div class="divider"></div>
 
 
   <!-- Skills Section -->
@@ -336,7 +300,6 @@
       </div>
     </div>
   </section>
-  <div class="divider"></div>
 
   <!-- Skills Section -->
 <section id="skills" class="min-h-screen px-6 py-16 bg-black text-white">
@@ -398,7 +361,6 @@
     </div>
   </div>
 </section>
-    <div class="divider"></div>
 
 
   <!-- Experience Section -->
@@ -426,7 +388,6 @@
     </div>
   </section>
   
- <div class="divider"></div>
 
     <!-- Contact Section -->
   <section id="contact" class="min-h-screen px-6 py-16 bg-black">
@@ -434,14 +395,6 @@
   <div class="max-w-xl mx-auto text-center space-y-6">
     <p class="text-lg text-gray-300">
       Feel free to reach out through any of the platforms below. I'm always open to connecting!
-    </p>
-
-    <!-- Email -->
-    <p class="text-gray-400">
-      <i class="fas fa-envelope mr-2 text-violet-400"></i>
-      <a href="mailto:harshithasrieya@gmail.com" class="text-blue-400 hover:underline">
-        harshithasrieya@gmail.com
-      </a>
     </p>
 
     <!-- Social Media Icons -->
@@ -459,7 +412,6 @@
   </div>
 </section>
 
-   <div class="divider"></div>
 
   <script>
 // Function to update the width of the progress bar based on page scroll
