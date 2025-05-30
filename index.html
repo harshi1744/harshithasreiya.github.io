@@ -943,12 +943,6 @@ footer {
 <!-- ========== 🚧 PROGRESS BAR SECTION START ========== -->
   <div id="progress" class="progress-bar w-0"></div>
   <!-- ========== 🚧 PROGRESS BAR SECTION END ========== -->
-
-  <!-- ========== 🔄 PRELOADER START ========== -->
-<div id="preloader" class="fixed inset-0 flex items-center justify-center bg-white z-50">
-  <div class="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-</div>
-  <!-- ========== 🔄 PRELOADER END ========== -->
   
 <!-- ========== 🔝 HEADER & NAVIGATION START ========== -->
 
@@ -1454,8 +1448,6 @@ document.addEventListener('keydown', (e) => {
   };
   magicMouse(options);
 
-  // Preloader
-    window.addEventListener('load', () => document.getElementById('preloader').style.display = 'none');
 //locomotive scroll
       const scroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
