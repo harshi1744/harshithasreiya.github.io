@@ -45,6 +45,8 @@
 <!-- Custom Styles -->
 <link rel="stylesheet" href="css/style.css" />
 
+  
+
 </head>
 
   <style>
@@ -441,7 +443,133 @@ footer {
     font-size: 1.5rem;
   }
 }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
 
+        .page-section {
+            padding: 4rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .project-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem; /* Space between project blocks */
+            margin-bottom: 3rem; /* Space between rows of projects */
+        }
+
+        .project-block {
+            position: relative; /* For absolute positioning of overlay and buttons */
+            background-color: #ffffff;
+            border-radius: 1rem; /* Rounded corners */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Ensures background image and overlay respect border-radius */
+            flex: 1 1 450px; /* Allows blocks to grow/shrink, max width 450px */
+            max-width: 500px;
+            min-height: 400px; /* Minimum height to ensure space for content and buttons */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Pushes content to the bottom */
+            padding: 2rem;
+            color: white; /* Text color over background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Overlay for text readability over background images */
+        .project-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+            z-index: 1; /* Ensure overlay is below text but above background */
+        }
+
+        .project-block > * {
+            position: relative; /* Ensure content is above the overlay */
+            z-index: 2;
+        }
+
+        .project-block h3 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+        }
+
+        .project-block p,
+        .project-block ul {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-block ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+        }
+
+        .project-block ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            justify-content: center; /* Center buttons horizontally */
+        }
+
+        .btn-transparent {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px; /* Fully rounded */
+            background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+            border: 1px solid rgba(255, 255, 255, 0.4); /* Slightly visible border */
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+            backdrop-filter: blur(5px); /* Frosted glass effect */
+            -webkit-backdrop-filter: blur(5px); /* For Safari */
+        }
+
+        .btn-transparent:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.7);
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        /* Specific background images for each project block */
+        .project-hiring {
+            background-image: url('https://i.pinimg.com/originals/12/b7/87/12b7877ea50bc630d3c2367553a4e1a3.gif');
+        }
+
+        .project-malnutrition {
+            background-image: url('https://cdn.dribbble.com/users/19455/screenshots/5808898/loader.gif');
+        }
+
+        .project-fraud {
+            background-image: url('https://imgflip.com/gif/9v1jeb');
+        }
   </style>
 
 <body class="min-h-screen flex flex-col">
@@ -503,38 +631,6 @@ footer {
       </ul>
     </nav>
   </header>
-
-
-  <body x-data="{ darkMode: true }" :class="darkMode ? 'bg-black text-white' : 'bg-white text-black'" class="min-h-screen flex flex-col">
-
-  <!-- Progress Bar -->
-  <div id="progress" class="progress-bar w-0"></div>
-
-  <!-- Header with Navigation -->
-  <header class="w-full p-4 md:p-6 flex flex-col md:flex-row justify-between items-center bg-black sticky top-0 z-50 shadow-md">
-    <!-- Site Title -->
-    <div class="text-lg md:text-xl font-semibold mb-4 md:mb-0 text-violet-400 text-center md:text-left w-full md:w-auto">
-      HARSHITHA SREIYA PALAPARTHI
-    </div>
-
-    <!-- Navigation Menu -->
-    <nav>
-      <ul class="flex space-x-4 md:space-x-8 text-sm md:text-base font-medium">
-        <li><a href="#home" class="nav-link"><i class="ion-ios-home text-lg"></i> <span>Home</span></a></li>
-        <li><a href="#about" class="nav-link"><i class="ion-ios-information-circle text-lg"></i> <span>About</span></a></li>
-        <li><a href="#education" class="nav-link"><i class="ion-ios-book text-lg"></i> <span>Education</span></a></li>
-        <li><a href="#skills" class="nav-link"><i class="ion-ios-barcode text-lg"></i> <span>Skills</span></a></li>
-        <li><a href="#projects" class="nav-link"><i class="ion-ios-briefcase text-lg"></i> <span>Projects</span></a></li>
-        <li><a href="#experience" class="nav-link"><i class="ion-ios-clipboard text-lg"></i> <span>Experience</span></a></li>
-        <li><a href="#contact" class="nav-link"><i class="ion-ios-call text-lg"></i> <span>Contact</span></a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Theme Toggle Button (Floating) -->
-  <button @click="darkMode = !darkMode" class="theme-toggle">
-    Toggle {{ darkMode ? 'Light' : 'Dark' }} Mode
-  </button>
 
   <!-- Home Section -->
   <main id="home" class="flex-grow flex items-center justify-center p-4 md:p-8 bg-black">
@@ -643,6 +739,58 @@ footer {
     </div>
   </section>
 
+  <!-- Projects Section -->
+  
+    <section id="projects" class="projects-section page-section">
+        <h2>Projects</h2>
+
+        <div class="project-flex">
+            <article class="project-block project-hiring">
+                <h3>1. Hiring Assistant AI – Agentic Resume Screening System (Academic Project)</h3>
+                <p>This intelligent hiring assistant was built to transform traditional recruitment by integrating agentic AI with Retrieval-Augmented Generation (RAG). It autonomously screens and ranks resumes, engages recruiters through dynamic chat, and evolves based on continuous feedback—all in a privacy-first, offline-ready architecture.</p>
+                <p><strong>Objective:</strong> To develop a lightweight, privacy-compliant, fully offline RAG-powered AI assistant that reduces hiring friction, enhances fairness, and adapts to evolving recruiter criteria in real-time.</p>
+                <div class="project-buttons">
+                    <a href="#" class="btn-transparent">View Project</a>
+                    <a href="#" class="btn-transparent">View Code</a>
+                </div>
+            </article>
+
+            <article class="project-block project-malnutrition">
+                <h3>2. Visualizing Global Trends in Child Malnutrition (Academic Project)</h3>
+                <p>Leveraging global health datasets from WHO, UNICEF, and the World Bank, this project offered a deep dive into malnutrition trends—analyzing stunting, wasting, underweight, and overweight metrics across geography, gender, and age. By transforming complex raw data into interactive dashboards, the project empowered global stakeholders to make informed decisions targeting child health inequalities.</p>
+                <p><strong>Key Deliverables:</strong></p>
+                <ul>
+                    <li>Malnutrition Severity Dashboard: Filterable by country, region, gender, and year—offering a 360° view of malnutrition prevalence</li>
+                    <li>Child Patterns Dashboard: Trend analysis by age, visualized through scatter plots, time-series, box plots, and stacked area charts</li>
+                    <li>Geospatial Heatmaps: Interactive mapping to highlight regional malnutrition disparities</li>
+                </ul>
+                <div class="project-buttons">
+                    <a href="#" class="btn-transparent">View Project</a>
+                    <a href="#" class="btn-transparent">View Code</a>
+                </div>
+            </article>
+
+            <article class="project-block project-fraud">
+                <h3>3. Financial Fraud Detection — Machine Learning Model (Academic Project)</h3>
+                <p>This project addressed the escalating challenge of financial fraud using supervised machine learning. By applying multiple models on a labeled dataset, the system aimed to detect suspicious transactions effectively, prioritizing recall to minimize undetected fraud and integrating fairness metrics to reduce bias.</p>
+                <p><strong>Approach & Methodology:</strong></p>
+                <ul>
+                    <li>Dataset: Publicly available transaction data with fraud labels</li>
+                    <li>Preprocessing: Balanced classes using SMOTE, handled missing values, feature scaling</li>
+                    <li>Models Trained: Logistic Regression, Random Forest, XGBoost, Neural Networks</li>
+                    <li>Evaluation Metrics: Precision, Recall, F1-score, ROC-AUC, with focus on minimizing false negatives</li>
+                    <li>Fairness Checks: Monitored model bias across demographics</li>
+                </ul>
+                <div class="project-buttons">
+                    <a href="#" class="btn-transparent">View Project</a>
+                    <a href="#" class="btn-transparent">View Code</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+
   <!-- Skills Section -->
   <section id="skills" class="min-h-screen px-6 py-16 bg-black text-white">
     <h2 class="text-4xl font-extrabold mb-14 text-center text-violet-400 tracking-wide">Skills</h2>
@@ -672,15 +820,16 @@ footer {
       <div class="bg-gray-900 rounded-xl shadow-lg p-8">
         <h3 class="text-2xl font-semibold mb-6 border-b border-teal-600 pb-2 text-white text-center">Conceptual & Business Skills</h3>
 
-        <ul class="list-disc list-inside space-y-3 text-gray-300 text-center">
-          <li>Data Analytics & Interpretation</li>
-          <li>Predictive Modeling & Forecasting</li>
-          <li>Statistical Analysis & Hypothesis Testing</li>
-          <li>Business Development & Market Research</li>
-          <li>Project Management & Team Collaboration</li>
-          <li>Problem Solving & Critical Thinking</li>
-          <li>Communication & Presentation Skills</li>
-        </ul>
+        <ul class="list-none space-y-3 text-gray-300 text-center">
+        <li>Data Analytics & Interpretation</li>
+        <li>Predictive Modeling & Forecasting</li>
+        <li>Statistical Analysis & Hypothesis Testing</li>
+        <li>Business Development & Market Research</li>
+        <li>Project Management & Team Collaboration</li>
+        <li>Problem Solving & Critical Thinking</li>
+        <li>Communication & Presentation Skills</li>
+      </ul>
+
       </div>
     </div>
   </section>
@@ -718,9 +867,9 @@ footer {
   <div class="animated-bg"></div> <!-- subtle animated background -->
 
   <div class="w-full max-w-5xl flex flex-col items-center justify-center relative z-10">
-    <h3 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 text-center" style="color:#00D1C1;">
-      Secure Transmission: Professional Credentials
-    </h3>
+   <h3 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 text-center text-violet-400">
+    Secure Transmission Professional Credentials
+  </h3>
     <p class="mt-4 text-lg sm:text-xl text-gray-400 text-center mb-12 max-w-2xl">
       Access encrypted channels. Intercept data shards for details.
     </p>
@@ -779,11 +928,7 @@ footer {
     <div class="card-detail">Evaluate my algorithmic performance.</div>
   </div>
   </a>
-    </div>
-  </div>
-</section>
-  
-<!-- Notion Wiki or Docs -->
+      <!-- Notion Wiki or Docs -->
 <a href="https://notion.so/yourpage" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="Knowledge Base">
   <div class="card-content">
     <i class="fas fa-database card-icon"></i>
@@ -791,8 +936,12 @@ footer {
     <div class="card-detail">Dive into curated systems and notes.</div>
   </div>
 </a>
+    </div>
+  </div>
+</section>
+  
 
-  <footer class="w-full bg-black text-gray-400 py-6 text-center text-sm">
+<footer class="w-full bg-black text-gray-400 py-6 text-center text-sm">
   <p>&copy; 2025 Harshitha Sreiya Palaparthi. All rights reserved.</p>
 
   <!-- Social Links Row -->
@@ -894,3 +1043,5 @@ document.addEventListener('DOMContentLoaded', function() {
   </script>
 </body>
 </html>
+
+    
