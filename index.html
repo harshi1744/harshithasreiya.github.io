@@ -5,19 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harshitha Sreiya </title>
 
-  <!-- Tailwind CSS (v2.2.19) - Utility-first CSS framework -->
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 
-<!-- Optional: Tailwind Play CDN for custom config (can be removed if using precompiled CSS) -->
 <script src="https://cdn.tailwindcss.com"></script> 
 
-<!-- Google Fonts: Montserrat & Inter -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-<!-- Alpine.js (v3) - Lightweight JS framework -->
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
-<!-- Font Awesome v6.5.0 - Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!-- jQuery (v3.6.0) - Required for Owl Carousel and Magnific Popup -->
@@ -903,6 +898,243 @@ footer {
   background-size: cover;
   background-position: center;
 }
+/* === GENERAL BODY & TYPOGRAPHY === */
+body {
+  background: #161616;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  color: #eee;
+  overflow-x: hidden;
+}
+
+/* === CONTAINER === */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* === HEADER === */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #161616;
+  border-bottom: 1px solid #333;
+  z-index: 10;
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  color: #eee;
+}
+
+/* === NAVIGATION === */
+nav {
+  margin-top: 80px;
+  text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 22px;
+  color: #eee;
+  margin: 0 30px;
+  padding: 5px 15px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+
+nav a:hover {
+  background-color: #eee;
+  color: #161616;
+  box-shadow: 0 0 6px 1px #eee;
+  border-radius: 10px;
+}
+
+/* === MAIN CONTENT === */
+main {
+  padding-top: 130px; /* Space for fixed header */
+  margin-bottom: 60px;
+}
+
+/* === PROJECTS CONTAINER === */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 40px 0;
+  justify-items: center;
+}
+
+/* === PROJECT CARD === */
+.project {
+  background-color: #222;
+  border-radius: 20px;
+  width: 280px;
+  height: 430px;
+  padding: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px 4px #eee;
+}
+
+/* Project content */
+.project .project-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #eee;
+}
+
+.project img {
+  width: 100%;
+  height: 180px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 0 6px 2px #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.project:hover img {
+  box-shadow: 0 0 20px 4px #eee;
+}
+
+/* === PROJECT DETAILS === */
+.project-details {
+  font-size: 18px;
+  font-weight: 500;
+  color: #eee;
+  margin-top: auto;
+  text-align: center;
+}
+
+/* === BUTTONS === */
+.btn {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-code {
+  background-color: #ddd;
+  color: #161616;
+}
+
+.btn-code:hover {
+  background-color: #bbb;
+}
+
+/* === MODAL === */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  max-width: 90%;
+  background-color: #222;
+  border-radius: 20px;
+  padding: 30px 30px 30px 40px;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  display: none; /* Hidden by default */
+  color: #eee;
+}
+
+.modal.show {
+  display: block;
+}
+
+/* Modal header */
+.modal h2 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+/* Modal content */
+.modal-content {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Modal buttons */
+.modal-buttons {
+  text-align: center;
+}
+
+.modal-buttons .btn {
+  margin: 0 15px;
+}
+
+/* Modal overlay (optional for dimming background) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 22, 22, 0.8);
+  z-index: 99;
+  display: none;
+}
+
+.modal-overlay.show {
+  display: block;
+}
+
+/* === FOOTER === */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #161616;
+  border-top: 1px solid #333;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #666;
+  font-weight: 600;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 720px) {
+  nav a {
+    margin: 0 15px;
+    font-size: 18px;
+  }
+
+  .project {
+    width: 90vw;
+    height: auto;
+  }
+
+  .modal {
+    width: 95vw;
+    padding: 20px;
+  }
+}
 
   </style>
 
@@ -1032,6 +1264,26 @@ footer {
       </div>
     </div>
   </section>
+    <!-- Projects Section -->
+<div class="projects-container">
+  <div class="project" data-title="Project One" data-description="Description for project one." data-image="project1.jpg" data-code-url="https://github.com/project1">
+    <img src="project1.jpg" alt="Project One" />
+    <div class="project-name">Project One</div>
+  </div>
+  <!-- Repeat project cards -->
+</div>
+
+<!-- Modal -->
+<div class="modal-overlay"></div>
+<div class="modal" id="modal">
+  <h2 id="modal-title"></h2>
+  <img id="modal-image" src="" alt="" style="width:100%; border-radius: 15px; margin-bottom: 15px;" />
+  <div class="modal-content" id="modal-description"></div>
+  <div class="modal-buttons">
+    <a href="#" target="_blank" id="modal-code-btn" class="btn btn-code">View Code</a>
+    <button id="modal-close-btn" class="btn">Close</button>
+  </div>
+</div>
 
   <!-- Projects Section -->
   <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50">
@@ -1382,80 +1634,50 @@ document.addEventListener('DOMContentLoaded', function() {
       ]
     });
   });
+// Get modal elements
+const modal = document.getElementById('modal');
+const overlay = document.querySelector('.modal-overlay');
+const modalTitle = document.getElementById('modal-title');
+const modalDescription = document.getElementById('modal-description');
+const modalImage = document.getElementById('modal-image');
+const modalCodeBtn = document.getElementById('modal-code-btn');
+const modalCloseBtn = document.getElementById('modal-close-btn');
 
-   // Store detailed project content in a JavaScript object
-        const projectDetails = {
-            'hiring': {
-                title: '1. Hiring Assistant AI – Agentic Resume Screening System (Academic Project)',
-                content: `
-                    <p>This intelligent hiring assistant was built to transform traditional recruitment by integrating agentic AI with Retrieval-Augmented Generation (RAG). It autonomously screens and ranks resumes, engages recruiters through dynamic chat, and evolves based on continuous feedback—all in a privacy-first, offline-ready architecture.</p>
-                    <p><strong>Objective:</strong> To develop a lightweight, privacy-compliant, fully offline RAG-powered AI assistant that reduces hiring friction, enhances fairness, and adapts to evolving recruiter criteria in real-time.</p>
-                    <p><strong>Core Features:</strong> Resume Parsing (PyMuPDF-based extraction from PDFs), Semantic Matching (SentenceTransformers embeddings + in-memory similarity for context-rich matching), Hybrid Scoring (combines semantic similarity with rubric-based skill match using Pandas), Recruiter Interaction (dynamic conversations powered by quantized Mistral-7B-Instruct model), Feedback Loop (updates scoring logic and rubric based on recruiter input).</p>
-                    <p><strong>Technologies:</strong> Python 3.x for backend logic and processing, Streamlit (interface for recruiter interaction), PyMuPDF (for text extraction), SentenceTransformers (all-MiniLM-L6-v2 embeddings), Pandas (skill rubric matching & hybrid ranking), ctransformers (for local inference using quantized Mistral-7B-Instruct), RAG (integrated retrieval + reasoning for enhanced explainability), Offline Mode (fully local, secure, and cloud-free operation).</p>
-                    <p><strong>Key Outcomes:</strong> Efficiency (reduced time-to-hire by automating resume triage and ranking), Transparency (provided clear explanations behind matches and rankings), Adaptability (evolved in real-time based on recruiter input and feedback), Privacy-Focused (local inference ensured no external dependencies).</p>
-                `
-            },
-            'malnutrition': {
-                title: '2. Visualizing Global Trends in Child Malnutrition (Academic Project)',
-                content: `
-                    <p>Leveraging global health datasets from WHO, UNICEF, and the World Bank, this project offered a deep dive into malnutrition trends—analyzing stunting, wasting, underweight, and overweight metrics across geography, gender, and age. By transforming complex raw data into interactive dashboards, the project empowered global stakeholders to make informed decisions targeting child health inequalities.</p>
-                    <p><strong>Key Deliverables:</strong> Malnutrition Severity Dashboard (filterable by country, region, gender, and year—offering a 360° view of malnutrition prevalence), Child Patterns Dashboard (trend analysis by age, visualized through scatter plots, time-series, box plots, and stacked area charts), and Geospatial Heatmaps (interactive mapping to highlight regional malnutrition disparities).</p>
-                    <p><strong>Data Engineering & Insights:</strong> Cleaned & standardized massive health datasets, resolving missing and inconsistent values. Mapped historical data (1970–2022) to expose evolving trends across urban-rural lines and genders. Identified critical hotspots like Papua New Guinea and Yemen demanding urgent intervention.</p>
-                    <p><strong>Tools & Tech Stack:</strong> Python (Pandas, NumPy) for data cleaning, transformation, and wrangling. Tableau / Power BI to build interactive, high-impact dashboards. Excel / Google Sheets for initial validation and exploration. Visualization Techniques included Geospatial mapping, trend & comparative analysis, and interactive filters.</p>
-                `
-            },
-            'fraud': {
-                title: '3. Financial Fraud Detection — Machine Learning Model (Academic Project)',
-                content: `
-                    <p>This project addressed the escalating challenge of financial fraud using supervised machine learning. By applying multiple models on a labeled dataset, the system aimed to detect suspicious transactions effectively, prioritizing recall to minimize undetected fraud and integrating fairness metrics to reduce bias.</p>
-                    <p><strong>Approach & Methodology:</strong> Utilized a publicly available transaction dataset with fraud labels. Preprocessing involved balancing classes using SMOTE, handling missing values, and feature scaling. Models trained included Logistic Regression, Random Forest, XGBoost, and Neural Networks. Evaluation focused on Precision, Recall, F1-score, ROC-AUC, with a strong emphasis on minimizing false negatives. Fairness checks were also implemented to monitor model bias across demographics.</p>
-                    <p><strong>Tools & Technologies:</strong> Python (scikit-learn, imbalanced-learn), Jupyter Notebook for exploratory data analysis and prototyping, Matplotlib & Seaborn for visualization.</p>
-                    <p><strong>Outcomes:</strong> Achieved high recall (>0.9) with acceptable precision. Reduced false negatives by 15% compared to baseline models. Implemented fairness-aware model evaluation to ensure equitable detection.</p>
-                `
-            }
-        };
+// Open modal function
+function openModal(project) {
+  modalTitle.textContent = project.dataset.title;
+  modalDescription.textContent = project.dataset.description;
+  modalImage.src = project.dataset.image;
+  modalImage.alt = project.dataset.title;
+  modalCodeBtn.href = project.dataset.codeUrl;
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const viewProjectButtons = document.querySelectorAll('.view-project-btn');
-            const modal = document.getElementById('projectModal');
-            const modalTitle = document.getElementById('modalProjectTitle');
-            const modalContent = document.getElementById('modalProjectContent');
-            const modalCloseBtn = document.querySelector('.modal-close-btn');
+  modal.classList.add('show');
+  overlay.classList.add('show');
+  document.body.style.overflow = 'hidden'; // Prevent background scroll
+}
 
-            // Function to open the modal
-            const openModal = (projectId) => {
-                const details = projectDetails[projectId];
-                if (details) {
-                    modalTitle.innerHTML = details.title;
-                    modalContent.innerHTML = details.content;
-                    modal.classList.add('active'); // Show modal
-                }
-            };
+// Close modal function
+function closeModal() {
+  modal.classList.remove('show');
+  overlay.classList.remove('show');
+  document.body.style.overflow = 'auto';
+}
 
-            // Function to close the modal
-            const closeModal = () => {
-                modal.classList.remove('active'); // Hide modal
-            };
+// Attach click to each project card
+document.querySelectorAll('.project').forEach(project => {
+  project.addEventListener('click', () => openModal(project));
+});
 
-            // Add click listeners to all "View Project" buttons
-            viewProjectButtons.forEach(button => {
-                button.addEventListener('click', (event) => {
-                    event.preventDefault(); // Prevent default link behavior
-                    const projectId = button.dataset.projectId;
-                    openModal(projectId);
-                });
-            });
+// Close button and overlay click
+modalCloseBtn.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
 
-            // Add click listener to the close button
-            modalCloseBtn.addEventListener('click', closeModal);
-
-            // Close modal if clicked outside content (on overlay)
-            modal.addEventListener('click', (event) => {
-                if (event.target === modal) {
-                    closeModal();
-                }
-            });
-        });
+// Close on ESC key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modal.classList.contains('show')) {
+    closeModal();
+  }
+});
   </script>
 </body>
 </html>
