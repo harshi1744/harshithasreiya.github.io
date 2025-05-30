@@ -4,42 +4,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harshitha Sreiya </title>
+<!-- Tailwind CSS -->
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
+<!-- Alpine.js -->
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<!-- Font Awesome (latest 6.5.0) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+<!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+<!-- Owl Carousel -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-<link href="https://cdn.jsdelivr.net/npm/open-iconic@1.1.1/font/css/open-iconic-bootstrap.min.css" rel="stylesheet" />
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
+<!-- Open Iconic -->
+<link href="https://cdn.jsdelivr.net/npm/open-iconic@1.1.1/font/css/open-iconic-bootstrap.min.css" rel="stylesheet" />
+
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<!-- Magnific Popup -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
 
+<!-- AOS (Animate On Scroll) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
-<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+<!-- Ionicons -->
+<link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/felipefialho/flaticon.css@1.0.0/css/flaticon.min.css" />
-
+<!-- Your Custom Styles -->
 <link rel="stylesheet" href="css/style.css" />
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-  integrity="sha512-dyZt+ZwPU8R9bSy6qphD9eV+3EChPNLpX3F/NNxIb0b4b0U9E9KV/3tVbFdqJ4fZzEdqaF4V3SqLv8h6zR43Iw=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
+
+<!-- Tailwind CSS (for utility scripts, optional if you want to configure tailwind on the fly) -->
+<script src="https://cdn.tailwindcss.com"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -436,6 +443,125 @@
   }
 }
 
+.experience-timeline {
+  position: relative;
+  border-left: 2px solid #444;
+  padding-left: 1.5rem;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #00D1C1;
+  border-radius: 50%;
+}
+/* Projects Section Container */
+#projects {
+  background-color: #000;
+  color: #e0e0e0;
+  padding: 4rem 1.5rem;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Section Title */
+#projects .section-title {
+  color: #8b5cf6; /* violet-400 */
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Grid Layout for Project Cards */
+#projects .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Project Card */
+#projects .card {
+  background-color: #1f2937; /* Tailwind gray-800 */
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for card */
+#projects .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgb(139 92 246 / 0.6); /* violet glow */
+}
+
+/* Icon styling */
+#projects .card i {
+  font-size: 1.5rem;
+  color: #8b5cf6; /* violet */
+  margin-right: 0.75rem;
+}
+
+/* Project Title container */
+#projects .card .flex {
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Project Title */
+#projects .card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ddd;
+}
+
+/* Project Description */
+#projects .card p {
+  font-size: 0.875rem;
+  color: #cbd5e1; /* lighter gray */
+  line-height: 1.5;
+}
+/* Icon and heading styling */
+#skills h3.flex, 
+#skills h4.flex {
+  transition: color 0.3s ease;
+  cursor: default;
+}
+
+#skills h3.flex:hover, 
+#skills h4.flex:hover {
+  color: #14b8a6; /* Slightly brighter teal on hover */
+}
+
+#skills i {
+  transition: transform 0.3s ease;
+  color: #14b8a6; /* Icon teal color */
+}
+
+#skills h3.flex:hover i,
+#skills h4.flex:hover i {
+  transform: scale(1.2); /* Slight scale-up on hover */
+  color: #0d9488; /* Darker teal */
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  #skills .max-w-5xl {
+    grid-template-columns: 1fr !important; /* Stack cards vertically on small screens */
+  }
+  
+  #skills h3.flex i,
+  #skills h4.flex i {
+    font-size: 1.5rem; /* Slightly smaller icons on mobile */
+  }
+}
+
 
 
   </style>
@@ -460,32 +586,61 @@
     </nav>
   </header>
 
-  <main id="home" class="flex-grow flex items-center justify-center p-4 md:p-8 bg-black">
-    <div class="text-center md:text-left w-full max-w-4xl px-4 md:px-0 flex flex-col md:flex-row items-center md:items-start">
-        <div>
-            <p class="text-sm md:text-base mb-2 md:mb-4 font-semibold">HELLO!</p>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-2 md:mb-3">
-                I'm <span class="text-violet-300">Harshitha Sreiya</span><br>
-                <span class="text-violet-300">Palaparthi</span>
-            </h1>
-            <p class="text-lg md:text-xl mb-4 md:mb-6">
-                Aspiring Financial Analyst | UNT Business Analytics Graduate Student
-            </p>
-            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" target="_blank" rel="noopener noreferrer"
-                    class="inline-block bg-violet-200 text-black font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-violet-300 transition-colors duration-200 text-center">
-                    LINKEDIN
-                </a>
-                <a href="https://github.com/harshi1744" target="_blank" rel="noopener noreferrer"
-                    class="inline-block border border-white text-white font-semibold py-3 px-6 rounded-full hover:bg-white hover:text-black transition-colors duration-200 text-center">
-                    GITHUB
-                </a>
-            </div>
-        </div>
+
+  
+  <header class="w-full p-4 md:p-6 flex flex-col md:flex-row justify-between items-center bg-black sticky top-0 z-50 shadow-md">
+    <div class="text-lg md:text-xl font-semibold mb-4 md:mb-0">
+      HARSHITHA SREIYA PALAPARTHI
     </div>
-</main>
+  <nav>
+  <ul class="flex space-x-4 md:space-x-8 text-sm md:text-base font-medium">
+    <li>
+      <a href="#home" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2">
+        <i class="ion-ios-home text-lg"></i>
+        <span>Home</span>
+      </a>
+    </li>
+    <li>
+      <a href="#about" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2">
+        <i class="ion-ios-information-circle text-lg"></i>
+        <span>About</span>
+      </a>
+    </li>
+    <li>
+      <a href="#education" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2">
+        <i class="ion-ios-book text-lg"></i>
+        <span>Education</span>
+      </a>
+    </li>
+    <li>
+      <a href="#skills" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2">
+        <i class="ion-ios-barcode text-lg"></i>
+        <span>Skills</span>
+      </a>
+    </li>
+    <li>
+      <a href="#projects" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2">
+        <i class="ion-ios-briefcase text-lg"></i>
+        <span>Projects</span>
+      </a>
+    </li>
+    <li>
+      <a href="#experience" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2">
+        <i class="ion-ios-clipboard text-lg"></i>
+        <span>Experience</span>
+      </a>
+    </li>
+    <li>
+      <a href="#contact" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2">
+        <i class="ion-ios-call text-lg"></i>
+        <span>Contact</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+  </header>
 
-
+  
 
   <main id="home" class="flex-grow flex items-center justify-center p-4 md:p-8 bg-black">
     <div class="text-center md:text-left w-full max-w-4xl px-4 md:px-0 flex flex-col md:flex-row items-center md:items-start">
@@ -512,7 +667,7 @@
             </div>
               </div>
               </div>
-</main>
+      </main>
 
   <section id="about" class="min-h-screen px-6 py-16 bg-black text-white">
   <h3 class="section-title text-white mb-8 text-center">About Me</h3>
@@ -556,43 +711,6 @@
     </div>
   </section>
 
-<section id="experience" class="min-h-screen px-6 py-16 bg-black text-white">
-  <h2 class="section-title text-4xl font-bold mb-12 text-center" style="color:#00D1C1;">
-    Experience
-  </h2>
-
-  <div class="max-w-4xl mx-auto space-y-10">
-    <!-- Experience Block 1 -->
-    <div class="experience-card">
-      <div class="experience-header">
-        <h3>Business Development Intern</h3>
-        <span class="experience-date">May 2022 – Mar 2023</span>
-      </div>
-      <h4 class="experience-company">NSIC, Hyderabad</h4>
-      <ul class="experience-list">
-        <li>Analyzed market trends and financial viability to guide business strategy and growth for small and medium enterprises.</li>
-        <li>Built financial and business models to support strategic decision-making using data-driven insights.</li>
-        <li>Utilized Excel and analytics tools to study customer demand, sales performance, and growth projections.</li>
-      </ul>
-    </div>
-
-    <!-- Experience Block 2 -->
-    <div class="experience-card">
-      <div class="experience-header">
-        <h3>Counselor / Data Mentor</h3>
-        <span class="experience-date">Aug 2021 – Mar 2022</span>
-      </div>
-      <h4 class="experience-company">Voice 4 Girls, Hyderabad</h4>
-      <ul class="experience-list">
-        <li>Guided students in academic and personal development while analyzing engagement patterns to optimize learning experiences.</li>
-        <li>Performed structured data collection and feedback analysis to assess program effectiveness and retention rates.</li>
-        <li>Led workshops using survey-driven insights to enhance educational delivery and impact.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
   <section id="projects" class="min-h-screen px-6 py-16 bg-black">
   <h3 class="section-title">Projects</h3>
   <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -611,6 +729,87 @@
   </div>
 </section>
 
+
+  <section id="projects" class="min-h-screen px-6 py-16 bg-black text-white">
+  <h3 class="section-title text-4xl font-bold mb-12 text-center text-violet-300">Projects</h3>
+
+  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <!-- Project 1 -->
+    <div class="card bg-gray-900 rounded-lg p-6 shadow-md">
+      <div class="flex items-center mb-4">
+        <i class="ion-ios-flask text-violet-400 text-xl mr-3"></i>
+        <h3 class="text-lg font-semibold">Hiring Assistant AI</h3>
+      </div>
+      <p class="text-sm text-gray-300">
+        Developed a privacy-compliant AI system that screens resumes using RAG-based techniques and semantic similarity.
+        The solution operates offline using open-source LLMs, streamlining hiring workflows by 50% and enhancing candidate-job alignment through contextual matching.
+      </p>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="card bg-gray-900 rounded-lg p-6 shadow-md">
+      <div class="flex items-center mb-4">
+        <i class="ion-ios-flask text-violet-400 text-xl mr-3"></i>
+        <h3 class="text-lg font-semibold">Child Malnutrition Visualizer</h3>
+      </div>
+      <p class="text-sm text-gray-300">
+        Created interactive Tableau dashboards to visualize malnutrition patterns in children across Indian states segmented by gender.
+        Integrated data pipelines using Excel and SQL, enabling policymakers and NGOs to track interventions and outcomes effectively.
+      </p>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="card bg-gray-900 rounded-lg p-6 shadow-md">
+      <div class="flex items-center mb-4">
+        <i class="ion-ios-flask text-violet-400 text-xl mr-3"></i>
+        <h3 class="text-lg font-semibold">AI-Powered Fraud Detection</h3>
+      </div>
+      <p class="text-sm text-gray-300">
+        Built a real-time banking fraud detection tool combining supervised and unsupervised ML models.
+        Incorporated SHAP and LIME for explainability, aligned with GDPR/PCI DSS, and deployed AES-256 encryption to ensure secure financial data handling.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="min-h-screen px-6 py-16 bg-black text-white">
+  <h3 class="section-title text-4xl font-bold mb-12 text-center text-violet-300">Projects</h3>
+
+  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <!-- Project 1: Hiring Assistant AI -->
+    <div class="card bg-gray-900 rounded-lg p-6 shadow-md">
+      <div class="flex items-center mb-4">
+        <i class="ion-ios-analytics text-violet-400 text-xl mr-3"></i>
+        <h3 class="text-lg font-semibold">Hiring Assistant AI</h3>
+      </div>
+      <p class="text-sm text-gray-300">
+        Developed a privacy-compliant AI system that screens resumes using RAG-based techniques and semantic similarity. Operates offline with open-source LLMs, streamlining workflows by 50% and boosting candidate-job alignment.
+      </p>
+    </div>
+
+    <!-- Project 2: Child Malnutrition Visualizer -->
+    <div class="card bg-gray-900 rounded-lg p-6 shadow-md">
+      <div class="flex items-center mb-4">
+        <i class="ion-ios-stats text-violet-400 text-xl mr-3"></i>
+        <h3 class="text-lg font-semibold">Child Malnutrition Visualizer</h3>
+      </div>
+      <p class="text-sm text-gray-300">
+        Created interactive Tableau dashboards to analyze malnutrition patterns in children across Indian states, segmented by gender. Built with SQL pipelines and Excel integration for use by NGOs and policymakers.
+      </p>
+    </div>
+
+    <!-- Project 3: AI-Powered Fraud Detection -->
+    <div class="card bg-gray-900 rounded-lg p-6 shadow-md">
+      <div class="flex items-center mb-4">
+        <i class="ion-ios-lock text-violet-400 text-xl mr-3"></i>
+        <h3 class="text-lg font-semibold">AI-Powered Fraud Detection</h3>
+      </div>
+      <p class="text-sm text-gray-300">
+        Engineered a real-time fraud detection platform using hybrid ML models, SHAP & LIME explainability, and AES-256 encryption. Fully GDPR/PCI compliant and deployed for secure financial environments.
+      </p>
+    </div>
+  </div>
+</section>
 
   <section id="skills" class="min-h-screen px-6 py-16 bg-black text-white">
   <h2 class="text-4xl font-extrabold mb-14 text-center text-teal-400 tracking-wide">Skills</h2>
@@ -669,7 +868,120 @@
   </div>
 </section>
 
+<section id="skills" class="min-h-screen px-6 py-16 bg-black text-white">
+  <h2 class="text-4xl font-extrabold mb-14 text-center text-teal-400 tracking-wide">Skills</h2>
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
 
+    <!-- Technical Skills -->
+    <div class="bg-gray-900 rounded-xl shadow-lg p-8">
+      <h3 class="text-2xl font-semibold mb-6 border-b border-teal-600 pb-2 text-teal-300 flex items-center gap-3">
+        <i class="ion-ios-analytics text-teal-400 text-3xl"></i> Technical Skills
+      </h3>
+
+      <div class="mb-6">
+        <h4 class="font-semibold text-teal-400 mb-2">Programming Languages</h4>
+        <p class="text-gray-300">Python, R, Java, JavaScript, SQL</p>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="font-semibold text-teal-400 mb-2">Data Visualization</h4>
+        <p class="text-gray-300">Tableau, Power BI, Excel</p>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="font-semibold text-teal-400 mb-2">Databases</h4>
+        <p class="text-gray-300">MySQL, MongoDB, BigQuery</p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-teal-400 mb-2 flex items-center gap-2">
+          <i class="ion-ios-cloud text-teal-400 text-xl"></i> Cloud Platforms
+        </h4>
+        <p class="text-gray-300">Google Cloud Platform (GCP), AWS (basic)</p>
+      </div>
+    </div>
+
+    <!-- Tools & Concepts -->
+    <div class="bg-gray-900 rounded-xl shadow-lg p-8">
+      <h3 class="text-2xl font-semibold mb-6 border-b border-teal-600 pb-2 text-teal-300 flex items-center gap-3">
+        <i class="ion-ios-code text-teal-400 text-3xl"></i> Tools & Concepts
+      </h3>
+
+      <div class="mb-6">
+        <h4 class="font-semibold text-teal-400 mb-2">Version Control & Collaboration</h4>
+        <p class="text-gray-300">Git, GitHub, JIRA</p>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="font-semibold text-teal-400 mb-2">Libraries & Frameworks</h4>
+        <p class="text-gray-300">NumPy, Pandas, Scikit-learn, TensorFlow</p>
+      </div>
+
+      <div class="mb-6">
+        <h4 class="font-semibold text-teal-400 mb-2">Web Technologies</h4>
+        <p class="text-gray-300">HTML, CSS, JavaScript (React basics)</p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-teal-400 mb-2 flex items-center gap-2">
+          <i class="ion-ios-pie text-teal-400 text-xl"></i> Concepts & Methodologies
+        </h4>
+        <p class="text-gray-300">Data Modeling, KPI Design, Business Intelligence, Agile</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  
+<section id="experience" class="min-h-screen px-6 py-16 bg-black text-white">
+  <h2 class="section-title text-4xl font-bold mb-12 text-center" style="color:#00D1C1;">
+    Experience
+  </h2>
+  <div class="max-w-4xl mx-auto space-y-12">
+
+    <!-- Experience Block 1 -->
+    <div class="experience-card bg-gray-900 rounded-lg p-6 shadow-lg">
+      <div class="flex items-center mb-3 space-x-4 text-teal-400">
+        <i class="ion-ios-person text-2xl"></i>
+        <h3 class="text-xl font-semibold">Business Development Intern</h3>
+      </div>
+      <div class="flex items-center mb-2 space-x-4 text-gray-400">
+        <i class="ion-ios-briefcase text-xl"></i>
+        <span>NSIC, Hyderabad</span>
+      </div>
+      <div class="flex items-center mb-4 space-x-4 text-gray-400">
+        <i class="ion-ios-time text-xl"></i>
+        <span>May 2022 – Mar 2023</span>
+      </div>
+      <p class="text-gray-300 leading-relaxed">
+        Analyzed market trends and financial viability to guide business strategy and growth for small and medium enterprises. Built financial and business models to support strategic decision-making using data-driven insights. Utilized Excel and analytics tools to study customer demand, sales performance, and growth projections.
+      </p>
+    </div>
+
+    <!-- Experience Block 2 -->
+    <div class="experience-card bg-gray-900 rounded-lg p-6 shadow-lg">
+      <div class="flex items-center mb-3 space-x-4 text-teal-400">
+        <i class="ion-ios-person text-2xl"></i>
+        <h3 class="text-xl font-semibold">Counselor / Data Mentor</h3>
+      </div>
+      <div class="flex items-center mb-2 space-x-4 text-gray-400">
+        <i class="ion-ios-briefcase text-xl"></i>
+        <span>Voice 4 Girls, Hyderabad</span>
+      </div>
+      <div class="flex items-center mb-4 space-x-4 text-gray-400">
+        <i class="ion-ios-time text-xl"></i>
+        <span>Aug 2021 – Mar 2022</span>
+      </div>
+      <p class="text-gray-300 leading-relaxed">
+        Guided students in academic and personal development while analyzing engagement patterns to optimize learning experiences. Performed structured data collection and feedback analysis to assess program effectiveness and retention rates. Led workshops using survey-driven insights to enhance educational delivery and impact.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+  
   <section id="experience" class="min-h-screen px-6 py-16 bg-black">
     <h2 class="section-title">Experience</h2>
     <div class="max-w-4xl mx-auto space-y-10">
@@ -695,40 +1007,49 @@
   </section>
 
 
+  
 
   <section id="experience" class="min-h-screen px-6 py-16 bg-black text-white">
-  <h2 class="section-title text-4xl font-extrabold mb-12 text-center" style="color:#00D1C1;">
+  <h2 class="text-4xl font-bold mb-16 text-center" style="color:#00D1C1;">
     Experience
   </h2>
 
-  <div class="max-w-5xl mx-auto space-y-12">
+  <div class="max-w-5xl mx-auto relative border-l border-gray-700 pl-6">
+    
     <!-- Experience Block 1 -->
-    <div class="experience-card">
-      <div class="experience-header">
-        <h3>Business Development Intern</h3>
-        <span class="experience-date">May 2022 – Mar 2023</span>
+    <div class="mb-12 relative">
+      <div class="absolute -left-3 top-1 w-6 h-6 bg-[#00D1C1] border-4 border-black rounded-full"></div>
+      <div class="bg-gray-900 rounded-lg shadow-md p-6">
+        <div class="flex justify-between items-center mb-2">
+          <h3 class="text-xl font-semibold">Business Development Intern</h3>
+          <span class="text-sm text-gray-400">May 2022 – Mar 2023</span>
+        </div>
+        <h4 class="text-md text-[#00D1C1] font-medium mb-4">NSIC, Hyderabad</h4>
+        <ul class="list-disc list-inside space-y-2 text-sm text-gray-300">
+          <li>Analyzed market trends and financial viability to guide business strategy for SMEs.</li>
+          <li>Built financial and business models using data-driven insights.</li>
+          <li>Used Excel and analytics tools to study customer demand and sales performance.</li>
+        </ul>
       </div>
-      <h4 class="experience-company">NSIC, Hyderabad</h4>
-      <ul class="experience-list">
-        <li>Analyzed market trends and financial viability to guide business strategy and growth for small and medium enterprises.</li>
-        <li>Built financial and business models to support strategic decision-making using data-driven insights.</li>
-        <li>Utilized Excel and analytics tools to study customer demand, sales performance, and growth projections.</li>
-      </ul>
     </div>
 
     <!-- Experience Block 2 -->
-    <div class="experience-card">
-      <div class="experience-header">
-        <h3>Counselor / Data Mentor</h3>
-        <span class="experience-date">Aug 2021 – Mar 2022</span>
+    <div class="mb-12 relative">
+      <div class="absolute -left-3 top-1 w-6 h-6 bg-[#00D1C1] border-4 border-black rounded-full"></div>
+      <div class="bg-gray-900 rounded-lg shadow-md p-6">
+        <div class="flex justify-between items-center mb-2">
+          <h3 class="text-xl font-semibold">Counselor / Data Mentor</h3>
+          <span class="text-sm text-gray-400">Aug 2021 – Mar 2022</span>
+        </div>
+        <h4 class="text-md text-[#00D1C1] font-medium mb-4">Voice 4 Girls, Hyderabad</h4>
+        <ul class="list-disc list-inside space-y-2 text-sm text-gray-300">
+          <li>Guided students in academic and personal development.</li>
+          <li>Analyzed engagement patterns and program feedback.</li>
+          <li>Led workshops using survey-driven insights for better impact.</li>
+        </ul>
       </div>
-      <h4 class="experience-company">Voice 4 Girls, Hyderabad</h4>
-      <ul class="experience-list">
-        <li>Guided students in academic and personal development while analyzing engagement patterns to optimize learning experiences.</li>
-        <li>Performed structured data collection and feedback analysis to assess program effectiveness and retention rates.</li>
-        <li>Led workshops using survey-driven insights to enhance educational delivery and impact.</li>
-      </ul>
     </div>
+
   </div>
 </section>
 
@@ -789,7 +1110,6 @@
           <div class="card-detail">Access my professional data packet.</div>
         </div>
       </a>
-      
     </div>
   </div>
 </section>
@@ -799,6 +1119,59 @@
     <p>&copy; 2025 Harshitha Sreiya Palaparthi. All rights reserved.</p>
     <div id="live-date-time" class="mt-2"></div>
   </footer>
+
+  <footer class="w-full bg-black text-gray-400 py-6 text-center text-sm">
+  <p>&copy; 2025 Harshitha Sreiya Palaparthi. All rights reserved.</p>
+
+  <!-- Social Links Row -->
+  <div class="flex justify-center items-center space-x-6 mt-4 text-base">
+    <!-- Email -->
+    <a href="mailto:harshithasreiya@gmail.com" class="flex items-center space-x-2 hover:text-white transition-colors duration-200">
+      <i class="fas fa-envelope"></i>
+      <span>Email</span>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" target="_blank"
+       class="flex items-center space-x-2 hover:text-white transition-colors duration-200">
+      <i class="fab fa-linkedin"></i>
+      <span>LinkedIn</span>
+    </a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/harshi1744" target="_blank"
+       class="flex items-center space-x-2 hover:text-white transition-colors duration-200">
+      <i class="fab fa-github"></i>
+      <span>GitHub</span>
+    </a>
+  </div>
+
+  <!-- Optional live date/time -->
+  <div id="live-date-time" class="mt-3 text-xs text-gray-500"></div>
+</footer>
+
+
+  <footer class="w-full bg-black text-gray-400 py-6 text-center text-sm">
+  <p class="mb-4">&copy; 2025 Harshitha Sreiya Palaparthi. All rights reserved.</p>
+  <div class="flex justify-center space-x-6">
+    <a href="mailto:harshithasrieya@gmail.com" class="flex items-center space-x-2 hover:text-violet-400 transition-colors duration-200">
+      <i class="ion-ios-mail text-lg"></i>
+      <span>Email</span>
+    </a>
+    <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" target="_blank" rel="noopener noreferrer"
+       class="flex items-center space-x-2 hover:text-violet-400 transition-colors duration-200">
+      <i class="ion-logo-linkedin text-lg"></i>
+      <span>LinkedIn</span>
+    </a>
+    <a href="https://github.com/harshi1744" target="_blank" rel="noopener noreferrer"
+       class="flex items-center space-x-2 hover:text-violet-400 transition-colors duration-200">
+      <i class="ion-logo-github text-lg"></i>
+      <span>GitHub</span>
+    </a>
+  </div>
+</footer>
+
+
 
   <script>
 // Function to update the width of the progress bar based on page scroll
