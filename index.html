@@ -406,131 +406,17 @@ font-family:'Montserrat', sans-serif;
   background-color: #00D1C1;
   border-radius: 50%;
 }
-
-/* ============================================================= */
-/* =================== 🧠 PROJECTS SECTION ====================== */
-/* ============================================================= */
-#projects {
-  background-color: #000;
-  color: #e0e0e0;
-  padding: 4rem 1.5rem;
-  min-height: 100vh;
-font-family:'Montserrat', sans-serif;
+/* ===================================================================================
+   💼 EXPERIENCE TIMELINE & DETAILS SECTION
+=================================================================================== */
+#experience {
+    background-color: #000;
+    color: #fff;
+  font-family:'Montserrat', sans-serif;
+    padding: 4rem 1.5rem;
+    min-height: 100vh;
 }
 
-#projects .section-title {
-  color: #8b5cf6;
-  font-weight: 700;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-.project-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.project-block {
-  position: relative;
-  background-color: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  flex: 1 1 450px;
-  max-width: 500px;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 2rem;
-  color: white;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.project-block::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
-  z-index: 1;
-}
-
-.project-block > * {
-  position: relative;
-  z-index: 2;
-}
-
-.project-block h3 {
-  font-size: 1.75rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.project-block p,
-.project-block ul {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.project-block ul {
-  list-style: disc;
-  margin-left: 1.5rem;
-}
-
-.project-block ul li {
-  margin-bottom: 0.5rem;
-}
-
-.project-buttons {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  justify-content: center;
-}
-
-.btn-transparent {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-}
-
-.btn-transparent:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.7);
-  transform: translateY(-2px);
-}
-
-/* === Specific Backgrounds for Project Blocks === */
-.project-hiring {
-  background-image: url('https://i.pinimg.com/originals/12/b7/87/12b7877ea50bc630d3c2367553a4e1a3.gif');
-}
-
-.project-malnutrition {
-  background-image: url('https://cdn.dribbble.com/users/19455/screenshots/5808898/loader.gif');
-}
-
-.project-fraud {
-  background-image: url('https://imgflip.com/gif/9v1jeb');
-}
 
 /* ============================================================= */
 /* ==================== 🧩 SKILLS SECTION ======================= */
@@ -567,161 +453,42 @@ font-family:'Montserrat', sans-serif;
     font-size: 1.5rem;
   }
 }
-/* ===================================================================================
-   🔳 OVERLAY EFFECT FOR PROJECT BLOCKS
-   PURPOSE: Enhances text readability over background images using gradient overlay
-   TECHNIQUE: Uses ::before pseudo-element layered between image and text content
+    /* ===================================================================================
+   🧠 SKILLS INTERACTIONS + RESPONSIVE TWEAKS
 =================================================================================== */
-.project-block::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.7) 0%,
-        rgba(0, 0, 0, 0.4) 50%,
-        rgba(0, 0, 0, 0.1) 100%
-    );
-    z-index: 1;
+#skills h3.flex,
+#skills h4.flex {
+    transition: color 0.3s ease;
+    cursor: default;
 }
 
-.project-block > * {
-    position: relative;
-    z-index: 2;
+#skills h3.flex:hover,
+#skills h4.flex:hover {
+    color: #14b8a6;
 }
 
-/* ===================================================================================
-   🏷️ PROJECT TEXT STYLING (TITLES & DESCRIPTIONS)
-=================================================================================== */
-.project-block h3 {
-    font-size: 1.75rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.project-block p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-/* ===================================================================================
-   🔘 PROJECT BUTTONS (TRANSPARENT, GLOW EFFECT, HOVER STATES)
-=================================================================================== */
-.project-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
-    justify-content: center;
-}
-
-.btn-transparent {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border-radius: 9999px;
-    background-color: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-}
-
-.btn-transparent:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.7);
-    transform: translateY(-2px);
-}
-
-/* ===================================================================================
-   🖼️ PROJECT BACKGROUND IMAGES (ASSOCIATED BY CATEGORY)
-=================================================================================== */
-.project-hiring {
-    background-image: url('https://i.pinimg.com/originals/12/b7/87/12b7877ea50bc630d3c2367553a4e1a3.gif');
-}
-
-.project-malnutrition {
-    background-image: url('https://cdn.dribbble.com/users/19455/screenshots/5808898/loader.gif');
-}
-
-.project-fraud {
-    background-image: url('https://imgflip.com/gif/9v1jeb');
-}
-
-/* ===================================================================================
-   🪟 MODAL WINDOW STYLING (OVERLAY, CONTENT, CLOSE BUTTON)
-=================================================================================== */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-content {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 1rem;
-    max-width: 700px;
-    width: 90%;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-    position: relative;
-    transform: translateY(20px);
+#skills i {
     transition: transform 0.3s ease;
-    color: #333;
+    color: #14b8a6;
 }
 
-.modal-overlay.active .modal-content {
-    transform: translateY(0);
+#skills h3.flex:hover i,
+#skills h4.flex:hover i {
+    transform: scale(1.2);
+    color: #0d9488;
 }
 
-.modal-content h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: #1a202c;
+@media (max-width: 768px) {
+    #skills .max-w-5xl {
+        grid-template-columns: 1fr !important;
+    }
+
+    #skills h3.flex i,
+    #skills h4.flex i {
+        font-size: 1.5rem;
+    }
 }
 
-.modal-content p {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
-.modal-close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #666;
-    transition: color 0.2s ease;
-}
-
-.modal-close-btn:hover {
-    color: #333;
-}
 
 /* ===================================================================================
    🌐 BASE STYLES — BODY, HTML, TYPOGRAPHY
@@ -785,42 +552,6 @@ footer {
     left: 0;
     z-index: 50;
     transition: width 0.3s ease-in-out;
-}
-
-/* ===================================================================================
-   🌙 THEME TOGGLE BUTTON (Floating Button Bottom Right)
-=================================================================================== */
-.theme-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #8b5cf6;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.25rem;
-    border-radius: 9999px;
-    cursor: pointer;
-    font-weight: 600;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-}
-
-/* ===================================================================================
-   ⚡ GLITCH EFFECT FOR HEADINGS
-=================================================================================== */
-.glitch-heading {
-    color: #00C0A0;
-    text-shadow:
-        0 0 3px #00C0A0,
-        0 0 8px #00C0A0,
-        0 0 15px #00C0A0,
-        0 0 25px #CC33FF,
-        0 0 40px #0099CC;
-    animation: glitch 2s infinite alternate, pulse-heading-glow 3s infinite alternate;
-}
-
-@keyframes pulse-heading-glow {
-    0%, 100% { text-shadow: 0 0 3px #00C0A0, 0 0 8px #00C0A0; }
-    50% { text-shadow: 0 0 6px #00C0A0, 0 0 12px #00C0A0, 0 0 22px #CC33FF, 0 0 30px #0099CC; }
 }
 
 /* ===================================================================================
@@ -942,55 +673,6 @@ footer {
     }
 }
 
-/* ===================================================================================
-   💼 EXPERIENCE TIMELINE & DETAILS SECTION
-=================================================================================== */
-#experience {
-    background-color: #000;
-    color: #fff;
-  font-family:'Montserrat', sans-serif;
-    padding: 4rem 1.5rem;
-    min-height: 100vh;
-}
-
-/* === Continued styles for .experience-card, .experience-timeline etc. === */
-/* ... (you already had the rest of this section styled properly) */
-
-/* ===================================================================================
-   🧠 SKILLS INTERACTIONS + RESPONSIVE TWEAKS
-=================================================================================== */
-#skills h3.flex,
-#skills h4.flex {
-    transition: color 0.3s ease;
-    cursor: default;
-}
-
-#skills h3.flex:hover,
-#skills h4.flex:hover {
-    color: #14b8a6;
-}
-
-#skills i {
-    transition: transform 0.3s ease;
-    color: #14b8a6;
-}
-
-#skills h3.flex:hover i,
-#skills h4.flex:hover i {
-    transform: scale(1.2);
-    color: #0d9488;
-}
-
-@media (max-width: 768px) {
-    #skills .max-w-5xl {
-        grid-template-columns: 1fr !important;
-    }
-
-    #skills h3.flex i,
-    #skills h4.flex i {
-        font-size: 1.5rem;
-    }
-}
 
 
 
