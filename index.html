@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harshitha Sreiya | Portfolio </title>
+  <title>Harshitha Sreiya </title>
 <!-- Tailwind CSS: Utility-first CSS framework for rapid UI development -->
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 
@@ -45,6 +45,9 @@
 
 <!-- Custom Stylesheet: CSS overrides and styles -->
 <link rel="stylesheet" href="css/style.css" />
+  
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 </head>
 
@@ -106,15 +109,90 @@
     .owl-carousel .card {
   border: 1px solid red;
 }
+        .progress-bar {
+      height: 4px;
+      background-color: #8b5cf6;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 50;
+      transition: width 0.3s ease-in-out;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .theme-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #8b5cf6;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    }
+
 
   </style>
-</head>
-<body x-data="{ dark: true }" :class="dark ? 'bg-black text-white' : 'bg-white text-black'">
+  
+<body class="min-h-screen flex flex-col">
   <div id="progress" class="progress-bar w-0"></div>
   <button class="theme-toggle" @click="dark = !dark">Toggle Theme</button>
 
+  <!-- Header / Navigation -->
+  <header class="w-full p-4 md:p-6 flex flex-col md:flex-row justify-between items-center bg-black sticky top-0 z-50 shadow-md">
+    <div class="text-lg md:text-xl font-semibold mb-4 md:mb-0">
+      HARSHITHA SREIYA PALAPARTHI
+    </div>
+    <nav>
+      <ul class="flex space-x-4 md:space-x-8 text-sm md:text-base font-medium">
+        <li><a href="#home" class="hover:text-purple-400 transition-colors duration-200">Home</a></li>
+        <li><a href="#about" class="hover:text-purple-400 transition-colors duration-200">About</a></li>
+        <li><a href="#education" class="hover:text-purple-400 transition-colors duration-200">Education</a></li>
+        <li><a href="#skills" class="hover:text-purple-400 transition-colors duration-200">Skills</a></li>
+        <li><a href="#projects" class="hover:text-purple-400 transition-colors duration-200">Projects</a></li>
+        <li><a href="#experience" class="hover:text-purple-400 transition-colors duration-200">Experience</a></li>
+        <li><a href="#contact" class="hover:text-purple-400 transition-colors duration-200">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <main id="home" class="flex-grow flex items-center justify-center p-4 md:p-8">
+    <div class="text-left w-full max-w-4xl px-4 md:px-0">
+      <p class="text-sm md:text-base mb-2 md:mb-4 font-semibold">HELLO!</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 md:mb-6">
+        I'm <span class="text-violet-300">Harshitha Sreiya</span><br>
+        <span class="text-violet-300">Palaparthi</span>
+      </h1>
+      <p class="text-lg md:text-xl mb-6 md:mb-8">
+        Graduate Student at UNT<br>
+        Masters in Business Analytics
+      </p>
+
+      <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+        <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" target="_blank" rel="noopener noreferrer"
+           class="inline-block bg-violet-200 text-black font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-violet-300 transition-colors duration-200 text-center">
+          LINKEDIN
+        </a>
+        <a href="https://github.com/harshi1744" target="_blank" rel="noopener noreferrer"
+           class="inline-block border border-white text-white font-semibold py-3 px-6 rounded-full hover:bg-white hover:text-black transition-colors duration-200 text-center">
+          GITHUB
+        </a>
+      </div>
+    </div>
+  </main>
+
+<!--
+<body x-data="{ dark: true }" :class="dark ? 'bg-black text-white' : 'bg-white text-black'">
+  <div id="progress" class="progress-bar w-0"></div>
+  <button class="theme-toggle" @click="dark = !dark">Toggle Theme</button>
+  -->
   <!-- Navigation -->
-  <nav class="bg-black py-4 shadow-md sticky top-0 z-50">
+  <!-- <nav class="bg-black py-4 shadow-md sticky top-0 z-50">
     <ul class="flex justify-center space-x-10">
       <li><a href="#about" class="nav-link">About</a></li>
       <li><a href="#education" class="nav-link">Education</a></li>
@@ -124,24 +202,29 @@
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
   </nav>
-
+</body>
   <!-- Hero Section -->
-<header class="flex items-center justify-between py-20 px-10">
+<!--
+  <header class="flex items-center justify-between py-20 px-10">
   <!-- Left side: Heading and subheading -->
-  <div class="text-left mr-10">
+ <!--
+    <div class="text-left mr-10">
     <div>
       <h1 class="text-5xl font-bold mb-2">Harshitha Sreiya Palaparthi</h1>
       <h2 class="text-xl text-gray-600 mb-4">Business Analyst | Financial Analyst</h2>
     </div>
     <a href="resume.pdf" download class="mt-6 inline-block px-6 py-2 border border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white transition rounded-full">Download Resume</a>
   </div>
+    -->
 
   <!-- Right side: Image in a square box -->
-  <div class="w-64 h-64 bg-gray-200 rounded overflow-hidden flex items-center justify-center">
+  <!--
+    <div class="w-64 h-64 bg-gray-200 rounded overflow-hidden flex items-center justify-center">
     <img src="your-image.jpg" alt="Profile Image" class="object-cover w-full h-full">
   </div>
 </header>
   <div class="divider"></div>
+    -->
 
 
   <!-- About Section -->
@@ -447,3 +530,9 @@ $(document).ready(function(){
   </script>
 </body>
 </html>
+
+    
+  
+ 
+
+   
