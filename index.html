@@ -865,6 +865,44 @@ footer {
   padding-left: 0;
   margin-left: 0;
 }
+.project-block {
+  position: relative;
+  color: white;
+}
+
+/* Overlay for transparency */
+.project-block .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: black;
+  opacity: 0.5; /* Adjust transparency here */
+  z-index: 0;
+}
+
+/* Content stays on top */
+.project-block .content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Background images */
+.project-bg-hiring {
+  background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.project-bg-malnutrition {
+  background-image: url('https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.project-bg-fraud {
+  background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80');
+  background-size: cover;
+  background-position: center;
+}
 
   </style>
 
@@ -996,196 +1034,67 @@ footer {
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="min-h-screen px-6 py-16 bg-black text-white">
-    <h3 class="section-title text-violet-400 mb-12 text-center">Projects</h3>
+  <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50">
+  <div class="bg-white rounded-lg p-8 max-w-3xl w-full relative">
+    <button class="modal-close-btn absolute top-4 right-4 text-gray-600 hover:text-black text-2xl font-bold">&times;</button>
+    <h3 id="modalProjectTitle" class="text-2xl font-bold text-violet-600 mb-4"></h3>
+    <div id="modalProjectContent" class="text-gray-800 leading-relaxed text-base max-h-[70vh] overflow-y-auto"></div>
+  </div>
+</div>
 
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <div class="card bg-gray-900 rounded-lg p-6 shadow-md">
-        <div class="flex items-center mb-4">
-          <i class="ion-ios-flask text-violet-400 text-xl mr-3"></i>
-          <h3 class="text-lg font-semibold text-white">Hiring Assistant AI</h3>
-        </div>
-        <p class="text-sm text-gray-300">
-          Developed a privacy-compliant AI system that screens resumes using RAG-based techniques and semantic similarity.
-          The solution operates offline using open-source LLMs, streamlining hiring workflows by 50% and enhancing candidate-job alignment through contextual matching.
-        </p>
-      </div>
-
-      <div class="card bg-gray-900 rounded-lg p-6 shadow-md">
-        <div class="flex items-center mb-4">
-          <i class="ion-ios-flask text-violet-400 text-xl mr-3"></i>
-          <h3 class="text-lg font-semibold text-white">Child Malnutrition Visualizer</h3>
-        </div>
-        <p class="text-sm text-gray-300">
-          Created interactive Tableau dashboards to visualize malnutrition patterns in children across Indian states segmented by gender.
-          Integrated data pipelines using Excel and SQL, enabling policymakers and NGOs to track interventions and outcomes effectively.
-        </p>
-      </div>
-
-      <div class="card bg-gray-900 rounded-lg p-6 shadow-md">
-        <div class="flex items-center mb-4">
-          <i class="ion-ios-flask text-violet-400 text-xl mr-3"></i>
-          <h3 class="text-lg font-semibold text-white">AI-Powered Fraud Detection</h3>
-        </div>
-        <p class="text-sm text-gray-300">
-          Built a real-time banking fraud detection tool combining supervised and unsupervised ML models.
-          Incorporated SHAP and LIME for explainability, aligned with GDPR/PCI DSS, and deployed AES-256 encryption to ensure secure financial data handling.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  
-    <section id="projects" class="projects-section page-section">
-        <h2>Projects</h2>
-
-        <div class="project-flex">
-            <article class="project-block project-hiring">
-                <h3>1. Hiring Assistant AI – Agentic Resume Screening System (Academic Project)</h3>
-                <p>This intelligent hiring assistant was built to transform traditional recruitment by integrating agentic AI with Retrieval-Augmented Generation (RAG). It autonomously screens and ranks resumes, engages recruiters through dynamic chat, and evolves based on continuous feedback—all in a privacy-first, offline-ready architecture.</p>
-                <p><strong>Objective:</strong> To develop a lightweight, privacy-compliant, fully offline RAG-powered AI assistant that reduces hiring friction, enhances fairness, and adapts to evolving recruiter criteria in real-time.</p>
-                <div class="project-buttons">
-                    <a href="#" class="btn-transparent">View Project</a>
-                    <a href="#" class="btn-transparent">View Code</a>
-                </div>
-            </article>
-
-            <article class="project-block project-malnutrition">
-                <h3>2. Visualizing Global Trends in Child Malnutrition (Academic Project)</h3>
-                <p>Leveraging global health datasets from WHO, UNICEF, and the World Bank, this project offered a deep dive into malnutrition trends—analyzing stunting, wasting, underweight, and overweight metrics across geography, gender, and age. By transforming complex raw data into interactive dashboards, the project empowered global stakeholders to make informed decisions targeting child health inequalities.</p>
-                <p><strong>Key Deliverables:</strong></p>
-                <ul>
-                    <li>Malnutrition Severity Dashboard: Filterable by country, region, gender, and year—offering a 360° view of malnutrition prevalence</li>
-                    <li>Child Patterns Dashboard: Trend analysis by age, visualized through scatter plots, time-series, box plots, and stacked area charts</li>
-                    <li>Geospatial Heatmaps: Interactive mapping to highlight regional malnutrition disparities</li>
-                </ul>
-                <div class="project-buttons">
-                    <a href="#" class="btn-transparent">View Project</a>
-                    <a href="#" class="btn-transparent">View Code</a>
-                </div>
-            </article>
-
-            <article class="project-block project-fraud">
-                <h3>3. Financial Fraud Detection — Machine Learning Model (Academic Project)</h3>
-                <p>This project addressed the escalating challenge of financial fraud using supervised machine learning. By applying multiple models on a labeled dataset, the system aimed to detect suspicious transactions effectively, prioritizing recall to minimize undetected fraud and integrating fairness metrics to reduce bias.</p>
-                <p><strong>Approach & Methodology:</strong></p>
-                <ul>
-                    <li>Dataset: Publicly available transaction data with fraud labels</li>
-                    <li>Preprocessing: Balanced classes using SMOTE, handled missing values, feature scaling</li>
-                    <li>Models Trained: Logistic Regression, Random Forest, XGBoost, Neural Networks</li>
-                    <li>Evaluation Metrics: Precision, Recall, F1-score, ROC-AUC, with focus on minimizing false negatives</li>
-                    <li>Fairness Checks: Monitored model bias across demographics</li>
-                </ul>
-                <div class="project-buttons">
-                    <a href="#" class="btn-transparent">View Project</a>
-                    <a href="#" class="btn-transparent">View Code</a>
-                </div>
-            </article>
-        </div>
-    </section>
-  
-  <!-- Projects Section -->
-
-   <section id="projects" class="projects-section page-section">
-        <h2>Projects</h2>
-
-        <div class="project-flex">
-            <article class="project-block project-hiring">
-                <h3>1. Hiring Assistant AI – Agentic Resume Screening System (Academic Project)</h3>
-                <p>This intelligent hiring assistant was built to transform traditional recruitment by integrating agentic AI with Retrieval-Augmented Generation (RAG). It autonomously screens and ranks resumes, engages recruiters through dynamic chat, and evolves based on continuous feedback—all in a privacy-first, offline-ready architecture.</p>
-                <div class="project-buttons">
-                    <a href="#" class="btn-transparent view-project-btn" data-project-id="hiring">View Project</a>
-                    <a href="#" class="btn-transparent">View Code</a>
-                </div>
-            </article>
-
-            <article class="project-block project-malnutrition">
-                <h3>2. Visualizing Global Trends in Child Malnutrition (Academic Project)</h3>
-                <p>Leveraging global health datasets from WHO, UNICEF, and the World Bank, this project offered a deep dive into malnutrition trends—analyzing stunting, wasting, underweight, and overweight metrics across geography, gender, and age. By transforming complex raw data into interactive dashboards, the project empowered global stakeholders to make informed decisions targeting child health inequalities.</p>
-                <div class="project-buttons">
-                    <a href="#" class="btn-transparent view-project-btn" data-project-id="malnutrition">View Project</a>
-                    <a href="#" class="btn-transparent">View Code</a>
-                </div>
-            </article>
-
-            <article class="project-block project-fraud">
-                <h3>3. Financial Fraud Detection — Machine Learning Model (Academic Project)</h3>
-                <p>This project addressed the escalating challenge of financial fraud using supervised machine learning. By applying multiple models on a labeled dataset, the system aimed to detect suspicious transactions effectively, prioritizing recall to minimize undetected fraud and integrating fairness metrics to reduce bias.</p>
-                <div class="project-buttons">
-                    <a href="#" class="btn-transparent view-project-btn" data-project-id="fraud">View Project</a>
-                    <a href="#" class="btn-transparent">View Code</a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <div id="projectModal" class="modal-overlay">
-        <div class="modal-content">
-            <button class="modal-close-btn">&times;</button>
-            <h3 id="modalProjectTitle"></h3>
-            <p id="modalProjectContent"></p>
-        </div>
-    </div>
-
-  <section id="projects" class="projects-section page-section bg-black py-16 px-6">
+<section id="projects" class="projects-section page-section bg-black py-16 px-6">
   <h2 class="text-4xl font-extrabold text-violet-600 text-center mb-12">Projects</h2>
 
   <div class="project-flex space-y-12">
-      <!-- Projects Section -->
 
     <!-- Project 1 -->
-    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg">
-      <h3 class="text-2xl font-semibold text-white mb-4">
-        1. Hiring Assistant AI – Agentic Resume Screening System (Academic Project)
-      </h3>
-      <p class="text-white mb-4">
-        This intelligent hiring assistant was built to transform traditional recruitment by integrating agentic AI with Retrieval-Augmented Generation (RAG). It autonomously screens and ranks resumes, engages recruiters through dynamic chat, and evolves based on continuous feedback—all in a privacy-first, offline-ready architecture.
-      </p>
-      <p class="text-white mb-4">
-        <strong>Objective:</strong> To develop a lightweight, privacy-compliant, fully offline RAG-powered AI assistant that reduces hiring friction, enhances fairness, and adapts to evolving recruiter criteria in real-time.
-      </p>
-      <div class="project-buttons space-x-4">
-        <a href="#" class="btn-transparent text-violet-500 border border-violet-500 px-4 py-2 rounded hover:bg-violet-500 hover:text-white transition">View Project</a>
-        <a href="#" class="btn-transparent text-violet-500 border border-violet-500 px-4 py-2 rounded hover:bg-violet-500 hover:text-white transition">View Code</a>
+    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg project-bg-hiring relative overflow-hidden">
+      <div class="overlay absolute inset-0 bg-black opacity-50"></div>
+      <div class="content relative z-10">
+        <h3 class="text-2xl font-semibold text-white mb-4">
+          1. Hiring Assistant AI – Agentic Resume Screening System (Academic Project)
+        </h3>
+        <p class="text-white mb-4">
+          Intelligent hiring assistant that integrates agentic AI with RAG to autonomously screen and rank resumes, converse with recruiters, and evolve based on feedback—all in a privacy-first, offline-ready architecture.
+        </p>
+        <div class="project-buttons space-x-4">
+          <a href="#" class="btn-transparent view-project-btn" data-project-id="hiring">View Project</a>
+          <a href="#" class="btn-transparent">View Code</a>
+        </div>
       </div>
     </article>
 
     <!-- Project 2 -->
-    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg">
-      <h3 class="text-2xl font-semibold text-white mb-4">
-        2. Visualizing Global Trends in Child Malnutrition (Academic Project)
-      </h3>
-      <p class="text-white mb-4">
-        Leveraging global health datasets from WHO, UNICEF, and the World Bank, this project offered a deep dive into malnutrition trends—analyzing stunting, wasting, underweight, and overweight metrics across geography, gender, and age. By transforming complex raw data into interactive dashboards, the project empowered global stakeholders to make informed decisions targeting child health inequalities.
-      </p>
-      <p class="text-white mb-2 font-semibold">Key Deliverables:</p>
-      <p class="text-white mb-2">Malnutrition Severity Dashboard: Filterable by country, region, gender, and year—offering a 360° view of malnutrition prevalence.</p>
-      <p class="text-white mb-2">Child Patterns Dashboard: Trend analysis by age, visualized through scatter plots, time-series, box plots, and stacked area charts.</p>
-      <p class="text-white mb-4">Geospatial Heatmaps: Interactive mapping to highlight regional malnutrition disparities.</p>
-      <div class="project-buttons space-x-4">
-        <a href="#" class="btn-transparent text-violet-500 border border-violet-500 px-4 py-2 rounded hover:bg-violet-500 hover:text-white transition">View Project</a>
-        <a href="#" class="btn-transparent text-violet-500 border border-violet-500 px-4 py-2 rounded hover:bg-violet-500 hover:text-white transition">View Code</a>
+    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg project-bg-malnutrition relative overflow-hidden">
+      <div class="overlay absolute inset-0 bg-black opacity-50"></div>
+      <div class="content relative z-10">
+        <h3 class="text-2xl font-semibold text-white mb-4">
+          2. Visualizing Global Trends in Child Malnutrition (Academic Project)
+        </h3>
+        <p class="text-white mb-4">
+          Deep analysis of global malnutrition data across gender, geography, and age using interactive dashboards to support informed decisions for public health initiatives.
+        </p>
+        <div class="project-buttons space-x-4">
+          <a href="#" class="btn-transparent view-project-btn" data-project-id="malnutrition">View Project</a>
+          <a href="#" class="btn-transparent">View Code</a>
+        </div>
       </div>
     </article>
 
     <!-- Project 3 -->
-    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg">
-      <h3 class="text-2xl font-semibold text-white mb-4">
-        3. Financial Fraud Detection — Machine Learning Model (Academic Project)
-      </h3>
-      <p class="text-white mb-4">
-        This project addressed the escalating challenge of financial fraud using supervised machine learning. By applying multiple models on a labeled dataset, the system aimed to detect suspicious transactions effectively, prioritizing recall to minimize undetected fraud and integrating fairness metrics to reduce bias.
-      </p>
-      <p class="text-white mb-2 font-semibold">Approach & Methodology:</p>
-      <p class="text-white mb-2">Dataset: Publicly available transaction data with fraud labels.</p>
-      <p class="text-white mb-2">Preprocessing: Balanced classes using SMOTE, handled missing values, and applied feature scaling.</p>
-      <p class="text-white mb-2">Models Trained: Logistic Regression, Random Forest, XGBoost, and Neural Networks.</p>
-      <p class="text-white mb-2">Evaluation Metrics: Precision, Recall, F1-score, ROC-AUC—with a focus on minimizing false negatives.</p>
-      <p class="text-white mb-4">Fairness Checks: Monitored model bias across demographics to ensure equitable outcomes.</p>
-      <div class="project-buttons space-x-4">
-        <a href="#" class="btn-transparent text-violet-500 border border-violet-500 px-4 py-2 rounded hover:bg-violet-500 hover:text-white transition">View Project</a>
-        <a href="#" class="btn-transparent text-violet-500 border border-violet-500 px-4 py-2 rounded hover:bg-violet-500 hover:text-white transition">View Code</a>
+    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg project-bg-fraud relative overflow-hidden">
+      <div class="overlay absolute inset-0 bg-black opacity-50"></div>
+      <div class="content relative z-10">
+        <h3 class="text-2xl font-semibold text-white mb-4">
+          3. Financial Fraud Detection — Machine Learning Model (Academic Project)
+        </h3>
+        <p class="text-white mb-4">
+          Supervised ML-based fraud detection solution prioritizing recall and fairness, trained on labeled datasets and validated across precision-recall trade-offs.
+        </p>
+        <div class="project-buttons space-x-4">
+          <a href="#" class="btn-transparent view-project-btn" data-project-id="fraud">View Project</a>
+          <a href="#" class="btn-transparent">View Code</a>
+        </div>
       </div>
     </article>
 
@@ -1234,34 +1143,6 @@ footer {
       </ul>
 
       </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="min-h-screen px-6 py-16 bg-black text-white">
-    <h3 class="section-title text-violet-400 mb-8 text-center">Experience</h3>
-    <div class="max-w-6xl mx-auto space-y-10">
-
-      <div class="bg-gray-900 rounded-lg p-6 shadow-md">
-        <h4 class="text-xl font-semibold mb-1 text-white text-center">Business Development Intern - NSIC</h4>
-        <p class="text-gray-400 text-sm mb-2 text-center">May 2023 - Aug 2023</p>
-        <ul class="list-disc list-inside text-gray-300 space-y-2">
-          <li>Analyzed market trends to identify growth opportunities.</li>
-          <li>Supported business proposals with detailed data insights.</li>
-          <li>Collaborated with teams to enhance client engagement.</li>
-        </ul>
-      </div>
-
-      <div class="bg-gray-900 rounded-lg p-6 shadow-md">
-        <h4 class="text-xl font-semibold mb-1 text-white text-center">Learning & Development Associate - Voice 4 Girls</h4>
-        <p class="text-gray-400 text-sm mb-2 text-center">Sep 2022 - Dec 2022</p>
-        <ul class="list-disc list-inside text-gray-300 space-y-2">
-          <li>Developed training materials and programs based on analytics.</li>
-          <li>Monitored and reported program impact using data dashboards.</li>
-          <li>Engaged with stakeholders to tailor development initiatives.</li>
-        </ul>
-      </div>
-
     </div>
   </section>
 
