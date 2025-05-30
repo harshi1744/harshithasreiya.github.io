@@ -46,6 +46,24 @@
       cursor: pointer;
       z-index: 9999;
     }
+    .divider {
+  height: 2px;
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.2), rgba(255,255,255,0));
+  margin: 3rem auto;
+  width: 80%;
+  animation: glow 3s infinite ease-in-out;
+  border-radius: 9999px;
+}
+
+@keyframes glow {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
   </style>
 </head>
 <body x-data="{ dark: true }" :class="dark ? 'bg-black text-white' : 'bg-white text-black'">
@@ -74,38 +92,6 @@
 
   <!-- Hero Section -->
 <header class="flex items-center justify-between py-20 px-10">
-  <!-- Left side: Image in a square box -->
-  <div class="w-64 h-64 bg-gray-200 rounded overflow-hidden flex items-center justify-center">
-    <img src="your-image.jpg" alt="Profile Image" class="object-cover w-full h-full">
-  </div>
-
-  <!-- Right side: Text content -->
-  <div class="text-right ml-10">
-    <h1 class="text-5xl font-bold mb-4">Harshitha Sreiya Palaparthi</h1>
-    <p class="text-lg">Business Analyst | Financial Analyst</p>
-    <a href="resume.pdf" download class="mt-6 inline-block px-6 py-2 border border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white transition rounded-full">Download Resume</a>
-  </div>
-</header>
-
-  <!-- Hero Section -->
-<header class="flex items-center justify-between py-20 px-10">
-  <!-- Left side: Image in a square box -->
-  <div class="w-64 h-64 bg-gray-200 rounded overflow-hidden flex items-center justify-center">
-    <img src="your-image.jpg" alt="Profile Image" class="object-cover w-full h-full">
-  </div>
-
-  <!-- Right side: Heading and subheading -->
-  <div class="text-right ml-10">
-    <div>
-      <h1 class="text-5xl font-bold mb-2">Harshitha Sreiya Palaparthi</h1>
-      <h2 class="text-xl text-gray-600 mb-4">Business Analyst | Financial Analyst</h2>
-    </div>
-    <a href="resume.pdf" download class="mt-6 inline-block px-6 py-2 border border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white transition rounded-full">Download Resume</a>
-  </div>
-</header>
-
-  <!-- Hero Section -->
-<header class="flex items-center justify-between py-20 px-10">
   <!-- Left side: Heading and subheading -->
   <div class="text-left mr-10">
     <div>
@@ -120,6 +106,7 @@
     <img src="your-image.jpg" alt="Profile Image" class="object-cover w-full h-full">
   </div>
 </header>
+  <div class="divider"></div>
 
 
   <!-- About Section -->
@@ -129,15 +116,10 @@
       I am a results-driven Business Analyst currently pursuing a Master's in Business Analytics at the University of North Texas. My strengths include data modeling, data visualization, front-end reporting, and building AI-powered solutions. With strong communication and analytical skills, I translate data insights into strategic decisions.
     </p>
   </section>
+  <div class="divider"></div>
+
 
   <!-- Career Section -->
-  <section id="career" class="min-h-screen px-6 py-16 bg-gray-800">
-  <h2 class="section-title">Career Summary</h2>
-  <div class="max-w-3xl mx-auto text-center">
-    <p class="text-lg">I am a Business Analyst in training with a strong foundation in data analysis, visualization, and business strategy. With experience in AI-powered tools and a passion for actionable insights, I thrive at the intersection of technology and business decision-making.</p>
-  </div>
-</section>
-
   <section id="career" class="min-h-screen px-6 py-16 bg-black">
   <h2 class="section-title">Career Summary</h2>
   <div class="max-w-3xl mx-auto text-center">
@@ -146,6 +128,7 @@
 </p>
   </div>
 </section>
+<div class="divider"></div>
 
 
    <!-- Education Section -->
@@ -167,6 +150,8 @@
       </div>
     </div>
   </section>
+  <div class="divider"></div>
+
   
   <!-- Projects Section -->
   <section id="projects" class="min-h-screen px-6 py-16 bg-gray-800">
@@ -186,6 +171,7 @@
     </div>
   </div>
 </section>
+<div class="divider"></div>
 
 
   <!-- Skills Section -->
@@ -236,7 +222,8 @@
     </div>
   </section>
   
- 
+ <div class="divider"></div>
+
 
   <!-- Contact Section -->
   <section id="contact" class="min-h-screen px-6 py-16">
@@ -247,6 +234,41 @@
       <p>GitHub: <a href="https://github.com/harshi1744" class="text-blue-400 hover:underline">/harshi1744</a></p>
     </div>
   </section>
+ <div class="divider"></div>
+
+    <!-- Contact Section -->
+  <section id="contact" class="min-h-screen px-6 py-16 bg-black">
+  <h2 class="section-title">Contact</h2>
+  <div class="max-w-xl mx-auto text-center space-y-6">
+    <p class="text-lg text-gray-300">
+      Feel free to reach out through any of the platforms below. I'm always open to connecting!
+    </p>
+
+    <!-- Email -->
+    <p class="text-gray-400">
+      <i class="fas fa-envelope mr-2 text-violet-400"></i>
+      <a href="mailto:harshithasrieya@gmail.com" class="text-blue-400 hover:underline">
+        harshithasrieya@gmail.com
+      </a>
+    </p>
+
+    <!-- Social Media Icons -->
+    <div class="flex justify-center space-x-6 mt-6">
+      <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" target="_blank" aria-label="LinkedIn" class="text-gray-400 hover:text-blue-400 text-2xl transition">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/harshi1744" target="_blank" aria-label="GitHub" class="text-gray-400 hover:text-white text-2xl transition">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:harshithasrieya@gmail.com" aria-label="Email" class="text-gray-400 hover:text-red-400 text-2xl transition">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+   <div class="divider"></div>
+
     
   <!-- Footer Section-->
   
