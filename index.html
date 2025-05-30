@@ -674,6 +674,44 @@ footer {
 }
 
 
+/* === Glow effect on hover for cards === */
+.group:hover {
+  background-color: #1f2937; /* gray-800 */
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4); /* purple glow */
+  transition: box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+/* === Pulse icon dots on timeline === */
+.timeline-dot {
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(139, 92, 246, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+  }
+}
+
+/* === Section fade-in on scroll (AOS optional replacement) === */
+[data-fade] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-fade].show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
   </style>
@@ -869,6 +907,42 @@ footer {
       </div>
     </div>
   </section>
+<!-- ========== 🎓 EDUCATION SECTION END ========== -->
+
+  <!-- ========== 🎓 EDUCATION SECTION START ========== -->
+
+  <section id="education" class="bg-black text-white py-20 px-6">
+  <h3 class="text-3xl font-bold text-center text-violet-400 mb-16">📚 My Education Journey</h3>
+  
+  <div class="relative max-w-4xl mx-auto">
+    <!-- Vertical timeline line -->
+    <div class="absolute left-4 top-0 bottom-0 w-1 bg-violet-500 rounded-full"></div>
+
+    <!-- Card 1 -->
+    <div class="relative mb-16 pl-16 group hover:bg-gray-800 rounded-lg p-6 transition-all duration-300">
+      <div class="absolute left-0 top-3 w-8 h-8 bg-violet-500 rounded-full flex items-center justify-center text-black font-bold shadow-lg">
+        🎓
+      </div>
+      <h4 class="text-xl font-semibold group-hover:text-violet-400 transition">University of North Texas</h4>
+      <p class="text-sm text-gray-300">MS in Business Analytics<br><span class="italic">Jan 2024 – Dec 2025</span></p>
+      <p class="mt-2 text-gray-400 hidden group-hover:block transition-all duration-300">
+        Coursework in AI, Data Engineering, and Business Strategy. Specialized in cloud analytics and predictive modeling.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="relative mb-16 pl-16 group hover:bg-gray-800 rounded-lg p-6 transition-all duration-300">
+      <div class="absolute left-0 top-3 w-8 h-8 bg-violet-500 rounded-full flex items-center justify-center text-black font-bold shadow-lg">
+        💻
+      </div>
+      <h4 class="text-xl font-semibold group-hover:text-violet-400 transition">Osmania University</h4>
+      <p class="text-sm text-gray-300">B.Com in Computer Science<br><span class="italic">Jun 2020 – Apr 2023</span></p>
+      <p class="mt-2 text-gray-400 hidden group-hover:block transition-all duration-300">
+        Explored database design, Python development, and system analysis. Built early-stage portfolio tools and dashboards.
+      </p>
+    </div>
+  </div>
+</section>
 <!-- ========== 🎓 EDUCATION SECTION END ========== -->
 
   
@@ -1253,6 +1327,25 @@ document.addEventListener('keydown', (e) => {
       el: document.querySelector('[data-scroll-container]'),
       smooth: true
     });
+  <script>
+  const faders = document.querySelectorAll('[data-fade]');
+
+  const appearOptions = {
+    threshold: 0.3,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
+
   </script>
 </body>
 </html>
