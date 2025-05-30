@@ -249,6 +249,195 @@
   }
 }
 
+/*experience*/
+
+#experience {
+  background-color: #000000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  padding: 4rem 1.5rem;
+  min-height: 100vh;
+}
+
+.section-title {
+  color: #00d1c1;
+  font-weight: 800;
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+}
+
+.max-w-5xl {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Card styling */
+.experience-card {
+  background: linear-gradient(145deg, #0a0a0a, #121212);
+  border: 1px solid #00d1c1;
+  border-radius: 0.75rem;
+  padding: 2rem 2.5rem;
+  box-shadow:
+    0 4px 8px rgba(0, 209, 193, 0.2),
+    inset 0 0 8px #00d1c1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow:
+    0 12px 24px rgba(0, 209, 193, 0.6),
+    inset 0 0 15px #00d1c1;
+}
+
+/* Header flex with job title & date */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.experience-header h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #00d1c1;
+}
+
+.experience-date {
+  font-size: 0.875rem;
+  color: #66fff6;
+  font-style: italic;
+}
+
+/* Company name */
+.experience-company {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  color: #8ffcf7;
+}
+
+/* Experience bullet points */
+.experience-list {
+  list-style: disc inside;
+  color: #cceeee;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.experience-list li {
+  margin-bottom: 0.6rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .experience-date {
+    font-size: 0.8rem;
+  }
+}
+
+    /* experience without glow effect */
+
+#experience {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 4rem 1.5rem;
+  min-height: 100vh;
+}
+
+.section-title {
+  color: #00d1c1;
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 3rem;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Experience card style */
+.experience-card {
+  border: 1px solid #333;
+  padding: 1.75rem 2rem;
+  border-radius: 0.5rem;
+  background-color: #111;
+  transition: background-color 0.3s ease;
+}
+
+.experience-card:hover {
+  background-color: #1a1a1a;
+}
+
+/* Header flex for job title and date */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.experience-header h3 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #00d1c1;
+  margin: 0;
+}
+
+.experience-date {
+  font-size: 0.875rem;
+  color: #7fdbdb;
+  font-style: normal;
+}
+
+/* Company name styling */
+.experience-company {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #a3f7f3;
+}
+
+/* Experience bullet list */
+.experience-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  padding-left: 0.5rem;
+}
+
+.experience-list li + li {
+  margin-top: 0.6rem;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 640px) {
+  .experience-header {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .experience-date {
+    font-size: 0.8rem;
+  }
+}
+
+
 
   </style>
 
@@ -338,6 +527,79 @@
       </div>
     </div>
   </section>
+
+
+  <section id="experience" class="min-h-screen px-6 py-16 bg-black text-white">
+  <h2 class="section-title text-4xl font-extrabold mb-12 text-center" style="color:#00D1C1;">
+    Experience
+  </h2>
+
+  <div class="max-w-5xl mx-auto space-y-12">
+    <!-- Experience Block 1 -->
+    <div class="experience-card">
+      <div class="experience-header">
+        <h3>Business Development Intern</h3>
+        <span class="experience-date">May 2022 – Mar 2023</span>
+      </div>
+      <h4 class="experience-company">NSIC, Hyderabad</h4>
+      <ul class="experience-list">
+        <li>Analyzed market trends and financial viability to guide business strategy and growth for small and medium enterprises.</li>
+        <li>Built financial and business models to support strategic decision-making using data-driven insights.</li>
+        <li>Utilized Excel and analytics tools to study customer demand, sales performance, and growth projections.</li>
+      </ul>
+    </div>
+
+    <!-- Experience Block 2 -->
+    <div class="experience-card">
+      <div class="experience-header">
+        <h3>Counselor / Data Mentor</h3>
+        <span class="experience-date">Aug 2021 – Mar 2022</span>
+      </div>
+      <h4 class="experience-company">Voice 4 Girls, Hyderabad</h4>
+      <ul class="experience-list">
+        <li>Guided students in academic and personal development while analyzing engagement patterns to optimize learning experiences.</li>
+        <li>Performed structured data collection and feedback analysis to assess program effectiveness and retention rates.</li>
+        <li>Led workshops using survey-driven insights to enhance educational delivery and impact.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="min-h-screen px-6 py-16 bg-black text-white">
+  <h2 class="section-title text-4xl font-bold mb-12 text-center" style="color:#00D1C1;">
+    Experience
+  </h2>
+
+  <div class="max-w-4xl mx-auto space-y-10">
+    <!-- Experience Block 1 -->
+    <div class="experience-card">
+      <div class="experience-header">
+        <h3>Business Development Intern</h3>
+        <span class="experience-date">May 2022 – Mar 2023</span>
+      </div>
+      <h4 class="experience-company">NSIC, Hyderabad</h4>
+      <ul class="experience-list">
+        <li>Analyzed market trends and financial viability to guide business strategy and growth for small and medium enterprises.</li>
+        <li>Built financial and business models to support strategic decision-making using data-driven insights.</li>
+        <li>Utilized Excel and analytics tools to study customer demand, sales performance, and growth projections.</li>
+      </ul>
+    </div>
+
+    <!-- Experience Block 2 -->
+    <div class="experience-card">
+      <div class="experience-header">
+        <h3>Counselor / Data Mentor</h3>
+        <span class="experience-date">Aug 2021 – Mar 2022</span>
+      </div>
+      <h4 class="experience-company">Voice 4 Girls, Hyderabad</h4>
+      <ul class="experience-list">
+        <li>Guided students in academic and personal development while analyzing engagement patterns to optimize learning experiences.</li>
+        <li>Performed structured data collection and feedback analysis to assess program effectiveness and retention rates.</li>
+        <li>Led workshops using survey-driven insights to enhance educational delivery and impact.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 
   <section id="projects" class="min-h-screen px-6 py-16 bg-black">
@@ -442,23 +704,39 @@
   </section>
 
 
-    <section id="contact" class="min-h-screen px-6 py-16 bg-black">
-  <h2 class="section-title">Contact</h2>
-  <div class="max-w-xl mx-auto text-center space-y-6">
-    <p class="text-lg text-gray-300">
-      Feel free to reach out through any of the platforms below. I'm always open to connecting!
-    </p>
 
-    <div class="flex justify-center space-x-6 mt-6">
-      <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" target="_blank" aria-label="LinkedIn" class="text-gray-400 hover:text-blue-400 text-2xl transition">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/harshi1744" target="_blank" aria-label="GitHub" class="text-gray-400 hover:text-white text-2xl transition">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="mailto:harshithasrieya@gmail.com" aria-label="Email" class="text-gray-400 hover:text-red-400 text-2xl transition">
-        <i class="fas fa-envelope"></i>
-      </a>
+  <section id="experience" class="min-h-screen px-6 py-16 bg-black text-white">
+  <h2 class="section-title text-4xl font-extrabold mb-12 text-center" style="color:#00D1C1;">
+    Experience
+  </h2>
+
+  <div class="max-w-5xl mx-auto space-y-12">
+    <!-- Experience Block 1 -->
+    <div class="experience-card">
+      <div class="experience-header">
+        <h3>Business Development Intern</h3>
+        <span class="experience-date">May 2022 – Mar 2023</span>
+      </div>
+      <h4 class="experience-company">NSIC, Hyderabad</h4>
+      <ul class="experience-list">
+        <li>Analyzed market trends and financial viability to guide business strategy and growth for small and medium enterprises.</li>
+        <li>Built financial and business models to support strategic decision-making using data-driven insights.</li>
+        <li>Utilized Excel and analytics tools to study customer demand, sales performance, and growth projections.</li>
+      </ul>
+    </div>
+
+    <!-- Experience Block 2 -->
+    <div class="experience-card">
+      <div class="experience-header">
+        <h3>Counselor / Data Mentor</h3>
+        <span class="experience-date">Aug 2021 – Mar 2022</span>
+      </div>
+      <h4 class="experience-company">Voice 4 Girls, Hyderabad</h4>
+      <ul class="experience-list">
+        <li>Guided students in academic and personal development while analyzing engagement patterns to optimize learning experiences.</li>
+        <li>Performed structured data collection and feedback analysis to assess program effectiveness and retention rates.</li>
+        <li>Led workshops using survey-driven insights to enhance educational delivery and impact.</li>
+      </ul>
     </div>
   </div>
 </section>
