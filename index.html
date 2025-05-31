@@ -458,7 +458,46 @@ footer {
   .tag-icon {
     @apply flex items-center gap-2 bg-gray-700 px-4 py-2 rounded-full hover:scale-105 transition transform;
   }
+  /* Custom styles for circular progress bars */
+    .circular-progress {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
+    .circular-progress::before {
+      content: '';
+      position: absolute;
+      width: 80px; /* Inner circle size */
+      height: 80px; /* Inner circle size */
+      border-radius: 50%;
+      background-color: black; /* Background color of the inner circle */
+      z-index: 1;
+    }
+
+    .progress-value {
+      position: relative;
+      font-size: 1.125rem; /* text-lg */
+      font-weight: 600; /* font-semibold */
+      color: #FBBF24; /* amber-400 */
+      z-index: 2;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .circular-progress .progress-circle {
+      fill: none;
+      stroke: #FBBF24; /* amber-400 */
+      stroke-width: 10;
+      stroke-linecap: round;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+      transition: stroke-dashoffset 0.5s ease-out;
+    }
   </style>
 
 <body class="min-h-screen flex flex-col">
@@ -815,8 +854,534 @@ footer {
 <!-- ========== 🧩 SKILLS SECTION END ========== -->
   
   <!-- ========== 🧩 SKILLS SECTION START ========== -->
-
   
+  <section id="my-skills" class="bg-[#1a1a1a] py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-24">
+    <div class="max-w-4xl w-full bg-gray-900 rounded-lg shadow-lg p-8">
+    <h1 class="text-4xl font-bold text-center mb-12 text-amber-400">My Skills</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+      <!-- Progress bars: Concepts & Business -->
+      <div class="space-y-8">
+        <h2 class="text-2xl font-semibold mb-6 text-amber-400">Concepts & Business Skills</h2>
+
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-lg font-medium text-gray-300">Data Analytics & Interpretation</span>
+            <span class="text-lg font-medium text-amber-400">90%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="bg-amber-400 h-2.5 rounded-full" style="width: 90%;"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-lg font-medium text-gray-300">Predictive Modeling & Forecasting</span>
+            <span class="text-lg font-medium text-amber-400">85%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="bg-amber-400 h-2.5 rounded-full" style="width: 85%;"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-lg font-medium text-gray-300">Statistical Analysis & Hypothesis Testing</span>
+            <span class="text-lg font-medium text-amber-400">80%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="bg-amber-400 h-2.5 rounded-full" style="width: 80%;"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-lg font-medium text-gray-300">Business Development & Market Research</span>
+            <span class="text-lg font-medium text-amber-400">85%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="bg-amber-400 h-2.5 rounded-full" style="width: 85%;"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-lg font-medium text-gray-300">Project Management & Team Collaboration</span>
+            <span class="text-lg font-medium text-amber-400">88%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="bg-amber-400 h-2.5 rounded-full" style="width: 88%;"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-lg font-medium text-gray-300">Problem Solving & Critical Thinking</span>
+            <span class="text-lg font-medium text-amber-400">90%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="bg-amber-400 h-2.5 rounded-full" style="width: 90%;"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-lg font-medium text-gray-300">Communication & Presentation Skills</span>
+            <span class="text-lg font-medium text-amber-400">92%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="bg-amber-400 h-2.5 rounded-full" style="width: 92%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Circular progress bars: Programming Languages, Tools & Cloud/ML -->
+      <div class="grid grid-cols-3 gap-8 justify-items-center">
+        <!-- Programming Languages -->
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="95">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">Python 95</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="85">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">Java 85</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="90">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">JavaScript 90</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="80">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">SQL 80</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="95">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">HTML 95</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="90">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">CSS 90</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="70">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">R 70</span>
+          </div>
+        </div>
+
+        <!-- Tools & Technologies -->
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="90">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">Git 90</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="85">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">GitHub 85</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="88">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">Excel 88</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="80">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">Jupyter 80</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="85">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">MySQL 85</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="70">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">MongoDB 70</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="85">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">NumPy 85</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="85">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">Pandas 85</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="75">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">Matplotlib 75</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="75">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">Seaborn 75</span>
+          </div>
+        </div>
+
+        <!-- Cloud & ML Tools -->
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="65">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">AWS 65</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="70">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">Azure 70</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="60">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">GCP 60</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="55">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">TensorFlow 55</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="circular-progress bg-gray-700 rounded-full" data-progress="65">
+            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
+              <circle
+                class="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                stroke-dasharray="282.7"
+                stroke-dashoffset="282.7"
+              ></circle>
+            </svg>
+            <span class="progress-value">PyTorch 65</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="mt-16 space-y-8">
+      <h2 class="text-2xl font-semibold mb-6 text-amber-400">Additional Conceptual & Business Skills</h2>
+
+      <div>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-lg font-medium text-gray-300">Data Analytics & Interpretation</span>
+          <span class="text-lg font-medium text-amber-400">88%</span>
+        </div>
+        <div class="w-full bg-gray-700 rounded-full h-2.5">
+          <div class="bg-amber-400 h-2.5 rounded-full" style="width: 88%;"></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-lg font-medium text-gray-300">Predictive Modeling & Forecasting</span>
+          <span class="text-lg font-medium text-amber-400">80%</span>
+        </div>
+        <div class="w-full bg-gray-700 rounded-full h-2.5">
+          <div class="bg-amber-400 h-2.5 rounded-full" style="width: 80%;"></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-lg font-medium text-gray-300">Business Development & Market Research</span>
+          <span class="text-lg font-medium text-amber-400">85%</span>
+        </div>
+        <div class="w-full bg-gray-700 rounded-full h-2.5">
+          <div class="bg-amber-400 h-2.5 rounded-full" style="width: 85%;"></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-lg font-medium text-gray-300">Project Management & Team Collaboration</span>
+          <span class="text-lg font-medium text-amber-400">87%</span>
+        </div>
+        <div class="w-full bg-gray-700 rounded-full h-2.5">
+          <div class="bg-amber-400 h-2.5 rounded-full" style="width: 87%;"></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-lg font-medium text-gray-300">Communication & Presentation Skills</span>
+          <span class="text-lg font-medium text-amber-400">90%</span>
+        </div>
+        <div class="w-full bg-gray-700 rounded-full h-2.5">
+          <div class="bg-amber-400 h-2.5 rounded-full" style="width: 90%;"></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-lg font-medium text-gray-300">Problem Solving & Critical Thinking</span>
+          <span class="text-lg font-medium text-amber-400">92%</span>
+        </div>
+        <div class="w-full bg-gray-700 rounded-full h-2.5">
+          <div class="bg-amber-400 h-2.5 rounded-full" style="width: 92%;"></div>
+        </div>
+      </div>
+    </div>
+    </section>
 <!-- ========== 🧩 SKILLS SECTION END ========== -->
 
   <!-- ========== 🧩 SKILLS SECTION START ========== -->
@@ -1145,6 +1710,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+
+     // Animate circular progress bars
+    document.querySelectorAll('.circular-progress').forEach(container => {
+      const circle = container.querySelector('.progress-circle');
+      const radius = circle.r.baseVal.value;
+      const circumference = 2 * Math.PI * radius;
+      const progress = container.getAttribute('data-progress');
+
+      circle.style.strokeDasharray = circumference;
+      const offset = circumference - (progress / 100) * circumference;
+      circle.style.strokeDashoffset = offset;
+    });
+  
   </script>
 </body>
 </html>
