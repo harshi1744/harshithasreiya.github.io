@@ -576,10 +576,10 @@ footer {
   <div class="w-full max-w-4xl flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
     <div>
       <p class="text-sm md:text-base mb-2 md:mb-4 font-semibold text-white">HELLO!</p>
-      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-2 md:mb-3 text-violet-400">
-        I'm <span>Harshitha Sreiya</span><br>
+      <h1 class="text-violet-400 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-2 md:mb-3">
+         I'm <span>Harshitha Sreiya</span><br>
         <span>Palaparthi</span>
-      </h1>
+        </h1>
       <p class="text-lg md:text-xl mb-4 md:mb-6 text-white">
         Aspiring Business Analyst | UNT Business Analytics Graduate Student
       </p>
@@ -588,8 +588,8 @@ footer {
            class="inline-flex items-center justify-center w-12 h-12 bg-violet-200 text-black rounded-full hover:bg-violet-300 transition duration-200">
            <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://github.com/harshi1744" 
-           class="inline-flex items-center justify-center w-12 h-12 border border-white text-white rounded-full hover:bg-white hover:text-black transition duration-200">
+        <a href="https://github.com/harshi1744" class="inline-flex items-center justify-center w-12 h-12 bg-violet-200 text-black rounded-full hover:bg-violet-300 transition duration-200">
+           //class="inline-flex items-center justify-center w-12 h-12 border border-white text-white rounded-full hover:bg-white hover:text-black transition duration-200">
            <i class="fab fa-github"></i>
         </a>
       </div>
@@ -721,61 +721,11 @@ footer {
 </section>
   <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
   
-<!-- ========== 💼 EXPERIENCE SECTION START ========== -->
-
-  <section id="experience-gallery" class="py-20 px-6 bg-black">
-  <div class="max-w-4xl mx-auto">
-  <h1 class="text-3xl md:text-4xl font-extrabold text-lightgray mb-12 text-center">🚀 My Journey</h1>
-
-  <!-- NSIC Internship -->
-  <div class="flex relative mb-16 fade-in-section">
-    <div class="w-1/6 text-right pr-4 pt-1">
-      <span class="text-lightgray font-semibold text-lg md:text-xl">2022–2023</span>
-    </div>
-    <div class="flex flex-col items-center mx-2">
-      <div class="w-4 h-4 rounded-full bg-yellow-400 flex-shrink-0 shadow-lg"></div>
-      <div class="timeline-line bg-yellow-200 w-1 flex-grow"></div>
-    </div>
-    <div class="w-5/6 pl-4">
-      <h2 class="text-xl md:text-2xl font-bold text-yellow-300 mb-1">💼 Entrepreneurship Intern</h2>
-      <p class="italic text-base md:text-lg text-yellow-100 mb-2">NSIC – Hyderabad, India</p>
-      <p class="text-sm md:text-base leading-relaxed text-gray-300">
-        Contributed to small business development through market research and financial feasibility studies. Analyzed
-        industry data to identify growth opportunities, designed simple financial models, and generated actionable insights
-        to guide business planning for micro-enterprises.
-      </p>
-    </div>
-  </div>
-
-  <!-- Voice 4 Girls -->
-  <div class="flex relative mb-16 fade-in-section">
-    <div class="w-1/6 text-right pr-4 pt-1">
-      <span class="text-lightgray font-semibold text-lg md:text-xl">2021–2022</span>
-    </div>
-    <div class="flex flex-col items-center mx-2">
-      <div class="w-4 h-4 rounded-full bg-pink-400 flex-shrink-0 shadow-lg"></div>
-      <div class="timeline-line bg-pink-200 w-1 flex-grow"></div>
-    </div>
-    <div class="w-5/6 pl-4">
-      <h2 class="text-xl md:text-2xl font-bold text-pink-300 mb-1">📊 Data Mentor & Counselor</h2>
-      <p class="italic text-base md:text-lg text-pink-100 mb-2">Voice 4 Girls – India</p>
-      <p class="text-sm md:text-base leading-relaxed text-gray-300">
-        Mentored adolescent students in decision-making and communication skills. Leveraged data insights from surveys and
-        feedback loops to shape effective learning strategies. Sessions focused on building confidence while using
-        behavioral patterns and data analysis to refine engagement techniques.
-      </p>
-    </div>
-  </div>
-</div>
-  </section>
-
-  <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
-  
   <!-- ========== 💼 EXPERIENCE SECTION START ========== -->
   
 <section id="experience-gallery" class="py-20 px-6 bg-black">
   <div class="max-w-4xl mx-auto">
-    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-200 mb-12 text-center">🚀 My Journey</h1>
+    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-200 mb-12 text-center">🚀 Work Experience</h1>
 
     <!-- Timeline Entry -->
     <div class="relative border-l border-yellow-400 pl-6 mb-10">
@@ -805,7 +755,6 @@ footer {
 
   </div>
 </section>
-
 
   <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
 
@@ -916,81 +865,6 @@ footer {
 <!-- ========== 🧩 SKILLS SECTION END ========== -->
   
   <!-- ========== 🧩 SKILLS SECTION START ========== -->
-
-<section id="my-skills" class="bg-[#1a1a1a] py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-24 text-white">
-  <div class="container mx-auto text-center" x-data="{ tab: 'programming' }">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12">My Skills</h2>
-
-    <!-- Tabs -->
-    <div class="flex flex-wrap justify-center gap-4 mb-10">
-      <button @click="tab = 'programming'" :class="tab === 'programming' ? 'bg-yellow-500 text-black' : 'bg-gray-700 text-white'" class="px-4 py-2 rounded-full text-sm font-medium transition">Programming</button>
-      <button @click="tab = 'tools'" :class="tab === 'tools' ? 'bg-yellow-500 text-black' : 'bg-gray-700 text-white'" class="px-4 py-2 rounded-full text-sm font-medium transition">Tools & Tech</button>
-      <button @click="tab = 'cloud'" :class="tab === 'cloud' ? 'bg-yellow-500 text-black' : 'bg-gray-700 text-white'" class="px-4 py-2 rounded-full text-sm font-medium transition">Cloud & ML</button>
-      <button @click="tab = 'business'" :class="tab === 'business' ? 'bg-yellow-500 text-black' : 'bg-gray-700 text-white'" class="px-4 py-2 rounded-full text-sm font-medium transition">Business & Concepts</button>
-    </div>
-
-    <!-- Tab Content -->
-    <div class="max-w-4xl mx-auto text-left grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
-
-      <!-- Programming Languages -->
-      <template x-if="tab === 'programming'">
-        <div class="col-span-full flex flex-wrap gap-3">
-          <span class="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs">Python</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Java</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">JavaScript</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">SQL</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">HTML</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">CSS</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">R</span>
-        </div>
-      </template>
-
-      <!-- Tools & Technologies -->
-      <template x-if="tab === 'tools'">
-        <div class="col-span-full flex flex-wrap gap-3">
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Git</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">GitHub</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MS Excel</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Jupyter Notebook</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MySQL</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MongoDB</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Numpy</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Pandas</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">AngularJS</span>
-        </div>
-      </template>
-
-      <!-- Cloud & ML Tools -->
-      <template x-if="tab === 'cloud'">
-        <div class="col-span-full flex flex-wrap gap-3">
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Google Cloud</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">AWS</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Azure</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Scikit-learn</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">TensorFlow</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Keras</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">SHAP</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">LIME</span>
-        </div>
-      </template>
-
-      <!-- Business Concepts -->
-      <template x-if="tab === 'business'">
-        <div class="col-span-full flex flex-wrap gap-3">
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Data Analytics</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Predictive Modeling</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Statistical Analysis</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Market Research</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Project Management</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Agile</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Scrum</span>
-          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Communication</span>
-        </div>
-      </template>
-
-    </div>
-  </div>
-</section>
 
   
 <!-- ========== 🧩 SKILLS SECTION END ========== -->
