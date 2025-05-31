@@ -713,6 +713,65 @@ footer {
   transform: translateY(0);
 }
 
+.text-lightgray { color: #d1d5db; }
+.timeline-line { background: #e5e7eb; width: 2px; }
+body {
+  background-color: #0f172a; /* dark slate background */
+  font-family:'Montserrat', sans-serif;
+  color: #f1f5f9; /* light text */
+}
+
+/* Custom gray */
+.text-lightgray {
+  color: #d1d5db; /* Tailwind's gray-300 */
+}
+
+/* Timeline vertical line */
+.timeline-line {
+  width: 2px;
+  background-color: #e5e7eb; /* Tailwind's gray-200 */
+  flex-grow: 1;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* Timeline dot styles (color variants used directly in HTML for flexibility) */
+.accent-color {
+  background-color: #38bdf8; /* Optional default blue */
+}
+
+/* Fade-in animation */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.appear {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* Responsive typography override (if not using Tailwind) */
+h1, h2 {
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Optional: Timeline icon spacing */
+.timeline-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
 
   </style>
 
@@ -946,6 +1005,57 @@ footer {
   </div>
 </section>
   <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
+  
+<!-- ========== 💼 EXPERIENCE SECTION START ========== -->
+
+  <section id="experience-gallery" class="py-20 px-6 bg-black">
+  <div class="max-w-4xl mx-auto">
+  <h1 class="text-3xl md:text-4xl font-extrabold text-lightgray mb-12 text-center">🚀 My Journey</h1>
+
+  <!-- NSIC Internship -->
+  <div class="flex relative mb-16 fade-in-section">
+    <div class="w-1/6 text-right pr-4 pt-1">
+      <span class="text-lightgray font-semibold text-lg md:text-xl">2022–2023</span>
+    </div>
+    <div class="flex flex-col items-center mx-2">
+      <div class="w-4 h-4 rounded-full bg-yellow-400 flex-shrink-0 shadow-lg"></div>
+      <div class="timeline-line bg-yellow-200 w-1 flex-grow"></div>
+    </div>
+    <div class="w-5/6 pl-4">
+      <h2 class="text-xl md:text-2xl font-bold text-yellow-300 mb-1">💼 Entrepreneurship Intern</h2>
+      <p class="italic text-base md:text-lg text-yellow-100 mb-2">NSIC – Hyderabad, India</p>
+      <p class="text-sm md:text-base leading-relaxed text-gray-300">
+        Contributed to small business development through market research and financial feasibility studies. Analyzed
+        industry data to identify growth opportunities, designed simple financial models, and generated actionable insights
+        to guide business planning for micro-enterprises.
+      </p>
+    </div>
+  </div>
+
+  <!-- Voice 4 Girls -->
+  <div class="flex relative mb-16 fade-in-section">
+    <div class="w-1/6 text-right pr-4 pt-1">
+      <span class="text-lightgray font-semibold text-lg md:text-xl">2021–2022</span>
+    </div>
+    <div class="flex flex-col items-center mx-2">
+      <div class="w-4 h-4 rounded-full bg-pink-400 flex-shrink-0 shadow-lg"></div>
+      <div class="timeline-line bg-pink-200 w-1 flex-grow"></div>
+    </div>
+    <div class="w-5/6 pl-4">
+      <h2 class="text-xl md:text-2xl font-bold text-pink-300 mb-1">📊 Data Mentor & Counselor</h2>
+      <p class="italic text-base md:text-lg text-pink-100 mb-2">Voice 4 Girls – India</p>
+      <p class="text-sm md:text-base leading-relaxed text-gray-300">
+        Mentored adolescent students in decision-making and communication skills. Leveraged data insights from surveys and
+        feedback loops to shape effective learning strategies. Sessions focused on building confidence while using
+        behavioral patterns and data analysis to refine engagement techniques.
+      </p>
+    </div>
+  </div>
+</div>
+  </section>
+
+  <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
+
 
 <!-- ========== 🧠 PROJECTS SECTION START ========== -->
 
@@ -1287,6 +1397,29 @@ document.addEventListener('keydown', (e) => {
   }, appearOptions);
 
   faders.forEach(fader => appearOnScroll.observe(fader));
+
+            document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll(".fade-in-section");
+
+            const observerOptions = {
+                root: null, /* relative to the viewport */
+                rootMargin: "0px",
+                threshold: 0.1 /* 10% of the section must be visible */
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target); /* Stop observing once visible */
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
 </script>
 
   </script>
