@@ -458,46 +458,81 @@ footer {
   .tag-icon {
     @apply flex items-center gap-2 bg-gray-700 px-4 py-2 rounded-full hover:scale-105 transition transform;
   }
-  /* Custom styles for circular progress bars */
-    .circular-progress {
-      position: relative;
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+ body {
+  font-family: 'Montserrat', sans-serif;
+  background: #f0f2f5;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-    .circular-progress::before {
-      content: '';
-      position: absolute;
-      width: 80px; /* Inner circle size */
-      height: 80px; /* Inner circle size */
-      border-radius: 50%;
-      background-color: black; /* Background color of the inner circle */
-      z-index: 1;
-    }
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* This gives the 3D effect */
+}
 
-    .progress-value {
-      position: relative;
-      font-size: 1.125rem; /* text-lg */
-      font-weight: 600; /* font-semibold */
-      color: #FBBF24; /* amber-400 */
-      z-index: 2;
-      text-align: center;
-      white-space: nowrap;
-    }
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  cursor: pointer;
+}
 
-    .circular-progress .progress-circle {
-      fill: none;
-      stroke: #FBBF24; /* amber-400 */
-      stroke-width: 10;
-      stroke-linecap: round;
-      transform: rotate(-90deg);
-      transform-origin: 50% 50%;
-      transition: stroke-dashoffset 0.5s ease-out;
-    }
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flip-card-front {
+  background-color: #007BFF;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border: 2px solid #0056b3;
+}
+
+.flip-card-back {
+  background-color: white;
+  color: #333;
+  transform: rotateY(180deg);
+  overflow-y: auto;
+  border: 2px solid #0056b3;
+  font-size: 16px;
+  text-align: left;
+}
+
+.flip-card-back ul {
+  padding-left: 20px;
+  margin: 0;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.flip-card-back ul li {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
   </style>
 
 <body class="min-h-screen flex flex-col">
@@ -794,627 +829,111 @@ footer {
   </section>
 <!-- ========== 🧩 SKILLS SECTION END ========== -->
   
-  <!-- ========== 🧩 SKILLS SECTION START ========== -->
+<!-- ========== 🧩 SKILLS SECTION START ========== -->
+<section id="skills" class="min-h-screen px-6 py-16 bg-black text-white">
+    <h2 class="text-4xl font-extrabold mb-14 text-center text-violet-400 tracking-wide">Skills</h2>
   
-  <section id="my-skills" class="bg-[#1a1a1a] py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-24">
-    <div class="max-w-4xl w-full bg-gray-900 rounded-lg shadow-lg p-8">
-    <h1 class="text-4xl font-bold text-center mb-12 text-amber-400">My Skills</h1>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-
-      <!-- Progress bars: Concepts & Business -->
-      <div class="space-y-8">
-        <h2 class="text-2xl font-semibold mb-6 text-amber-400">Concepts & Business Skills</h2>
-
-        <div>
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-lg font-medium text-gray-300">Data Analytics & Interpretation</span>
-            <span class="text-lg font-medium text-amber-400">90%</span>
-          </div>
-          <div class="w-full bg-gray-700 rounded-full h-2.5">
-            <div class="bg-amber-400 h-2.5 rounded-full" style="width: 90%;"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-lg font-medium text-gray-300">Predictive Modeling & Forecasting</span>
-            <span class="text-lg font-medium text-amber-400">85%</span>
-          </div>
-          <div class="w-full bg-gray-700 rounded-full h-2.5">
-            <div class="bg-amber-400 h-2.5 rounded-full" style="width: 85%;"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-lg font-medium text-gray-300">Statistical Analysis & Hypothesis Testing</span>
-            <span class="text-lg font-medium text-amber-400">80%</span>
-          </div>
-          <div class="w-full bg-gray-700 rounded-full h-2.5">
-            <div class="bg-amber-400 h-2.5 rounded-full" style="width: 80%;"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-lg font-medium text-gray-300">Business Development & Market Research</span>
-            <span class="text-lg font-medium text-amber-400">85%</span>
-          </div>
-          <div class="w-full bg-gray-700 rounded-full h-2.5">
-            <div class="bg-amber-400 h-2.5 rounded-full" style="width: 85%;"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-lg font-medium text-gray-300">Project Management & Team Collaboration</span>
-            <span class="text-lg font-medium text-amber-400">88%</span>
-          </div>
-          <div class="w-full bg-gray-700 rounded-full h-2.5">
-            <div class="bg-amber-400 h-2.5 rounded-full" style="width: 88%;"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-lg font-medium text-gray-300">Problem Solving & Critical Thinking</span>
-            <span class="text-lg font-medium text-amber-400">90%</span>
-          </div>
-          <div class="w-full bg-gray-700 rounded-full h-2.5">
-            <div class="bg-amber-400 h-2.5 rounded-full" style="width: 90%;"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-lg font-medium text-gray-300">Communication & Presentation Skills</span>
-            <span class="text-lg font-medium text-amber-400">92%</span>
-          </div>
-          <div class="w-full bg-gray-700 rounded-full h-2.5">
-            <div class="bg-amber-400 h-2.5 rounded-full" style="width: 92%;"></div>
-          </div>
-        </div>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        Programming Languages
       </div>
-
-      <!-- Circular progress bars: Programming Languages, Tools & Cloud/ML -->
-      <div class="grid grid-cols-3 gap-8 justify-items-center">
-        <!-- Programming Languages -->
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="95">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">Python 95</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="85">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">Java 85</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="90">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">JavaScript 90</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="80">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">SQL 80</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="95">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">HTML 95</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="90">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">CSS 90</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="70">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">R 70</span>
-          </div>
-        </div>
-
-        <!-- Tools & Technologies -->
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="90">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">Git 90</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="85">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">GitHub 85</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="88">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">Excel 88</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="80">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">Jupyter 80</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="85">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">MySQL 85</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="70">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">MongoDB 70</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="85">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">NumPy 85</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="85">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">Pandas 85</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="75">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">Matplotlib 75</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="75">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">Seaborn 75</span>
-          </div>
-        </div>
-
-        <!-- Cloud & ML Tools -->
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="65">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">AWS 65</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="70">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">Azure 70</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="60">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">GCP 60</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="55">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">TensorFlow 55</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <div class="circular-progress bg-gray-700 rounded-full" data-progress="65">
-            <svg class="w-full h-full absolute top-0 left-0" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="#374151" stroke-width="10"></circle>
-              <circle
-                class="progress-circle"
-                cx="50"
-                cy="50"
-                r="45"
-                stroke-dasharray="282.7"
-                stroke-dashoffset="282.7"
-              ></circle>
-            </svg>
-            <span class="progress-value">PyTorch 65</span>
-          </div>
-        </div>
-
+      <div class="flip-card-back">
+        <ul>
+          <li>Python</li>
+          <li>Java</li>
+          <li>JavaScript</li>
+          <li>SQL</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>R</li>
+        </ul>
       </div>
     </div>
+  </div>
 
-    <div class="mt-16 space-y-8">
-      <h2 class="text-2xl font-semibold mb-6 text-amber-400">Additional Conceptual & Business Skills</h2>
-
-      <div>
-        <div class="flex justify-between items-center mb-2">
-          <span class="text-lg font-medium text-gray-300">Data Analytics & Interpretation</span>
-          <span class="text-lg font-medium text-amber-400">88%</span>
-        </div>
-        <div class="w-full bg-gray-700 rounded-full h-2.5">
-          <div class="bg-amber-400 h-2.5 rounded-full" style="width: 88%;"></div>
-        </div>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        Tools & Technologies
       </div>
-
-      <div>
-        <div class="flex justify-between items-center mb-2">
-          <span class="text-lg font-medium text-gray-300">Predictive Modeling & Forecasting</span>
-          <span class="text-lg font-medium text-amber-400">80%</span>
-        </div>
-        <div class="w-full bg-gray-700 rounded-full h-2.5">
-          <div class="bg-amber-400 h-2.5 rounded-full" style="width: 80%;"></div>
-        </div>
-      </div>
-
-      <div>
-        <div class="flex justify-between items-center mb-2">
-          <span class="text-lg font-medium text-gray-300">Business Development & Market Research</span>
-          <span class="text-lg font-medium text-amber-400">85%</span>
-        </div>
-        <div class="w-full bg-gray-700 rounded-full h-2.5">
-          <div class="bg-amber-400 h-2.5 rounded-full" style="width: 85%;"></div>
-        </div>
-      </div>
-
-      <div>
-        <div class="flex justify-between items-center mb-2">
-          <span class="text-lg font-medium text-gray-300">Project Management & Team Collaboration</span>
-          <span class="text-lg font-medium text-amber-400">87%</span>
-        </div>
-        <div class="w-full bg-gray-700 rounded-full h-2.5">
-          <div class="bg-amber-400 h-2.5 rounded-full" style="width: 87%;"></div>
-        </div>
-      </div>
-
-      <div>
-        <div class="flex justify-between items-center mb-2">
-          <span class="text-lg font-medium text-gray-300">Communication & Presentation Skills</span>
-          <span class="text-lg font-medium text-amber-400">90%</span>
-        </div>
-        <div class="w-full bg-gray-700 rounded-full h-2.5">
-          <div class="bg-amber-400 h-2.5 rounded-full" style="width: 90%;"></div>
-        </div>
-      </div>
-
-      <div>
-        <div class="flex justify-between items-center mb-2">
-          <span class="text-lg font-medium text-gray-300">Problem Solving & Critical Thinking</span>
-          <span class="text-lg font-medium text-amber-400">92%</span>
-        </div>
-        <div class="w-full bg-gray-700 rounded-full h-2.5">
-          <div class="bg-amber-400 h-2.5 rounded-full" style="width: 92%;"></div>
-        </div>
+      <div class="flip-card-back">
+        <ul>
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>Excel</li>
+          <li>Jupyter</li>
+          <li>MySQL</li>
+          <li>MongoDB</li>
+          <li>NumPy</li>
+          <li>Pandas</li>
+          <li>AngularJS</li>
+        </ul>
       </div>
     </div>
-    </section>
-<!-- ========== 🧩 SKILLS SECTION END ========== -->
+  </div>
 
-  <!-- ========== 🧩 SKILLS SECTION START ========== -->
-
-  <section id="my-skills" class="bg-[#1a1a1a] py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-24">
-  <div class="container mx-auto text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">
-      My Skills
-    </h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto text-white text-sm">
-
-      <!-- Programming Languages -->
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-        <h3 class="font-semibold text-lg mb-4">Programming Languages</h3>
-        <div class="flex flex-wrap gap-3">
-          <div class="flex items-center gap-2 px-4 py-2 bg-yellow-500 text-black rounded-full hover:scale-105 transition">
-            <i class="fab fa-python"></i><span>Python</span>
-          </div>
-          <div class="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-full hover:scale-105 transition">
-            <i class="fab fa-java"></i><span>Java</span>
-          </div>
-          <div class="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-full hover:scale-105 transition">
-            <i class="fab fa-js-square"></i><span>JavaScript</span>
-          </div>
-          <div class="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-full hover:scale-105 transition">
-            <i class="fas fa-database"></i><span>SQL</span>
-          </div>
-          <div class="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-full hover:scale-105 transition">
-            <i class="fab fa-html5"></i><span>HTML</span>
-          </div>
-          <div class="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-full hover:scale-105 transition">
-            <i class="fab fa-css3-alt"></i><span>CSS</span>
-          </div>
-          <div class="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-full hover:scale-105 transition">
-            <i class="fas fa-chart-line"></i><span>R</span>
-          </div>
-        </div>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        Cloud & ML Tools
       </div>
-
-      <!-- Tools & Technologies -->
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-        <h3 class="font-semibold text-lg mb-4">Tools & Technologies</h3>
-        <div class="flex flex-wrap gap-3">
-          <div class="tag-icon">Git <i class="fab fa-git-alt"></i></div>
-          <div class="tag-icon">GitHub <i class="fab fa-github"></i></div>
-          <div class="tag-icon">Excel <i class="fas fa-file-excel"></i></div>
-          <div class="tag-icon">Jupyter <i class="fas fa-book-open"></i></div>
-          <div class="tag-icon">MySQL <i class="fas fa-database"></i></div>
-          <div class="tag-icon">MongoDB <i class="fas fa-leaf"></i></div>
-          <div class="tag-icon">NumPy <i class="fas fa-calculator"></i></div>
-          <div class="tag-icon">Pandas <i class="fas fa-table"></i></div>
-          <div class="tag-icon">AngularJS <i class="fab fa-angular"></i></div>
-        </div>
+      <div class="flip-card-back">
+        <ul>
+          <li>Google Cloud</li>
+          <li>AWS</li>
+          <li>Azure</li>
+          <li>Scikit-learn</li>
+          <li>TensorFlow</li>
+          <li>Keras</li>
+          <li>SHAP</li>
+          <li>LIME</li>
+        </ul>
       </div>
+    </div>
+  </div>
 
-      <!-- Cloud & ML Tools -->
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-        <h3 class="font-semibold text-lg mb-4">Cloud & ML Tools</h3>
-        <div class="flex flex-wrap gap-3">
-          <div class="tag-icon">Google Cloud <i class="fab fa-google"></i></div>
-          <div class="tag-icon">AWS <i class="fab fa-aws"></i></div>
-          <div class="tag-icon">Azure <i class="fab fa-microsoft"></i></div>
-          <div class="tag-icon">Scikit-learn <i class="fas fa-robot"></i></div>
-          <div class="tag-icon">TensorFlow <i class="fas fa-brain"></i></div>
-          <div class="tag-icon">Keras <i class="fas fa-network-wired"></i></div>
-          <div class="tag-icon">SHAP <i class="fas fa-lightbulb"></i></div>
-          <div class="tag-icon">LIME <i class="fas fa-lightbulb"></i></div>
-        </div>
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        Concepts & Business
       </div>
-
-      <!-- Concepts & Business -->
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-        <h3 class="font-semibold text-lg mb-4">Concepts & Business</h3>
-        <div class="flex flex-wrap gap-3">
-          <div class="tag-icon">Data Analytics <i class="fas fa-chart-bar"></i></div>
-          <div class="tag-icon">Predictive Modeling <i class="fas fa-project-diagram"></i></div>
-          <div class="tag-icon">Statistical Analysis <i class="fas fa-percentage"></i></div>
-          <div class="tag-icon">Market Research <i class="fas fa-search-dollar"></i></div>
-          <div class="tag-icon">Project Mgmt <i class="fas fa-tasks"></i></div>
-          <div class="tag-icon">Agile <i class="fas fa-running"></i></div>
-          <div class="tag-icon">Scrum <i class="fas fa-users-cog"></i></div>
-          <div class="tag-icon">Communication <i class="fas fa-comments"></i></div>
-        </div>
+      <div class="flip-card-back">
+        <ul>
+          <li>Data Analytics</li>
+          <li>Predictive Modeling</li>
+          <li>Statistical Analysis</li>
+          <li>Market Research</li>
+          <li>Project Management</li>
+          <li>Agile</li>
+          <li>Scrum</li>
+          <li>Communication</li>
+        </ul>
       </div>
+    </div>
+  </div>
 
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        Additional Conceptual & Business Skills
+      </div>
+      <div class="flip-card-back">
+        <ul>
+          <li>Data Analytics & Interpretation</li>
+          <li>Predictive Modeling & Forecasting</li>
+          <li>Statistical Analysis & Hypothesis Testing</li>
+          <li>Business Development & Market Research</li>
+          <li>Project Management & Team Collaboration</li>
+          <li>Problem Solving & Critical Thinking</li>
+          <li>Communication & Presentation Skills</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-  <!-- ========== 🧩 SKILLS SECTION END ========== -->
-
+<!-- ========== 🧩 SKILLS SECTION END ========== -->
 
  <!-- ========== 📞 CONTACT SECTION START ========== -->
 
@@ -1651,19 +1170,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-
-     // Animate circular progress bars
-    document.querySelectorAll('.circular-progress').forEach(container => {
-      const circle = container.querySelector('.progress-circle');
-      const radius = circle.r.baseVal.value;
-      const circumference = 2 * Math.PI * radius;
-      const progress = container.getAttribute('data-progress');
-
-      circle.style.strokeDasharray = circumference;
-      const offset = circumference - (progress / 100) * circumference;
-      circle.style.strokeDashoffset = offset;
-    });
-  
   </script>
 </body>
 </html>
