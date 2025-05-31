@@ -587,6 +587,9 @@ footer {
     transform: scale(1.3);
   }
 }
+
+  /*projects*/
+    
   body {
   font-family: 'Montserrat', sans-serif;
       margin: 0;
@@ -836,70 +839,6 @@ footer {
 
   <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
 
-
-<!-- ========== 🧠 PROJECTS SECTION START ========== -->
-
-  <section id="projects" class="projects-section page-section bg-black py-16 px-6">
-  <h2 class="text-4xl font-extrabold text-violet-600 text-center mb-12">Projects</h2>
-
-  <div class="project-flex space-y-12">
-
-    <!-- Project 1 -->
-    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg project-bg-hiring relative overflow-hidden">
-      <div class="overlay absolute inset-0 bg-black opacity-50"></div>
-      <div class="content relative z-10">
-        <h3 class="text-2xl font-semibold text-white mb-4">
-          Hiring Assistant AI – Agentic Resume Screening System (Academic Project)
-        </h3>
-        <p class="text-white mb-4">
-          Intelligent hiring assistant that integrates agentic AI with RAG to autonomously screen and rank resumes, converse with recruiters, and evolve based on feedback—all in a privacy-first, offline-ready architecture.
-        </p>
-        <div class="project-buttons space-x-4">
-          <a href="#" class="btn-transparent view-project-btn" data-project-id="hiring">View Project</a>
-          <a href="#" class="btn-transparent">View Code</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Project 2 -->
-    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg project-bg-malnutrition relative overflow-hidden">
-      <div class="overlay absolute inset-0 bg-black opacity-50"></div>
-      <div class="content relative z-10">
-        <h3 class="text-2xl font-semibold text-white mb-4">
-          Visualizing Global Trends in Child Malnutrition (Academic Project)
-        </h3>
-        <p class="text-white mb-4">
-          Deep analysis of global malnutrition data across gender, geography, and age using interactive dashboards to support informed decisions for public health initiatives.
-        </p>
-        <div class="project-buttons space-x-4">
-          <a href="#" class="btn-transparent view-project-btn" data-project-id="malnutrition">View Project</a>
-          <a href="#" class="btn-transparent">View Code</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Project 3 -->
-    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg project-bg-fraud relative overflow-hidden">
-      <div class="overlay absolute inset-0 bg-black opacity-50"></div>
-      <div class="content relative z-10">
-        <h3 class="text-2xl font-semibold text-white mb-4">
-          Financial Fraud Detection — Machine Learning Model (Academic Project)
-        </h3>
-        <p class="text-white mb-4">
-          Supervised ML-based fraud detection solution prioritizing recall and fairness, trained on labeled datasets and validated across precision-recall trade-offs.
-        </p>
-        <div class="project-buttons space-x-4">
-          <a href="#" class="btn-transparent view-project-btn" data-project-id="fraud">View Project</a>
-          <a href="#" class="btn-transparent">View Code</a>
-        </div>
-      </div>
-    </article>
-
-  </div>
-</section>
-  <!-- ========== 🧠 PROJECTS SECTION END ========== -->
-
-  
 <!-- ========== 🧠 PROJECTS SECTION START ========== -->
 
   <section id="projects" class="projects-section page-section bg-black py-16 px-6">
@@ -1088,6 +1027,217 @@ footer {
   </div>
 </div>
 
+
+  </div>
+</section>
+  <!-- ========== 🧠 PROJECTS SECTION END ========== -->
+
+  <!-- ========== 🧠 PROJECTS SECTION START ========== -->
+
+ <section id="projects" class="projects-section page-section bg-black py-16 px-6">
+  <h2 class="text-4xl font-extrabold text-violet-600 text-center mb-12">Projects</h2>
+
+  <div class="project-flex space-y-20 max-w-7xl mx-auto">
+
+    <!-- Project 1 -->
+    <article class="project relative overflow-hidden rounded-xl bg-gray-900 shadow-lg text-white p-8"
+      data-project="1">
+      <canvas class="bg-canvas absolute inset-0 w-full h-full pointer-events-none"></canvas>
+      <div class="relative z-10 space-y-6">
+        <header class="project-header max-w-3xl mx-auto">
+          <h2 class="text-2xl font-bold mb-2">🤖 Hiring Assistant AI – Agentic Resume Screening System</h2>
+          <p class="project-purpose text-gray-300">
+            To revolutionize traditional hiring by building a lightweight, privacy-compliant, and offline-ready AI assistant
+            that autonomously screens resumes, ranks candidates, and interacts dynamically with recruiters—powered by
+            Retrieval-Augmented Generation (RAG) and continual feedback adaptation.
+          </p>
+        </header>
+        <div class="project-body grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <section class="project-details space-y-4">
+            <h3 class="text-xl font-semibold">⚙️ Skills Demonstrated</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-200">
+              <li>Agentic AI Design & Prompt Engineering</li>
+              <li>Retrieval-Augmented Generation (RAG)</li>
+              <li>Semantic Similarity & Embedding Techniques</li>
+              <li>Feedback-Driven Adaptation</li>
+              <li>Privacy-Centric Architecture</li>
+              <li>Streamlit App Development</li>
+              <li>Human-AI Interaction Design</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6">🛠️ Tools & Technologies</h3>
+            <p class="text-gray-300 font-mono text-sm">
+              Python 3.x | PyMuPDF | SentenceTransformers (MiniLM-L6-v2) | Pandas | Streamlit | ctransformers
+              (Mistral-7B-Instruct) | In-Memory Vector Search | RAG | Offline Inference Framework
+            </p>
+
+            <h3 class="text-xl font-semibold mt-6">🔑 Core Features & Workflow</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-200">
+              <li>📄 <strong>Resume Parsing:</strong> Extracts structured content from resumes & job descriptions using PyMuPDF</li>
+              <li>🔍 <strong>Semantic Matching:</strong> Uses SentenceTransformers to embed and compare candidate/job text</li>
+              <li>🧮 <strong>Hybrid Scoring:</strong> Combines semantic similarity with rubric-based skill matching using Pandas</li>
+              <li>💬 <strong>Recruiter Chat UI:</strong> Streamlit interface backed by a quantized Mistral-7B-Instruct model</li>
+              <li>🔄 <strong>Adaptive Feedback Loop:</strong> Learns recruiter preferences in real time</li>
+              <li>🔐 <strong>Offline & Secure:</strong> Fully local, privacy-focused operation with no cloud dependencies</li>
+            </ul>
+          </section>
+
+          <section class="project-impact space-y-4 text-gray-300">
+            <h3 class="text-xl font-semibold">📈 Key Outcomes</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li><strong>⬇️ Time-to-Hire:</strong> Significantly reduced screening time through automation</li>
+              <li><strong>📊 Transparent Matching:</strong> Clear score explanations improved recruiter trust</li>
+              <li><strong>⚙️ Evolving System:</strong> Adapted scoring and ranking via recruiter feedback</li>
+              <li><strong>🔐 Fully Private:</strong> Local, GDPR-compliant architecture ensured data sovereignty</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6">🔎 Outcome</h3>
+            <blockquote class="italic border-l-4 border-violet-600 pl-4 text-gray-100">
+              An intelligent, privacy-first hiring assistant that enhances recruiter efficiency, fairness, and decision transparency
+              through adaptive, agentic AI.
+            </blockquote>
+
+            <h3 class="text-xl font-semibold mt-6">🧠 Reflection</h3>
+            <p>
+              "This project deepened my understanding of building secure, agentic AI tools that respect user privacy while enhancing
+              decision quality. Designing a transparent, feedback-driven system taught me the balance between automation and human
+              oversight in sensitive applications like hiring."
+            </p>
+          </section>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 2 -->
+    <article class="project relative overflow-hidden rounded-xl bg-gray-900 shadow-lg text-white p-8"
+      data-project="2">
+      <canvas class="bg-canvas absolute inset-0 w-full h-full pointer-events-none"></canvas>
+      <div class="relative z-10 space-y-6">
+        <header class="project-header max-w-3xl mx-auto">
+          <h2 class="text-2xl font-bold mb-2">📊 Interactive Dashboard for Visualizing Global Child Malnutrition Trends</h2>
+          <p class="project-purpose text-gray-300">
+            To explore and expose global patterns of child malnutrition using interactive visual analytics, empowering stakeholders to
+            develop targeted, data-informed interventions.
+          </p>
+        </header>
+        <div class="project-body grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <section class="project-details space-y-4">
+            <h3 class="text-xl font-semibold">⚖️ Skills Demonstrated</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-200">
+              <li>Data Wrangling & Preprocessing</li>
+              <li>Interactive Dashboard Design</li>
+              <li>Data Storytelling</li>
+              <li>Demographic & Geographic Analysis</li>
+              <li>Team Collaboration</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6">🔹 Tools & Technologies</h3>
+            <p class="text-gray-300 font-mono text-sm">
+              Tableau | Python (Pandas, Matplotlib) | WHO Global Database | Data Cleaning Techniques
+            </p>
+
+            <h3 class="text-xl font-semibold mt-6">🌐 Key Visuals & Insights</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-200">
+              <li>🌍 <strong>Geographic Map:</strong> Highlighted countries with highest severity</li>
+              <li>♂️♀️ <strong>Line Chart:</strong> Females consistently show higher malnutrition rates</li>
+              <li>🏠 <strong>Urban vs Rural:</strong> Bar graph shows rural areas most affected</li>
+              <li>🔹 <strong>Scatter Plot:</strong> Wasting vs. Severe wasting by age group</li>
+              <li>📆 <strong>Stacked Area Chart:</strong> Stunting prevalence trends over time</li>
+              <li>⚖️ <strong>Box Plots:</strong> IQR and outliers across malnutrition types</li>
+            </ul>
+          </section>
+
+          <section class="project-impact space-y-4 text-gray-300">
+            <h3 class="text-xl font-semibold">🌿 Project Impact</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li><strong>Spain:</strong> Highest malnutrition severity</li>
+              <li><strong>Greece:</strong> Lowest malnutrition severity</li>
+              <li><strong>Infants & Toddlers:</strong> Most at risk</li>
+              <li><strong>Urban Areas:</strong> Slightly higher malnutrition rates than rural</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6">🔎 Outcome</h3>
+            <blockquote class="italic border-l-4 border-violet-600 pl-4 text-gray-100">
+              A multi-layered, interactive data experience that uncovers hidden trends and supports global health awareness and policymaking.
+            </blockquote>
+
+            <h3 class="text-xl font-semibold mt-6">🧠 Reflection</h3>
+            <p>
+              "This project strengthened my ability to translate data into meaningful insights and visual narratives. I learned to tailor dashboards
+              for intuitive exploration and deliver real-world impact through data storytelling."
+            </p>
+          </section>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 3 -->
+    <article class="project relative overflow-hidden rounded-xl bg-gray-900 shadow-lg text-white p-8"
+      data-project="3">
+      <canvas class="bg-canvas absolute inset-0 w-full h-full pointer-events-none"></canvas>
+      <div class="relative z-10 space-y-6">
+        <header class="project-header max-w-3xl mx-auto">
+          <h2 class="text-2xl font-bold mb-2">💳 AI-Powered Fraud Detection in Banking</h2>
+          <p class="project-purpose text-gray-300">
+            To design a real-time, AI-driven fraud detection system tailored for the financial sector—replacing traditional
+            rule-based methods with adaptive machine learning to identify known and emerging fraud patterns while ensuring regulatory
+            compliance and explainability.
+          </p>
+        </header>
+        <div class="project-body grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <section class="project-details space-y-4">
+            <h3 class="text-xl font-semibold">⚙️ Skills Demonstrated</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-200">
+              <li>Machine Learning (Supervised & Unsupervised)</li>
+              <li>Real-Time Data Processing & Alerting</li>
+              <li>Model Explainability (SHAP, LIME)</li>
+              <li>Ethical & Fair AI Design</li>
+              <li>Secure System Design & Cryptography</li>
+              <li>Microservices Architecture & High Availability</li>
+              <li>Compliance-Aware AI Development (GDPR, AML, PCI DSS)</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6">🛠️ Tools & Technologies</h3>
+            <p class="text-gray-300 font-mono text-sm">
+              Python | Scikit-learn | XGBoost | SHAP | LIME | Kafka | Docker | Flask | PostgreSQL | Prometheus | Grafana |
+              AES-256 | TLS 1.3 | Role-Based Access Control (RBAC)
+            </p>
+
+            <h3 class="text-xl font-semibold mt-6">🔑 Core Features & Workflow</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-200">
+              <li>⚡ <strong>Real-Time Monitoring:</strong> Flags high-risk transactions within 300ms latency</li>
+              <li>🧠 <strong>Hybrid ML Models:</strong> Combines supervised learning (known fraud) with unsupervised anomaly detection (unknown fraud)</li>
+              <li>🔍 <strong>Investigation Module:</strong> Analysts can annotate, confirm, or dismiss alerts—feeding into retraining</li>
+              <li>📊 <strong>Risk Scoring Engine:</strong> Continuously scores transactions and triggers alerts via dashboards & SMS</li>
+              <li>🔎 <strong>Explainable AI:</strong> SHAP & LIME deliver transparent, auditable justifications for all decisions</li>
+              <li>🔐 <strong>Security Layer:</strong> AES encryption, TLS, MFA, and RBAC ensure full compliance and protection</li>
+            </ul>
+          </section>
+
+          <section class="project-impact space-y-4 text-gray-300">
+            <h3 class="text-xl font-semibold">📈 Key Outcomes</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li><strong>Real-Time Fraud Workflow:</strong> Enabled proactive detection and analyst response</li>
+              <li><strong>Operational Efficiency:</strong> Reduced financial losses and increased fraud analyst throughput</li>
+              <li><strong>Regulatory Compliance:</strong> Fully aligned with GDPR, PCI DSS, AML, and KYC standards</li>
+              <li><strong>Bias Mitigation:</strong> Fair, demographic-aware fraud decisions boosted customer trust</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6">🔎 Outcome</h3>
+            <blockquote class="italic border-l-4 border-violet-600 pl-4 text-gray-100">
+              A robust, real-time fraud detection system that combines predictive intelligence, ethical AI, and security best practices to
+              safeguard financial transactions while meeting regulatory demands.
+            </blockquote>
+
+            <h3 class="text-xl font-semibold mt-6">🧠 Reflection</h3>
+            <p>
+              "This project sharpened my skills in building real-time, resilient AI systems. It taught me how to balance performance,
+              fairness, and compliance—while delivering explainable, trustable outcomes in high-stakes environments like finance."
+            </p>
+          </section>
+        </div>
+      </div>
+    </article>
 
   </div>
 </section>
@@ -1505,6 +1655,43 @@ document.addEventListener('DOMContentLoaded', function() {
       appearOnScroll.observe(fader);
     });
   });
+
+  const projects = document.querySelectorAll('.project');
+const options = { threshold: 0.1 };
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+      observer.unobserve(entry.target); // trigger once per card
+    }
+  });
+}, options);
+
+projects.forEach(p => observer.observe(p));
+projects.forEach(project => {
+  const canvas = project.querySelector('canvas.bg-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+
+  // Distinct background colors (can be modified per project)
+  const colors = ['#6D28D9', '#9333EA', '#3B82F6'];
+
+  for (let i = 0; i < 100; i++) {
+    ctx.beginPath();
+    ctx.arc(
+      Math.random() * canvas.width,
+      Math.random() * canvas.height,
+      Math.random() * 40,
+      0,
+      2 * Math.PI
+    );
+    ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)] + '30'; // semi-transparent
+    ctx.fill();
+  }
+});
+
 
   </script>
 </body>
