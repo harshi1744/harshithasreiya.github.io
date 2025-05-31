@@ -29,6 +29,8 @@ font-family:'Montserrat', sans-serif; for headings (weights 400,700)
   Loaded with defer to avoid blocking rendering
 -->
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 
 <!--
   Font Awesome (v6.5.0) - Popular icon font and toolkit
@@ -112,10 +114,12 @@ font-family:'Montserrat', sans-serif; for headings (weights 400,700)
 /* ======================== 🌐 BASE STYLES ====================== */
 /* ============================================================= */
 body {
-font-family:'Montserrat', sans-serif;
-  background-color: #f0f2f5;
-  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #1a1a1a; /* dark background */
+  color: white; /* light text */
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -123,14 +127,77 @@ html {
 }
 
 /* ============================================================= */
-/* ======================== 🔚 FOOTER STYLES ==================== */
+/* ======================== HEADER & NAVIGATION ================= */
 /* ============================================================= */
-footer {
-  @apply bg-black text-gray-400 py-6 text-center text-sm;
+header {
+  background-color: #1a1a1a;
+  padding: 1rem 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: white;
 }
 
 /* ============================================================= */
-/* ====================== 📝 SECTION TITLE ====================== */
+/* ======================== FORM INPUT ========================== */
+/* ============================================================= */
+input[type="text"] {
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: none;
+  outline: none;
+}
+
+/* ============================================================= */
+/* ======================== SECTIONS ============================ */
+/* ============================================================= */
+section {
+  padding: 4rem 1.5rem;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h1 span {
+  color: #FFD700; /* gold highlight */
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ============================================================= */
+/* ====================== SECTION TITLE ========================= */
 /* ============================================================= */
 .section-title {
   color: #00d1c1;
@@ -142,26 +209,38 @@ footer {
 }
 
 /* ============================================================= */
-/* ======================== 🧭 NAVIGATION ======================= */
+/* ======================== FOOTER ============================== */
 /* ============================================================= */
-.nav-link {
-  @apply text-sm text-gray-300 hover:text-white transition;
+footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 2rem 0;
 }
 
 /* ============================================================= */
-/* ======================= 🧾 CARD STYLES ======================= */
+/* ======================= CARD STYLES ========================== */
 /* ============================================================= */
 .card {
-  @apply bg-gray-800 text-gray-200 p-6 rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105;
+  background-color: #2e2e2e;
+  color: #ddd;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
-/* Owl Carousel Specific Styling */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Owl Carousel Specific */
 .owl-carousel .card {
   border: 1px solid red;
 }
 
 /* ============================================================= */
-/* ====================== 📊 PROGRESS BAR ======================= */
+/* ===================== PROGRESS BAR =========================== */
 /* ============================================================= */
 .progress-bar {
   height: 4px;
@@ -174,7 +253,7 @@ footer {
 }
 
 /* ============================================================= */
-/* =================== 🌙 THEME TOGGLE BUTTON =================== */
+/* ===================== THEME TOGGLE BUTTON ==================== */
 /* ============================================================= */
 .theme-toggle {
   position: fixed;
@@ -191,7 +270,7 @@ footer {
 }
 
 /* ============================================================= */
-/* ===================== ⚡ GLITCH HEADING ====================== */
+/* ==================== GLITCH HEADING ========================== */
 /* ============================================================= */
 .glitch-heading {
   color: #00C0A0;
@@ -205,24 +284,24 @@ footer {
 }
 
 @keyframes pulse-heading-glow {
-  0%, 100% { text-shadow: 0 0 3px #00C0A0, 0 0 8px #00C0A0; }
-  50% { text-shadow: 0 0 6px #00C0A0, 0 0 12px #00C0A0, 0 0 22px #CC33FF, 0 0 30px #0099CC; }
+  0%, 100% {
+    text-shadow: 0 0 3px #00C0A0, 0 0 8px #00C0A0;
+  }
+  50% {
+    text-shadow: 0 0 6px #00C0A0, 0 0 12px #00C0A0, 0 0 22px #CC33FF, 0 0 30px #0099CC;
+  }
 }
 
 /* ============================================================= */
-/* ==================== 📞 CONTACT SECTION ====================== */
+/* =================== CONTACT SECTION ========================== */
 /* ============================================================= */
 #contact {
   background-color: #000;
   color: #a0f0ea;
   min-height: 100vh;
   padding: 4rem 1.5rem;
-font-family: sans-serif; 'IBM Plex Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   overflow: hidden;
-}
-
-.animated-bg {
-  display: none;
 }
 
 #contact > div.w-full {
@@ -328,12 +407,12 @@ font-family: sans-serif; 'IBM Plex Mono', monospace;
 }
 
 /* ============================================================= */
-/* ================== 💼 EXPERIENCE SECTION ===================== */
+/* ================== EXPERIENCE SECTION ======================== */
 /* ============================================================= */
 #experience {
   background-color: #000;
   color: #fff;
-font-family:'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding: 4rem 1.5rem;
   min-height: 100vh;
 }
@@ -406,481 +485,30 @@ font-family:'Montserrat', sans-serif;
   background-color: #00D1C1;
   border-radius: 50%;
 }
-/* ===================================================================================
-   💼 EXPERIENCE TIMELINE & DETAILS SECTION
-=================================================================================== */
-#experience {
-    background-color: #000;
-    color: #fff;
-  font-family:'Montserrat', sans-serif;
-    padding: 4rem 1.5rem;
-    min-height: 100vh;
-}
-
-
-/* ============================================================= */
-/* ==================== 🧩 SKILLS SECTION ======================= */
-/* ============================================================= */
-#skills h3.flex,
-#skills h4.flex {
-  transition: color 0.3s ease;
-  cursor: default;
-}
-
-#skills h3.flex:hover,
-#skills h4.flex:hover {
-  color: #14b8a6;
-}
-
-#skills i {
-  transition: transform 0.3s ease;
-  color: #14b8a6;
-}
-
-#skills h3.flex:hover i,
-#skills h4.flex:hover i {
-  transform: scale(1.2);
-  color: #0d9488;
-}
-
-@media (max-width: 768px) {
-  #skills .max-w-5xl {
-    grid-template-columns: 1fr !important;
-  }
-
-  #skills h3.flex i,
-  #skills h4.flex i {
-    font-size: 1.5rem;
-  }
-}
-    /* ===================================================================================
-   🧠 SKILLS INTERACTIONS + RESPONSIVE TWEAKS
-=================================================================================== */
-#skills h3.flex,
-#skills h4.flex {
-    transition: color 0.3s ease;
-    cursor: default;
-}
-
-#skills h3.flex:hover,
-#skills h4.flex:hover {
-    color: #14b8a6;
-}
-
-#skills i {
-    transition: transform 0.3s ease;
-    color: #14b8a6;
-}
-
-#skills h3.flex:hover i,
-#skills h4.flex:hover i {
-    transform: scale(1.2);
-    color: #0d9488;
-}
-
-@media (max-width: 768px) {
-    #skills .max-w-5xl {
-        grid-template-columns: 1fr !important;
-    }
-
-    #skills h3.flex i,
-    #skills h4.flex i {
-        font-size: 1.5rem;
-    }
-}
-
-
-/* ===================================================================================
-   🌐 BASE STYLES — BODY, HTML, TYPOGRAPHY
-=================================================================================== */
-body {
-  font-family:'Montserrat', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
-    line-height: 1.6;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-/* ===================================================================================
-   🔚 FOOTER STYLES
-=================================================================================== */
-footer {
-    @apply bg-black text-gray-400 py-6 text-center text-sm;
-}
-
-/* ===================================================================================
-   📝 SECTION TITLE (Shared Across Pages)
-=================================================================================== */
-.section-title {
-    color: #00d1c1;
-    font-weight: 700;
-    font-size: 2.5rem;
-    letter-spacing: 0.05em;
-    margin-bottom: 3rem;
-    text-align: center;
-}
-
-/* ===================================================================================
-   🧭 NAVIGATION LINKS (Header/Sidebar)
-=================================================================================== */
-.nav-link {
-    @apply text-sm text-gray-300 hover:text-white transition;
-}
-
-/* ===================================================================================
-   🧾 CARD STYLES (Generic + Owl Carousel Specific)
-=================================================================================== */
-.card {
-    @apply bg-gray-800 text-gray-200 p-6 rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105;
-}
-
-.owl-carousel .card {
-    border: 1px solid red;
-}
-
-/* ===================================================================================
-   📊 PROGRESS BAR AT TOP OF PAGE
-=================================================================================== */
-.progress-bar {
-    height: 4px;
-    background-color: #8b5cf6;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 50;
-    transition: width 0.3s ease-in-out;
-}
-
-/* ===================================================================================
-   📞 CONTACT SECTION (Cards with Hover Effects)
-=================================================================================== */
-#contact {
-    background-color: #000;
-    color: #a0f0ea;
-    min-height: 100vh;
-    padding: 4rem 1.5rem;
-    font-family: 'IBM Plex Mono', monospace;
-    overflow: hidden;
-}
-
-.animated-bg {
-    display: none;
-}
-
-#contact > div.w-full {
-    max-width: 64rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 10;
-}
-
-#contact h2 {
-    color: #00d1c1;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 2rem;
-    letter-spacing: 0.03em;
-    line-height: 1.1;
-}
-
-#contact p {
-    color: #7a8a91;
-    font-size: 1.125rem;
-    max-width: 40rem;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-/* Contact Card Grid */
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    width: 100%;
-}
-
-.contact-card {
-    background-color: #0b1615;
-    border: 1.5px solid #00d1c1;
-    border-radius: 12px;
-    padding: 1.8rem 2rem;
-    box-shadow: 0 4px 12px rgba(0, 209, 193, 0.2);
-    color: #a0f0ea;
-    display: flex;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    cursor: pointer;
-    user-select: none;
-    text-decoration: none;
-}
-
-.contact-card:hover {
-    transform: translateY(-6px) scale(1.04);
-    background-color: #103833;
-    box-shadow: 0 8px 20px rgba(0, 209, 193, 0.35);
-}
-
-.card-icon {
-    font-size: 2.6rem;
-    color: #00d1c1;
-    margin-right: 1.2rem;
-    flex-shrink: 0;
-    transition: color 0.3s ease;
-}
-
-.contact-card:hover .card-icon {
-    color: #00fff5;
-}
-
-.card-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.card-label {
-    font-weight: 700;
-    font-size: 0.8rem;
-    color: #00d1c1;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    margin-bottom: 0.25rem;
-    user-select: none;
-}
-
-.card-detail {
-    font-weight: 500;
-    font-size: 1.1rem;
-    color: #a0f0ea;
-    line-height: 1.4;
-}
-
-@media (max-width: 640px) {
-    .contact-card {
-        padding: 1.4rem 1.6rem;
-    }
-    .card-icon {
-        font-size: 2.2rem;
-        margin-right: 1rem;
-    }
-    .card-detail {
-        font-size: 1rem;
-    }
-}
-
-
-/* === Glow effect on hover for cards === */
-.group:hover {
-  background-color: #1f2937; /* gray-800 */
-  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4); /* purple glow */
-  transition: box-shadow 0.4s ease, background-color 0.4s ease;
-}
-
-/* === Pulse icon dots on timeline === */
-.timeline-dot {
-  animation: pulseDot 2s infinite;
-}
-
-@keyframes pulseDot {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7);
-  }
-  70% {
-    transform: scale(1.1);
-    box-shadow: 0 0 0 10px rgba(139, 92, 246, 0);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
-  }
-}
-
-/* === Section fade-in on scroll (AOS optional replacement) === */
-[data-fade] {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-[data-fade].show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.text-lightgray { color: #d1d5db; }
-.timeline-line { background: #e5e7eb; width: 2px; }
-body {
-  background-color: #0f172a; /* dark slate background */
-  font-family:'Montserrat', sans-serif;
-  color: #f1f5f9; /* light text */
-}
-
-/* Custom gray */
-.text-lightgray {
-  color: #d1d5db; /* Tailwind's gray-300 */
-}
-
-/* Timeline vertical line */
-.timeline-line {
-  width: 2px;
-  background-color: #e5e7eb; /* Tailwind's gray-200 */
-  flex-grow: 1;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-
-/* Timeline dot styles (color variants used directly in HTML for flexibility) */
-.accent-color {
-  background-color: #38bdf8; /* Optional default blue */
-}
-
-/* Fade-in animation */
+    /* Fade-in animation for elements when they scroll into view */
 .fade-in-section {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.fade-in-section.appear {
+.fade-in-section.is-visible {
   opacity: 1;
-  transform: translateY(0px);
+  transform: none;
 }
 
-/* Responsive typography override (if not using Tailwind) */
-h1, h2 {
-  line-height: 1.2;
+/* Optional vertical line styling (timeline-line) */
+.timeline-line {
+  background-color: #e5e7eb; /* Tailwind gray-200 equivalent */
 }
 
-@media (min-width: 768px) {
-  h1 {
-    font-size: 2.25rem;
+
+/* ============================================================= */
+/* ======================== SKILLS SECTION ====================== */
+/* ============================================================= */
+  .tag-icon {
+    @apply flex items-center gap-2 bg-gray-700 px-4 py-2 rounded-full hover:scale-105 transition transform;
   }
-  h2 {
-    font-size: 1.5rem;
-  }
-}
-
-/* Optional: Timeline icon spacing */
-.timeline-icon {
-  font-size: 1.5rem;
-  margin-right: 0.5rem;
-}
-
-body {
-  font-family:'Montserrat', sans-serif;
-    background-color: #1a1a1a;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #1a1a1a;
-    padding: 1rem 1.5rem;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-nav ul {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li a {
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: white;
-}
-
-input[type="text"] {
-    background-color: #333;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 9999px;
-    border: none;
-    outline: none;
-}
-
-section {
-    padding: 4rem 1.5rem;
-}
-
-h1, h2 {
-    margin-bottom: 1rem;
-}
-
-h1 span {
-    color: #FFD700;
-}
-
-.about-text, .skills-box {
-    max-width: 900px;
-    margin: auto;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.skill-category {
-    background-color: #2e2e2e;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.skill-category h3 {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.skill-tag {
-    background-color: #444;
-    padding: 0.3rem 0.8rem;
-    border-radius: 999px;
-    font-size: 0.75rem;
-    color: #fff;
-}
-
-.skill-tag.highlight {
-    background-color: #FFD700;
-    color: black;
-}
-
-footer {
-    background-color: #111;
-    color: #aaa;
-    text-align: center;
-    padding: 2rem 0;
-}
 
   </style>
 
@@ -1142,7 +770,44 @@ footer {
   </section>
 
   <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
+  
+  <!-- ========== 💼 EXPERIENCE SECTION START ========== -->
+  
+<section id="experience-gallery" class="py-20 px-6 bg-black">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-200 mb-12 text-center">🚀 My Journey</h1>
 
+    <!-- Timeline Entry -->
+    <div class="relative border-l border-yellow-400 pl-6 mb-10">
+      <div class="absolute -left-2 top-1 w-4 h-4 bg-yellow-400 rounded-full shadow-lg"></div>
+      <span class="text-sm text-gray-400">2022–2023</span>
+      <h2 class="text-xl md:text-2xl font-bold text-yellow-300">💼 Entrepreneurship Intern</h2>
+      <p class="italic text-sm text-yellow-100">NSIC – Hyderabad, India</p>
+      <p class="text-sm md:text-base text-gray-300 mt-2">
+        Contributed to small business development through market research and financial feasibility studies. Analyzed
+        industry data to identify growth opportunities, designed simple financial models, and generated actionable insights
+        to guide business planning for micro-enterprises.
+      </p>
+    </div>
+
+    <!-- Timeline Entry -->
+    <div class="relative border-l border-pink-400 pl-6 mb-10">
+      <div class="absolute -left-2 top-1 w-4 h-4 bg-pink-400 rounded-full shadow-lg"></div>
+      <span class="text-sm text-gray-400">2021–2022</span>
+      <h2 class="text-xl md:text-2xl font-bold text-pink-300">📊 Data Mentor & Counselor</h2>
+      <p class="italic text-sm text-pink-100">Voice 4 Girls – India</p>
+      <p class="text-sm md:text-base text-gray-300 mt-2">
+        Mentored adolescent students in decision-making and communication skills. Leveraged data insights from surveys and
+        feedback loops to shape effective learning strategies. Sessions focused on building confidence while using
+        behavioral patterns and data analysis to refine engagement techniques.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
 
 <!-- ========== 🧠 PROJECTS SECTION START ========== -->
 
@@ -1252,76 +917,174 @@ footer {
   
   <!-- ========== 🧩 SKILLS SECTION START ========== -->
 
-<section id="my-skills" class="bg-[#1a1a1a] py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-24">
-    <div class="container mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">
-            My Skills
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto text-left text-white text-sm">
+<section id="my-skills" class="bg-[#1a1a1a] py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-24 text-white">
+  <div class="container mx-auto text-center" x-data="{ tab: 'programming' }">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12">My Skills</h2>
 
-            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 class="font-semibold text-lg mb-4">Programming Languages</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs">Python</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Java</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">JavaScript</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">SQL</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">HTML</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">CSS</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">R</span>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 class="font-semibold text-lg mb-4">Tools & Technologies</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Git</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">GitHub</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MS Excel</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Jupyter Notebook</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MySQL</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MongoDB</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Numpy</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Pandas</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">AngularJS</span>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 class="font-semibold text-lg mb-4">Cloud & ML Tools</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Google Cloud</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">AWS</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Azure</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Scikit-learn</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">TensorFlow</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Keras</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">SHAP</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">LIME</span>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 class="font-semibold text-lg mb-4">Concepts & Business</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Data Analytics</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Predictive Modeling</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Statistical Analysis</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Market Research</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Project Management</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Agile</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Scrum</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Communication</span>
-                </div>
-            </div>
-
-        </div>
+    <!-- Tabs -->
+    <div class="flex flex-wrap justify-center gap-4 mb-10">
+      <button @click="tab = 'programming'" :class="tab === 'programming' ? 'bg-yellow-500 text-black' : 'bg-gray-700 text-white'" class="px-4 py-2 rounded-full text-sm font-medium transition">Programming</button>
+      <button @click="tab = 'tools'" :class="tab === 'tools' ? 'bg-yellow-500 text-black' : 'bg-gray-700 text-white'" class="px-4 py-2 rounded-full text-sm font-medium transition">Tools & Tech</button>
+      <button @click="tab = 'cloud'" :class="tab === 'cloud' ? 'bg-yellow-500 text-black' : 'bg-gray-700 text-white'" class="px-4 py-2 rounded-full text-sm font-medium transition">Cloud & ML</button>
+      <button @click="tab = 'business'" :class="tab === 'business' ? 'bg-yellow-500 text-black' : 'bg-gray-700 text-white'" class="px-4 py-2 rounded-full text-sm font-medium transition">Business & Concepts</button>
     </div>
-</section>
 
+    <!-- Tab Content -->
+    <div class="max-w-4xl mx-auto text-left grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
+
+      <!-- Programming Languages -->
+      <template x-if="tab === 'programming'">
+        <div class="col-span-full flex flex-wrap gap-3">
+          <span class="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs">Python</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Java</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">JavaScript</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">SQL</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">HTML</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">CSS</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">R</span>
+        </div>
+      </template>
+
+      <!-- Tools & Technologies -->
+      <template x-if="tab === 'tools'">
+        <div class="col-span-full flex flex-wrap gap-3">
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Git</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">GitHub</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MS Excel</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Jupyter Notebook</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MySQL</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MongoDB</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Numpy</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Pandas</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">AngularJS</span>
+        </div>
+      </template>
+
+      <!-- Cloud & ML Tools -->
+      <template x-if="tab === 'cloud'">
+        <div class="col-span-full flex flex-wrap gap-3">
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Google Cloud</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">AWS</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Azure</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Scikit-learn</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">TensorFlow</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Keras</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">SHAP</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">LIME</span>
+        </div>
+      </template>
+
+      <!-- Business Concepts -->
+      <template x-if="tab === 'business'">
+        <div class="col-span-full flex flex-wrap gap-3">
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Data Analytics</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Predictive Modeling</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Statistical Analysis</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Market Research</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Project Management</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Agile</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Scrum</span>
+          <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Communication</span>
+        </div>
+      </template>
+
+    </div>
+  </div>
+</section>
 
   
 <!-- ========== 🧩 SKILLS SECTION END ========== -->
+
+  <!-- ========== 🧩 SKILLS SECTION START ========== -->
+
+  <section id="my-skills" class="bg-[#1a1a1a] py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-24">
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">
+      My Skills
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto text-white text-sm">
+
+      <!-- Programming Languages -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+        <h3 class="font-semibold text-lg mb-4">Programming Languages</h3>
+        <div class="flex flex-wrap gap-3">
+          <div class="flex items-center gap-2 px-4 py-2 bg-yellow-500 text-black rounded-full hover:scale-105 transition">
+            <i class="fab fa-python"></i><span>Python</span>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-full hover:scale-105 transition">
+            <i class="fab fa-java"></i><span>Java</span>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-full hover:scale-105 transition">
+            <i class="fab fa-js-square"></i><span>JavaScript</span>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-full hover:scale-105 transition">
+            <i class="fas fa-database"></i><span>SQL</span>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-full hover:scale-105 transition">
+            <i class="fab fa-html5"></i><span>HTML</span>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-full hover:scale-105 transition">
+            <i class="fab fa-css3-alt"></i><span>CSS</span>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-full hover:scale-105 transition">
+            <i class="fas fa-chart-line"></i><span>R</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Technologies -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+        <h3 class="font-semibold text-lg mb-4">Tools & Technologies</h3>
+        <div class="flex flex-wrap gap-3">
+          <div class="tag-icon">Git <i class="fab fa-git-alt"></i></div>
+          <div class="tag-icon">GitHub <i class="fab fa-github"></i></div>
+          <div class="tag-icon">Excel <i class="fas fa-file-excel"></i></div>
+          <div class="tag-icon">Jupyter <i class="fas fa-book-open"></i></div>
+          <div class="tag-icon">MySQL <i class="fas fa-database"></i></div>
+          <div class="tag-icon">MongoDB <i class="fas fa-leaf"></i></div>
+          <div class="tag-icon">NumPy <i class="fas fa-calculator"></i></div>
+          <div class="tag-icon">Pandas <i class="fas fa-table"></i></div>
+          <div class="tag-icon">AngularJS <i class="fab fa-angular"></i></div>
+        </div>
+      </div>
+
+      <!-- Cloud & ML Tools -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+        <h3 class="font-semibold text-lg mb-4">Cloud & ML Tools</h3>
+        <div class="flex flex-wrap gap-3">
+          <div class="tag-icon">Google Cloud <i class="fab fa-google"></i></div>
+          <div class="tag-icon">AWS <i class="fab fa-aws"></i></div>
+          <div class="tag-icon">Azure <i class="fab fa-microsoft"></i></div>
+          <div class="tag-icon">Scikit-learn <i class="fas fa-robot"></i></div>
+          <div class="tag-icon">TensorFlow <i class="fas fa-brain"></i></div>
+          <div class="tag-icon">Keras <i class="fas fa-network-wired"></i></div>
+          <div class="tag-icon">SHAP <i class="fas fa-lightbulb"></i></div>
+          <div class="tag-icon">LIME <i class="fas fa-lightbulb"></i></div>
+        </div>
+      </div>
+
+      <!-- Concepts & Business -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+        <h3 class="font-semibold text-lg mb-4">Concepts & Business</h3>
+        <div class="flex flex-wrap gap-3">
+          <div class="tag-icon">Data Analytics <i class="fas fa-chart-bar"></i></div>
+          <div class="tag-icon">Predictive Modeling <i class="fas fa-project-diagram"></i></div>
+          <div class="tag-icon">Statistical Analysis <i class="fas fa-percentage"></i></div>
+          <div class="tag-icon">Market Research <i class="fas fa-search-dollar"></i></div>
+          <div class="tag-icon">Project Mgmt <i class="fas fa-tasks"></i></div>
+          <div class="tag-icon">Agile <i class="fas fa-running"></i></div>
+          <div class="tag-icon">Scrum <i class="fas fa-users-cog"></i></div>
+          <div class="tag-icon">Communication <i class="fas fa-comments"></i></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ========== 🧩 SKILLS SECTION END ========== -->
+
 
  <!-- ========== 📞 CONTACT SECTION START ========== -->
 
@@ -1540,7 +1303,6 @@ document.addEventListener('keydown', (e) => {
       el: document.querySelector('[data-scroll-container]'),
       smooth: true
     });
-  <script>
   const faders = document.querySelectorAll('[data-fade]');
 
   const appearOptions = {
@@ -1580,7 +1342,27 @@ document.addEventListener('keydown', (e) => {
                 observer.observe(section);
             });
         });
-</script>
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const faders = document.querySelectorAll('.fade-in-section');
+
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -20px 0px'
+    };
+
+    const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        appearOnScroll.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  });
 
   </script>
 </body>
