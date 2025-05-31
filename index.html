@@ -536,6 +536,87 @@ footer {
 }
 /*Education and Experience*/
 
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.card {
+  background-color: #1a1a2e; /* dark navy/blackish */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(106, 84, 255, 0.3);
+  color: #ddd;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  outline-offset: 4px;
+}
+
+.card:hover,
+.card:focus {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(106, 84, 255, 0.7);
+  color: #a78bfa; /* violet accent */
+}
+
+.skill-icon {
+  font-size: 2.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.skill-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #a78bfa;
+}
+
+.skill-outcome {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+  line-height: 1.3;
+}
+
+.skill-tools {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+/* Mini-bar container */
+.mini-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+/* Mini-bar individual segments */
+.mini-bar span {
+  --bar-color: #6a54ff; /* violet */
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--bar-color);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: pulse 1.5s infinite;
+  animation-delay: calc(var(--i) * 0.15s);
+}
+
+/* Pulse animation to animate the mini bars with delay */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
 
   </style>
 
@@ -689,38 +770,6 @@ footer {
 </section>
 <!-- ========== 🎓 EDUCATION SECTION END ========== -->
   
-    <!-- ========== 🎓 EDUCATION SECTION START ========== -->
-
-<section id="education" class="bg-black text-white py-20 px-6">
-  <h3 class="text-3xl font-bold text-center text-violet-400 mb-16">📚 My Education Journey</h3>
-
-  <div class="max-w-6xl w-full mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div>
-        <h2 class="text-3xl font-bold text-orange-500 mb-8 text-center md:text-left">Education</h2>
-        <div class="space-y-6">
-          <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-            <h3 class="text-xl font-semibold text-gray-100">University of North Texas</h3>
-            <p class="text-orange-400 text-sm mt-1">January 2024 - December 2025</p>
-            <p class="text-gray-300 mt-2">Master of Science, Business Analytics</p>
-            <p class="text-gray-400 text-sm mt-1">Texas, United States</p>
-          </div>
-
-          <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-            <h3 class="text-xl font-semibold text-gray-100">Osmania University</h3>
-            <p class="text-orange-400 text-sm mt-1">June 2020 - April 2023</p>
-            <p class="text-gray-300 mt-2">Bachelor of Commerce, Computer Science</p>
-            <p class="text-gray-400 text-sm mt-1">Hyderabad, India</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-     
-
-<!-- ========== 🎓 EDUCATION SECTION END ========== -->
 
   <!-- ========== 💼 EXPERIENCE SECTION START ========== -->
   
@@ -758,39 +807,6 @@ footer {
 </section>
 
   <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
-
-<!-- ========== 💼 EXPERIENCE SECTION START ========== -->
-  
-<section id="experience-gallery" class="py-20 px-6 bg-black">
-  <div class="max-w-4xl mx-auto">
-    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-200 mb-12 text-center">🚀Professional Experience</h1>
-
-    <div class="p-6 md:p-8 bg-gray-800 bg-opacity-40 rounded-xl shadow-2xl backdrop-blur-md border border-gray-700">
-      <h2 class="section-title text-5xl font-extrabold text-orange-400 mb-12 text-center md:text-left">Experience</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 experience-cards">
-        
-        <div class="card-item p-8 rounded-lg shadow-xl">
-          <h3 class="text-2xl font-bold text-gray-100">NSIC – Hyderabad, India</h3>
-          <p class="text-orange-300 text-base mt-2">May 2022 – March 2023</p>
-          <p class="text-gray-300 mt-3 leading-relaxed">
-            During my time as an Entrepreneurship and Business Development Intern at NSIC in Hyderabad, I worked on understanding how market trends, financial feasibility, and industrial awareness impact the growth of small businesses. My role involved analyzing market data, evaluating business growth patterns, and developing insights to help small enterprises make informed decisions. I collected and interpreted data from a variety of small businesses, identifying trends in sales, customer demand, and industry growth. Additionally, I created a basic financial model to assess business viability, which contributed to strategic planning efforts.
-          </p>
-        </div>
-
-        <div class="card-item p-8 rounded-lg shadow-xl">
-          <h3 class="text-2xl font-bold text-gray-100">Voice 4 Girls – India</h3>
-          <p class="text-orange-300 text-base mt-2">August 2021 – March 2022</p>
-          <p class="text-gray-300 mt-3 leading-relaxed">
-            As a Counselor and Data Insights Mentor at Voice 4 Girls, I worked to empower students by helping them develop essential skills for personal and academic growth. I mentored students by conducting interactive counseling sessions and closely analyzing learning behaviors to tailor effective mentoring strategies. I used data analysis methods such as surveys and feedback tracking to assess student progress and identify gaps in learning. This experience not only improved students’ confidence, problem-solving, and decision-making skills, but also strengthened my ability to analyze behavioral trends and apply data-driven approaches to educational challenges.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-  
-<!-- ========== 💼 EXPERIENCE SECTION END ========== -->
 
 
 <!-- ========== 🧠 PROJECTS SECTION START ========== -->
@@ -901,8 +917,98 @@ footer {
   
 <!-- ========== 🧩 SKILLS SECTION START ========== -->
 <section id="skills" class="min-h-screen px-6 py-16 bg-black text-white">
-    <h2 class="text-4xl font-extrabold mb-14 text-center text-violet-400 tracking-wide">Skills</h2>
-  
+  <h2 class="text-4xl font-extrabold mb-14 text-center text-violet-400 tracking-wide">Skills</h2>
+
+  <h3 class="text-3xl font-bold mb-10 text-center text-violet-300 tracking-wide">Business Analytics Skills</h3>
+  <div class="cards-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+
+    <div class="card bg-gray-900 p-6 rounded-lg shadow-lg cursor-pointer" tabindex="0" role="button" aria-label="SQL skill details">
+      <div class="skill-icon text-4xl mb-3">🗄️</div>
+      <div class="skill-title text-xl font-semibold mb-2">SQL</div>
+      <div class="skill-outcome mb-3 text-gray-300">
+        Streamlined data extraction, reducing report creation time by 35%.
+      </div>
+      <div class="skill-tools text-sm text-gray-400 mb-4">Tools: MySQL, PostgreSQL, BigQuery</div>
+      <div class="mini-bar" aria-hidden="true">
+        <span style="--i:0"></span>
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+        <span style="--i:4"></span>
+        <span style="--i:5"></span>
+        <span style="--i:6"></span>
+        <span style="--i:7"></span>
+        <span style="--i:8"></span>
+        <span style="--i:9"></span>
+      </div>
+    </div>
+
+    <div class="card bg-gray-900 p-6 rounded-lg shadow-lg cursor-pointer" tabindex="0" role="button" aria-label="Python skill details">
+      <div class="skill-icon text-4xl mb-3">🐍</div>
+      <div class="skill-title text-xl font-semibold mb-2">Python</div>
+      <div class="skill-outcome mb-3 text-gray-300">
+        Developed predictive models that improved sales forecasts accuracy by 20%.
+      </div>
+      <div class="skill-tools text-sm text-gray-400 mb-4">Tools: Pandas, NumPy, scikit-learn</div>
+      <div class="mini-bar" aria-hidden="true">
+        <span style="--i:1"></span>
+        <span style="--i:3"></span>
+        <span style="--i:5"></span>
+        <span style="--i:7"></span>
+        <span style="--i:9"></span>
+        <span style="--i:2"></span>
+        <span style="--i:4"></span>
+        <span style="--i:6"></span>
+        <span style="--i:8"></span>
+        <span style="--i:0"></span>
+      </div>
+    </div>
+
+    <div class="card bg-gray-900 p-6 rounded-lg shadow-lg cursor-pointer" tabindex="0" role="button" aria-label="Tableau skill details">
+      <div class="skill-icon text-4xl mb-3">📊</div>
+      <div class="skill-title text-xl font-semibold mb-2">Tableau</div>
+      <div class="skill-outcome mb-3 text-gray-300">
+        Created dashboards adopted by 60+ business stakeholders for real-time insights.
+      </div>
+      <div class="skill-tools text-sm text-gray-400 mb-4">Tools: Tableau Desktop, Tableau Server</div>
+      <div class="mini-bar" aria-hidden="true">
+        <span style="--i:9"></span>
+        <span style="--i:7"></span>
+        <span style="--i:5"></span>
+        <span style="--i:3"></span>
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:4"></span>
+        <span style="--i:6"></span>
+        <span style="--i:8"></span>
+        <span style="--i:0"></span>
+      </div>
+    </div>
+
+    <div class="card bg-gray-900 p-6 rounded-lg shadow-lg cursor-pointer" tabindex="0" role="button" aria-label="Business Communication skill details">
+      <div class="skill-icon text-4xl mb-3">🗣️</div>
+      <div class="skill-title text-xl font-semibold mb-2">Business Communication</div>
+      <div class="skill-outcome mb-3 text-gray-300">
+        Delivered presentations that influenced key stakeholders' strategic decisions.
+      </div>
+      <div class="skill-tools text-sm text-gray-400 mb-4">Skills: Storytelling, Reporting, Visualization</div>
+      <div class="mini-bar" aria-hidden="true">
+        <span style="--i:0"></span>
+        <span style="--i:4"></span>
+        <span style="--i:8"></span>
+        <span style="--i:3"></span>
+        <span style="--i:7"></span>
+        <span style="--i:2"></span>
+        <span style="--i:6"></span>
+        <span style="--i:1"></span>
+        <span style="--i:5"></span>
+        <span style="--i:9"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Existing Skills Section -->
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
@@ -1002,6 +1108,7 @@ footer {
     </div>
   </div>
 </section>
+
 
 <!-- ========== 🧩 SKILLS SECTION END ========== -->
 
