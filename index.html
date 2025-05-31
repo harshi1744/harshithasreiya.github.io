@@ -587,7 +587,65 @@ footer {
     transform: scale(1.3);
   }
 }
+  body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 40px;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
 
+    h2 {
+      margin-top: 0;
+      color: #222;
+    }
+
+    .project-header {
+      margin-bottom: 10px;
+    }
+
+    .project-purpose {
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .project-body {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .project-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .project-details, .project-impact {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    blockquote {
+      font-style: italic;
+      color: #555;
+      border-left: 4px solid #ccc;
+      padding-left: 16px;
+      margin: 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      .project-columns {
+        flex-direction: column;
+      }
+    }
   </style>
 
 <body class="min-h-screen flex flex-col">
@@ -840,10 +898,203 @@ footer {
   </div>
 </section>
   <!-- ========== 🧠 PROJECTS SECTION END ========== -->
+
+  
+<!-- ========== 🧠 PROJECTS SECTION START ========== -->
+
+  <section id="projects" class="projects-section page-section bg-black py-16 px-6">
+  <h2 class="text-4xl font-extrabold text-violet-600 text-center mb-12">Projects</h2>
+
+  <div class="project-flex space-y-12">
+
+    <!-- Project 1 -->
+  <div class="project-header">
+  <h2>🤖 Hiring Assistant AI – Agentic Resume Screening System</h2>
+  <p class="project-purpose">
+    To revolutionize traditional hiring by building a lightweight, privacy-compliant, and offline-ready AI assistant that autonomously screens resumes, ranks candidates, and interacts dynamically with recruiters—powered by Retrieval-Augmented Generation (RAG) and continual feedback adaptation.
+  </p>
+</div>
+<div class="project-body">
+  <div class="project-columns">
+    <div class="project-details">
+      <h3>⚙️ Skills Demonstrated</h3>
+      <ul>
+        <li>Agentic AI Design & Prompt Engineering</li>
+        <li>Retrieval-Augmented Generation (RAG)</li>
+        <li>Semantic Similarity & Embedding Techniques</li>
+        <li>Feedback-Driven Adaptation</li>
+        <li>Privacy-Centric Architecture</li>
+        <li>Streamlit App Development</li>
+        <li>Human-AI Interaction Design</li>
+      </ul>
+
+      <h3>🛠️ Tools & Technologies</h3>
+      <p>
+        <strong>Python 3.x</strong> | PyMuPDF | SentenceTransformers (MiniLM-L6-v2) |
+        Pandas | Streamlit | ctransformers (Mistral-7B-Instruct) |
+        In-Memory Vector Search | Retrieval-Augmented Generation (RAG) | Offline Inference Framework
+      </p>
+
+      <h3>🔑 Core Features & Workflow</h3>
+      <ul>
+        <li>📄 <strong>Resume Parsing:</strong> Extracts structured content from resumes & job descriptions using PyMuPDF</li>
+        <li>🔍 <strong>Semantic Matching:</strong> Uses SentenceTransformers to embed and compare candidate/job text</li>
+        <li>🧮 <strong>Hybrid Scoring:</strong> Combines semantic similarity with rubric-based skill matching using Pandas</li>
+        <li>💬 <strong>Recruiter Chat UI:</strong> Streamlit interface backed by a quantized Mistral-7B-Instruct model</li>
+        <li>🔄 <strong>Adaptive Feedback Loop:</strong> Learns recruiter preferences in real time</li>
+        <li>🔐 <strong>Offline & Secure:</strong> Fully local, privacy-focused operation with no cloud dependencies</li>
+      </ul>
+    </div>
+
+    <div class="project-impact">
+      <h3>📈 Key Outcomes</h3>
+      <ul>
+        <li><strong>⬇️ Time-to-Hire:</strong> Significantly reduced screening time through automation</li>
+        <li><strong>📊 Transparent Matching:</strong> Clear score explanations improved recruiter trust</li>
+        <li><strong>⚙️ Evolving System:</strong> Adapted scoring and ranking via recruiter feedback</li>
+        <li><strong>🔐 Fully Private:</strong> Local, GDPR-compliant architecture ensured data sovereignty</li>
+      </ul>
+
+      <h3>🔎 Outcome</h3>
+      <blockquote>
+        An intelligent, privacy-first hiring assistant that enhances recruiter efficiency, fairness, and decision transparency through adaptive, agentic AI.
+      </blockquote>
+
+      <h3>🧠 Reflection</h3>
+      <p>
+        "This project deepened my understanding of building secure, agentic AI tools that respect user privacy while enhancing decision quality. Designing a transparent, feedback-driven system taught me the balance between automation and human oversight in sensitive applications like hiring."
+      </p>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Project 2 -->
+
+<div class="project-header">
+    <h2>📊 Interactive Dashboard for Visualizing Global Child Malnutrition Trends</h2>
+    <p class="project-purpose">
+      To explore and expose global patterns of child malnutrition using interactive visual analytics,
+      empowering stakeholders to develop targeted, data-informed interventions.
+    </p>
+  </div>
+
+  <div class="project-body">
+    <div class="project-columns">
+      <div class="project-details">
+        <h3>⚖️ Skills Demonstrated</h3>
+        <ul>
+          <li>Data Wrangling & Preprocessing</li>
+          <li>Interactive Dashboard Design</li>
+          <li>Data Storytelling</li>
+          <li>Demographic & Geographic Analysis</li>
+          <li>Team Collaboration</li>
+        </ul>
+
+        <h3>🔹 Tools & Technologies</h3>
+        <p><strong>Tableau</strong> | Python (Pandas, Matplotlib) | WHO Global Database | Data Cleaning Techniques</p>
+
+        <h3>🌐 Key Visuals & Insights</h3>
+        <ul>
+          <li>🌍 <strong>Geographic Map:</strong> Highlighted countries with highest severity</li>
+          <li>♂️♀️ <strong>Line Chart:</strong> Females consistently show higher malnutrition rates</li>
+          <li>🏠 <strong>Urban vs Rural:</strong> Bar graph shows rural areas most affected</li>
+          <li>🔹 <strong>Scatter Plot:</strong> Wasting vs. Severe wasting by age group</li>
+          <li>📆 <strong>Stacked Area Chart:</strong> Stunting prevalence trends over time</li>
+          <li>⚖️ <strong>Box Plots:</strong> IQR and outliers across malnutrition types</li>
+        </ul>
+      </div>
+
+      <div class="project-impact">
+        <h3>🌿 Project Impact</h3>
+        <ul>
+          <li><strong>Spain:</strong> Highest malnutrition severity</li>
+          <li><strong>Greece:</strong> Lowest malnutrition severity</li>
+          <li><strong>Infants & Toddlers:</strong> Most at risk</li>
+          <li><strong>Urban Areas:</strong> Slightly higher malnutrition rates than rural</li>
+        </ul>
+
+        <h3>🔎 Outcome</h3>
+        <blockquote>
+          A multi-layered, interactive data experience that uncovers hidden trends and supports global health awareness and policymaking.
+        </blockquote>
+
+        <h3>🧠 Reflection</h3>
+        <p>
+          "This project strengthened my ability to translate data into meaningful insights and visual narratives. I learned to tailor dashboards for intuitive exploration and deliver real-world impact through data storytelling."
+        </p>
+      </div>
+    </div>
+  </div>
+    
+    <!-- Project 3 -->
+   <div class="project-header">
+  <h2>💳 AI-Powered Fraud Detection in Banking</h2>
+  <p class="project-purpose">
+    To design a real-time, AI-driven fraud detection system tailored for the financial sector—replacing traditional rule-based methods with adaptive machine learning to identify known and emerging fraud patterns while ensuring regulatory compliance and explainability.
+  </p>
+</div>
+
+<div class="project-body">
+  <div class="project-columns">
+    <div class="project-details">
+      <h3>⚙️ Skills Demonstrated</h3>
+      <ul>
+        <li>Machine Learning (Supervised & Unsupervised)</li>
+        <li>Real-Time Data Processing & Alerting</li>
+        <li>Model Explainability (SHAP, LIME)</li>
+        <li>Ethical & Fair AI Design</li>
+        <li>Secure System Design & Cryptography</li>
+        <li>Microservices Architecture & High Availability</li>
+        <li>Compliance-Aware AI Development (GDPR, AML, PCI DSS)</li>
+      </ul>
+
+      <h3>🛠️ Tools & Technologies</h3>
+      <p>
+        <strong>Python</strong> | Scikit-learn | XGBoost | SHAP | LIME | Kafka | Docker | Flask | PostgreSQL |
+        Prometheus | Grafana | AES-256 | TLS 1.3 | Role-Based Access Control (RBAC)
+      </p>
+
+      <h3>🔑 Core Features & Workflow</h3>
+      <ul>
+        <li>⚡ <strong>Real-Time Monitoring:</strong> Flags high-risk transactions within 300ms latency</li>
+        <li>🧠 <strong>Hybrid ML Models:</strong> Combines supervised learning (known fraud) with unsupervised anomaly detection (unknown fraud)</li>
+        <li>🔍 <strong>Investigation Module:</strong> Analysts can annotate, confirm, or dismiss alerts—feeding into retraining</li>
+        <li>📊 <strong>Risk Scoring Engine:</strong> Continuously scores transactions and triggers alerts via dashboards & SMS</li>
+        <li>🔎 <strong>Explainable AI:</strong> SHAP & LIME deliver transparent, auditable justifications for all decisions</li>
+        <li>🔐 <strong>Security Layer:</strong> AES encryption, TLS, MFA, and RBAC ensure full compliance and protection</li>
+      </ul>
+    </div>
+
+    <div class="project-impact">
+      <h3>📈 Key Outcomes</h3>
+      <ul>
+        <li><strong>Real-Time Fraud Workflow:</strong> Enabled proactive detection and analyst response</li>
+        <li><strong>Operational Efficiency:</strong> Reduced financial losses and increased fraud analyst throughput</li>
+        <li><strong>Regulatory Compliance:</strong> Fully aligned with GDPR, PCI DSS, AML, and KYC standards</li>
+        <li><strong>Bias Mitigation:</strong> Fair, demographic-aware fraud decisions boosted customer trust</li>
+      </ul>
+
+      <h3>🔎 Outcome</h3>
+      <blockquote>
+        A robust, real-time fraud detection system that combines predictive intelligence, ethical AI, and security best practices to safeguard financial transactions while meeting regulatory demands.
+      </blockquote>
+
+      <h3>🧠 Reflection</h3>
+      <p>
+        "This project sharpened my skills in building real-time, resilient AI systems. It taught me how to balance performance, fairness, and compliance—while delivering explainable, trustable outcomes in high-stakes environments like finance."
+      </p>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</section>
+  <!-- ========== 🧠 PROJECTS SECTION END ========== -->
   
 <!-- ========== 🧩 SKILLS SECTION START ========== -->
 
-<!-- ========== 🧩 SKILLS SECTION START ========== -->
 <section id="skills" class="min-h-screen px-6 py-16 bg-black text-white">
   <h2 class="text-4xl font-extrabold mb-14 text-center text-violet-400 tracking-wide">Skills</h2>
 
