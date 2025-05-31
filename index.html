@@ -160,18 +160,6 @@ nav ul li a:hover {
 }
 
 /* ============================================================= */
-/* ======================== FORM INPUT ========================== */
-/* ============================================================= */
-input[type="text"] {
-  background-color: #333;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  border: none;
-  outline: none;
-}
-
-/* ============================================================= */
 /* ======================== SECTIONS ============================ */
 /* ============================================================= */
 section {
@@ -252,45 +240,6 @@ footer {
   transition: width 0.3s ease-in-out;
 }
 
-/* ============================================================= */
-/* ===================== THEME TOGGLE BUTTON ==================== */
-/* ============================================================= */
-.theme-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #8b5cf6;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.25rem;
-  border-radius: 9999px;
-  cursor: pointer;
-  font-weight: 600;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-}
-
-/* ============================================================= */
-/* ==================== GLITCH HEADING ========================== */
-/* ============================================================= */
-.glitch-heading {
-  color: #00C0A0;
-  text-shadow:
-    0 0 3px #00C0A0,
-    0 0 8px #00C0A0,
-    0 0 15px #00C0A0,
-    0 0 25px #CC33FF,
-    0 0 40px #0099CC;
-  animation: glitch 2s infinite alternate, pulse-heading-glow 3s infinite alternate;
-}
-
-@keyframes pulse-heading-glow {
-  0%, 100% {
-    text-shadow: 0 0 3px #00C0A0, 0 0 8px #00C0A0;
-  }
-  50% {
-    text-shadow: 0 0 6px #00C0A0, 0 0 12px #00C0A0, 0 0 22px #CC33FF, 0 0 30px #0099CC;
-  }
-}
 
 /* ============================================================= */
 /* =================== CONTACT SECTION ========================== */
@@ -576,10 +525,11 @@ footer {
   <div class="w-full max-w-4xl flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
     <div>
       <p class="text-sm md:text-base mb-2 md:mb-4 font-semibold text-white">HELLO!</p>
-      <h1 class="text-violet-400 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-2 md:mb-3">
-         I'm <span>Harshitha Sreiya</span><br>
-        <span>Palaparthi</span>
-        </h1>
+     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-2 md:mb-3">
+        I'm <span class="text-violet-400">Harshitha Sreiya</span><br>
+        <span class="text-violet-400">Palaparthi</span>
+      </h1>
+
       <p class="text-lg md:text-xl mb-4 md:mb-6 text-white">
         Aspiring Business Analyst | UNT Business Analytics Graduate Student
       </p>
@@ -1117,50 +1067,7 @@ document.addEventListener('DOMContentLoaded', function() {
       ]
     });
   });
-// Get modal elements
-const modal = document.getElementById('modal');
-const overlay = document.querySelector('.modal-overlay');
-const modalTitle = document.getElementById('modal-title');
-const modalDescription = document.getElementById('modal-description');
-const modalImage = document.getElementById('modal-image');
-const modalCodeBtn = document.getElementById('modal-code-btn');
-const modalCloseBtn = document.getElementById('modal-close-btn');
 
-// Open modal function
-function openModal(project) {
-  modalTitle.textContent = project.dataset.title;
-  modalDescription.textContent = project.dataset.description;
-  modalImage.src = project.dataset.image;
-  modalImage.alt = project.dataset.title;
-  modalCodeBtn.href = project.dataset.codeUrl;
-
-  modal.classList.add('show');
-  overlay.classList.add('show');
-  document.body.style.overflow = 'hidden'; // Prevent background scroll
-}
-
-// Close modal function
-function closeModal() {
-  modal.classList.remove('show');
-  overlay.classList.remove('show');
-  document.body.style.overflow = 'auto';
-}
-
-// Attach click to each project card
-document.querySelectorAll('.project').forEach(project => {
-  project.addEventListener('click', () => openModal(project));
-});
-
-// Close button and overlay click
-modalCloseBtn.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
-
-// Close on ESC key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modal.classList.contains('show')) {
-    closeModal();
-  }
-});
 // MagicMouse
     options = {
     "outerStyle": "circle-basic",
