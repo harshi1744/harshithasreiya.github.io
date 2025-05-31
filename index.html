@@ -772,6 +772,115 @@ h1, h2 {
   margin-right: 0.5rem;
 }
 
+body {
+  font-family:'Montserrat', sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 1rem 1.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+input[type="text"] {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    border: none;
+    outline: none;
+}
+
+section {
+    padding: 4rem 1.5rem;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+}
+
+h1 span {
+    color: #FFD700;
+}
+
+.about-text, .skills-box {
+    max-width: 900px;
+    margin: auto;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-category {
+    background-color: #2e2e2e;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.skill-category h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background-color: #444;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+.skill-tag.highlight {
+    background-color: #FFD700;
+    color: black;
+}
+
+footer {
+    background-color: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 2rem 0;
+}
 
   </style>
 
@@ -823,8 +932,6 @@ h1, h2 {
     <span>Experience</span>
   </a>
 </li>
-
-
     <!-- Projects - Webpage Emoji -->
     <li>
       <a href="#projects" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2 text-white">
@@ -855,6 +962,28 @@ h1, h2 {
   </header>
 <!-- ========== 🔝 HEADER & NAVIGATION END ========== -->
   
+  <!-- ========== 🔝 HEADER & NAVIGATION START ========== -->
+
+    <header class="bg-[#1a1a1a] py-4 px-6 md:px-12 lg:px-24">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/FFD700/000000?text=H" alt="Logo" class="rounded-full">
+                <span class="text-xl font-bold text-white hidden sm:block">Harshitha Sreiya</span>
+            </div>
+
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="text-gray-300 hover:text-white transition duration-300">About</a></li>
+                <li><a href="#portfolio" class="text-gray-300 hover:text-white transition duration-300">Portfolio</a></li>
+                <li><a href="#contact" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
+            </ul>
+
+            <div class="hidden md:block">
+                <input type="text" placeholder="Search" class="bg-gray-700 text-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+        </nav>
+    </header>
+  <!-- ========== 🔝 HEADER & NAVIGATION END ========== -->
+
 <!-- ========== 🏠 HOME SECTION START ========== -->
 <section id="home" class="min-h-screen flex items-center justify-center px-4 md:px-8 bg-black text-white">
   <div class="w-full max-w-4xl flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
@@ -883,6 +1012,34 @@ h1, h2 {
 <!-- ========== 🏠 HOME SECTION END ========== -->
 
 
+    <section class="relative bg-[#1a1a1a] py-16 md:py-24 lg:py-32 overflow-hidden">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between px-6 md:px-12 lg:px-24">
+            <div class="text-center lg:text-left mb-12 lg:mb-0 lg:w-1/2">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                    I'M <span class="text-yellow-500">Harshitha Sreiya</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mt-4">
+                    Business Analytics Grad | AI, Data Viz & Development
+                </p>
+                <button class="mt-8 px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-yellow-600 transition duration-300">
+                    Contact Me
+                </button>
+            </div>
+
+            <div class="relative w-full lg:w-1/2 flex justify-center lg:justify-end items-center">
+        <img src="https://avatars.githubusercontent.com/u/197736111?v=4" alt="Profile Image" class="w-64 h-64 object-cover shadow-lg">
+
+                <div class="absolute top-1/2 -right-4 md:-right-8 lg:-right-12 transform -translate-y-1/2 bg-gray-800 p-4 rounded-l-lg shadow-lg">
+                    <ul class="flex flex-col space-y-4">
+                        <li><a href="https://github.com/harshi1744" target="_blank" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-github text-xl"></i></a></li>
+                        <li><a href="https://linkedin.com/in/harshithasreiya" target="_blank" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-linkedin-in text-xl"></i></a></li>
+                        <li><a href="mailto:harshithasrieya@gmail.com" class="text-gray-400 hover:text-white transition duration-300"><i class="fas fa-envelope text-xl"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+  
 <!-- ========== 👤 ABOUT SECTION START ========== -->
   <section id="about" class="min-h-screen px-6 py-16 bg-black text-white">
     <h3 class="section-title text-violet-400 mb-8 text-center">About Me</h3>
@@ -908,6 +1065,28 @@ h1, h2 {
       </div>
     </div>
   </section>
+<!-- ========== 👤 ABOUT SECTION END ========== -->
+  
+<!-- ========== 👤 ABOUT SECTION START ========== -->
+  
+    <section id="about" class="bg-[#242424] py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-24">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 relative pb-4">
+                About
+                <span class="absolute bottom-0 left-0 w-16 h-1 bg-yellow-500 rounded-full"></span>
+            </h2>
+            <p class="text-lg text-gray-300 leading-relaxed max-w-4xl">
+                Hi, I’m Harshitha Sreiya Palaparthi, a Business Analytics graduate student pursuing my Master’s at the University of North Texas. I specialize in AI applications, data visualization, and business development, with strong technical skills in Python, SQL, Tableau, and cloud platforms including Google Cloud.
+                <br><br>
+                My experience spans analyzing complex datasets, building predictive models, and enabling data-driven decision-making across various business functions. I’ve led impactful projects like an AI-powered resume screening assistant that reduced hiring time, a fraud detection solution to safeguard financial integrity, and interactive dashboards that visualize malnutrition trends across regions.
+                <br><br>
+                Alongside my studies, I gained real-world experience as a Business Development Intern at NSIC and a Learning & Development Associate at Voice 4 Girls, where I enhanced program evaluation and engagement strategies through data analysis.
+                <br><br>
+                I’m currently open to internship opportunities and actively seeking full-time roles starting December 2025 across the U.S.
+            </p>
+        </div>
+    </section>
+  
 <!-- ========== 👤 ABOUT SECTION END ========== -->
 
   <!-- ========== 🎓 EDUCATION SECTION START ========== -->
@@ -1161,6 +1340,79 @@ h1, h2 {
       </div>
     </div>
   </section>
+<!-- ========== 🧩 SKILLS SECTION END ========== -->
+  
+  <!-- ========== 🧩 SKILLS SECTION START ========== -->
+
+<section id="my-skills" class="bg-[#1a1a1a] py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-24">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">
+            My Skills
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto text-left text-white text-sm">
+
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h3 class="font-semibold text-lg mb-4">Programming Languages</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs">Python</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Java</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">JavaScript</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">SQL</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">HTML</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">CSS</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">R</span>
+                </div>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h3 class="font-semibold text-lg mb-4">Tools & Technologies</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Git</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">GitHub</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MS Excel</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Jupyter Notebook</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MySQL</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MongoDB</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Numpy</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Pandas</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">AngularJS</span>
+                </div>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h3 class="font-semibold text-lg mb-4">Cloud & ML Tools</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Google Cloud</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">AWS</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Azure</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Scikit-learn</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">TensorFlow</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Keras</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">SHAP</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">LIME</span>
+                </div>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h3 class="font-semibold text-lg mb-4">Concepts & Business</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Data Analytics</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Predictive Modeling</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Statistical Analysis</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Market Research</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Project Management</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Agile</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Scrum</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Communication</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+  
 <!-- ========== 🧩 SKILLS SECTION END ========== -->
 
  <!-- ========== 📞 CONTACT SECTION START ========== -->
