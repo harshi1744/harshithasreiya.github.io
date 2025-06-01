@@ -115,9 +115,8 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #1a1a1a;
-  color: #ffffff; /* pure white */
-  /*color: #f1f5f9;*/
+  background-color: #000;
+  color: #fff;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -153,6 +152,7 @@ nav ul {
   gap: 1.5rem;
   list-style: none;
   padding: 0;
+  margin: 0; /* add margin reset */
 }
 
 nav ul li a {
@@ -162,7 +162,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: white;
+  color: #fff;
 }
 
 /* ====================== 🧾 CARD (Generic + Owl) ====================== */
@@ -171,7 +171,7 @@ nav ul li a:hover {
   color: #ddd;
   padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   transition: transform 0.5s;
 }
 
@@ -179,6 +179,7 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
+/* Owl Carousel specific card border */
 .owl-carousel .card {
   border: 1px solid red;
 }
@@ -208,6 +209,7 @@ nav ul li a:hover {
   align-items: center;
   transition: all 0.3s ease;
   text-decoration: none;
+  color: inherit; /* inherit text color */
 }
 
 .contact-card:hover {
@@ -235,8 +237,7 @@ nav ul li a:hover {
 .card-label {
   font-weight: 700;
   font-size: 0.8rem;
-  color: #00d1c1
-  ;
+  color: #00d1c1;
   text-transform: uppercase;
   margin-bottom: 0.25rem;
 }
@@ -248,6 +249,7 @@ nav ul li a:hover {
   line-height: 1.4;
 }
 
+/* Responsive tweaks */
 @media (max-width: 640px) {
   .contact-card {
     padding: 1.4rem 1.6rem;
@@ -270,10 +272,10 @@ nav ul li a:hover {
 }
 
 .experience-card {
+  background-color: #111;
   border: 1px solid #333;
   padding: 1.75rem 2rem;
   border-radius: 0.5rem;
-  background-color: #111;
   transition: background-color 0.3s ease;
 }
 
@@ -330,8 +332,9 @@ nav ul li a:hover {
   top: 0;
   width: 16px;
   height: 16px;
-  background-color: #00D1C1;
+  background-color: #00d1c1;
   border-radius: 50%;
+  animation: pulseDot 2s infinite;
 }
 
 /* ====================== 🧩 SKILLS ====================== */
@@ -346,7 +349,7 @@ nav ul li a:hover {
   background-color: #2e2e2e;
   padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .skill-category h3 {
@@ -355,7 +358,8 @@ nav ul li a:hover {
   font-weight: bold;
 }
 
-.skill-tags {
+.skill-tags,
+.skill-tags > * {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -370,13 +374,14 @@ nav ul li a:hover {
 }
 
 .skill-tag.highlight {
-  background-color: #FFD700;
+  background-color: #ffd700;
   color: black;
 }
+
 .skill {
   display: inline-block;
   font-weight: 600;
-  border-radius: 9999px; /* fully rounded */
+  border-radius: 9999px;
   padding: 0.5rem 1rem;
   margin: 0.25rem;
   cursor: default;
@@ -392,44 +397,48 @@ nav ul li a:hover {
 
 /* Proficiency levels */
 .skill-high {
-  background: linear-gradient(135deg, #7c3aed, #c084fc); /* purple gradient */
-  color: white;
+  background: linear-gradient(135deg, #7c3aed, #c084fc);
+  color: #fff;
   font-size: 1.15rem;
   box-shadow: 0 0 6px #a78bfa;
 }
 
 .skill-mid {
-  background: linear-gradient(135deg, #22d3ee, #06b6d4); /* cyan gradient */
-  color: white;
+  background: linear-gradient(135deg, #22d3ee, #06b6d4);
+  color: #fff;
   font-size: 1rem;
   box-shadow: 0 0 5px #06b6d4;
 }
 
 .skill-low {
-  background: linear-gradient(135deg, #6b7280, #9ca3af); /* gray gradient */
-  color: white;
+  background: linear-gradient(135deg, #6b7280, #9ca3af);
+  color: #fff;
   font-size: 0.9rem;
   box-shadow: 0 0 3px #9ca3af;
 }
 
 /* ====================== ⚡ EFFECTS & ANIMATIONS ====================== */
 .glitch-heading {
-  color: #00C0A0;
+  color: #00c0a0;
   text-shadow:
-    0 0 3px #00C0A0,
-    0 0 8px #00C0A0,
-    0 0 15px #00C0A0,
-    0 0 25px #CC33FF,
-    0 0 40px #0099CC;
+    0 0 3px #00c0a0,
+    0 0 8px #00c0a0,
+    0 0 15px #00c0a0,
+    0 0 25px #cc33ff,
+    0 0 40px #0099cc;
   animation: glitch 2s infinite alternate, pulse-heading-glow 3s infinite alternate;
 }
 
 @keyframes pulse-heading-glow {
   0%, 100% {
-    text-shadow: 0 0 3px #00C0A0, 0 0 8px #00C0A0;
+    text-shadow: 0 0 3px #00c0a0, 0 0 8px #00c0a0;
   }
   50% {
-    text-shadow: 0 0 6px #00C0A0, 0 0 12px #00C0A0, 0 0 22px #CC33FF, 0 0 30px #0099CC;
+    text-shadow:
+      0 0 6px #00c0a0,
+      0 0 12px #00c0a0,
+      0 0 22px #cc33ff,
+      0 0 30px #0099cc;
   }
 }
 
@@ -441,11 +450,7 @@ nav ul li a:hover {
 
 .fade-in-section.appear {
   opacity: 1;
-  transform: translateY(0px);
-}
-
-.timeline-dot {
-  animation: pulseDot 2s infinite;
+  transform: translateY(0);
 }
 
 @keyframes pulseDot {
@@ -463,44 +468,37 @@ nav ul li a:hover {
   }
 }
 
- /* Hide scrollbar for horizontal scrolling (used in the card carousel example) */
+/* ====================== SCROLLBAR HIDE ====================== */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+  scroll-behavior: smooth;
+}
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
 
-/* Optional: smooth horizontal scrolling */
-.scrollbar-hide {
-  scroll-behavior: smooth;
-}
-
-/* For blockquote left border */
+/* ====================== BLOCKQUOTE ====================== */
 blockquote {
-  border-left-width: 4px;
+  border-left: 4px solid currentColor;
   padding-left: 1rem;
   font-style: italic;
 }
 
-/* Responsive tweaks */
+/* ====================== RESPONSIVE & UTILITY ====================== */
 @media (min-width: 768px) {
-  /* Increase gap for flex-row layouts */
-  .flex-row > div {
+  .flex-row > div:not(:last-child) {
     margin-right: 1.5rem;
   }
 }
 
-/* Utility classes for consistent spacing if needed */
 .space-y-12 > * + *,
 .space-y-16 > * + * {
   margin-top: 3rem; /* or 4rem for 16 */
 }
 
-/* Tailwind typically handles these, this is just fallback */
 .text-lightgray {
-  color: #d1d5db; /* A light gray */
+  color: #d1d5db;
 }
 
   </style>
@@ -1159,7 +1157,6 @@ blockquote {
 <!-- ========== ⚫ FOOTER START ========== -->
 
 <footer class="w-full bg-black text-gray-400 py-6 text-center text-sm">
-  <p>&copy; 2025 Harshitha Sreiya Palaparthi. All rights reserved.</p>
 
   <!-- Social Links Row -->
   <div class="flex justify-center items-center space-x-6 mt-4 text-base">
@@ -1183,6 +1180,8 @@ blockquote {
       <span>GitHub</span>
     </a>
   </div>
+  
+  <p>&copy; 2025 Harshitha Sreiya Palaparthi. All rights reserved.</p>
 
   <!-- Optional live date/time -->
   <div id="live-date-time" class="mt-3 text-xs text-gray-500"></div>
@@ -1201,7 +1200,7 @@ function updateProgressBar() {
   }
 }
 
-// Function to update the live date and time display every second
+    // Function to update the live date and time display every second
 function updateDateTime() {
   const now = new Date();
   const dateTimeStr = now.toLocaleString('en-IN', {
@@ -1225,6 +1224,9 @@ document.addEventListener('DOMContentLoaded', function() {
   updateDateTime();
   // Set interval to update the date/time every 1000 milliseconds (1 second)
   setInterval(updateDateTime, 1000);
+}); // <-- Closing parenthesis and semicolon added here
+
+
 
   // Initial call to update progress bar
   updateProgressBar();
