@@ -881,7 +881,120 @@ footer {
     text-align: center;
     padding: 2rem 0;
 }
+.projects-section {
+  font-family:'Montserrat', sans-serif;
+  color: #ddd;
+}
 
+.project-card {
+  background: linear-gradient(135deg, #2a076e, #4a148c);
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(74, 20, 140, 0.7);
+  padding: 2rem 2.5rem;
+  margin-bottom: 3rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(138, 43, 226, 0.9);
+}
+
+.project-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #d8b4fe;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 6px #a855f7;
+}
+
+.project-intro {
+  font-size: 1.05rem;
+  color: #c4b5fd;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  color: #a78bfa;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-shadow: 0 0 3px #7c3aed;
+}
+
+ul {
+  padding-left: 1.3rem;
+  color: #c4b5fd;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+ul li {
+  margin-bottom: 0.4rem;
+}
+
+blockquote {
+  border-left: 4px solid #7c3aed;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #d8b4fe;
+  margin: 1rem 0;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+    .skills-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.4rem;
+      padding: 0 1rem;
+    }
+    .skill {
+      display: inline-block;
+      padding: 0.3rem 0.7rem;
+      cursor: default;
+      transition: transform 0.3s ease, color 0.3s ease;
+      user-select: none;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transform-origin: center;
+      border-radius: 0.25rem;
+      background-color: rgba(167, 139, 250, 0.1); /* subtle violet background */
+    }
+    .skill-high {
+      font-weight: 700;
+      color: #a78bfa; /* violet-400 */
+      font-size: 1.4rem;
+      transform: rotate(-2deg) skewX(-2deg);
+      background-color: rgba(167, 139, 250, 0.3);
+    }
+    .skill-mid {
+      font-weight: 600;
+      color: #c4b5fd; /* violet-300 */
+      font-size: 1.2rem;
+      transform: rotate(1deg) skewX(1deg);
+      background-color: rgba(196, 181, 253, 0.2);
+    }
+    .skill-low {
+      font-weight: 500;
+      color: #d8d4fc; /* violet-200 */
+      font-size: 1rem;
+      transform: rotate(-1deg) skewX(1deg);
+      background-color: rgba(216, 212, 252, 0.1);
+    }
+    .skill:hover {
+      color: #f9a8d4; /* pink-300 */
+      transform: scale(1.15) rotate(0) skewX(0);
+      text-shadow: 0 0 5px #f9a8d4;
+      background-color: rgba(249, 168, 212, 0.3);
+    }
+ 
   </style>
 
 <body class="min-h-screen flex flex-col">
@@ -891,52 +1004,54 @@ footer {
   
 <!-- ========== 🔝 HEADER & NAVIGATION START ========== -->
 
-  <header class="w-full p-4 md:p-6 flex flex-col md:flex-row justify-between items-center bg-black sticky top-0 z-50 shadow-md">
-    <!-- Site Title -->
-    <div class="flex items-center justify-center md:justify-start w-full md:w-auto space-x-3">
-  <!-- Logo Image -->
-  <!-- Name Text -->
-   <div class="text-lg md:text-xl font-semibold mb-4 md:mb-0 text-violet-400 text-center md:text-left w-full md:w-auto">
+
+<!-- Header -->
+<header class="w-full p-4 md:p-6 flex flex-col md:flex-row justify-between items-center bg-black sticky top-0 z-50 shadow-md">
+  <!-- Site Title -->
+  <div class="flex items-center justify-center md:justify-start w-full md:w-auto space-x-3">
+    <div class="text-lg md:text-xl font-semibold mb-4 md:mb-0 text-violet-400 text-center md:text-left w-full md:w-auto">
       HARSHITHA SREIYA PALAPARTHI
     </div>
-</div>
-    <!-- Navigation Menu -->
-  <nav>
-  <ul class="flex space-x-4 md:space-x-8 text-sm md:text-base font-medium">
-    <li>
-      <a href="#about" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2 text-white">
-        <span>About</span>
-      </a>
-    </li>
-    <li>
-      <a href="#education" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2 text-white">
-        <span>Education</span>
-      </a>
-    </li>
-  <li>
-  <a href="#experience-gallery" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2 text-white">
-    <span>Experience</span>
-  </a>
-</li>
-    <li>
-      <a href="#projects" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2 text-white">
-        <span>Projects</span>
-      </a>
-    </li>
-    <li>
-      <a href="#skills" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2 text-white">
-        <span>Skills</span>
-      </a>
-    </li>
-    <li>
-      <a href="#contact" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2 text-white">
-        <span>Contact</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+  </div>
 
-  </header>
+  <!-- Navigation Menu -->
+  <nav>
+    <ul class="flex space-x-4 md:space-x-8 text-sm md:text-base font-medium">
+      <li>
+        <a href="#about" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2 text-white">
+          <span>About</span>
+        </a>
+      </li>
+      <li>
+        <a href="#education" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2 text-white">
+          <span>Education</span>
+        </a>
+      </li>
+      <li>
+        <a href="#experience-gallery" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2 text-white">
+          <span>Experience</span>
+        </a>
+      </li>
+      <li>
+        <a href="#projects" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2 text-white">
+          <span>Projects</span>
+        </a>
+      </li>
+      <li>
+        <a href="#skills" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2 text-white">
+          <span>Skills</span>
+        </a>
+      </li>
+      <li>
+        <a href="#contact" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2 text-white">
+          <span>Contact</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+  
+  
 <!-- ========== 🔝 HEADER & NAVIGATION END ========== -->
   
 
@@ -968,7 +1083,7 @@ footer {
 <!-- ========== 🏠 HOME SECTION END ========== -->
   
 <!-- ========== 👤 ABOUT SECTION START ========== -->
-  <section id="#about" class="min-h-screen px-6 py-16 bg-black text-white">
+<section id="about" class="min-h-screen px-6 py-16 bg-black text-white">
     <h3 class="section-title text-violet-400 mb-8 text-center">About Me</h3>
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start md:space-x-10 space-y-10 md:space-y-0">
       
@@ -995,9 +1110,8 @@ footer {
 <!-- ========== 👤 ABOUT SECTION END ========== -->
 
   <!-- ========== 🎓 EDUCATION SECTION START ========== -->
-
-  <section id="#education" class="bg-black text-white py-20 px-6">
-  <h3 class="text-3xl font-bold text-center text-violet-400 mb-16">📚 My Education Journey</h3>
+<section id="education" class="bg-black text-white py-20 px-6">
+  <h3 class="text-3xl font-bold text-center text-violet-400 mb-16">Education</h3>
   
   <div class="relative max-w-4xl mx-auto">
     <!-- Vertical timeline line -->
@@ -1026,73 +1140,28 @@ footer {
         Explored database design, Python development, and system analysis. Built early-stage portfolio tools and dashboards.
       </p>
     </div>
+
+    <!-- Card 3 -->
+    <div class="relative mb-16 pl-16 group hover:bg-gray-800 rounded-lg p-6 transition-all duration-300">
+      <div class="absolute left-0 top-3 w-8 h-8 bg-violet-500 rounded-full flex items-center justify-center text-black font-bold shadow-lg">
+        🏫
+      </div>
+      <h4 class="text-xl font-semibold group-hover:text-violet-400 transition">Johnson Grammar School</h4>
+      <p class="text-sm text-gray-300">High School<br><span class="italic">2005 – 2018</span></p>
+      <p class="mt-2 text-gray-400 hidden group-hover:block transition-all duration-300">
+        Completed rigorous secondary education with a strong emphasis on critical thinking, discipline, and foundational knowledge, preparing for higher education and professional success.
+      </p>
+    </div>
   </div>
 </section>
+
+
 <!-- ========== 🎓 EDUCATION SECTION END ========== -->
 
   
 <!-- ========== 💼 EXPERIENCE SECTION START ========== -->
 
-<section id="#experience-gallery" class="py-20 px-6 bg-black">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-4xl font-extrabold text-violet-600 text-center mb-16 tracking-wide">
-      <span class="oi oi-briefcase mr-2"></span>Experience
-    </h2>
-
-    <div class="grid gap-10 md:grid-cols-2">
-
-      <!-- Experience Card 1 -->
-      <article class="flex bg-white rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
-        <div class="w-1/3 bg-violet-100 flex items-center justify-center p-6">
-          <img src="https://media.licdn.com/dms/image/v2/C560BAQG0Ovre6zdqQg/company-logo_200_200/company-logo_200_200/0/1630665972770?e=2147483647&v=beta&t=zaT3b2K8Qf6nKSwvzmF4RUssHplbmHMOQiPX4adPsOs" alt="NSIC Logo" class="h-20 object-contain">
-        </div>
-        <div class="w-2/3 p-8 flex flex-col justify-center bg-black">
-          <h4 class="text-lg font-medium text-white mb-1">
-            <i class="ion-ios-briefcase-outline mr-1"></i>NSIC
-          </h4>
-          <h3 class="text-xl font-semibold text-white mb-2">
-            <i class="ion-ios-person mr-1 text-violet-600"></i>Business Development Intern
-          </h3>
-          <time class="text-sm text-gray-500 mb-4" datetime="2022-05">
-            <i class="oi oi-calendar mr-1"></i>May 2022 – Mar 2023
-          </time>
-          <p class="text-white text-base leading-relaxed">
-            <i class="ion-ios-analytics-outline text-violet-600 mr-1"></i>
-            Analyzed market trends and financial feasibility to help small businesses grow. Developed financial models and provided data insights for strategic support.
-          </p>
-        </div>
-      </article>
-
-      <!-- Experience Card 2 -->
-      <article class="flex bg-white rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
-        <div class="w-1/3 bg-violet-100 flex items-center justify-center p-6">
-          <img src="https://www.ciee.org/sites/default/files/styles/960w/public/blog/2019-06/voice-4-girls-logo.jpg?itok=asrKSN75" alt="Voice 4 Girls Logo" class="h-20 object-contain">
-        </div>
-        <div class="w-2/3 p-8 flex flex-col justify-center bg-black">
-          <h4 class="text-lg font-medium text-white mb-1">
-            <i class="ion-ios-people-outline mr-1"></i>Voice 4 Girls
-          </h4>
-          <h3 class="text-xl font-semibold text-white mb-2">
-            <i class="ion-ios-person mr-1 text-violet-600"></i>Data Insights Mentor
-          </h3>
-          <time class="text-sm text-gray-500 mb-4" datetime="2021-08">
-            <i class="oi oi-calendar mr-1"></i>Aug 2021 – Mar 2022
-          </time>
-          <p class="text-white text-base leading-relaxed">
-            <i class="ion-ios-lightbulb-outline text-violet-600 mr-1"></i>
-            Mentored students in communication and personal development. Used survey data to optimize teaching strategies and create impactful learning sessions.
-          </p>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-  <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
-  
-<!-- ========== 💼 EXPERIENCE SECTION START ========== -->
-
-  <section id="#experience-gallery" class="py-20 px-6 bg-black">
+<section id="experience-gallery" class="py-20 px-6 bg-black">
   <div class="max-w-4xl mx-auto">
   <h1 class="text-3xl md:text-4xl font-extrabold text-lightgray mb-12 text-center">🚀 My Journey</h1>
 
@@ -1142,97 +1211,210 @@ footer {
 
 
 <!-- ========== 🧠 PROJECTS SECTION START ========== -->
+<section id="projects" class="projects-section page-section bg-black py-16 px-6 max-w-5xl mx-auto rounded-lg shadow-2xl border-2 border-violet-600">
+  <h2 class="text-5xl font-extrabold text-violet-500 text-center mb-16 tracking-wide drop-shadow-lg">
+    Projects
+  </h2>
 
-  <section id="#projects" class="projects-section page-section bg-black py-16 px-6">
-  <h2 class="text-4xl font-extrabold text-violet-600 text-center mb-12">Projects</h2>
+  <!-- Project 1: Hiring Assistant AI -->
+<article class="project-card">
+  <h3 class="project-title">🤖 Project Title:<br>Hiring Assistant AI – Agentic Resume Screening System (Academic Project)</h3>
 
-  <div class="project-flex space-y-12">
+  <h4>🎯 Purpose:</h4>
+  <p>
+    To revolutionize traditional recruitment through a privacy-first, offline-ready AI hiring assistant that autonomously parses, evaluates, and ranks resumes using Retrieval-Augmented Generation (RAG), while adapting in real time based on recruiter feedback.
+  </p>
 
-    <!-- Project 1 -->
-    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg project-bg-hiring relative overflow-hidden">
-      <div class="overlay absolute inset-0 bg-black opacity-50"></div>
-      <div class="content relative z-10">
-        <h3 class="text-2xl font-semibold text-white mb-4">
-          Hiring Assistant AI – Agentic Resume Screening System (Academic Project)
-        </h3>
-        <p class="text-white mb-4">
-          Intelligent hiring assistant that integrates agentic AI with RAG to autonomously screen and rank resumes, converse with recruiters, and evolve based on feedback—all in a privacy-first, offline-ready architecture.
-        </p>
-        <div class="project-buttons space-x-4">
-          <a href="#" class="btn-transparent view-project-btn" data-project-id="hiring">View Project</a>
-          <a href="#" class="btn-transparent">View Code</a>
-        </div>
-      </div>
-    </article>
+  <h4>⚙️ Skills Demonstrated:</h4>
+  <ul>
+    <li>Resume Parsing & NLP</li>
+    <li>Semantic Similarity & Hybrid Scoring</li>
+    <li>Conversational AI (LLM Integration)</li>
+    <li>Agentic System Design</li>
+    <li>Feedback-Driven Learning Loop</li>
+    <li>Privacy-Centric Architecture</li>
+  </ul>
 
-    <!-- Project 2 -->
-    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg project-bg-malnutrition relative overflow-hidden">
-      <div class="overlay absolute inset-0 bg-black opacity-50"></div>
-      <div class="content relative z-10">
-        <h3 class="text-2xl font-semibold text-white mb-4">
-          Visualizing Global Trends in Child Malnutrition (Academic Project)
-        </h3>
-        <p class="text-white mb-4">
-          Deep analysis of global malnutrition data across gender, geography, and age using interactive dashboards to support informed decisions for public health initiatives.
-        </p>
-        <div class="project-buttons space-x-4">
-          <a href="#" class="btn-transparent view-project-btn" data-project-id="malnutrition">View Project</a>
-          <a href="#" class="btn-transparent">View Code</a>
-        </div>
-      </div>
-    </article>
+  <h4>🧰 Tools & Technologies:</h4>
+  <p>Python 3.x | Streamlit | PyMuPDF | SentenceTransformers | Pandas | ctransformers (Mistral-7B) | RAG Architecture</p>
 
-    <!-- Project 3 -->
-    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg project-bg-fraud relative overflow-hidden">
-      <div class="overlay absolute inset-0 bg-black opacity-50"></div>
-      <div class="content relative z-10">
-        <h3 class="text-2xl font-semibold text-white mb-4">
-          Financial Fraud Detection — Machine Learning Model (Academic Project)
-        </h3>
-        <p class="text-white mb-4">
-          Supervised ML-based fraud detection solution prioritizing recall and fairness, trained on labeled datasets and validated across precision-recall trade-offs.
-        </p>
-        <div class="project-buttons space-x-4">
-          <a href="#" class="btn-transparent view-project-btn" data-project-id="fraud">View Project</a>
-          <a href="#" class="btn-transparent">View Code</a>
-        </div>
-      </div>
-    </article>
+  <h4>🧠 Key Features & Logic:</h4>
+  <ul>
+    <li>📄 <strong>Resume Parsing:</strong> Extracted structured data from PDFs (resumes & JDs) using PyMuPDF</li>
+    <li>🔍 <strong>Semantic Matching:</strong> Leveraged MiniLM embeddings for context-aware comparisons</li>
+    <li>⚖️ <strong>Hybrid Scoring:</strong> Blended semantic scores with rule-based skill rubrics using Pandas</li>
+    <li>💬 <strong>Conversational Interface:</strong> Powered by a quantized Mistral-7B-Instruct model via ctransformers</li>
+    <li>🔁 <strong>Feedback Loop:</strong> Continuously evolved rubric logic based on recruiter interactions</li>
+    <li>🔐 <strong>Offline Mode:</strong> Operated fully locally without any cloud dependencies</li>
+  </ul>
 
-  </div>
+  <h4>📈 Impact & Outcomes:</h4>
+  <ul>
+    <li>⏱️ <strong>Time Efficiency:</strong> Significantly reduced resume triage and shortlist duration</li>
+    <li>🌐 <strong>Transparency:</strong> Delivered interpretable match scores and decision rationale</li>
+    <li>🔄 <strong>Adaptability:</strong> Dynamically refined screening based on real-time recruiter feedback</li>
+    <li>🛡️ <strong>Privacy First:</strong> Designed for environments demanding complete data confidentiality</li>
+  </ul>
+
+  <h4>🧭 Reflection:</h4>
+  <blockquote>
+    "This project challenged me to engineer an intelligent, agentic system that balances innovation with ethical AI design. It deepened my understanding of RAG workflows, local LLM deployment, and human-in-the-loop systems for high-stakes domains like hiring."
+  </blockquote>
+</article>
+
+
+  <!-- Project 2: Child Malnutrition Visualization -->
+  <article class="project-card">
+    <h3 class="project-title">📊 Visualizing Global Child Malnutrition</h3>
+    <p class="project-intro">
+      Interactive Dashboard for Visualizing Global Child Malnutrition Trends.
+    </p>
+
+    <h4>Purpose:</h4>
+    <p>To explore and expose global patterns of child malnutrition using interactive visual analytics, empowering stakeholders to develop targeted, data-informed interventions.</p>
+
+    <h4>Skills Demonstrated:</h4>
+    <ul>
+      <li>Data Wrangling & Preprocessing</li>
+      <li>Interactive Dashboard Design</li>
+      <li>Data Storytelling</li>
+      <li>Demographic & Geographic Analysis</li>
+      <li>Team Collaboration</li>
+    </ul>
+
+    <h4>Tools & Technologies:</h4>
+    <p>Tableau | Python (Pandas, Matplotlib) | WHO Global Database | Data Cleaning Techniques</p>
+
+    <h4>Key Visuals & Insights:</h4>
+    <ul>
+      <li>🌍 Geographic Map: Highlighted countries with highest severity (e.g., Papua New Guinea, Equatorial Guinea)</li>
+      <li>♂️♀️ Line Chart (1970–2022): Females consistently show higher malnutrition rates</li>
+      <li>🏠 Urban vs Rural: Bar graph reveals high stunting & underweight in rural areas</li>
+      <li>🔹 Scatter Plot: Wasting vs. Severe wasting across age groups</li>
+      <li>📆 Stacked Area Chart: Longitudinal view of stunting prevalence</li>
+      <li>⚖️ Box Plots: Outliers and IQR patterns across malnutrition types</li>
+    </ul>
+
+    <h4>Project Impact:</h4>
+    <ul>
+      <li>Spain: Highest malnutrition severity</li>
+      <li>Greece: Lowest malnutrition severity</li>
+      <li>Infants & Toddlers: Most at risk (stunting/underweight)</li>
+      <li>Urban Areas: Slightly higher malnutrition rates than rural</li>
+    </ul>
+
+    <h4>Outcome:</h4>
+    <blockquote>
+      A multi-layered, interactive data experience that uncovers hidden trends and supports global health awareness and policymaking.
+    </blockquote>
+
+    <h4>Reflection:</h4>
+    <p>
+      "This project strengthened my ability to translate data into meaningful insights and visual narratives. I learned to tailor dashboards for intuitive exploration and deliver real-world impact through data storytelling."
+    </p>
+  </article>
+
+  <!-- Project 3: AI-Powered Fraud Detection -->
+  <article class="project-card">
+  <h3 class="project-title">🛡️ Project Title:<br>AI-Powered Fraud Detection in Banking (Academic Project)</h3>
+
+  <h4>🎯 Purpose:</h4>
+  <p>
+    To envision and implement a real-time, AI-driven fraud detection system that replaces outdated rule-based approaches with predictive, pattern-aware machine learning. The system enhances operational efficiency, strengthens trust, and ensures regulatory compliance in financial institutions.
+  </p>
+
+  <h4>⚙️ Skills Demonstrated:</h4>
+  <ul>
+    <li>Real-Time Event Monitoring & ML Deployment</li>
+    <li>Supervised & Unsupervised Learning</li>
+    <li>Risk Scoring & Behavioral Analytics</li>
+    <li>Explainable AI (XAI) Integration</li>
+    <li>Secure Systems Architecture</li>
+    <li>Compliance-Aware AI Design</li>
+  </ul>
+
+  <h4>🧰 Tools & Technologies:</h4>
+  <p>
+    Python | Scikit-learn | XGBoost | SHAP | LIME | Flask | Docker | PostgreSQL | Prometheus | Grafana | Kafka | SMS Gateway APIs
+  </p>
+
+  <h4>🧠 Key Features & Logic:</h4>
+  <ul>
+    <li>⏱️ <strong>Real-Time Monitoring:</strong> Flags suspicious activity with latency under 300ms</li>
+    <li>🧠 <strong>ML-Powered Detection:</strong> Utilizes supervised and unsupervised models to spot known and novel fraud tactics</li>
+    <li>🔎 <strong>Investigation Module:</strong> Analysts can review, annotate, and escalate flagged cases with audit trails</li>
+    <li>📊 <strong>Dynamic Risk Scoring:</strong> Scores transactions based on behavioral models; alerts delivered via dashboard and SMS</li>
+    <li>🧾 <strong>Explainability:</strong> SHAP and LIME used to provide transparent decisions for regulators and auditors</li>
+    <li>🔄 <strong>Adaptive Learning:</strong> Incorporates feedback loops from analysts to refine models in production</li>
+  </ul>
+
+  <h4>📈 Impact & Outcomes:</h4>
+  <ul>
+    <li>⚡ <strong>Operational Efficiency:</strong> Accelerated fraud resolution pipeline, reduced losses</li>
+    <li>💡 <strong>Pattern Awareness:</strong> Surfaced hidden fraud clusters across demographics and transaction types</li>
+    <li>📋 <strong>Compliance & Governance:</strong> Fully aligned with GDPR, KYC, PCI DSS, AML, and CCPA standards</li>
+    <li>🔐 <strong>Security & Resilience:</strong> AES-256 encryption, RBAC, TLS 1.3, MFA, and 99.99% uptime via container orchestration</li>
+    <li>⚖️ <strong>Fairness:</strong> Integrated bias-mitigation across sensitive attributes</li>
+  </ul>
+
+  <h4>🧭 Reflection:</h4>
+  <blockquote>
+    "This project deepened my understanding of deploying machine learning in regulated, real-time environments. It taught me the balance between speed, transparency, and ethical design when building trust-critical systems like financial fraud detection."
+  </blockquote>
+</article>
+
 </section>
+
+
   <!-- ========== 🧠 PROJECTS SECTION END ========== -->
 
 <!-- ========== 🧩 SKILLS SECTION START ========== -->
-  <section id="#skills" class="min-h-screen px-6 py-16 bg-black text-white">
-    <h2 class="text-4xl font-extrabold mb-14 text-center text-violet-400 tracking-wide">Skills</h2>
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+<section id="skills" class="min-h-screen px-6 py-16 bg-black text-white">
+  <h2 class="text-4xl font-extrabold mb-14 text-center text-violet-400 tracking-wide">Skills</h2>
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
 
-      <div class="bg-gray-900 rounded-xl shadow-lg p-8">
-        <h3 class="text-2xl font-semibold mb-6 border-b border-teal-600 pb-2 text-white text-center">Technical Skills</h3>
+    <!-- Technical Skills -->
+    <div>
+      <h3 class="text-2xl font-semibold mb-8 border-b border-teal-600 pb-2 text-white text-center">Technical Skills</h3>
+      <div class="skills-cloud text-center">
 
-        <div class="mb-6">
-          <h4 class="font-semibold text-white mb-2 text-center">Programming Languages</h4>
-          <p class="text-gray-300 text-center">Python, SQL, R</p>
-        </div>
-        <div class="mb-6">
-          <h4 class="font-semibold text-white mb-2 text-center">Data Visualization</h4>
-          <p class="text-gray-300 text-center">Tableau, Power BI, Matplotlib, Seaborn</p>
-        </div>
-        <div class="mb-6">
-          <h4 class="font-semibold text-white mb-2 text-center">Cloud Platforms</h4>
-          <p class="text-gray-300 text-center">Google Cloud, AWS</p>
-        </div>
-        <div>
-          <h4 class="font-semibold text-white mb-2 text-center">Machine Learning Tools</h4>
-          <p class="text-gray-300 text-center">Scikit-learn, TensorFlow, Keras, SHAP, LIME</p>
-        </div>
+        <!-- Programming Languages -->
+        <span class="skill skill-high" title="Python">Python</span>
+        <span class="skill skill-mid" title="SQL">SQL</span>
+        <span class="skill skill-mid" title="R">R</span>
+
+        <!-- Data Visualization -->
+        <span class="skill skill-high" title="Tableau">Tableau</span>
+        <span class="skill skill-mid" title="Power BI">Power BI</span>
+        <span class="skill skill-mid" title="Matplotlib">Matplotlib</span>
+        <span class="skill skill-low" title="Seaborn">Seaborn</span>
+
+        <!-- Data Handling & Databases -->
+        <span class="skill skill-high" title="Pandas">Pandas</span>
+        <span class="skill skill-mid" title="MySQL">MySQL</span>
+        <span class="skill skill-low" title="NoSQL">NoSQL</span>
+        <span class="skill skill-low" title="MongoDB">MongoDB</span>
+        <span class="skill skill-high" title="MS Excel">MS Excel</span>
+        <span class="skill skill-low" title="Big Data">Big Data</span>
+
+        <!-- Cloud Platforms -->
+        <span class="skill skill-mid" title="Google Cloud Platform">Google Cloud</span>
+        <span class="skill skill-low" title="AWS">AWS</span>
+
+        <!-- Machine Learning Tools -->
+        <span class="skill skill-mid" title="Scikit-learn">Scikit-learn</span>
+        <span class="skill skill-mid" title="TensorFlow">TensorFlow</span>
+        <span class="skill skill-mid" title="Keras">Keras</span>
+        <span class="skill skill-low" title="SHAP">SHAP</span>
+        <span class="skill skill-low" title="LIME">LIME</span>
+
       </div>
+    </div>
 
-      <div class="bg-gray-900 rounded-xl shadow-lg p-8">
-        <h3 class="text-2xl font-semibold mb-6 border-b border-teal-600 pb-2 text-white text-center">Conceptual & Business Skills</h3>
-
-        <ul class="list-none space-y-3 text-gray-300 text-center">
+    <!-- Conceptual & Business Skills -->
+    <div>
+      <h3 class="text-2xl font-semibold mb-8 border-b border-teal-600 pb-2 text-white text-center">Conceptual & Business Skills</h3>
+      <ul class="list-disc list-inside space-y-4 text-gray-300 max-w-lg mx-auto text-center">
         <li>Data Analytics & Interpretation</li>
         <li>Predictive Modeling & Forecasting</li>
         <li>Statistical Analysis & Hypothesis Testing</li>
@@ -1241,88 +1423,15 @@ footer {
         <li>Problem Solving & Critical Thinking</li>
         <li>Communication & Presentation Skills</li>
       </ul>
-
-      </div>
     </div>
-  </section>
-<!-- ========== 🧩 SKILLS SECTION END ========== -->
-  
-  <!-- ========== 🧩 SKILLS SECTION START ========== -->
-
-<section id="#skills" class="bg-[#1a1a1a] py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-24">
-    <div class="container mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">
-            My Skills
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto text-left text-white text-sm">
-
-            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 class="font-semibold text-lg mb-4">Programming Languages</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs">Python</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Java</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">JavaScript</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">SQL</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">HTML</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">CSS</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">R</span>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 class="font-semibold text-lg mb-4">Tools & Technologies</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Git</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">GitHub</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MS Excel</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Jupyter Notebook</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MySQL</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MongoDB</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Numpy</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Pandas</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">AngularJS</span>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 class="font-semibold text-lg mb-4">Cloud & ML Tools</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Google Cloud</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">AWS</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Azure</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Scikit-learn</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">TensorFlow</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Keras</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">SHAP</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">LIME</span>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 class="font-semibold text-lg mb-4">Concepts & Business</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Data Analytics</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Predictive Modeling</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Statistical Analysis</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Market Research</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Project Management</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Agile</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Scrum</span>
-                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Communication</span>
-                </div>
-            </div>
-
-        </div>
-    </div>
+  </div>
 </section>
 
-
-  
 <!-- ========== 🧩 SKILLS SECTION END ========== -->
 
  <!-- ========== 📞 CONTACT SECTION START ========== -->
 
- <section id="#contact" class="min-h-screen px-6 py-16 bg-black text-white relative overflow-hidden">
+<section id="contact" class="min-h-screen px-6 py-16 bg-black text-white relative overflow-hidden">
   <div class="animated-bg"></div> <!-- subtle animated background -->
 
   <div class="w-full max-w-5xl flex flex-col items-center justify-center relative z-10">
