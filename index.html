@@ -994,6 +994,20 @@ p {
       text-shadow: 0 0 5px #f9a8d4;
       background-color: rgba(249, 168, 212, 0.3);
     }
+
+    .fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+/* When the section is in view, add this class via JS */
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
  
   </style>
 
@@ -1060,10 +1074,12 @@ p {
   <div class="w-full max-w-4xl flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
     <div>
       <p class="text-sm md:text-base mb-2 md:mb-4 font-semibold text-white">HELLO!</p>
-      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-2 md:mb-3 text-violet-400">
+    
+      <h1 class="text-violet-400 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-2 md:mb-3">
         I'm <span>Harshitha Sreiya</span><br>
         <span>Palaparthi</span>
       </h1>
+
       <p class="text-lg md:text-xl mb-4 md:mb-6 text-white">
         Aspiring Business Analyst | UNT Business Analytics Graduate Student
       </p>
@@ -1163,53 +1179,51 @@ p {
 
 <section id="experience-gallery" class="py-20 px-6 bg-black">
   <div class="max-w-4xl mx-auto">
-  <h1 class="text-3xl md:text-4xl font-extrabold text-lightgray mb-12 text-center">🚀 My Journey</h1>
+    <h1 class="text-3xl md:text-4xl font-extrabold text-lightgray mb-12 text-center">🚀 Experience</h1>
 
-  <!-- NSIC Internship -->
-  <div class="flex relative mb-16 fade-in-section">
-    <div class="w-1/6 text-right pr-4 pt-1">
-      <span class="text-lightgray font-semibold text-lg md:text-xl">2022–2023</span>
+    <!-- NSIC Internship -->
+    <div class="flex relative mb-16">
+      <div class="w-1/6 text-right pr-4 pt-1">
+        <span class="text-lightgray font-semibold text-lg md:text-xl">2022–2023</span>
+      </div>
+      <div class="flex flex-col items-center mx-2">
+        <div class="w-4 h-4 rounded-full bg-yellow-400 shadow-lg"></div>
+        <div class="bg-yellow-200 w-1 flex-grow"></div>
+      </div>
+      <div class="w-5/6 pl-4">
+        <h2 class="text-xl md:text-2xl font-bold text-yellow-300 mb-1">💼 Entrepreneurship Intern</h2>
+        <p class="italic text-base md:text-lg text-yellow-100 mb-2">NSIC – Hyderabad, India</p>
+        <p class="text-sm md:text-base leading-relaxed text-gray-300">
+          Contributed to small business development through market research and financial feasibility studies. Analyzed
+          industry data to identify growth opportunities, designed simple financial models, and generated actionable insights
+          to guide business planning for micro-enterprises.
+        </p>
+      </div>
     </div>
-    <div class="flex flex-col items-center mx-2">
-      <div class="w-4 h-4 rounded-full bg-yellow-400 flex-shrink-0 shadow-lg"></div>
-      <div class="timeline-line bg-yellow-200 w-1 flex-grow"></div>
-    </div>
-    <div class="w-5/6 pl-4">
-      <h2 class="text-xl md:text-2xl font-bold text-yellow-300 mb-1">💼 Entrepreneurship Intern</h2>
-      <p class="italic text-base md:text-lg text-yellow-100 mb-2">NSIC – Hyderabad, India</p>
-      <p class="text-sm md:text-base leading-relaxed text-gray-300">
-        Contributed to small business development through market research and financial feasibility studies. Analyzed
-        industry data to identify growth opportunities, designed simple financial models, and generated actionable insights
-        to guide business planning for micro-enterprises.
-      </p>
+
+    <!-- Voice 4 Girls -->
+    <div class="flex relative mb-16">
+      <div class="w-1/6 text-right pr-4 pt-1">
+        <span class="text-lightgray font-semibold text-lg md:text-xl">2021–2022</span>
+      </div>
+      <div class="flex flex-col items-center mx-2">
+        <div class="w-4 h-4 rounded-full bg-pink-400 shadow-lg"></div>
+        <div class="bg-pink-200 w-1 flex-grow"></div>
+      </div>
+      <div class="w-5/6 pl-4">
+        <h2 class="text-xl md:text-2xl font-bold text-pink-300 mb-1">📊 Data Mentor & Counselor</h2>
+        <p class="italic text-base md:text-lg text-pink-100 mb-2">Voice 4 Girls – India</p>
+        <p class="text-sm md:text-base leading-relaxed text-gray-300">
+          Mentored adolescent students in decision-making and communication skills. Leveraged data insights from surveys and
+          feedback loops to shape effective learning strategies. Sessions focused on building confidence while using
+          behavioral patterns and data analysis to refine engagement techniques.
+        </p>
+      </div>
     </div>
   </div>
-
-  <!-- Voice 4 Girls -->
-  <div class="flex relative mb-16 fade-in-section">
-    <div class="w-1/6 text-right pr-4 pt-1">
-      <span class="text-lightgray font-semibold text-lg md:text-xl">2021–2022</span>
-    </div>
-    <div class="flex flex-col items-center mx-2">
-      <div class="w-4 h-4 rounded-full bg-pink-400 flex-shrink-0 shadow-lg"></div>
-      <div class="timeline-line bg-pink-200 w-1 flex-grow"></div>
-    </div>
-    <div class="w-5/6 pl-4">
-      <h2 class="text-xl md:text-2xl font-bold text-pink-300 mb-1">📊 Data Mentor & Counselor</h2>
-      <p class="italic text-base md:text-lg text-pink-100 mb-2">Voice 4 Girls – India</p>
-      <p class="text-sm md:text-base leading-relaxed text-gray-300">
-        Mentored adolescent students in decision-making and communication skills. Leveraged data insights from surveys and
-        feedback loops to shape effective learning strategies. Sessions focused on building confidence while using
-        behavioral patterns and data analysis to refine engagement techniques.
-      </p>
-    </div>
-  </div>
-</div>
-  </section>
-
+</section>
   <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
-
-
+  
 <!-- ========== 🧠 PROJECTS SECTION START ========== -->
 <section id="projects" class="projects-section page-section bg-black py-16 px-6 max-w-5xl mx-auto rounded-lg shadow-2xl border-2 border-violet-600">
   <h2 class="text-5xl font-extrabold text-violet-500 text-center mb-16 tracking-wide drop-shadow-lg">
@@ -1316,7 +1330,7 @@ p {
 
   <!-- Project 3: AI-Powered Fraud Detection -->
   <article class="project-card">
-  <h3 class="project-title">🛡️ Project Title:<br>AI-Powered Fraud Detection in Banking (Academic Project)</h3>
+  <h3 class="project-title">🛡️AI-Powered Fraud Detection in Banking (Academic Project)</h3>
 
   <h4>🎯 Purpose:</h4>
   <p>
@@ -1686,6 +1700,25 @@ document.addEventListener('keydown', (e) => {
                 observer.observe(section);
             });
         });
+      document.addEventListener("DOMContentLoaded", () => {
+    const faders = document.querySelectorAll('.fade-in-section');
+
+    const appearOptions = {
+      threshold: 0.1,
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(el => {
+      appearOnScroll.observe(el);
+    });
+  });
 </script>
 
   </script>
