@@ -649,6 +649,11 @@ footer {
         flex-direction: column;
       }
     }
+
+   .transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
   </style>
 
 <body class="min-h-screen flex flex-col">
@@ -815,38 +820,42 @@ footer {
 
   <!-- ========== 💼 EXPERIENCE SECTION START ========== -->
   
-<section id="experience-gallery" class="py-20 px-6 bg-black">
-  <div class="max-w-4xl mx-auto">
-    <h1 class="text-3xl md:text-4xl font-extrabold text-voilet-200 mb-12 text-center"> Work Experience</h1>
+<section id="experience" class="bg-black text-white py-16 px-6">
+  <h2 class="text-4xl font-extrabold text-violet-600 text-center mb-12">Professional Experience</h2>
 
-    <!-- Timeline Entry -->
-    <div class="relative border-l border-yellow-400 pl-6 mb-10">
-      <div class="absolute -left-2 top-1 w-4 h-4 bg-yellow-400 rounded-full shadow-lg"></div>
-      <span class="text-sm text-gray-400">2022–2023</span>
-      <h2 class="text-xl md:text-2xl font-bold text-yellow-300">💼 Entrepreneurship Intern</h2>
-      <p class="italic text-sm text-yellow-100">NSIC – Hyderabad, India</p>
-      <p class="text-sm md:text-base text-gray-300 mt-2">
-        Contributed to small business development through market research and financial feasibility studies. Analyzed
-        industry data to identify growth opportunities, designed simple financial models, and generated actionable insights
-        to guide business planning for micro-enterprises.
-      </p>
+  <div class="space-y-12 max-w-5xl mx-auto">
+
+    <!-- NSIC Experience -->
+    <div class="relative pl-16 group hover:bg-gray-800 rounded-lg p-6 transition-all duration-300">
+      <div class="absolute left-0 top-3 w-8 h-8 bg-violet-500 rounded-full flex items-center justify-center text-black font-bold shadow-lg">
+        📊
+      </div>
+      <h3 class="text-xl font-semibold group-hover:text-violet-400 transition">Entrepreneurship/Business Development Intern</h3>
+      <p class="text-sm text-gray-300">NSIC – Hyderabad, India<br><span class="italic">May 2022 – March 2023</span></p>
+      <ul class="mt-4 text-gray-400 list-disc list-inside space-y-2 hidden group-hover:block transition-all duration-300">
+        <li>📈 Analyzed data from 50+ SMEs using <strong>Excel</strong> & <strong>SQL</strong>, identifying a <span class="text-violet-400 font-semibold">15% seasonal demand increase</span>.</li>
+        <li>📊 Built 5 <strong>financial feasibility models</strong> & conducted <strong>EDA</strong> to boost revenue projections by <span class="text-violet-400 font-semibold">20%</span>.</li>
+        <li>📉 Created <strong>Power BI dashboards</strong> to visualize KPIs, improving market insight for stakeholders.</li>
+      </ul>
     </div>
 
-    <!-- Timeline Entry -->
-    <div class="relative border-l border-pink-400 pl-6 mb-10">
-      <div class="absolute -left-2 top-1 w-4 h-4 bg-pink-400 rounded-full shadow-lg"></div>
-      <span class="text-sm text-gray-400">2021–2022</span>
-      <h2 class="text-xl md:text-2xl font-bold text-pink-300">📊 Data Mentor & Counselor</h2>
-      <p class="italic text-sm text-pink-100">Voice 4 Girls – India</p>
-      <p class="text-sm md:text-base text-gray-300 mt-2">
-        Mentored adolescent students in decision-making and communication skills. Leveraged data insights from surveys and
-        feedback loops to shape effective learning strategies. Sessions focused on building confidence while using
-        behavioral patterns and data analysis to refine engagement techniques.
-      </p>
+    <!-- Voice 4 Girls Experience -->
+    <div class="relative pl-16 group hover:bg-gray-800 rounded-lg p-6 transition-all duration-300">
+      <div class="absolute left-0 top-3 w-8 h-8 bg-violet-500 rounded-full flex items-center justify-center text-black font-bold shadow-lg">
+        🎤
+      </div>
+      <h3 class="text-xl font-semibold group-hover:text-violet-400 transition">Counselor / Data Insights Mentor</h3>
+      <p class="text-sm text-gray-300">Voice 4 Girls – India<br><span class="italic">August 2021 – March 2022</span></p>
+      <ul class="mt-4 text-gray-400 list-disc list-inside space-y-2 hidden group-hover:block transition-all duration-300">
+        <li>🧠 Delivered 25+ counseling sessions, analyzed feedback using <strong>Google Forms</strong> & <strong>Excel</strong>.</li>
+        <li>📊 Used <strong>Python</strong> & <strong>SQL</strong> to identify patterns, increasing student participation by <span class="text-violet-400 font-semibold">30%</span>.</li>
+        <li>📈 Created weekly <strong>Tableau reports</strong> to guide data-driven curriculum improvements.</li>
+      </ul>
     </div>
 
   </div>
 </section>
+
 
   <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
 
