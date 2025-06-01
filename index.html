@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -9,7 +9,6 @@
   Using CDN for quick setup; includes default Tailwind styles
 -->
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
 
 <!--
   Tailwind CDN script - enables the latest Tailwind features and config support
@@ -30,8 +29,6 @@ font-family:'Montserrat', sans-serif; for headings (weights 400,700)
   Loaded with defer to avoid blocking rendering
 -->
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
 
 <!--
   Font Awesome (v6.5.0) - Popular icon font and toolkit
@@ -107,7 +104,6 @@ font-family:'Montserrat', sans-serif; for headings (weights 400,700)
 -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
@@ -116,12 +112,10 @@ font-family:'Montserrat', sans-serif; for headings (weights 400,700)
 /* ======================== 🌐 BASE STYLES ====================== */
 /* ============================================================= */
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #1a1a1a; /* dark background */
-  color: white; /* light text */
+font-family:'Montserrat', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
 }
 
 html {
@@ -129,66 +123,14 @@ html {
 }
 
 /* ============================================================= */
-/* ======================== HEADER & NAVIGATION ================= */
+/* ======================== 🔚 FOOTER STYLES ==================== */
 /* ============================================================= */
-header {
-  background-color: #1a1a1a;
-  padding: 1rem 1.5rem;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-nav ul {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li a {
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: white;
+footer {
+  @apply bg-black text-gray-400 py-6 text-center text-sm;
 }
 
 /* ============================================================= */
-/* ======================== SECTIONS ============================ */
-/* ============================================================= */
-section {
-  padding: 4rem 1.5rem;
-   display: none;
-}
-
-h1, h2 {
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-h1 span {
-  color: #FFD700; /* gold highlight */
-}
-
-@media (min-width: 768px) {
-  h1 {
-    font-size: 2.25rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-}
-
-/* ============================================================= */
-/* ====================== SECTION TITLE ========================= */
+/* ====================== 📝 SECTION TITLE ====================== */
 /* ============================================================= */
 .section-title {
   color: #00d1c1;
@@ -200,38 +142,26 @@ h1 span {
 }
 
 /* ============================================================= */
-/* ======================== FOOTER ============================== */
+/* ======================== 🧭 NAVIGATION ======================= */
 /* ============================================================= */
-footer {
-  background-color: #111;
-  color: #aaa;
-  text-align: center;
-  padding: 2rem 0;
+.nav-link {
+  @apply text-sm text-gray-300 hover:text-white transition;
 }
 
 /* ============================================================= */
-/* ======================= CARD STYLES ========================== */
+/* ======================= 🧾 CARD STYLES ======================= */
 /* ============================================================= */
 .card {
-  background-color: #2e2e2e;
-  color: #ddd;
-  padding: 1.5rem 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  @apply bg-gray-800 text-gray-200 p-6 rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105;
 }
 
-.card:hover {
-  transform: scale(1.05);
-}
-
-/* Owl Carousel Specific */
+/* Owl Carousel Specific Styling */
 .owl-carousel .card {
   border: 1px solid red;
 }
 
 /* ============================================================= */
-/* ===================== PROGRESS BAR =========================== */
+/* ====================== 📊 PROGRESS BAR ======================= */
 /* ============================================================= */
 .progress-bar {
   height: 4px;
@@ -243,17 +173,56 @@ footer {
   transition: width 0.3s ease-in-out;
 }
 
+/* ============================================================= */
+/* =================== 🌙 THEME TOGGLE BUTTON =================== */
+/* ============================================================= */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #8b5cf6;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
 
 /* ============================================================= */
-/* =================== CONTACT SECTION ========================== */
+/* ===================== ⚡ GLITCH HEADING ====================== */
+/* ============================================================= */
+.glitch-heading {
+  color: #00C0A0;
+  text-shadow:
+    0 0 3px #00C0A0,
+    0 0 8px #00C0A0,
+    0 0 15px #00C0A0,
+    0 0 25px #CC33FF,
+    0 0 40px #0099CC;
+  animation: glitch 2s infinite alternate, pulse-heading-glow 3s infinite alternate;
+}
+
+@keyframes pulse-heading-glow {
+  0%, 100% { text-shadow: 0 0 3px #00C0A0, 0 0 8px #00C0A0; }
+  50% { text-shadow: 0 0 6px #00C0A0, 0 0 12px #00C0A0, 0 0 22px #CC33FF, 0 0 30px #0099CC; }
+}
+
+/* ============================================================= */
+/* ==================== 📞 CONTACT SECTION ====================== */
 /* ============================================================= */
 #contact {
   background-color: #000;
   color: #a0f0ea;
   min-height: 100vh;
   padding: 4rem 1.5rem;
-  font-family: 'IBM Plex Mono', monospace;
+font-family: sans-serif; 'IBM Plex Mono', monospace;
   overflow: hidden;
+}
+
+.animated-bg {
+  display: none;
 }
 
 #contact > div.w-full {
@@ -359,12 +328,12 @@ footer {
 }
 
 /* ============================================================= */
-/* ================== EXPERIENCE SECTION ======================== */
+/* ================== 💼 EXPERIENCE SECTION ===================== */
 /* ============================================================= */
 #experience {
   background-color: #000;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+font-family:'Montserrat', sans-serif;
   padding: 4rem 1.5rem;
   min-height: 100vh;
 }
@@ -437,242 +406,504 @@ footer {
   background-color: #00D1C1;
   border-radius: 50%;
 }
-    /* Fade-in animation for elements when they scroll into view */
+/* ===================================================================================
+   💼 EXPERIENCE TIMELINE & DETAILS SECTION
+=================================================================================== */
+#experience {
+    background-color: #000;
+    color: #fff;
+  font-family:'Montserrat', sans-serif;
+    padding: 4rem 1.5rem;
+    min-height: 100vh;
+}
+
+
+/* ============================================================= */
+/* ==================== 🧩 SKILLS SECTION ======================= */
+/* ============================================================= */
+#skills h3.flex,
+#skills h4.flex {
+  transition: color 0.3s ease;
+  cursor: default;
+}
+
+#skills h3.flex:hover,
+#skills h4.flex:hover {
+  color: #14b8a6;
+}
+
+#skills i {
+  transition: transform 0.3s ease;
+  color: #14b8a6;
+}
+
+#skills h3.flex:hover i,
+#skills h4.flex:hover i {
+  transform: scale(1.2);
+  color: #0d9488;
+}
+
+@media (max-width: 768px) {
+  #skills .max-w-5xl {
+    grid-template-columns: 1fr !important;
+  }
+
+  #skills h3.flex i,
+  #skills h4.flex i {
+    font-size: 1.5rem;
+  }
+}
+    /* ===================================================================================
+   🧠 SKILLS INTERACTIONS + RESPONSIVE TWEAKS
+=================================================================================== */
+#skills h3.flex,
+#skills h4.flex {
+    transition: color 0.3s ease;
+    cursor: default;
+}
+
+#skills h3.flex:hover,
+#skills h4.flex:hover {
+    color: #14b8a6;
+}
+
+#skills i {
+    transition: transform 0.3s ease;
+    color: #14b8a6;
+}
+
+#skills h3.flex:hover i,
+#skills h4.flex:hover i {
+    transform: scale(1.2);
+    color: #0d9488;
+}
+
+@media (max-width: 768px) {
+    #skills .max-w-5xl {
+        grid-template-columns: 1fr !important;
+    }
+
+    #skills h3.flex i,
+    #skills h4.flex i {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ===================================================================================
+   🌐 BASE STYLES — BODY, HTML, TYPOGRAPHY
+=================================================================================== */
+body {
+  font-family:'Montserrat', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===================================================================================
+   🔚 FOOTER STYLES
+=================================================================================== */
+footer {
+    @apply bg-black text-gray-400 py-6 text-center text-sm;
+}
+
+/* ===================================================================================
+   📝 SECTION TITLE (Shared Across Pages)
+=================================================================================== */
+.section-title {
+    color: #00d1c1;
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* ===================================================================================
+   🧭 NAVIGATION LINKS (Header/Sidebar)
+=================================================================================== */
+.nav-link {
+    @apply text-sm text-gray-300 hover:text-white transition;
+}
+
+/* ===================================================================================
+   🧾 CARD STYLES (Generic + Owl Carousel Specific)
+=================================================================================== */
+.card {
+    @apply bg-gray-800 text-gray-200 p-6 rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105;
+}
+
+.owl-carousel .card {
+    border: 1px solid red;
+}
+
+/* ===================================================================================
+   📊 PROGRESS BAR AT TOP OF PAGE
+=================================================================================== */
+.progress-bar {
+    height: 4px;
+    background-color: #8b5cf6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    transition: width 0.3s ease-in-out;
+}
+
+/* ===================================================================================
+   📞 CONTACT SECTION (Cards with Hover Effects)
+=================================================================================== */
+#contact {
+    background-color: #000;
+    color: #a0f0ea;
+    min-height: 100vh;
+    padding: 4rem 1.5rem;
+    font-family: 'IBM Plex Mono', monospace;
+    overflow: hidden;
+}
+
+.animated-bg {
+    display: none;
+}
+
+#contact > div.w-full {
+    max-width: 64rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+#contact h2 {
+    color: #00d1c1;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 0.03em;
+    line-height: 1.1;
+}
+
+#contact p {
+    color: #7a8a91;
+    font-size: 1.125rem;
+    max-width: 40rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Contact Card Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.contact-card {
+    background-color: #0b1615;
+    border: 1.5px solid #00d1c1;
+    border-radius: 12px;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 209, 193, 0.2);
+    color: #a0f0ea;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px) scale(1.04);
+    background-color: #103833;
+    box-shadow: 0 8px 20px rgba(0, 209, 193, 0.35);
+}
+
+.card-icon {
+    font-size: 2.6rem;
+    color: #00d1c1;
+    margin-right: 1.2rem;
+    flex-shrink: 0;
+    transition: color 0.3s ease;
+}
+
+.contact-card:hover .card-icon {
+    color: #00fff5;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-label {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #00d1c1;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.25rem;
+    user-select: none;
+}
+
+.card-detail {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #a0f0ea;
+    line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+    .contact-card {
+        padding: 1.4rem 1.6rem;
+    }
+    .card-icon {
+        font-size: 2.2rem;
+        margin-right: 1rem;
+    }
+    .card-detail {
+        font-size: 1rem;
+    }
+}
+
+
+/* === Glow effect on hover for cards === */
+.group:hover {
+  background-color: #1f2937; /* gray-800 */
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4); /* purple glow */
+  transition: box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+/* === Pulse icon dots on timeline === */
+.timeline-dot {
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(139, 92, 246, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+  }
+}
+
+/* === Section fade-in on scroll (AOS optional replacement) === */
+[data-fade] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-fade].show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-lightgray { color: #d1d5db; }
+.timeline-line { background: #e5e7eb; width: 2px; }
+body {
+  background-color: #0f172a; /* dark slate background */
+  font-family:'Montserrat', sans-serif;
+  color: #f1f5f9; /* light text */
+}
+
+/* Custom gray */
+.text-lightgray {
+  color: #d1d5db; /* Tailwind's gray-300 */
+}
+
+/* Timeline vertical line */
+.timeline-line {
+  width: 2px;
+  background-color: #e5e7eb; /* Tailwind's gray-200 */
+  flex-grow: 1;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* Timeline dot styles (color variants used directly in HTML for flexibility) */
+.accent-color {
+  background-color: #38bdf8; /* Optional default blue */
+}
+
+/* Fade-in animation */
 .fade-in-section {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.fade-in-section.is-visible {
+.fade-in-section.appear {
   opacity: 1;
-  transform: none;
+  transform: translateY(0px);
 }
 
-/* Optional vertical line styling (timeline-line) */
-.timeline-line {
-  background-color: #e5e7eb; /* Tailwind gray-200 equivalent */
+/* Responsive typography override (if not using Tailwind) */
+h1, h2 {
+  line-height: 1.2;
 }
-  .tag-icon {
-    @apply flex items-center gap-2 bg-gray-700 px-4 py-2 rounded-full hover:scale-105 transition transform;
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
   }
-
-
-/* ============================================================= */
-/* ======================== SKILLS SECTION ====================== */
-/* ============================================================= */
-
-   /* Skills Section Base */
-#skills {
-  background-color: #000; /* black background */
-  color: #fff; /* white text */
-  padding: 4rem 1.5rem;
-  min-height: 100vh;
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* Section Titles */
-#skills h2 {
-  color: #8b5cf6; /* violet-400 */
-  font-weight: 800;
-  font-size: 2.5rem;
-  letter-spacing: 0.1em;
-  margin-bottom: 3.5rem;
-  text-align: center;
-}
-
-#skills h3 {
-  color: #a78bfa; /* violet-300 */
-  font-weight: 700;
-  font-size: 2rem;
-  letter-spacing: 0.1em;
-  margin-bottom: 2.5rem;
-  text-align: center;
-}
-
-/* Cards Container Grid */
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  margin-bottom: 5rem;
-}
-
-/* Individual Card */
-.card {
-  background-color: #1a1a2e; /* dark navy/blackish */
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(106, 84, 255, 0.3);
-  color: #ddd;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
-  outline-offset: 4px;
-}
-
-.card:hover,
-.card:focus {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(106, 84, 255, 0.7);
-  color: #a78bfa; /* violet accent */
-  outline: none;
-}
-
-/* Accessibility: outline for keyboard focus */
-.card:focus-visible {
-  outline: 3px solid #8b5cf6;
-  outline-offset: 4px;
-}
-
-/* Skill Icon */
-.skill-icon {
-  font-size: 2.8rem;
-  margin-bottom: 0.75rem;
-  color: inherit; /* inherit color from .card for hover effect */
-}
-
-/* Skill Title */
-.skill-title {
-  font-weight: 700;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: #a78bfa;
-}
-
-/* Skill Outcome */
-.skill-outcome {
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-  color: #ccc;
-  line-height: 1.3;
-  flex-grow: 1;
-}
-
-/* Skill Tools */
-.skill-tools {
-  font-size: 0.85rem;
-  color: #888;
-  margin-bottom: 1rem;
-}
-
-/* Mini Bar Container */
-.mini-bar {
-  display: flex;
-  justify-content: flex-start;
-  gap: 4px;
-  user-select: none;
-}
-
-/* Mini Bar Segments */
-.mini-bar span {
-  --bar-color: #6a54ff; /* violet */
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background-color: var(--bar-color);
-  border-radius: 50%;
-  opacity: 0.3;
-  animation: pulse 1.5s infinite;
-  animation-delay: calc(var(--i) * 0.15s);
-}
-
-/* Pulse animation for mini bars */
-@keyframes pulse {
-  0%, 100% {
-    opacity: 0.3;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.3);
+  h2 {
+    font-size: 1.5rem;
   }
 }
 
-  /*projects*/
-    
-  body {
-  font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 40px;
-      background: #000;
-      color: #ffff;
-      line-height: 1.6;
-    }
+/* Optional: Timeline icon spacing */
+.timeline-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
 
-    h2 {
-      margin-top: 0;
-      color: #222;
-    }
+body {
+  font-family:'Montserrat', sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
 
-    .project-header {
-      margin-bottom: 10px;
-    }
+header {
+    background-color: #1a1a1a;
+    padding: 1rem 1.5rem;
+}
 
-    .project-purpose {
-      font-style: italic;
-      margin-bottom: 20px;
-    }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    .project-body {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #000;
-      padding: 20px;
-      margin-bottom: 40px;
-    }
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+}
 
-    .project-columns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
+nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
-    .project-details, .project-impact {
-      flex: 1;
-      min-width: 300px;
-    }
+nav ul li a:hover {
+    color: white;
+}
 
-    ul {
-      padding-left: 20px;
-    }
+input[type="text"] {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    border: none;
+    outline: none;
+}
 
-    blockquote {
-      font-style: italic;
-      color: #555;
-      border-left: 4px solid #ccc;
-      padding-left: 16px;
-      margin: 20px 0;
-    }
+section {
+    padding: 4rem 1.5rem;
+}
 
-    @media (max-width: 768px) {
-      .project-columns {
-        flex-direction: column;
-      }
-    }
+h1, h2 {
+    margin-bottom: 1rem;
+}
+
+h1 span {
+    color: #FFD700;
+}
+
+.about-text, .skills-box {
+    max-width: 900px;
+    margin: auto;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-category {
+    background-color: #2e2e2e;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.skill-category h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background-color: #444;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+.skill-tag.highlight {
+    background-color: #FFD700;
+    color: black;
+}
+
+footer {
+    background-color: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 2rem 0;
+}
 
   </style>
 
 <body class="min-h-screen flex flex-col">
 <!-- ========== 🚧 PROGRESS BAR SECTION START ========== -->
- <div id="progress" class="progress-bar w-0"></div>
+  <div id="progress" class="progress-bar w-0"></div>
   <!-- ========== 🚧 PROGRESS BAR SECTION END ========== -->
   
 <!-- ========== 🔝 HEADER & NAVIGATION START ========== -->
 
- <header class="w-full p-4 md:p-6 flex flex-col md:flex-row justify-between items-center bg-black sticky top-0 z-50 shadow-md"> 
+  <header class="w-full p-4 md:p-6 flex flex-col md:flex-row justify-between items-center bg-black sticky top-0 z-50 shadow-md">
     <!-- Site Title -->
-    <div class="flex items-center justify-center md:justify-start w-full md:w-auto space-x-3"> 
+    <div class="flex items-center justify-center md:justify-start w-full md:w-auto space-x-3">
   <!-- Logo Image -->
   <!-- Name Text -->
-   <div class="text-lg md:text-xl font-semibold mb-4 md:mb-0 text-violet-400 text-center md:text-left w-full md:w-auto">
+   <!-- <div class="text-lg md:text-xl font-semibold mb-4 md:mb-0 text-violet-400 text-center md:text-left w-full md:w-auto">
       HARSHITHA SREIYA PALAPARTHI
     </div>
 </div>
-      
+      -->
 
     <!-- Navigation Menu -->
+
   <nav>
   <ul class="flex space-x-4 md:space-x-8 text-sm md:text-base font-medium">
     <li>
@@ -686,7 +917,7 @@ footer {
       </a>
     </li>
   <li>
-  <a href="#experience" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2 text-white">
+  <a href="#experience-gallery" class="hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2 text-white">
     <span>Experience</span>
   </a>
 </li>
@@ -707,33 +938,33 @@ footer {
     </li>
   </ul>
 </nav>
+
   </header>
- 
 <!-- ========== 🔝 HEADER & NAVIGATION END ========== -->
+  
 
 <!-- ========== 🏠 HOME SECTION START ========== -->
 <section id="home" class="min-h-screen flex items-center justify-center px-4 md:px-8 bg-black text-white">
   <div class="w-full max-w-4xl flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
     <div>
       <p class="text-sm md:text-base mb-2 md:mb-4 font-semibold text-white">HELLO!</p>
-     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-2 md:mb-3">
-        I'm <span class="text-violet-400">Harshitha Sreiya</span><br>
-        <span class="text-violet-400">Palaparthi</span>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-2 md:mb-3 text-violet-400">
+        I'm <span>Harshitha Sreiya</span><br>
+        <span>Palaparthi</span>
       </h1>
-
       <p class="text-lg md:text-xl mb-4 md:mb-6 text-white">
         Aspiring Business Analyst | UNT Business Analytics Graduate Student
       </p>
-          <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" 
-         class="inline-flex items-center justify-center w-12 h-12 bg-violet-200 text-black rounded-full hover:bg-violet-300 hover:text-black transition duration-200">
-        <i class="fab fa-linkedin"></i>
-      </a>
-            <a href="https://github.com/harshi1744"
-         class="inline-flex items-center justify-center w-12 h-12 border border-white text-white rounded-full hover:bg-white hover:text-black transition duration-200">
-        <i class="fab fa-github"></i>
-      </a>
-</div>
+      <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+        <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" 
+           class="inline-flex items-center justify-center w-12 h-12 bg-violet-200 text-black rounded-full hover:bg-violet-300 transition duration-200">
+           <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/harshi1744" 
+           class="inline-flex items-center justify-center w-12 h-12 border border-white text-white rounded-full hover:bg-white hover:text-black transition duration-200">
+           <i class="fab fa-github"></i>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -758,6 +989,7 @@ footer {
     I’m currently open to internship opportunities and actively seeking full-time roles starting December 2025 across the U.S.
   </p>
 </div>
+
       <div class="md:w-1/3 flex justify-center">
         <img src="https://avatars.githubusercontent.com/u/197736111?v=4" alt="Profile Image" class="w-64 h-64 object-cover shadow-lg">
       </div>
@@ -768,7 +1000,7 @@ footer {
   <!-- ========== 🎓 EDUCATION SECTION START ========== -->
 
   <section id="education" class="bg-black text-white py-20 px-6">
-  <h3 class="text-3xl font-bold text-center text-violet-400 mb-16">Education</h3>
+  <h3 class="text-3xl font-bold text-center text-violet-400 mb-16">📚 My Education Journey</h3>
   
   <div class="relative max-w-4xl mx-auto">
     <!-- Vertical timeline line -->
@@ -797,265 +1029,175 @@ footer {
         Explored database design, Python development, and system analysis. Built early-stage portfolio tools and dashboards.
       </p>
     </div>
-       <!-- Card 3 -->
-<div class="relative mb-16 pl-16 group hover:bg-gray-800 rounded-lg p-6 transition-all duration-300">
-  <div class="absolute left-0 top-3 w-8 h-8 bg-violet-500 rounded-full flex items-center justify-center text-black font-bold shadow-lg">
-    🏫
-  </div>
-  <h4 class="text-xl font-semibold group-hover:text-violet-400 transition">Johnson Grammar School</h4>
-  <p class="text-sm text-gray-300">ICSE<br><span class="italic">2005 – 2018</span></p>
-  <p class="mt-2 text-gray-400 hidden group-hover:block transition-all duration-300">
-    Built foundational skills in computer science, mathematics, and logical reasoning while excelling in a rigorous ICSE curriculum.
-  </p>
-</div>
   </div>
 </section>
 <!-- ========== 🎓 EDUCATION SECTION END ========== -->
+
   
-  <!-- ========== 💼 EXPERIENCE SECTION START ========== -->
-  
-<section id="experience" class="bg-black text-white py-16 px-6">
-  <h2 class="text-4xl font-extrabold text-violet-600 text-center mb-12">Professional Experience</h2>
+<!-- ========== 💼 EXPERIENCE SECTION START ========== -->
 
-  <div class="space-y-12 max-w-5xl mx-auto">
+<section id="experience-gallery" class="py-20 px-6 bg-black">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-extrabold text-violet-600 text-center mb-16 tracking-wide">
+      <span class="oi oi-briefcase mr-2"></span>Experience
+    </h2>
 
-    <!-- NSIC Experience -->
-    <div class="relative pl-16 group hover:bg-gray-800 rounded-lg p-6 transition-all duration-300">
-      <div class="absolute left-0 top-3 w-8 h-8 bg-violet-500 rounded-full flex items-center justify-center text-black font-bold shadow-lg">
-        📊
-      </div>
-      <h3 class="text-xl font-semibold group-hover:text-violet-400 transition">Entrepreneurship/Business Development Intern</h3>
-      <p class="text-sm text-gray-300">NSIC – Hyderabad, India<br><span class="italic">May 2022 – March 2023</span></p>
-      <ul class="mt-4 text-gray-400 list-disc list-inside space-y-2 hidden group-hover:block transition-all duration-300">
-        <li>📈 Analyzed data from 50+ SMEs using <strong>Excel</strong> & <strong>SQL</strong>, identifying a <span class="text-violet-400 font-semibold">15% seasonal demand increase</span>.</li>
-        <li>📊 Built 5 <strong>financial feasibility models</strong> & conducted <strong>EDA</strong> to boost revenue projections by <span class="text-violet-400 font-semibold">20%</span>.</li>
-        <li>📉 Created <strong>Power BI dashboards</strong> to visualize KPIs, improving market insight for stakeholders.</li>
-      </ul>
+    <div class="grid gap-10 md:grid-cols-2">
+
+      <!-- Experience Card 1 -->
+      <article class="flex bg-white rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
+        <div class="w-1/3 bg-violet-100 flex items-center justify-center p-6">
+          <img src="https://media.licdn.com/dms/image/v2/C560BAQG0Ovre6zdqQg/company-logo_200_200/company-logo_200_200/0/1630665972770?e=2147483647&v=beta&t=zaT3b2K8Qf6nKSwvzmF4RUssHplbmHMOQiPX4adPsOs" alt="NSIC Logo" class="h-20 object-contain">
+        </div>
+        <div class="w-2/3 p-8 flex flex-col justify-center bg-black">
+          <h4 class="text-lg font-medium text-white mb-1">
+            <i class="ion-ios-briefcase-outline mr-1"></i>NSIC
+          </h4>
+          <h3 class="text-xl font-semibold text-white mb-2">
+            <i class="ion-ios-person mr-1 text-violet-600"></i>Business Development Intern
+          </h3>
+          <time class="text-sm text-gray-500 mb-4" datetime="2022-05">
+            <i class="oi oi-calendar mr-1"></i>May 2022 – Mar 2023
+          </time>
+          <p class="text-white text-base leading-relaxed">
+            <i class="ion-ios-analytics-outline text-violet-600 mr-1"></i>
+            Analyzed market trends and financial feasibility to help small businesses grow. Developed financial models and provided data insights for strategic support.
+          </p>
+        </div>
+      </article>
+
+      <!-- Experience Card 2 -->
+      <article class="flex bg-white rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
+        <div class="w-1/3 bg-violet-100 flex items-center justify-center p-6">
+          <img src="https://www.ciee.org/sites/default/files/styles/960w/public/blog/2019-06/voice-4-girls-logo.jpg?itok=asrKSN75" alt="Voice 4 Girls Logo" class="h-20 object-contain">
+        </div>
+        <div class="w-2/3 p-8 flex flex-col justify-center bg-black">
+          <h4 class="text-lg font-medium text-white mb-1">
+            <i class="ion-ios-people-outline mr-1"></i>Voice 4 Girls
+          </h4>
+          <h3 class="text-xl font-semibold text-white mb-2">
+            <i class="ion-ios-person mr-1 text-violet-600"></i>Data Insights Mentor
+          </h3>
+          <time class="text-sm text-gray-500 mb-4" datetime="2021-08">
+            <i class="oi oi-calendar mr-1"></i>Aug 2021 – Mar 2022
+          </time>
+          <p class="text-white text-base leading-relaxed">
+            <i class="ion-ios-lightbulb-outline text-violet-600 mr-1"></i>
+            Mentored students in communication and personal development. Used survey data to optimize teaching strategies and create impactful learning sessions.
+          </p>
+        </div>
+      </article>
+
     </div>
-
-    <!-- Voice 4 Girls Experience -->
-    <div class="relative pl-16 group hover:bg-gray-800 rounded-lg p-6 transition-all duration-300">
-      <div class="absolute left-0 top-3 w-8 h-8 bg-violet-500 rounded-full flex items-center justify-center text-black font-bold shadow-lg">
-        🎤
-      </div>
-      <h3 class="text-xl font-semibold group-hover:text-violet-400 transition">Counselor / Data Insights Mentor</h3>
-      <p class="text-sm text-gray-300">Voice 4 Girls – India<br><span class="italic">August 2021 – March 2022</span></p>
-      <ul class="mt-4 text-gray-400 list-disc list-inside space-y-2 hidden group-hover:block transition-all duration-300">
-        <li>🧠 Delivered 25+ counseling sessions, analyzed feedback using <strong>Google Forms</strong> & <strong>Excel</strong>.</li>
-        <li>📊 Used <strong>Python</strong> & <strong>SQL</strong> to identify patterns, increasing student participation by <span class="text-violet-400 font-semibold">30%</span>.</li>
-        <li>📈 Created weekly <strong>Tableau reports</strong> to guide data-driven curriculum improvements.</li>
-      </ul>
-    </div>
-
   </div>
 </section>
+  <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
+  
+<!-- ========== 💼 EXPERIENCE SECTION START ========== -->
 
+  <section id="experience-gallery" class="py-20 px-6 bg-black">
+  <div class="max-w-4xl mx-auto">
+  <h1 class="text-3xl md:text-4xl font-extrabold text-lightgray mb-12 text-center">🚀 My Journey</h1>
+
+  <!-- NSIC Internship -->
+  <div class="flex relative mb-16 fade-in-section">
+    <div class="w-1/6 text-right pr-4 pt-1">
+      <span class="text-lightgray font-semibold text-lg md:text-xl">2022–2023</span>
+    </div>
+    <div class="flex flex-col items-center mx-2">
+      <div class="w-4 h-4 rounded-full bg-yellow-400 flex-shrink-0 shadow-lg"></div>
+      <div class="timeline-line bg-yellow-200 w-1 flex-grow"></div>
+    </div>
+    <div class="w-5/6 pl-4">
+      <h2 class="text-xl md:text-2xl font-bold text-yellow-300 mb-1">💼 Entrepreneurship Intern</h2>
+      <p class="italic text-base md:text-lg text-yellow-100 mb-2">NSIC – Hyderabad, India</p>
+      <p class="text-sm md:text-base leading-relaxed text-gray-300">
+        Contributed to small business development through market research and financial feasibility studies. Analyzed
+        industry data to identify growth opportunities, designed simple financial models, and generated actionable insights
+        to guide business planning for micro-enterprises.
+      </p>
+    </div>
+  </div>
+
+  <!-- Voice 4 Girls -->
+  <div class="flex relative mb-16 fade-in-section">
+    <div class="w-1/6 text-right pr-4 pt-1">
+      <span class="text-lightgray font-semibold text-lg md:text-xl">2021–2022</span>
+    </div>
+    <div class="flex flex-col items-center mx-2">
+      <div class="w-4 h-4 rounded-full bg-pink-400 flex-shrink-0 shadow-lg"></div>
+      <div class="timeline-line bg-pink-200 w-1 flex-grow"></div>
+    </div>
+    <div class="w-5/6 pl-4">
+      <h2 class="text-xl md:text-2xl font-bold text-pink-300 mb-1">📊 Data Mentor & Counselor</h2>
+      <p class="italic text-base md:text-lg text-pink-100 mb-2">Voice 4 Girls – India</p>
+      <p class="text-sm md:text-base leading-relaxed text-gray-300">
+        Mentored adolescent students in decision-making and communication skills. Leveraged data insights from surveys and
+        feedback loops to shape effective learning strategies. Sessions focused on building confidence while using
+        behavioral patterns and data analysis to refine engagement techniques.
+      </p>
+    </div>
+  </div>
+</div>
+  </section>
 
   <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
 
-  <!-- ========== 🧠 PROJECTS SECTION START ========== -->
 
- <section id="projects" class="projects-section page-section bg-black py-16 px-6">
+<!-- ========== 🧠 PROJECTS SECTION START ========== -->
+
+  <section id="projects" class="projects-section page-section bg-black py-16 px-6">
   <h2 class="text-4xl font-extrabold text-violet-600 text-center mb-12">Projects</h2>
 
-  <div class="project-flex space-y-20 max-w-7xl mx-auto">
+  <div class="project-flex space-y-12">
 
     <!-- Project 1 -->
-    <article class="project relative overflow-hidden rounded-xl bg-gray-900 shadow-lg text-white p-8"
-      data-project="1">
-      <canvas class="bg-canvas absolute inset-0 w-full h-full pointer-events-none"></canvas>
-      <div class="relative z-10 space-y-6">
-        <header class="project-header max-w-3xl mx-auto">
-          <h2 class="text-2xl font-bold mb-2">🤖 Hiring Assistant AI – Agentic Resume Screening System</h2>
-          <p class="project-purpose text-gray-300">
-            To revolutionize traditional hiring by building a lightweight, privacy-compliant, and offline-ready AI assistant
-            that autonomously screens resumes, ranks candidates, and interacts dynamically with recruiters—powered by
-            Retrieval-Augmented Generation (RAG) and continual feedback adaptation.
-          </p>
-        </header>
-        <div class="project-body grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <section class="project-details space-y-4">
-            <h3 class="text-xl font-semibold">⚙️ Skills Demonstrated</h3>
-            <ul class="list-disc list-inside space-y-1 text-gray-200">
-              <li>Agentic AI Design & Prompt Engineering</li>
-              <li>Retrieval-Augmented Generation (RAG)</li>
-              <li>Semantic Similarity & Embedding Techniques</li>
-              <li>Feedback-Driven Adaptation</li>
-              <li>Privacy-Centric Architecture</li>
-              <li>Streamlit App Development</li>
-              <li>Human-AI Interaction Design</li>
-            </ul>
-
-            <h3 class="text-xl font-semibold mt-6">🛠️ Tools & Technologies</h3>
-            <p class="text-gray-300 font-mono text-sm">
-              Python 3.x | PyMuPDF | SentenceTransformers (MiniLM-L6-v2) | Pandas | Streamlit | ctransformers
-              (Mistral-7B-Instruct) | In-Memory Vector Search | RAG | Offline Inference Framework
-            </p>
-
-            <h3 class="text-xl font-semibold mt-6">🔑 Core Features & Workflow</h3>
-            <ul class="list-disc list-inside space-y-1 text-gray-200">
-              <li>📄 <strong>Resume Parsing:</strong> Extracts structured content from resumes & job descriptions using PyMuPDF</li>
-              <li>🔍 <strong>Semantic Matching:</strong> Uses SentenceTransformers to embed and compare candidate/job text</li>
-              <li>🧮 <strong>Hybrid Scoring:</strong> Combines semantic similarity with rubric-based skill matching using Pandas</li>
-              <li>💬 <strong>Recruiter Chat UI:</strong> Streamlit interface backed by a quantized Mistral-7B-Instruct model</li>
-              <li>🔄 <strong>Adaptive Feedback Loop:</strong> Learns recruiter preferences in real time</li>
-              <li>🔐 <strong>Offline & Secure:</strong> Fully local, privacy-focused operation with no cloud dependencies</li>
-            </ul>
-          </section>
-
-          <section class="project-impact space-y-4 text-gray-300">
-            <h3 class="text-xl font-semibold">📈 Key Outcomes</h3>
-            <ul class="list-disc list-inside space-y-1">
-              <li><strong>⬇️ Time-to-Hire:</strong> Significantly reduced screening time through automation</li>
-              <li><strong>📊 Transparent Matching:</strong> Clear score explanations improved recruiter trust</li>
-              <li><strong>⚙️ Evolving System:</strong> Adapted scoring and ranking via recruiter feedback</li>
-              <li><strong>🔐 Fully Private:</strong> Local, GDPR-compliant architecture ensured data sovereignty</li>
-            </ul>
-
-            <h3 class="text-xl font-semibold mt-6">🔎 Outcome</h3>
-            <blockquote class="italic border-l-4 border-violet-600 pl-4 text-gray-100">
-              An intelligent, privacy-first hiring assistant that enhances recruiter efficiency, fairness, and decision transparency
-              through adaptive, agentic AI.
-            </blockquote>
-
-            <h3 class="text-xl font-semibold mt-6">🧠 Reflection</h3>
-            <p>
-              "This project deepened my understanding of building secure, agentic AI tools that respect user privacy while enhancing
-              decision quality. Designing a transparent, feedback-driven system taught me the balance between automation and human
-              oversight in sensitive applications like hiring."
-            </p>
-          </section>
+    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg project-bg-hiring relative overflow-hidden">
+      <div class="overlay absolute inset-0 bg-black opacity-50"></div>
+      <div class="content relative z-10">
+        <h3 class="text-2xl font-semibold text-white mb-4">
+          Hiring Assistant AI – Agentic Resume Screening System (Academic Project)
+        </h3>
+        <p class="text-white mb-4">
+          Intelligent hiring assistant that integrates agentic AI with RAG to autonomously screen and rank resumes, converse with recruiters, and evolve based on feedback—all in a privacy-first, offline-ready architecture.
+        </p>
+        <div class="project-buttons space-x-4">
+          <a href="#" class="btn-transparent view-project-btn" data-project-id="hiring">View Project</a>
+          <a href="#" class="btn-transparent">View Code</a>
         </div>
       </div>
     </article>
 
     <!-- Project 2 -->
-    <article class="project relative overflow-hidden rounded-xl bg-gray-900 shadow-lg text-white p-8"
-      data-project="2">
-      <canvas class="bg-canvas absolute inset-0 w-full h-full pointer-events-none"></canvas>
-      <div class="relative z-10 space-y-6">
-        <header class="project-header max-w-3xl mx-auto">
-          <h2 class="text-2xl font-bold mb-2">📊 Interactive Dashboard for Visualizing Global Child Malnutrition Trends</h2>
-          <p class="project-purpose text-gray-300">
-            To explore and expose global patterns of child malnutrition using interactive visual analytics, empowering stakeholders to
-            develop targeted, data-informed interventions.
-          </p>
-        </header>
-        <div class="project-body grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <section class="project-details space-y-4">
-            <h3 class="text-xl font-semibold">⚖️ Skills Demonstrated</h3>
-            <ul class="list-disc list-inside space-y-1 text-gray-200">
-              <li>Data Wrangling & Preprocessing</li>
-              <li>Interactive Dashboard Design</li>
-              <li>Data Storytelling</li>
-              <li>Demographic & Geographic Analysis</li>
-              <li>Team Collaboration</li>
-            </ul>
-
-            <h3 class="text-xl font-semibold mt-6">🔹 Tools & Technologies</h3>
-            <p class="text-gray-300 font-mono text-sm">
-              Tableau | Python (Pandas, Matplotlib) | WHO Global Database | Data Cleaning Techniques
-            </p>
-
-            <h3 class="text-xl font-semibold mt-6">🌐 Key Visuals & Insights</h3>
-            <ul class="list-disc list-inside space-y-1 text-gray-200">
-              <li>🌍 <strong>Geographic Map:</strong> Highlighted countries with highest severity</li>
-              <li>♂️♀️ <strong>Line Chart:</strong> Females consistently show higher malnutrition rates</li>
-              <li>🏠 <strong>Urban vs Rural:</strong> Bar graph shows rural areas most affected</li>
-              <li>🔹 <strong>Scatter Plot:</strong> Wasting vs. Severe wasting by age group</li>
-              <li>📆 <strong>Stacked Area Chart:</strong> Stunting prevalence trends over time</li>
-              <li>⚖️ <strong>Box Plots:</strong> IQR and outliers across malnutrition types</li>
-            </ul>
-          </section>
-
-          <section class="project-impact space-y-4 text-gray-300">
-            <h3 class="text-xl font-semibold">🌿 Project Impact</h3>
-            <ul class="list-disc list-inside space-y-1">
-              <li><strong>Spain:</strong> Highest malnutrition severity</li>
-              <li><strong>Greece:</strong> Lowest malnutrition severity</li>
-              <li><strong>Infants & Toddlers:</strong> Most at risk</li>
-              <li><strong>Urban Areas:</strong> Slightly higher malnutrition rates than rural</li>
-            </ul>
-
-            <h3 class="text-xl font-semibold mt-6">🔎 Outcome</h3>
-            <blockquote class="italic border-l-4 border-violet-600 pl-4 text-gray-100">
-              A multi-layered, interactive data experience that uncovers hidden trends and supports global health awareness and policymaking.
-            </blockquote>
-
-            <h3 class="text-xl font-semibold mt-6">🧠 Reflection</h3>
-            <p>
-              "This project strengthened my ability to translate data into meaningful insights and visual narratives. I learned to tailor dashboards
-              for intuitive exploration and deliver real-world impact through data storytelling."
-            </p>
-          </section>
+    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg project-bg-malnutrition relative overflow-hidden">
+      <div class="overlay absolute inset-0 bg-black opacity-50"></div>
+      <div class="content relative z-10">
+        <h3 class="text-2xl font-semibold text-white mb-4">
+          Visualizing Global Trends in Child Malnutrition (Academic Project)
+        </h3>
+        <p class="text-white mb-4">
+          Deep analysis of global malnutrition data across gender, geography, and age using interactive dashboards to support informed decisions for public health initiatives.
+        </p>
+        <div class="project-buttons space-x-4">
+          <a href="#" class="btn-transparent view-project-btn" data-project-id="malnutrition">View Project</a>
+          <a href="#" class="btn-transparent">View Code</a>
         </div>
       </div>
     </article>
 
     <!-- Project 3 -->
-    <article class="project relative overflow-hidden rounded-xl bg-gray-900 shadow-lg text-white p-8"
-      data-project="3">
-      <canvas class="bg-canvas absolute inset-0 w-full h-full pointer-events-none"></canvas>
-      <div class="relative z-10 space-y-6">
-        <header class="project-header max-w-3xl mx-auto">
-          <h2 class="text-2xl font-bold mb-2">💳 AI-Powered Fraud Detection in Banking</h2>
-          <p class="project-purpose text-gray-300">
-            To design a real-time, AI-driven fraud detection system tailored for the financial sector—replacing traditional
-            rule-based methods with adaptive machine learning to identify known and emerging fraud patterns while ensuring regulatory
-            compliance and explainability.
-          </p>
-        </header>
-        <div class="project-body grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <section class="project-details space-y-4">
-            <h3 class="text-xl font-semibold">⚙️ Skills Demonstrated</h3>
-            <ul class="list-disc list-inside space-y-1 text-gray-200">
-              <li>Machine Learning (Supervised & Unsupervised)</li>
-              <li>Real-Time Data Processing & Alerting</li>
-              <li>Model Explainability (SHAP, LIME)</li>
-              <li>Ethical & Fair AI Design</li>
-              <li>Secure System Design & Cryptography</li>
-              <li>Microservices Architecture & High Availability</li>
-              <li>Compliance-Aware AI Development (GDPR, AML, PCI DSS)</li>
-            </ul>
-
-            <h3 class="text-xl font-semibold mt-6">🛠️ Tools & Technologies</h3>
-            <p class="text-gray-300 font-mono text-sm">
-              Python | Scikit-learn | XGBoost | SHAP | LIME | Kafka | Docker | Flask | PostgreSQL | Prometheus | Grafana |
-              AES-256 | TLS 1.3 | Role-Based Access Control (RBAC)
-            </p>
-
-            <h3 class="text-xl font-semibold mt-6">🔑 Core Features & Workflow</h3>
-            <ul class="list-disc list-inside space-y-1 text-gray-200">
-              <li>⚡ <strong>Real-Time Monitoring:</strong> Flags high-risk transactions within 300ms latency</li>
-              <li>🧠 <strong>Hybrid ML Models:</strong> Combines supervised learning (known fraud) with unsupervised anomaly detection (unknown fraud)</li>
-              <li>🔍 <strong>Investigation Module:</strong> Analysts can annotate, confirm, or dismiss alerts—feeding into retraining</li>
-              <li>📊 <strong>Risk Scoring Engine:</strong> Continuously scores transactions and triggers alerts via dashboards & SMS</li>
-              <li>🔎 <strong>Explainable AI:</strong> SHAP & LIME deliver transparent, auditable justifications for all decisions</li>
-              <li>🔐 <strong>Security Layer:</strong> AES encryption, TLS, MFA, and RBAC ensure full compliance and protection</li>
-            </ul>
-          </section>
-
-          <section class="project-impact space-y-4 text-gray-300">
-            <h3 class="text-xl font-semibold">📈 Key Outcomes</h3>
-            <ul class="list-disc list-inside space-y-1">
-              <li><strong>Real-Time Fraud Workflow:</strong> Enabled proactive detection and analyst response</li>
-              <li><strong>Operational Efficiency:</strong> Reduced financial losses and increased fraud analyst throughput</li>
-              <li><strong>Regulatory Compliance:</strong> Fully aligned with GDPR, PCI DSS, AML, and KYC standards</li>
-              <li><strong>Bias Mitigation:</strong> Fair, demographic-aware fraud decisions boosted customer trust</li>
-            </ul>
-
-            <h3 class="text-xl font-semibold mt-6">🔎 Outcome</h3>
-            <blockquote class="italic border-l-4 border-violet-600 pl-4 text-gray-100">
-              A robust, real-time fraud detection system that combines predictive intelligence, ethical AI, and security best practices to
-              safeguard financial transactions while meeting regulatory demands.
-            </blockquote>
-
-            <h3 class="text-xl font-semibold mt-6">🧠 Reflection</h3>
-            <p>
-              "This project sharpened my skills in building real-time, resilient AI systems. It taught me how to balance performance,
-              fairness, and compliance—while delivering explainable, trustable outcomes in high-stakes environments like finance."
-            </p>
-          </section>
+    <article class="project-block bg-gray-900 rounded-xl p-6 shadow-lg project-bg-fraud relative overflow-hidden">
+      <div class="overlay absolute inset-0 bg-black opacity-50"></div>
+      <div class="content relative z-10">
+        <h3 class="text-2xl font-semibold text-white mb-4">
+          Financial Fraud Detection — Machine Learning Model (Academic Project)
+        </h3>
+        <p class="text-white mb-4">
+          Supervised ML-based fraud detection solution prioritizing recall and fairness, trained on labeled datasets and validated across precision-recall trade-offs.
+        </p>
+        <div class="project-buttons space-x-4">
+          <a href="#" class="btn-transparent view-project-btn" data-project-id="fraud">View Project</a>
+          <a href="#" class="btn-transparent">View Code</a>
         </div>
       </div>
     </article>
@@ -1064,241 +1206,122 @@ footer {
 </section>
   <!-- ========== 🧠 PROJECTS SECTION END ========== -->
 
-  <!-- ========== 🧠 PROJECTS SECTION START ========== -->
+<!-- ========== 🧩 SKILLS SECTION START ========== -->
+  <section id="skills" class="min-h-screen px-6 py-16 bg-black text-white">
+    <h2 class="text-4xl font-extrabold mb-14 text-center text-violet-400 tracking-wide">Skills</h2>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
 
+      <div class="bg-gray-900 rounded-xl shadow-lg p-8">
+        <h3 class="text-2xl font-semibold mb-6 border-b border-teal-600 pb-2 text-white text-center">Technical Skills</h3>
 
-  <!-- ========== 🧠 PROJECTS SECTION END ========== -->
+        <div class="mb-6">
+          <h4 class="font-semibold text-white mb-2 text-center">Programming Languages</h4>
+          <p class="text-gray-300 text-center">Python, SQL, R</p>
+        </div>
+        <div class="mb-6">
+          <h4 class="font-semibold text-white mb-2 text-center">Data Visualization</h4>
+          <p class="text-gray-300 text-center">Tableau, Power BI, Matplotlib, Seaborn</p>
+        </div>
+        <div class="mb-6">
+          <h4 class="font-semibold text-white mb-2 text-center">Cloud Platforms</h4>
+          <p class="text-gray-300 text-center">Google Cloud, AWS</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-white mb-2 text-center">Machine Learning Tools</h4>
+          <p class="text-gray-300 text-center">Scikit-learn, TensorFlow, Keras, SHAP, LIME</p>
+        </div>
+      </div>
+
+      <div class="bg-gray-900 rounded-xl shadow-lg p-8">
+        <h3 class="text-2xl font-semibold mb-6 border-b border-teal-600 pb-2 text-white text-center">Conceptual & Business Skills</h3>
+
+        <ul class="list-none space-y-3 text-gray-300 text-center">
+        <li>Data Analytics & Interpretation</li>
+        <li>Predictive Modeling & Forecasting</li>
+        <li>Statistical Analysis & Hypothesis Testing</li>
+        <li>Business Development & Market Research</li>
+        <li>Project Management & Team Collaboration</li>
+        <li>Problem Solving & Critical Thinking</li>
+        <li>Communication & Presentation Skills</li>
+      </ul>
+
+      </div>
+    </div>
+  </section>
+<!-- ========== 🧩 SKILLS SECTION END ========== -->
   
   <!-- ========== 🧩 SKILLS SECTION START ========== -->
-  <section id="skills" class="skills-section bg-gray-950 py-16 px-6 text-white">
-  <h2 class="text-4xl font-extrabold text-center text-violet-600 mb-12">Skills</h2>
-  <p class="text-center text-gray-300 mb-10">Technologies, tools, and platforms I’m proficient with:</p>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 max-w-6xl mx-auto text-center">
+<section id="my-skills" class="bg-[#1a1a1a] py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-24">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">
+            My Skills
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto text-left text-white text-sm">
 
-    <!-- Programming Languages -->
-    <div>
-      <h3 class="font-semibold text-violet-400 text-xl mb-4">💻 Programming Languages</h3>
-      <ul class="flex justify-center flex-wrap gap-4">
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-10 h-10" /></li>
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="w-10 h-10" /></li>
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-10 h-10" /></li>
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQL" class="w-10 h-10" /></li>
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-10 h-10" /></li>
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-10 h-10" /></li>
-      </ul>
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h3 class="font-semibold text-lg mb-4">Programming Languages</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs">Python</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Java</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">JavaScript</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">SQL</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">HTML</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">CSS</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">R</span>
+                </div>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h3 class="font-semibold text-lg mb-4">Tools & Technologies</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Git</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">GitHub</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MS Excel</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Jupyter Notebook</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MySQL</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">MongoDB</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Numpy</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Pandas</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">AngularJS</span>
+                </div>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h3 class="font-semibold text-lg mb-4">Cloud & ML Tools</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Google Cloud</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">AWS</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Azure</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Scikit-learn</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">TensorFlow</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Keras</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">SHAP</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">LIME</span>
+                </div>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h3 class="font-semibold text-lg mb-4">Concepts & Business</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Data Analytics</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Predictive Modeling</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Statistical Analysis</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Market Research</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Project Management</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Agile</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Scrum</span>
+                    <span class="bg-gray-700 px-3 py-1 rounded-full text-xs">Communication</span>
+                </div>
+            </div>
+
+        </div>
     </div>
-
-    <!-- Tools -->
-    <div>
-      <h3 class="font-semibold text-violet-400 text-xl mb-4">🛠️ Tools</h3>
-      <ul class="flex justify-center flex-wrap gap-4">
-        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8I6j_R1FjD_Ar8GF7DxAzA9gpKyROmx7MqA&s" alt="MS Excel" class="w-10 h-10" /></li>
-        <li><img src="https://raw.githubusercontent.com/github/explore/a4691f04ff219c1c2aa02fc61fda41aa43f1459a/topics/jupyter-notebook/jupyter-notebook.png" alt="Jupyter Notebook" class="w-10 h-10" /></li>
-      </ul>
-    </div>
-
-    <!-- Technologies -->
-    <div>
-      <h3 class="font-semibold text-violet-400 text-xl mb-4">🌐 Technologies</h3>
-      <ul class="flex justify-center flex-wrap gap-4">
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-10 h-10" /></li>
-        <li><img src="https://www.svgrepo.com/show/7344/sql-file-format-symbol.svg" alt="SQL Icon" class="w-10 h-10" /></li>
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-10 h-10" /></li>
-        <li><img src="https://numpy.org/images/logo.svg" alt="NumPy" class="w-10 h-10" /></li>
-        <li><img src="https://pandas.pydata.org/static/img/pandas_mark.svg" alt="Pandas" class="w-10 h-10" /></li>
-        <li><img src="https://azure.microsoft.com/svghandler/azure-icon.svg" alt="Azure" class="w-10 h-10" /></li>
-        <li><img src="https://logos-world.net/wp-content/uploads/2021/10/Tableau-Symbol.png" alt="Tableau" class="w-10 h-10" /></li>
-        <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/1200px-New_Power_BI_Logo.svg.png" alt="Power BI" class="w-10 h-10" /></li>
-      </ul>
-    </div>
-
-    <!-- Others -->
-    <div>
-      <h3 class="font-semibold text-violet-400 text-xl mb-4">⚙️ Others</h3>
-      <ul class="flex justify-center flex-wrap gap-4">
-        <li><img src="https://cdn.iconscout.com/icon/free/png-256/free-google-cloud-logo-icon-download-in-svg-png-gif-file-formats--weather-storage-data-pack-logos-icons-1721675.png?f=webp&w=256" alt="Google Cloud Platform" class="w-10 h-10" /></li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-    <!-- ========== 🧩 SKILLS SECTION END ========== -->
-
-<!-- ========== 🧩 SKILLS SECTION START ========== -->
-
-<section id="skills" class="min-h-screen px-6 py-16 bg-black text-white">
-  <h2 class="text-4xl font-extrabold mb-14 text-center text-violet-400 tracking-wide">Skills</h2>  
-  <div class="cards-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-
-    <div class="card bg-gray-900 p-6 rounded-lg shadow-lg cursor-pointer" tabindex="0" role="button" aria-label="SQL skill details">
-      <div class="skill-icon text-4xl mb-3">🗄️</div>
-      <div class="skill-title text-xl font-semibold mb-2">SQL</div>
-      <div class="skill-outcome mb-3 text-gray-300">
-        Streamlined data extraction, reducing report creation time by 35%.
-      </div>
-      <div class="skill-tools text-sm text-gray-400 mb-4">Tools: MySQL, PostgreSQL, BigQuery</div>
-      <div class="mini-bar" aria-hidden="true">
-        <span style="--i:0"></span>
-        <span style="--i:1"></span>
-        <span style="--i:2"></span>
-        <span style="--i:3"></span>
-        <span style="--i:4"></span>
-        <span style="--i:5"></span>
-        <span style="--i:6"></span>
-        <span style="--i:7"></span>
-        <span style="--i:8"></span>
-        <span style="--i:9"></span>
-      </div>
-    </div>
-
-    <div class="card bg-gray-900 p-6 rounded-lg shadow-lg cursor-pointer" tabindex="0" role="button" aria-label="Python skill details">
-      <div class="skill-icon text-4xl mb-3">🐍</div>
-      <div class="skill-title text-xl font-semibold mb-2">Python</div>
-      <div class="skill-outcome mb-3 text-gray-300">
-        Developed predictive models that improved sales forecasts accuracy by 20%.
-      </div>
-      <div class="skill-tools text-sm text-gray-400 mb-4">Tools: Pandas, NumPy, scikit-learn</div>
-      <div class="mini-bar" aria-hidden="true">
-        <span style="--i:1"></span>
-        <span style="--i:3"></span>
-        <span style="--i:5"></span>
-        <span style="--i:7"></span>
-        <span style="--i:9"></span>
-        <span style="--i:2"></span>
-        <span style="--i:4"></span>
-        <span style="--i:6"></span>
-        <span style="--i:8"></span>
-        <span style="--i:0"></span>
-      </div>
-    </div>
-
-    <div class="card bg-gray-900 p-6 rounded-lg shadow-lg cursor-pointer" tabindex="0" role="button" aria-label="Tableau skill details">
-      <div class="skill-icon text-4xl mb-3">📊</div>
-      <div class="skill-title text-xl font-semibold mb-2">Tableau</div>
-      <div class="skill-outcome mb-3 text-gray-300">
-        Created dashboards adopted by 60+ business stakeholders for real-time insights.
-      </div>
-      <div class="skill-tools text-sm text-gray-400 mb-4">Tools: Tableau Desktop, Tableau Server</div>
-      <div class="mini-bar" aria-hidden="true">
-        <span style="--i:9"></span>
-        <span style="--i:7"></span>
-        <span style="--i:5"></span>
-        <span style="--i:3"></span>
-        <span style="--i:1"></span>
-        <span style="--i:2"></span>
-        <span style="--i:4"></span>
-        <span style="--i:6"></span>
-        <span style="--i:8"></span>
-        <span style="--i:0"></span>
-      </div>
-    </div>
-
-    <div class="card bg-gray-900 p-6 rounded-lg shadow-lg cursor-pointer" tabindex="0" role="button" aria-label="Business Communication skill details">
-      <div class="skill-icon text-4xl mb-3">🗣️</div>
-      <div class="skill-title text-xl font-semibold mb-2">Business Communication</div>
-      <div class="skill-outcome mb-3 text-gray-300">
-        Delivered presentations that influenced key stakeholders' strategic decisions.
-      </div>
-      <div class="skill-tools text-sm text-gray-400 mb-4">Skills: Storytelling, Reporting, Visualization</div>
-      <div class="mini-bar" aria-hidden="true">
-        <span style="--i:0"></span>
-        <span style="--i:4"></span>
-        <span style="--i:8"></span>
-        <span style="--i:3"></span>
-        <span style="--i:7"></span>
-        <span style="--i:2"></span>
-        <span style="--i:6"></span>
-        <span style="--i:1"></span>
-        <span style="--i:5"></span>
-        <span style="--i:9"></span>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="cards-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-    <div class="card bg-gray-900 p-6 rounded-lg shadow-lg cursor-pointer" tabindex="0" role="button" aria-label="Programming Languages skill details">
-      <div class="skill-icon text-4xl mb-3">💻</div>
-      <div class="skill-title text-xl font-semibold mb-2">Programming Languages</div>
-      <div class="skill-outcome mb-3 text-gray-300">
-        Proficient in multiple languages enabling versatile software development.
-      </div>
-      <div class="skill-tools text-sm text-gray-400 mb-4">
-        Languages: Python, Java, JavaScript, SQL, HTML, CSS, R
-      </div>
-      <div class="mini-bar" aria-hidden="true">
-        <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span><span style="--i:4"></span>
-        <span style="--i:5"></span><span style="--i:6"></span>
-      </div>
-    </div>
-
-    <div class="card bg-gray-900 p-6 rounded-lg shadow-lg cursor-pointer" tabindex="0" role="button" aria-label="Tools & Technologies skill details">
-      <div class="skill-icon text-4xl mb-3">🛠️</div>
-      <div class="skill-title text-xl font-semibold mb-2">Tools & Technologies</div>
-      <div class="skill-outcome mb-3 text-gray-300">
-        Skilled with modern development and data tools enhancing productivity.
-      </div>
-      <div class="skill-tools text-sm text-gray-400 mb-4">
-        Tools: Git, GitHub, Excel, Jupyter, MySQL, MongoDB, NumPy, Pandas, AngularJS
-      </div>
-      <div class="mini-bar" aria-hidden="true">
-        <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span><span style="--i:4"></span>
-        <span style="--i:5"></span><span style="--i:6"></span><span style="--i:7"></span><span style="--i:8"></span>
-      </div>
-    </div>
-
-    <div class="card bg-gray-900 p-6 rounded-lg shadow-lg cursor-pointer" tabindex="0" role="button" aria-label="Cloud & ML Tools skill details">
-      <div class="skill-icon text-4xl mb-3">☁️</div>
-      <div class="skill-title text-xl font-semibold mb-2">Cloud & ML Tools</div>
-      <div class="skill-outcome mb-3 text-gray-300">
-        Experience with cloud platforms and machine learning libraries.
-      </div>
-      <div class="skill-tools text-sm text-gray-400 mb-4">
-        Platforms & Tools: Google Cloud, AWS, Azure, Scikit-learn, TensorFlow, Keras, SHAP, LIME
-      </div>
-      <div class="mini-bar" aria-hidden="true">
-        <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span><span style="--i:4"></span>
-        <span style="--i:5"></span><span style="--i:6"></span><span style="--i:7"></span>
-      </div>
-    </div>
-
-    <div class="card bg-gray-900 p-6 rounded-lg shadow-lg cursor-pointer" tabindex="0" role="button" aria-label="Concepts & Business skill details">
-      <div class="skill-icon text-4xl mb-3">📈</div>
-      <div class="skill-title text-xl font-semibold mb-2">Concepts & Business</div>
-      <div class="skill-outcome mb-3 text-gray-300">
-        Knowledge of core business concepts and analytics methodologies.
-      </div>
-      <div class="skill-tools text-sm text-gray-400 mb-4">
-        Areas: Data Analytics, Predictive Modeling, Statistical Analysis, Market Research, Project Management, Agile, Scrum, Communication
-      </div>
-      <div class="mini-bar" aria-hidden="true">
-        <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span><span style="--i:4"></span>
-        <span style="--i:5"></span><span style="--i:6"></span><span style="--i:7"></span>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="card bg-gray-900 p-6 rounded-lg shadow-lg cursor-pointer mt-8" tabindex="0" role="button" aria-label="Additional Conceptual & Business Skills skill details">
-    <div class="skill-icon text-4xl mb-3">🧠</div>
-    <div class="skill-title text-xl font-semibold mb-2">Additional Conceptual & Business Skills</div>
-    <div class="skill-outcome mb-3 text-gray-300">
-      Advanced skills supporting business insights and team collaboration.
-    </div>
-    <div class="skill-tools text-sm text-gray-400 mb-4">
-      Skills: Data Analytics & Interpretation, Predictive Modeling & Forecasting, Statistical Analysis & Hypothesis Testing, Business Development & Market Research, Project Management & Team Collaboration, Problem Solving & Critical Thinking, Communication & Presentation Skills
-    </div>
-    <div class="mini-bar" aria-hidden="true">
-      <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span><span style="--i:4"></span>
-      <span style="--i:5"></span><span style="--i:6"></span><span style="--i:7"></span>
-    </div>
-  </div>
 </section>
 
+
+  
 <!-- ========== 🧩 SKILLS SECTION END ========== -->
-
 
  <!-- ========== 📞 CONTACT SECTION START ========== -->
 
@@ -1388,9 +1411,6 @@ footer {
 </footer>
   
 <!-- ========== ⚫ FOOTER END ========== -->
-
-
-
   <script>
 // Function to update the width of the progress bar based on page scroll
 function updateProgressBar() {
@@ -1398,7 +1418,7 @@ function updateProgressBar() {
   const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   const scrolled = (winScroll / height) * 100;
   const progressBar = document.getElementById("progress");
-  if (progressBar) {
+  if (progressBar) { // Check if element exists before accessing its properties
     progressBar.style.width = scrolled + "%";
   }
 }
@@ -1416,57 +1436,152 @@ function updateDateTime() {
     second: '2-digit'
   });
   const dateTimeElement = document.getElementById('live-date-time');
-  if (dateTimeElement) {
+  if (dateTimeElement) { // Check if element exists before accessing its properties
     dateTimeElement.textContent = `Current Date & Time: ${dateTimeStr}`;
   }
 }
 
-// DOMContentLoaded listener
-document.addEventListener('DOMContentLoaded', function () {
+// Ensure DOM is fully loaded before running scripts that access elements
+document.addEventListener('DOMContentLoaded', function() {
+  // Initial call to display date/time immediately on page load
   updateDateTime();
+  // Set interval to update the date/time every 1000 milliseconds (1 second)
   setInterval(updateDateTime, 1000);
+
+  // Initial call to update progress bar
   updateProgressBar();
+  // Attach scroll event listener for progress bar
   window.addEventListener('scroll', updateProgressBar);
 
-  // Owl Carousel initialization
-  $(document).ready(function () {
+  // jQuery code to initialize Owl Carousel when the DOM is fully loaded
+  $(document).ready(function() {
     $(".owl-carousel").owlCarousel({
       loop: true,
-      margin: 30,
-      nav: true,
-      dots: true,
-      autoplay: true,
-      autoplayTimeout: 5000,
-      autoplayHoverPause: true,
+      margin: 30,            
+      nav: true,          
+      dots: true,            
+      autoplay: true,         
+      autoplayTimeout: 5000,  
+      autoplayHoverPause: true, 
       responsive: {
-        0: { items: 1 },
-        768: { items: 2 },
-        1024: { items: 3 }
+        0: {
+          items: 1         
+        },
+        768: {
+          items: 2            
+        },
+        1024: {
+          items: 3            
+        }
       },
       navText: [
-        "<span class='text-white text-2xl'>&#8592;</span>",
-        "<span class='text-white text-2xl'>&#8594;</span>"
+        "<span class='text-white text-2xl'>&#8592;</span>", 
+        "<span class='text-white text-2xl'>&#8594;</span>"   
       ]
     });
   });
+// Get modal elements
+const modal = document.getElementById('modal');
+const overlay = document.querySelector('.modal-overlay');
+const modalTitle = document.getElementById('modal-title');
+const modalDescription = document.getElementById('modal-description');
+const modalImage = document.getElementById('modal-image');
+const modalCodeBtn = document.getElementById('modal-code-btn');
+const modalCloseBtn = document.getElementById('modal-close-btn');
 
-  // MagicMouse initialization
-  magicMouse({
-    outerStyle: "circle-basic",
-    hoverEffect: "circle-move",
-    hoverItemMove: false,
-    defaultCursor: false,
-    outerWidth: 30,
-    outerHeight: 30
-  });
+// Open modal function
+function openModal(project) {
+  modalTitle.textContent = project.dataset.title;
+  modalDescription.textContent = project.dataset.description;
+  modalImage.src = project.dataset.image;
+  modalImage.alt = project.dataset.title;
+  modalCodeBtn.href = project.dataset.codeUrl;
 
-  // Locomotive Scroll setup
-  const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true
-  });
+  modal.classList.add('show');
+  overlay.classList.add('show');
+  document.body.style.overflow = 'hidden'; // Prevent background scroll
+}
+
+// Close modal function
+function closeModal() {
+  modal.classList.remove('show');
+  overlay.classList.remove('show');
+  document.body.style.overflow = 'auto';
+}
+
+// Attach click to each project card
+document.querySelectorAll('.project').forEach(project => {
+  project.addEventListener('click', () => openModal(project));
+});
+
+// Close button and overlay click
+modalCloseBtn.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
+
+// Close on ESC key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modal.classList.contains('show')) {
+    closeModal();
+  }
+});
+// MagicMouse
+    options = {
+    "outerStyle": "circle-basic",
+    "hoverEffect": "circle-move",
+    "hoverItemMove": false,
+    "defaultCursor": false,
+    "outerWidth": 30,
+    "outerHeight": 30
+  };
+  magicMouse(options);
+
+//locomotive scroll
+      const scroll = new LocomotiveScroll({
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true
+    });
+  <script>
+  const faders = document.querySelectorAll('[data-fade]');
+
+  const appearOptions = {
+    threshold: 0.3,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => appearOnScroll.observe(fader));
+
+            document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll(".fade-in-section");
+
+            const observerOptions = {
+                root: null, /* relative to the viewport */
+                rootMargin: "0px",
+                threshold: 0.1 /* 10% of the section must be visible */
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target); /* Stop observing once visible */
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+</script>
+
   </script>
 </body>
 </html>
-
-
