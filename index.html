@@ -107,6 +107,7 @@ font-family:'Montserrat', sans-serif; for headings (weights 400,700)
 -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
@@ -1384,14 +1385,14 @@ footer {
 
 <body class="min-h-screen flex flex-col">
 <!-- ========== 🚧 PROGRESS BAR SECTION START ========== -->
-  <div id="progress" class="progress-bar w-0"></div>
+ <!-- <div id="progress" class="progress-bar w-0"></div>-->
   <!-- ========== 🚧 PROGRESS BAR SECTION END ========== -->
   
 <!-- ========== 🔝 HEADER & NAVIGATION START ========== -->
 
-  <header class="w-full p-4 md:p-6 flex flex-col md:flex-row justify-between items-center bg-black sticky top-0 z-50 shadow-md">
+ <!-- <header class="w-full p-4 md:p-6 flex flex-col md:flex-row justify-between items-center bg-black sticky top-0 z-50 shadow-md"> -->
     <!-- Site Title -->
-    <div class="flex items-center justify-center md:justify-start w-full md:w-auto space-x-3">
+   <!-- <div class="flex items-center justify-center md:justify-start w-full md:w-auto space-x-3"> -->
   <!-- Logo Image -->
   <!-- Name Text -->
    <!-- <div class="text-lg md:text-xl font-semibold mb-4 md:mb-0 text-violet-400 text-center md:text-left w-full md:w-auto">
@@ -1401,7 +1402,7 @@ footer {
       -->
 
     <!-- Navigation Menu -->
-
+<!--
   <nav>
   <ul class="flex space-x-4 md:space-x-8 text-sm md:text-base font-medium">
     <li>
@@ -1436,93 +1437,106 @@ footer {
     </li>
   </ul>
 </nav>
-
   </header>
+ --->
+
 <!-- ========== 🔝 HEADER & NAVIGATION END ========== -->
+
+ <!-- ========== 🔝 HEADER & NAVIGATION START ========== -->
+
       <!-- Navigation Menu -->
- <canvas id="particleCanvas"></canvas>
 
+<!-- Particle Background -->
+<canvas id="particleCanvas"></canvas>
+
+<!-- Main Container -->
 <div class="content-wrapper">
-    <div class="container" id="mainContainer">
-        <header>
-            <a href="#" class="logo">
-                <span class="logo-icon">HP</span> HARSHIHA'S
-            </a>
-            <nav>   
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Education</a></li>
-                    <li><a href="#">Experience</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <a href="mailto:harshithasrieya@gmail.com" aria-label="Email">📧</a>
-                <a href="#" aria-label="Menu">☰</a>
-                <a href="https://www.linkedin.com/in/harshithasreiya" target="_blank" aria-label="LinkedIn">🔗</a>
-            </div>
-        </header>
+  <div class="container" id="mainContainer">
 
-<section id="home" class="min-h-screen flex items-center justify-center px-4 md:px-8 bg-black text-white"> 
-  <div class="w-full max-w-5xl flex flex-col md:flex-row items-center md:items-start text-center md:text-left space-y-8 md:space-y-0">
-    
-    <!-- Left Column -->
-    <div class="flex-1">
-      <p class="text-sm md:text-base mb-2 font-semibold text-white">HELLO!</p>
+    <!-- Header with Typing Animation and Navigation -->
+    <header class="w-full p-4 md:p-6 flex flex-col md:flex-row justify-between items-center bg-black sticky top-0 z-50 shadow-md">
       
-      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4">
-       <h1>I'm <span id="typedName" style="color: #f1c40f;"></span></h1>
-        <span class="text-violet-400">Palaparthi</span>
-      </h1>
-      
-      <p class="text-lg md:text-xl mb-6 text-white">
-        Aspiring Business Analyst | UNT Business Analytics Graduate Student
-      </p>
-
-      <div class="hero-image-container">
-        <img src="https://avatars.githubusercontent.com/u/197736111?v=4" alt="Profile Image" class="w-64 h-64 object-cover shadow-lg">
-            </div>
-     
-      <!-- Social Icons -->
-      <div class="flex space-x-4 justify-center md:justify-start">
-        <a href="mailto:harshithasrieya@gmail.com"
-           class="inline-flex items-center justify-center w-12 h-12 bg-red-100 text-black rounded-full hover:bg-red-200 transition duration-200"
-           aria-label="Email">
-          <i class="fas fa-envelope text-xl"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" 
-           class="inline-flex items-center justify-center w-12 h-12 bg-violet-200 text-black rounded-full hover:bg-violet-300 transition duration-200"
-           target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in text-xl"></i>
-        </a>
-        
-        <a href="https://github.com/harshi1744"
-           class="inline-flex items-center justify-center w-12 h-12 border border-white text-white rounded-full hover:bg-white hover:text-black transition duration-200"
-           target="_blank" aria-label="GitHub">
-          <i class="fab fa-github text-xl"></i>
-        </a>
+      <!-- Logo and Typed Title -->
+      <div class="flex items-center justify-center md:justify-start w-full md:w-auto space-x-3">
+        <div class="text-lg md:text-xl font-semibold text-violet-400 text-center md:text-left">
+          <span class="logo-icon text-yellow-300 font-bold text-2xl">HP</span>
+          <span id="typedName" class="ml-2"></span>
+        </div>
       </div>
-    </div>
 
-    <!-- Optional Image Column -->
-    <!--
-    <div class="flex-1 hidden md:flex justify-center">
-      <img src="your-image-url.jpg" alt="Harshitha Sreiya Palaparthi" class="rounded-xl shadow-lg w-80 h-80 object-cover">
-    </div>
-    -->
+      <!-- Navigation Menu -->
+      <nav class="mt-4 md:mt-0">
+        <ul class="flex flex-wrap justify-center space-x-4 md:space-x-8 text-sm md:text-base font-medium">
+          <li><a href="#about" class="hover:text-purple-400 transition duration-200 text-white">About</a></li>
+          <li><a href="#education" class="hover:text-purple-400 transition duration-200 text-white">Education</a></li>
+          <li><a href="#experience" class="hover:text-purple-400 transition duration-200 text-white">Experience</a></li>
+          <li><a href="#projects" class="hover:text-purple-400 transition duration-200 text-white">Projects</a></li>
+          <li><a href="#skills" class="hover:text-purple-400 transition duration-200 text-white">Skills</a></li>
+          <li><a href="#contact" class="hover:text-purple-400 transition duration-200 text-white">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Social Icons -->
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="mailto:harshithasrieya@gmail.com" class="text-white text-xl hover:text-red-400" aria-label="Email">📧</a>
+        <a href="#" class="text-white text-xl hover:text-gray-300" aria-label="Menu">☰</a>
+        <a href="https://www.linkedin.com/in/harshithasreiya" target="_blank" class="text-white text-xl hover:text-blue-400" aria-label="LinkedIn">🔗</a>
+      </div>
+    </header>
+
+    <section id="home" class="min-h-screen flex items-center justify-center px-4 md:px-8 bg-black text-white"> 
+      <div class="w-full max-w-5xl flex flex-col md:flex-row items-center md:items-start text-center md:text-left space-y-8 md:space-y-0">
+        
+        <!-- Left Column -->
+        <div class="flex-1">
+          <p class="text-sm md:text-base mb-2 font-semibold text-white">HELLO!</p>
+
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4">
+            I'm <span id="typedName" style="color: #f1c40f;"></span><br>
+          </h1>
+          
+          <p class="text-lg md:text-xl mb-6 text-white">
+            Aspiring Business Analyst | UNT Business Analytics Graduate Student
+          </p>
+
+          <!-- Social Icons -->
+          <div class="flex space-x-4 justify-center md:justify-start">
+            <a href="mailto:harshithasrieya@gmail.com"
+              class="inline-flex items-center justify-center w-12 h-12 bg-red-100 text-black rounded-full hover:bg-red-200 transition duration-200"
+              aria-label="Email">
+              <i class="fas fa-envelope text-xl"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/harshitha-sreiya-palaparthi-4434b4340" 
+              class="inline-flex items-center justify-center w-12 h-12 bg-violet-200 text-black rounded-full hover:bg-violet-300 transition duration-200"
+              target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in text-xl"></i>
+            </a>
+            
+            <a href="https://github.com/harshi1744"
+              class="inline-flex items-center justify-center w-12 h-12 border border-white text-white rounded-full hover:bg-white hover:text-black transition duration-200"
+              target="_blank" aria-label="GitHub">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Optional Image Column -->
+        <!--
+        <div class="flex-1 hidden md:flex justify-center">
+          <img src="your-image-url.jpg" alt="Harshitha Sreiya Palaparthi" class="rounded-xl shadow-lg w-80 h-80 object-cover">
+        </div>
+        -->
+      </div>
+    </section>
 
   </div>
-</section>
-
-    </div>
 </div>
+<!-- ========== 🔝 HEADER & NAVIGATION END ========== -->
 
 
 <!-- ========== 🏠 HOME SECTION START ========== -->
-<section id="home" class="min-h-screen flex items-center justify-center px-4 md:px-8 bg-black text-white">
+<!--<section id="home" class="min-h-screen flex items-center justify-center px-4 md:px-8 bg-black text-white">
   <div class="w-full max-w-4xl flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
     <div>
       <p class="text-sm md:text-base mb-2 md:mb-4 font-semibold text-white">HELLO!</p>
@@ -1546,7 +1560,7 @@ footer {
 </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- ========== 🏠 HOME SECTION END ========== -->
   
 <!-- ========== 👤 ABOUT SECTION START ========== -->
@@ -2200,6 +2214,9 @@ footer {
 </footer>
   
 <!-- ========== ⚫ FOOTER END ========== -->
+
+
+
   <script>
 // Function to update the width of the progress bar based on page scroll
 function updateProgressBar() {
@@ -2207,7 +2224,7 @@ function updateProgressBar() {
   const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   const scrolled = (winScroll / height) * 100;
   const progressBar = document.getElementById("progress");
-  if (progressBar) { // Check if element exists before accessing its properties
+  if (progressBar) {
     progressBar.style.width = scrolled + "%";
   }
 }
@@ -2225,341 +2242,231 @@ function updateDateTime() {
     second: '2-digit'
   });
   const dateTimeElement = document.getElementById('live-date-time');
-  if (dateTimeElement) { // Check if element exists before accessing its properties
+  if (dateTimeElement) {
     dateTimeElement.textContent = `Current Date & Time: ${dateTimeStr}`;
   }
 }
 
-// Ensure DOM is fully loaded before running scripts that access elements
-document.addEventListener('DOMContentLoaded', function() {
-  // Initial call to display date/time immediately on page load
+// DOMContentLoaded listener
+document.addEventListener('DOMContentLoaded', function () {
   updateDateTime();
-  // Set interval to update the date/time every 1000 milliseconds (1 second)
   setInterval(updateDateTime, 1000);
-
-  // Initial call to update progress bar
   updateProgressBar();
-  // Attach scroll event listener for progress bar
   window.addEventListener('scroll', updateProgressBar);
 
-  // jQuery code to initialize Owl Carousel when the DOM is fully loaded
-  $(document).ready(function() {
+  // Owl Carousel initialization
+  $(document).ready(function () {
     $(".owl-carousel").owlCarousel({
       loop: true,
-      margin: 30,            
-      nav: true,          
-      dots: true,            
-      autoplay: true,         
-      autoplayTimeout: 5000,  
-      autoplayHoverPause: true, 
+      margin: 30,
+      nav: true,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
       responsive: {
-        0: {
-          items: 1         
-        },
-        768: {
-          items: 2            
-        },
-        1024: {
-          items: 3            
-        }
+        0: { items: 1 },
+        768: { items: 2 },
+        1024: { items: 3 }
       },
       navText: [
-        "<span class='text-white text-2xl'>&#8592;</span>", 
-        "<span class='text-white text-2xl'>&#8594;</span>"   
+        "<span class='text-white text-2xl'>&#8592;</span>",
+        "<span class='text-white text-2xl'>&#8594;</span>"
       ]
     });
   });
 
-// MagicMouse
-    options = {
-    "outerStyle": "circle-basic",
-    "hoverEffect": "circle-move",
-    "hoverItemMove": false,
-    "defaultCursor": false,
-    "outerWidth": 30,
-    "outerHeight": 30
-  };
-  magicMouse(options);
+  // MagicMouse initialization
+  magicMouse({
+    outerStyle: "circle-basic",
+    hoverEffect: "circle-move",
+    hoverItemMove: false,
+    defaultCursor: false,
+    outerWidth: 30,
+    outerHeight: 30
+  });
 
-//locomotive scroll
-      const scroll = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-container]'),
-      smooth: true
-    });
-  const faders = document.querySelectorAll('[data-fade]');
+  // Locomotive Scroll setup
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true
+  });
 
+  // Fade-in animation with IntersectionObserver
+  const faders = document.querySelectorAll('.fade-in-section');
   const appearOptions = {
-    threshold: 0.3,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.1,
+    rootMargin: '0px 0px -20px 0px'
   };
-
-  const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      entry.target.classList.add('show');
+      entry.target.classList.add('is-visible');
       observer.unobserve(entry.target);
     });
   }, appearOptions);
-
   faders.forEach(fader => appearOnScroll.observe(fader));
 
-            document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll(".fade-in-section");
-
-            const observerOptions = {
-                root: null, /* relative to the viewport */
-                rootMargin: "0px",
-                threshold: 0.1 /* 10% of the section must be visible */
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("is-visible");
-                        observer.unobserve(entry.target); /* Stop observing once visible */
-                    }
-                });
-            }, observerOptions);
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const faders = document.querySelectorAll('.fade-in-section');
-
-    const appearOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -20px 0px'
-    };
-
-    const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        appearOnScroll.unobserve(entry.target);
-      });
-    }, appearOptions);
-
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
-  });
-
+  // Project fade-in and background canvas effect
   const projects = document.querySelectorAll('.project');
-const options = { threshold: 0.1 };
+  const projectObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+        projectObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting) {
-      entry.target.classList.add('fade-in');
-      observer.unobserve(entry.target); // trigger once per card
+  projects.forEach(project => {
+    projectObserver.observe(project);
+    const canvas = project.querySelector('canvas.bg-canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    const colors = ['#6D28D9', '#9333EA', '#3B82F6'];
+    for (let i = 0; i < 100; i++) {
+      ctx.beginPath();
+      ctx.arc(Math.random() * canvas.width, Math.random() * canvas.height, Math.random() * 40, 0, 2 * Math.PI);
+      ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)] + '30';
+      ctx.fill();
     }
   });
-}, options);
 
-projects.forEach(p => observer.observe(p));
-projects.forEach(project => {
-  const canvas = project.querySelector('canvas.bg-canvas');
+  // Particle animation setup
+  const canvas = document.getElementById('particleCanvas');
   const ctx = canvas.getContext('2d');
-  canvas.width = canvas.offsetWidth;
-  canvas.height = canvas.offsetHeight;
+  let particles = [];
+  const numParticles = 100;
+  const maxDistance = 120;
+  let mouse = { x: null, y: null, radius: 150 };
 
-  // Distinct background colors (can be modified per project)
-  const colors = ['#6D28D9', '#9333EA', '#3B82F6'];
+  function Particle(x, y, directionX, directionY, size, color) {
+    this.x = x;
+    this.y = y;
+    this.directionX = directionX;
+    this.directionY = directionY;
+    this.size = size;
+    this.color = color;
+  }
 
-  for (let i = 0; i < 100; i++) {
+  Particle.prototype.draw = function () {
     ctx.beginPath();
-    ctx.arc(
-      Math.random() * canvas.width,
-      Math.random() * canvas.height,
-      Math.random() * 40,
-      0,
-      2 * Math.PI
-    );
-    ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)] + '30'; // semi-transparent
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+    ctx.fillStyle = this.color;
     ctx.fill();
   }
+
+  Particle.prototype.update = function () {
+    if (this.x + this.size > canvas.width || this.x - this.size < 0) this.directionX = -this.directionX;
+    if (this.y + this.size > canvas.height || this.y - this.size < 0) this.directionY = -this.directionY;
+    this.x += this.directionX;
+    this.y += this.directionY;
+    const dx = mouse.x - this.x;
+    const dy = mouse.y - this.y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    if (distance < mouse.radius + this.size) {
+      if (mouse.x < this.x && this.x < canvas.width - this.size * 10) this.x += 2;
+      if (mouse.x > this.x && this.x > this.size * 10) this.x -= 2;
+      if (mouse.y < this.y && this.y < canvas.height - this.size * 10) this.y += 2;
+      if (mouse.y > this.y && this.y > this.size * 10) this.y -= 2;
+    }
+    this.draw();
+  }
+
+  function initParticles() {
+    particles = [];
+    for (let i = 0; i < numParticles; i++) {
+      let size = (Math.random() * 3) + 1;
+      let x = (Math.random() * ((canvas.width - size * 2) - (size * 2)) + size * 2);
+      let y = (Math.random() * ((canvas.height - size * 2) - (size * 2)) + size * 2);
+      let directionX = (Math.random() * 0.5) - 0.25;
+      let directionY = (Math.random() * 0.5) - 0.25;
+      let color = 'rgba(255, 255, 255, ' + (Math.random() * 0.5 + 0.1) + ')';
+      particles.push(new Particle(x, y, directionX, directionY, size, color));
+    }
+  }
+
+  function connectParticles() {
+    for (let a = 0; a < particles.length; a++) {
+      for (let b = a; b < particles.length; b++) {
+        let distance = ((particles[a].x - particles[b].x) ** 2) + ((particles[a].y - particles[b].y) ** 2);
+        if (distance < (maxDistance * maxDistance)) {
+          let opacityValue = 1 - (distance / (maxDistance * maxDistance));
+          ctx.strokeStyle = 'rgba(52, 152, 219,' + opacityValue + ')';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(particles[a].x, particles[a].y);
+          ctx.lineTo(particles[b].x, particles[b].y);
+          ctx.stroke();
+        }
+      }
+    }
+  }
+
+  function animateParticles() {
+    requestAnimationFrame(animateParticles);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => p.update());
+    connectParticles();
+  }
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    initParticles();
+  }
+
+  window.addEventListener('resize', resizeCanvas);
+  window.addEventListener('mousemove', (event) => {
+    mouse.x = event.x;
+    mouse.y = event.y;
+  });
+  window.addEventListener('mouseout', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+  window.addEventListener('touchmove', (event) => {
+    if (event.touches.length > 0) {
+      mouse.x = event.touches[0].clientX;
+      mouse.y = event.touches[0].clientY;
+    }
+  }, { passive: true });
+  window.addEventListener('touchend', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  resizeCanvas();
+  animateParticles();
+
+  // Parallax Effect
+  const contentWrapper = document.getElementById('mainContainer');
+  const parallaxStrength = 20;
+  document.addEventListener('mousemove', (e) => {
+    const xAxis = (window.innerWidth / 2 - e.pageX) / parallaxStrength;
+    const yAxis = (window.innerHeight / 2 - e.pageY) / parallaxStrength;
+    contentWrapper.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;
+  });
+
+ // Typewriter Effect 
+const typedNameElement = document.getElementById('typedName');
+const nameToType = "Harshitha Sreiya Palaparthi"; // <-- UPDATE THIS WITH YOUR NAME (e.g., "Rachna Kola")
+let charIndex = 0;
+const typingSpeed = 100; // milliseconds per character
+
+function typeWriter() {
+    if (charIndex < nameToType.length) {
+        typedNameElement.textContent += nameToType.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeWriter, typingSpeed);
+    }
+}
+
+// Start the typewriter effect once DOM is ready
+document.addEventListener("DOMContentLoaded", () => {
+    typeWriter();
 });
-
-    // --- Canvas Particle Animation ---
-        const canvas = document.getElementById('particleCanvas');
-        const ctx = canvas.getContext('2d');
-        let particles = [];
-        const numParticles = 100;
-        const maxDistance = 120; // Max distance for lines to connect
-        let mouse = { x: null, y: null, radius: 150 }; // Mouse interaction radius
-
-        // Particle constructor
-        function Particle(x, y, directionX, directionY, size, color) {
-            this.x = x;
-            this.y = y;
-            this.directionX = directionX;
-            this.directionY = directionY;
-            this.size = size;
-            this.color = color;
-        }
-
-        // Draw particle method
-        Particle.prototype.draw = function() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-            ctx.fillStyle = this.color;
-            ctx.fill();
-        }
-
-        // Update particle position and draw
-        Particle.prototype.update = function() {
-            // Check if particle is still in canvas
-            if (this.x + this.size > canvas.width || this.x - this.size < 0) {
-                this.directionX = -this.directionX;
-            }
-            if (this.y + this.size > canvas.height || this.y - this.size < 0) {
-                this.directionY = -this.directionY;
-            }
-
-            this.x += this.directionX;
-            this.y += this.directionY;
-
-            // Mouse interaction
-            let dx = mouse.x - this.x;
-            let dy = mouse.y - this.y;
-            let distance = Math.sqrt(dx*dx + dy*dy);
-
-            if (distance < mouse.radius + this.size) {
-                if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
-                    this.x += 2;
-                }
-                if (mouse.x > this.x && this.x > this.size * 10) {
-                    this.x -= 2;
-                }
-                if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
-                    this.y += 2;
-                }
-                if (mouse.y > this.y && this.y > this.size * 10) {
-                    this.y -= 2;
-                }
-            }
-
-            this.draw();
-        }
-
-        // Initialize particles
-        function initParticles() {
-            particles = [];
-            for (let i = 0; i < numParticles; i++) {
-                let size = (Math.random() * 3) + 1; // Particle size 1-4
-                let x = (Math.random() * ((canvas.width - size * 2) - (size * 2)) + size * 2);
-                let y = (Math.random() * ((canvas.height - size * 2) - (size * 2)) + size * 2);
-                let directionX = (Math.random() * 0.5) - 0.25; // Speed -0.25 to 0.25
-                let directionY = (Math.random() * 0.5) - 0.25;
-                let color = 'rgba(255, 255, 255, ' + (Math.random() * 0.5 + 0.1) + ')'; // Semi-transparent white
-                particles.push(new Particle(x, y, directionX, directionY, size, color));
-            }
-        }
-
-        // Connect particles with lines
-        function connectParticles() {
-            let opacityValue = 1;
-            for (let a = 0; a < particles.length; a++) {
-                for (let b = a; b < particles.length; b++) {
-                    let distance = ((particles[a].x - particles[b].x) * (particles[a].x - particles[b].x)) +
-                                   ((particles[a].y - particles[b].y) * (particles[a].y - particles[b].y));
-                    if (distance < (maxDistance * maxDistance)) {
-                        opacityValue = 1 - (distance / (maxDistance * maxDistance));
-                        ctx.strokeStyle = 'rgba(52, 152, 219,' + opacityValue + ')'; // Blue lines
-                        ctx.lineWidth = 1;
-                        ctx.beginPath();
-                        ctx.moveTo(particles[a].x, particles[a].y);
-                        ctx.lineTo(particles[b].x, particles[b].y);
-                        ctx.stroke();
-                    }
-                }
-            }
-        }
-
-        // Animation loop for particles
-        function animateParticles() {
-            requestAnimationFrame(animateParticles);
-            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
-
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-            }
-            connectParticles();
-        }
-
-        // Resize canvas on window resize
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            initParticles(); // Re-initialize particles for new dimensions
-        }
-
-        // Event listeners for particle interaction
-        window.addEventListener('resize', resizeCanvas);
-        window.addEventListener('mousemove', (event) => {
-            mouse.x = event.x;
-            mouse.y = event.y;
-        });
-        window.addEventListener('mouseout', () => {
-            mouse.x = null;
-            mouse.y = null;
-        });
-        // For touch devices
-        window.addEventListener('touchmove', (event) => {
-            if (event.touches.length > 0) {
-                mouse.x = event.touches[0].clientX;
-                mouse.y = event.touches[0].clientY;
-            }
-        }, { passive: true });
-        window.addEventListener('touchend', () => {
-            mouse.x = null;
-            mouse.y = null;
-        });
-
-        // --- Parallax Effect for Content ---
-        const contentWrapper = document.getElementById('mainContainer'); // Targeting the container for parallax
-        const parallaxStrength = 20; // How much the content moves (in pixels)
-
-        document.addEventListener('mousemove', (e) => {
-            const xAxis = (window.innerWidth / 2 - e.pageX) / parallaxStrength;
-            const yAxis = (window.innerHeight / 2 - e.pageY) / parallaxStrength;
-            contentWrapper.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;
-        });
-
-        // --- Typewriter Effect ---
-        const typedNameElement = document.getElementById('typedName');
-        const nameToType = "James Adam";
-        let charIndex = 0;
-        const typingSpeed = 100; // milliseconds per character
-
-        function typeWriter() {
-            if (charIndex < nameToType.length) {
-                typedNameElement.textContent += nameToType.charAt(charIndex);
-                charIndex++;
-                setTimeout(typeWriter, typingSpeed);
-            }
-        }
-
-        // --- Profile Image Fallback ---
-        document.addEventListener('DOMContentLoaded', function() {
-            const profileImage = document.querySelector('.hero-image');
-            if (profileImage) {
-                profileImage.onerror = function() {
-                    this.src = 'https://placehold.co/400x400/cccccc/ffffff?text=Image+Error';
-                    this.alt = 'Image failed to load';
-                };
-            }
-        });
-
-        // Initial setup on window load
-        window.onload = function() {
-            resizeCanvas(); // Set initial size and populate particles
-            animateParticles(); // Start the particle animation loop
-            typeWriter(); // Start the typewriter effect
-        };
   </script>
 </body>
 </html>
