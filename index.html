@@ -501,6 +501,37 @@ blockquote {
   color: #d1d5db;
 }
 
+    .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #aaa;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #264653;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: -100px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
   </style>
 
 <body class="min-h-screen flex flex-col">
@@ -696,14 +727,14 @@ blockquote {
   
 <!-- ========== 💼 EXPERIENCE SECTION START ========== -->
 
-<section id="experience-gallery" class="py-20 px-6 bg-black">
+<!--<section id="experience-gallery" class="py-20 px-6 bg-black"> -->
 <!--  <h1 class="text-3xl font-bold text-center text-violet-400 mb-16">Experience</h1> -->
 
-  <div class="max-w-4xl mx-auto">
+<!--  <div class="max-w-4xl mx-auto">
   <h1 class="section-title text-violet-400 mb-8 text-center">Profesional Experience</h1>
-
+-->
     <!-- NSIC Internship -->
-    <div class="flex relative mb-16">
+    <!--<div class="flex relative mb-16">
       <div class="w-1/6 text-right pr-4 pt-1">
         <span class="text-lightgray font-semibold text-lg md:text-xl">2022–2023</span>
       </div>
@@ -724,9 +755,9 @@ blockquote {
         </blockquote>
       </div>
     </div>
-
+-->
     <!-- Voice 4 Girls -->
-    <div class="flex relative mb-16">
+   <!-- <div class="flex relative mb-16">
       <div class="w-1/6 text-right pr-4 pt-1">
         <span class="text-lightgray font-semibold text-lg md:text-xl">2021–2022</span>
       </div>
@@ -748,7 +779,83 @@ blockquote {
       </div>
     </div>
   </div>
+</section> -->
+  <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
+
+  
+<!-- ========== 💼 EXPERIENCE SECTION START ========== -->
+
+<section id="experience-gallery" class="py-20 px-6 bg-black">
+  <h1 class="text-3xl font-bold text-center text-violet-400 mb-16">Experience</h1>
+
+  <div class="max-w-4xl mx-auto">
+    <h1 class="section-title text-violet-400 mb-8 text-center">Professional Experience</h1>
+
+    <!-- NSIC Internship -->
+    <div class="flex relative mb-16">
+      <div class="w-1/6 text-right pr-4 pt-1">
+        <span class="text-lightgray font-semibold text-lg md:text-xl">2022–2023</span>
+      </div>
+      <div class="flex flex-col items-center mx-2">
+        <div class="w-4 h-4 rounded-full bg-yellow-400 shadow-lg"></div>
+        <div class="bg-yellow-200 w-1 flex-grow"></div>
+      </div>
+      <div class="w-5/6 pl-4">
+        <h2 class="text-xl md:text-2xl font-bold text-yellow-300 mb-1">💼 Entrepreneurship Intern</h2>
+        <div class="tooltip text-yellow-200 text-sm mb-2">
+          Hover to see highlights
+          <span class="tooltiptext">
+            +10 Feasibility Reports<br>
+            15+ SMEs Impacted<br>
+            3 New Market Plans
+          </span>
+        </div>
+        <p class="italic text-base md:text-lg text-yellow-100 mb-2">NSIC – Hyderabad, India</p>
+        <p class="text-sm md:text-base leading-relaxed text-gray-300">
+          Contributed to small business development through market research and financial feasibility studies. Analyzed
+          industry data to identify growth opportunities, designed simple financial models, and generated actionable insights
+          to guide business planning for micro-enterprises.
+        </p>
+        <blockquote class="border-l-4 border-yellow-400 pl-4 italic text-yellow-200 text-lg leading-relaxed">
+          "Leveraged data and research to drive micro-enterprise growth and sustainable business planning."
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Voice 4 Girls -->
+    <div class="flex relative mb-16">
+      <div class="w-1/6 text-right pr-4 pt-1">
+        <span class="text-lightgray font-semibold text-lg md:text-xl">2021–2022</span>
+      </div>
+      <div class="flex flex-col items-center mx-2">
+        <div class="w-4 h-4 rounded-full bg-pink-400 shadow-lg"></div>
+        <div class="bg-pink-200 w-1 flex-grow"></div>
+      </div>
+      <div class="w-5/6 pl-4">
+        <h2 class="text-xl md:text-2xl font-bold text-pink-300 mb-1">📊 Data Mentor & Counselor</h2>
+        <div class="tooltip text-pink-200 text-sm mb-2">
+          Hover to see highlights
+          <span class="tooltiptext">
+            200+ Students Mentored<br>
+            Survey Accuracy ↑ 18%<br>
+            4 Learning Modules Optimized
+          </span>
+        </div>
+        <p class="italic text-base md:text-lg text-pink-100 mb-2">Voice 4 Girls – India</p>
+        <p class="text-sm md:text-base leading-relaxed text-gray-300">
+          Mentored adolescent students in decision-making and communication skills. Leveraged data insights from surveys and
+          feedback loops to shape effective learning strategies. Sessions focused on building confidence while using
+          behavioral patterns and data analysis to refine engagement techniques.
+        </p>
+        <blockquote class="border-l-4 border-pink-400 pl-4 italic text-pink-200 text-lg leading-relaxed">
+          "Empowered adolescents through data-driven strategies and personal mentorship."
+        </blockquote>
+      </div>
+    </div>
+  </div>
 </section>
+
+
   <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
   
 <!-- ========== 🧠 PROJECTS SECTION START ========== -->
