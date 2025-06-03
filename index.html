@@ -1326,18 +1326,19 @@ function updateProgressBar() {
   }
 }
 
-    // Function to update the live date and time display every second
+// Function to update the live date and time display every second
 function updateDateTime() {
   const now = new Date();
   const dateTimeStr = now.toLocaleString('en-IN', {
     weekday: 'short',
     year: 'numeric',
-    month: 'short',
+    month: 'short',   // <-- comma added here
     day: 'numeric',
     hour: '2-digit',
     minute: '2-digit',
     second: '2-digit'
   });
+  
   const dateTimeElement = document.getElementById('live-date-time');
   if (dateTimeElement) { // Check if element exists before accessing its properties
     dateTimeElement.textContent = `Current Date & Time: ${dateTimeStr}`;
@@ -1350,7 +1351,7 @@ document.addEventListener('DOMContentLoaded', function() {
   updateDateTime();
   // Set interval to update the date/time every 1000 milliseconds (1 second)
   setInterval(updateDateTime, 1000);
-}); // <-- Closing parenthesis and semicolon added here
+});
 
 
 
