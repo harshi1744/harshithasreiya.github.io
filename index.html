@@ -1305,209 +1305,150 @@ blockquote {
       <i class="fab fa-github"></i>
       <span>GitHub</span>
     </a>
-    
-  <!-- live date/time -->
-  <div id="live-date-time" class="mt-3 text-xs text-gray-500"></div>
-    
   </div>
-  
-  <p>&copy; 2025 Harshitha Sreiya Palaparthi. All rights reserved.</p>
+
+  <!-- live date/time (moved outside flex container for proper layout) -->
+  <div id="live-date-time" class="mt-3 text-xs text-gray-500"></div>
+
+  <p class="mt-4">&copy; 2025 Harshitha Sreiya Palaparthi. All rights reserved.</p>
 
 </footer>
+
   
 <!-- ========== ⚫ FOOTER END ========== -->
   <script>
+    // --- Progress Bar ---
 // Function to update the width of the progress bar based on page scroll
 function updateProgressBar() {
   const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   const scrolled = (winScroll / height) * 100;
   const progressBar = document.getElementById("progress");
-  if (progressBar) { // Check if element exists before accessing its properties
+  if (progressBar) { // Ensure element exists
     progressBar.style.width = scrolled + "%";
   }
 }
 
+// --- Live Date and Time ---
 // Function to update the live date and time display every second
 function updateDateTime() {
   const now = new Date();
   const dateTimeStr = now.toLocaleString('en-IN', {
     weekday: 'short',
     year: 'numeric',
-    month: 'short',   // <-- comma added here
+    month: 'short',
     day: 'numeric',
     hour: '2-digit',
     minute: '2-digit',
     second: '2-digit'
   });
-  
   const dateTimeElement = document.getElementById('live-date-time');
-  if (dateTimeElement) { // Check if element exists before accessing its properties
+  if (dateTimeElement) {
     dateTimeElement.textContent = `Current Date & Time: ${dateTimeStr}`;
   }
 }
 
-// Ensure DOM is fully loaded before running scripts that access elements
+// Initialize progress bar and live date/time updates after DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-  // Initial call to display date/time immediately on page load
-  updateDateTime();
-  // Set interval to update the date/time every 1000 milliseconds (1 second)
-  setInterval(updateDateTime, 1000);
+  updateDateTime(); // Show date/time immediately on load
+  setInterval(updateDateTime, 1000); // Update date/time every second
+
+  updateProgressBar(); // Initial update of progress bar
+  window.addEventListener('scroll', updateProgressBar); // Update on scroll
 });
 
-
-
-  // Initial call to update progress bar
-  updateProgressBar();
-  // Attach scroll event listener for progress bar
-  window.addEventListener('scroll', updateProgressBar);
-
-  // jQuery code to initialize Owl Carousel when the DOM is fully loaded
-  $(document).ready(function() {
-    $(".owl-carousel").owlCarousel({
-      loop: true,
-      margin: 30,            
-      nav: true,          
-      dots: true,            
-      autoplay: true,         
-      autoplayTimeout: 5000,  
-      autoplayHoverPause: true, 
-      responsive: {
-        0: {
-          items: 1         
-        },
-        768: {
-          items: 2            
-        },
-        1024: {
-          items: 3            
-        }
-      },
-      navText: [
-        "<span class='text-white text-2xl'>&#8592;</span>", 
-        "<span class='text-white text-2xl'>&#8594;</span>"   
-      ]
-    });
+// --- Owl Carousel Initialization ---
+// Requires jQuery and Owl Carousel library loaded
+$(document).ready(function() {
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: true,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: { items: 1 },
+      768: { items: 2 },
+      1024: { items: 3 }
+    },
+    navText: [
+      "<span class='text-white text-2xl'>&#8592;</span>", 
+      "<span class='text-white text-2xl'>&#8594;</span>"
+    ]
   });
-// Get modal elements
-const modal = document.getElementById('modal');
-const overlay = document.querySelector('.modal-overlay');
-const modalTitle = document.getElementById('modal-title');
-const modalDescription = document.getElementById('modal-description');
-const modalImage = document.getElementById('modal-image');
-const modalCodeBtn = document.getElementById('modal-code-btn');
-const modalCloseBtn = document.getElementById('modal-close-btn');
-
-// Open modal function
-function openModal(project) {
-  modalTitle.textContent = project.dataset.title;
-  modalDescription.textContent = project.dataset.description;
-  modalImage.src = project.dataset.image;
-  modalImage.alt = project.dataset.title;
-  modalCodeBtn.href = project.dataset.codeUrl;
-
-  modal.classList.add('show');
-  overlay.classList.add('show');
-  document.body.style.overflow = 'hidden'; // Prevent background scroll
-}
-
-// Close modal function
-function closeModal() {
-  modal.classList.remove('show');
-  overlay.classList.remove('show');
-  document.body.style.overflow = 'auto';
-}
-
-// Attach click to each project card
-document.querySelectorAll('.project').forEach(project => {
-  project.addEventListener('click', () => openModal(project));
 });
 
-// Close button and overlay click
-modalCloseBtn.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
+// --- MagicMouse Initialization ---
+// Options for custom cursor effect
+const magicMouseOptions = {
+  outerStyle: "circle-basic",
+  hoverEffect: "circle-move",
+  hoverItemMove: false,
+  defaultCursor: false,
+  outerWidth: 30,
+  outerHeight: 30
+};
+magicMouse(magicMouseOptions);
 
-// Close on ESC key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modal.classList.contains('show')) {
-    closeModal();
-  }
+// --- Locomotive Scroll Initialization ---
+// Smooth scrolling effect for element with data-scroll-container attribute
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('[data-scroll-container]'),
+  smooth: true
 });
-// MagicMouse
-    options = {
-    "outerStyle": "circle-basic",
-    "hoverEffect": "circle-move",
-    "hoverItemMove": false,
-    "defaultCursor": false,
-    "outerWidth": 30,
-    "outerHeight": 30
+
+// --- Fade-In Animation on Scroll ---
+// IntersectionObserver to fade in elements with [data-fade] attribute
+const faders = document.querySelectorAll('[data-fade]');
+const appearOptions = {
+  threshold: 0.3,
+  rootMargin: '0px 0px -50px 0px'
+};
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('show');
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+faders.forEach(fader => appearOnScroll.observe(fader));
+
+// --- Fade-In Sections (alternative method) ---
+// IntersectionObserver for elements with class 'fade-in-section' to add 'is-visible' class
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.fade-in-section');
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
   };
-  magicMouse(options);
-
-//locomotive scroll
-      const scroll = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-container]'),
-      smooth: true
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
     });
-  <script>
-  const faders = document.querySelectorAll('[data-fade]');
+  }, observerOptions);
+  sections.forEach(section => observer.observe(section));
+});
 
-  const appearOptions = {
-    threshold: 0.3,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+// Another slightly redundant fade-in code (can remove one if desired)
+document.addEventListener('DOMContentLoaded', () => {
+  const faders = document.querySelectorAll('.fade-in-section');
+  const appearOptions = { threshold: 0.1 };
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      entry.target.classList.add('show');
+      entry.target.classList.add('is-visible');
       observer.unobserve(entry.target);
     });
   }, appearOptions);
+  faders.forEach(el => appearOnScroll.observe(el));
+});
 
-  faders.forEach(fader => appearOnScroll.observe(fader));
-
-            document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll(".fade-in-section");
-
-            const observerOptions = {
-                root: null, /* relative to the viewport */
-                rootMargin: "0px",
-                threshold: 0.1 /* 10% of the section must be visible */
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("is-visible");
-                        observer.unobserve(entry.target); /* Stop observing once visible */
-                    }
-                });
-            }, observerOptions);
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
-      document.addEventListener("DOMContentLoaded", () => {
-    const faders = document.querySelectorAll('.fade-in-section');
-
-    const appearOptions = {
-      threshold: 0.1,
-    };
-
-    const appearOnScroll = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      });
-    }, appearOptions);
-
-    faders.forEach(el => {
-      appearOnScroll.observe(el);
-    });
-  });
-  </script>
+ </script>
 </body>
 </html>
