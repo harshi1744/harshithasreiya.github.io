@@ -7,152 +7,87 @@
 
 ## 📊 Business Analytics Portfolio
 
-Welcome to a dynamic repository chronicling my contributions at the intersection of **business strategy** and **computer applications**.
+# 👋 Hey there, I’m Harshitha Sreiya Palaparthi
 
-This site serves as my personal **Business Analyst portfolio**, meticulously crafted with **HTML** and **CSS**, and seamlessly hosted via **GitHub Pages**. More than just a portfolio, it’s a **living narrative** of how I blend curiosity with capability—transforming raw data into actionable insight.
-
-Here, you’ll find a thoughtfully structured showcase of:
-- 📈 My analytical development process  
-- 🧠 Real-world projects that combine storytelling with data science  
-- 💡 Academic achievements and technical proficiencies  
-- 🔍 My continuous pursuit to turn information into impact  
-
-By uniting **quantitative analysis** with **strategic thinking**, this platform reflects not only what I do—but *how I think*.
-
-> *Where business insight meets data fluency, and every decision begins with understanding*  
+### Data Whisperer | Business Analyst in the Making | AI Trailblazer  
+🎓 Mastering Business Analytics @ University of North Texas  
+📍 Exploring opportunities across the U.S. | Ready to launch full-time Dec 2025  
+✉️ [harshithasrieya@gmail.com](mailto:harshithasrieya@gmail.com)  
 
 ---
 
-# 👩‍💻 Harshitha Sreiya Palaparthi
+## 🚀 Who I Am
 
-**📍 Business Analyst | 📊 Data Storyteller | 🤖 AI & Insight Enthusiast**  
-🎓 Graduate Student in Business Analytics | University of North Texas  
-✉️ harshithasrieya@gmail.com 
+I’m a curious mind fueled by data and driven by impact. I believe every dataset tells a story, and I’m here to translate those stories into decisions that matter. Whether it’s unveiling hidden patterns in child malnutrition or crafting AI tools that rethink recruitment — I bring **heart, hustle, and a hacker’s mindset** to every challenge.
 
-🔗 [LinkedIn – Let’s Connect](https://www.linkedin.com/in/harshithasreiya)  
-🐙 [GitHub – Explore My Code](https://github.com/harshi1744)  
-🌐 [Portfolio – Dive Into My Work](#)
+Currently, I’m sharpening my analytics sword through an MS in Business Analytics, specializing in:
 
-> I turn data into conversations, analytics into decisions, and insight into action.
+- Crafting narratives with data visualization & business intelligence  
+- Engineering AI solutions that explain themselves (yes, XAI is a thing!)  
+- Turning raw data into actionable insights that humanize complexity  
 
-
----
-
-## 🚀 About Me
-
-## 👋 Hello! I’m **Harshitha**  
-### Business Analyst-in-Training | Insight Explorer | AI-Driven Problem Solver
-
-With a creative heart and an analytical mind, I live at the intersection of data, storytelling, and strategy.
-
-Whether it’s **visualizing the impact of child malnutrition** or **engineering AI-powered tools for resume screening**, I’m passionate about crafting data-driven solutions that solve real problems and spark meaningful change.
-
-🎓 Currently pursuing my **M.S. in Business Analytics** at the University of North Texas, I specialize in blending:
-- 📊 **Business Intelligence**  
-- 🤖 **Artificial Intelligence & Machine Learning**  
-- 🔍 **Insight Generation through Data Science**  
-
-My goal? To use data not just as a tool—but as a lens to **understand human behavior**, optimize decisions, and simplify complexity.
-
-💼 I’m actively seeking **full-time opportunities starting December 2025** across the U.S., where I can bring my curiosity, creativity, and coding chops to mission-driven teams.
-
-> **Let’s build smarter solutions, one insight at a time.**
-
+My mission? To partner with visionary teams and build smarter, fairer, and more transparent AI-powered solutions.
 
 ---
 
-## 🧠 Tech Stack
+## 🧰 My Toolbox
 
-### 🧠 Programming & Languages
+**Languages & Frameworks:**  
+Python | R | Java | JavaScript | SQL | HTML/CSS | AngularJS | Maven  
 
-- **Python** | **R** | **Java** | **JavaScript** | **SQL**  
-- **HTML** | **CSS**  
-- **AngularJS**  
-- **Maven**
+**Platforms & Tools:**  
+Excel | Tableau | Power BI | MySQL | MongoDB | BigQuery | GCP | Azure | Streamlit | Jupyter  
 
----
+**Data Science & AI:**  
+Pandas | NumPy | Scikit-learn | SHAP | LIME | NLP  
 
-### 📊 Data Tools & Platforms
+**Workflow & Collaboration:**  
+Git | GitHub | Agile / Scrum  
 
-- **Excel** | **Tableau** | **Power BI**  
-- **MySQL** | **MongoDB** | **BigQuery** | **DBMS**  
-- **GCP** | **Azure**  
-- **Streamlit** | **Jupyter Notebook**
+**Analytics Expertise:**  
+Data Modeling | Predictive Forecasting | Statistical Testing | Explainable AI | Resume AI  
 
----
-
-### 📚 Libraries & Frameworks
-
-- **Pandas** | **NumPy** | **Scikit-learn**  
-- **SHAP** | **LIME**  
-- **NLP (Natural Language Processing)**
+**Human Skills:**  
+Storytelling with Data | Business Insight Design | Cross-team Collaboration | Creative Problem Solving | Clear Communication  
 
 ---
 
-### ⚙️ Development & Version Control
+## 💼 What I’ve Built & Done
 
-- **Git** | **GitHub**  
-- **Agile / Scrum Methodologies**
+### NSIC – Business Development Intern  
+*Hyderabad, India | May 2022 – Mar 2023*  
+Translated complex market data into clear growth strategies — helping startups dream bigger and scale smarter.
 
----
-
-### 📈 Analytics & Machine Learning
-
-- **Data Modeling**  
-- **Predictive Modeling & Forecasting**  
-- **Statistical Analysis & Hypothesis Testing**  
-- **Explainable AI (XAI)**  
-- **Resume AI**
+### Voice 4 Girls – Data Mentor & Counselor  
+*India | Aug 2021 – Mar 2022*  
+Mentored young changemakers, blending empathy with analytics to unlock their potential and sharpen their critical thinking.
 
 ---
 
-### 🤝 Conceptual & Soft Skills
+## 🔍 Spotlight Projects
 
-- **Data Analytics & Interpretation**  
-- **Business Intelligence & KPI Design**  
-- **Business Development & Market Research**  
-- **Cross-functional Collaboration**  
-- **Creative Problem Solving**  
-- **Effective Communication & Technical Presentation**
+- **Global Child Malnutrition Dashboard:** Illuminated vital health trends with interactive, impactful visual storytelling.  
+- **AI-Powered Resume Screener:** Built a private, offline AI assistant to revolutionize hiring with fairness and precision.  
+- **Banking Fraud Detection:** Designed explainable ML models that safeguard transactions and reduce false alarms.  
 
----
-## 💼 Professional Experience
-
-### 🏢 NSIC – Business Development Intern  
-📍 Hyderabad, India | 🗓️ May 2022 – Mar 2023  
-Worked closely with small businesses to uncover insights from market and financial data, helping turn ideas into actionable growth strategies.
-
-### 🧠 Voice 4 Girls – Data Mentor & Counselor  
-📍 India | 🗓️ Aug 2021 – Mar 2022  
-Mentored young learners by combining soft skills coaching with data-driven approaches, fostering critical thinking and personalized growth.
+Curious? Dive deeper at my [Portfolio](#) or [GitHub](https://github.com/harshi1744).
 
 ---
 
-## 🧪 Featured Projects
+## 🎯 What’s Next?
 
-Here’s a snapshot of key projects that reflect my passion for solving real-world problems through data and AI:
-
-- **Global Child Malnutrition Dashboard:** Interactive visualizations to spotlight critical health trends worldwide.  
-- **AI-Powered Resume Screening:** A private, offline tool leveraging AI for smarter recruitment decisions.  
-- **Fraud Detection in Banking:** Advanced machine learning models designed to protect transactions and reduce risks.
-
----
-
-*For a deep dive into my work, check out my [Portfolio Website](#) or GitHub repositories.*  
-
----
-## 🎯 Career Goals
-
-✅ Combine **business acumen** with **data intelligence**  
-✅ Build **transparent, human-friendly AI systems**  
-✅ Join a team where I can **learn, build, and contribute** from day one
+I’m on a quest to:  
+- Blend human intuition with machine intelligence  
+- Build AI systems you can trust — transparent, ethical, and effective  
+- Join a team that values creativity, collaboration, and constant learning  
 
 ---
 
-## 📫 Let’s Connect
+## 📬 Let’s Talk
 
-I’m always up for a chat about data, AI, or just brainstorming over coffee ☕.  
-👉 Drop a message on [LinkedIn](https://www.linkedin.com/in/harshithasreiya) or say hi at ** harshithasrieya@gmail.com **!
+Data, AI, or just great coffee chats — I’m all ears.  
+Connect with me on [LinkedIn](https://www.linkedin.com/in/harshithasreiya) or shoot an email: **harshithasrieya@gmail.com**  
 
 ---
 
+*Together, let’s turn data into decisions that make a difference.*
