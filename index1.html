@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Harshitha Sreiya Palaparthi | Business Analytics Portfolio</title>
+
+  <!-- Tailwind CSS (single source – optimized) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Alpine.js -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+  <!-- Custom Styles -->
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #000;
+      color: #fff;
+    }
+
+    /* Progress Bar */
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #8b5cf6, #ec4899);
+      z-index: 9999;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #a78bfa;
+    }
+
+    blockquote {
+      border-left: 4px solid currentColor;
+      padding-left: 1rem;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+<!-- Progress Bar -->
+<div id="progress" class="progress-bar w-0"></div>
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-black shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+    <div class="flex items-center space-x-4">
+      <img src="https://i.ibb.co/7tWyDdfv/HP-Business-Logo.png" class="w-14 h-14 object-contain" alt="Logo">
+      <span class="text-violet-400 font-semibold text-lg">HARSHITHA SREIYA PALAPARTHI</span>
+    </div>
+
+    <nav class="mt-4 md:mt-0">
+      <ul class="flex space-x-6 text-sm text-gray-300">
+        <li><a href="#about" class="hover:text-violet-400">About</a></li>
+        <li><a href="#education" class="hover:text-violet-400">Education</a></li>
+        <li><a href="#experience" class="hover:text-violet-400">Experience</a></li>
+        <li><a href="#projects" class="hover:text-violet-400">Projects</a></li>
+        <li><a href="#skills" class="hover:text-violet-400">Skills</a></li>
+        <li><a href="#contact" class="hover:text-violet-400">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center text-center px-6">
+  <div>
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-4">
+      I'm <span class="text-violet-400">Harshitha Sreiya Palaparthi</span>
+    </h1>
+    <p class="text-xl text-gray-300 mb-6">
+      Business Analytics Graduate | AI & Decision Intelligence
+    </p>
+
+    <div class="flex justify-center space-x-4">
+      <a href="https://linkedin.com/in/harshithasrieya" class="w-12 h-12 flex items-center justify-center border border-violet-400 rounded-full hover:bg-violet-400 hover:text-black transition">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/harshi1744" class="w-12 h-12 flex items-center justify-center border border-violet-400 rounded-full hover:bg-violet-400 hover:text-black transition">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 px-6 max-w-6xl mx-auto">
+  <h1 class="section-title">About Me</h1>
+  <p class="text-gray-300 text-lg leading-relaxed">
+    Business Analytics graduate student at the University of North Texas with hands-on experience in AI-driven analytics,
+    predictive modeling, dashboards, and decision intelligence platforms. Passionate about translating complex data
+    into strategic business insights.
+  </p>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="py-20 px-6 bg-black">
+  <h1 class="section-title">Education</h1>
+
+  <div class="max-w-3xl mx-auto space-y-8">
+    <div class="border-l-4 border-violet-400 pl-6">
+      <h3 class="text-xl font-semibold">University of North Texas</h3>
+      <p class="text-gray-400">M.S. Business Analytics (2024–2025)</p>
+    </div>
+
+    <div class="border-l-4 border-violet-400 pl-6">
+      <h3 class="text-xl font-semibold">Osmania University</h3>
+      <p class="text-gray-400">B.Com – Computer Science (2020–2023)</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-20 px-6 max-w-6xl mx-auto">
+  <h1 class="section-title">Projects</h1>
+
+  <div class="grid md:grid-cols-2 gap-10">
+
+    <!-- Example Project Card -->
+    <article class="bg-gray-900 p-8 rounded-lg border-l-8 border-violet-500">
+      <h3 class="text-2xl font-bold text-violet-400 mb-2">🤖 Hiring Assistant AI</h3>
+      <p class="text-gray-400 mb-4">Agentic Resume Screening System</p>
+
+      <ul class="list-disc list-inside text-gray-300 space-y-1">
+        <li>Offline AI resume parsing & semantic scoring</li>
+        <li>Human-in-the-loop ranking logic</li>
+        <li>Explainable candidate recommendations</li>
+      </ul>
+
+      <blockquote class="mt-4 text-violet-400">
+        Designed ethical, privacy-first AI for hiring decisions.
+      </blockquote>
+    </article>
+
+    <!-- You can replicate remaining projects here (same structure) -->
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-20 px-6 bg-black">
+  <h1 class="section-title">Skills</h1>
+
+  <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+    <div class="bg-gray-900 p-6 rounded-lg">
+      <h3 class="text-purple-400 font-bold mb-4">Programming</h3>
+      <p class="text-gray-300">Python · SQL · Java · JavaScript</p>
+    </div>
+    <div class="bg-gray-900 p-6 rounded-lg">
+      <h3 class="text-pink-400 font-bold mb-4">Analytics</h3>
+      <p class="text-gray-300">Power BI · Tableau · Excel · ML</p>
+    </div>
+    <div class="bg-gray-900 p-6 rounded-lg">
+      <h3 class="text-cyan-400 font-bold mb-4">Platforms</h3>
+      <p class="text-gray-300">GCP · Azure · AWS · GitHub</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 px-6 text-center">
+  <h1 class="section-title">Contact</h1>
+
+  <p class="text-gray-400 mb-6">Let’s connect and build something impactful.</p>
+
+  <div class="flex justify-center space-x-6">
+    <a href="mailto:harshithasrieya@gmail.com" class="hover:text-violet-400">Email</a>
+    <a href="https://linkedin.com/in/harshithasrieya" class="hover:text-violet-400">LinkedIn</a>
+    <a href="https://github.com/harshi1744" class="hover:text-violet-400">GitHub</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-6 text-center text-gray-500 text-sm">
+  © 2025 Harshitha Sreiya Palaparthi
+</footer>
+
+<!-- JS -->
+<script>
+  function updateProgressBar() {
+    const scroll = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    document.getElementById("progress").style.width = (scroll / height) * 100 + "%";
+  }
+  window.addEventListener("scroll", updateProgressBar);
+</script>
+
+</body>
+</html>
