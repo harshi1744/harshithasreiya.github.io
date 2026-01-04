@@ -1,7 +1,7 @@
 # 💼 Where Data Meets Decisions  
 ### Analytics • Business Intelligence • AI-Driven Problem Solving
 
-A refined professional portfolio showcasing expertise in **data analytics, business intelligence, predictive modeling, and explainable AI**—focused on transforming data into actionable decisions.
+A refined professional portfolio showcasing expertise in **data analytics, business intelligence, predictive modeling, and explainable AI** focused on transforming data into actionable decisions.
 
 ---
 
