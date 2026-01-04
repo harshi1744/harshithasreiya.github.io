@@ -1,93 +1,120 @@
+💼 Where Data Meets Decisions, and Analytics Drives Impact
+A refined professional portfolio reflecting analytics expertise, business acumen, and AI-driven problem solving.
 
-# 💼 Welcome to a Space Where Vision Translates into Code and Dedication Shapes Innovation 💼
+👋 Hi, I’m Harshitha Sreiya Palaparthi
+Business Analytics Graduate | Data Analytics Specialist | AI-Driven Problem Solver
+🎓 M.S. in Business Analytics, University of North Texas (Jan 2024 – Dec 2025)
+📍 Open to full-time opportunities across the U.S. starting December 2025
+✉️ Email: harshithasrieya@gmail.com
+🔗 LinkedIn: harshithasrieya
+💻 GitHub: harshi1744
 
-> *A thoughtfully curated journey where strategic business insight converges with technological excellence—one line of purposeful code at a time.*
+🚀 Professional Summary
+Master’s graduate in Business Analytics with strong expertise in data modeling, visualization, predictive analytics, and AI-driven solutions. Experienced in building interactive dashboards, KPI-driven reporting systems, automated data pipelines, and explainable machine learning models. Proven ability to translate complex datasets into actionable business insights using Power BI, Tableau, SQL, Python, and cloud platforms. Known for analytical rigor, process optimization, and clear stakeholder communication.
 
----
+🎓 Education
+University of North Texas, Texas, USA
+Master of Science – Business Analytics
+📅 Jan 2024 – Dec 2025
 
-## 📊 Business Analytics Portfolio
+Osmania University, Hyderabad, India
+Bachelor of Commerce – Computer Science
+📅 Jun 2020 – Apr 2023
 
-# 👋 Hey there, I’m Harshitha Sreiya Palaparthi
+🧰 Technical Skillset
+🔹 Analytics & BI Tools
+Power BI | Tableau | MS Excel | Jupyter Notebook
 
-### Data Whisperer | Business Analyst in the Making | AI Trailblazer  
-🎓 Mastering Business Analytics @ University of North Texas  
-📍 Exploring opportunities across the U.S. | Ready to launch full-time Dec 2025  
-✉️ [harshithasrieya@gmail.com](mailto:harshithasrieya@gmail.com)  
+🔹 Programming & Querying
+Python | Java | JavaScript | SQL | HTML | CSS
 
----
+🔹 Data & Technologies
+MySQL | MongoDB | NumPy | Pandas | Big Data | Data Warehousing | DBMS
 
-## 🚀 Who I Am
+🔹 Cloud Platforms
+Google Cloud Platform (GCP) | Microsoft Azure | AWS
 
-I’m a curious mind fueled by data and driven by impact. I believe every dataset tells a story, and I’m here to translate those stories into decisions that matter. Whether it’s unveiling hidden patterns in child malnutrition or crafting AI tools that rethink recruitment — I bring **heart, hustle, and a hacker’s mindset** to every challenge.
+🔹 AI & Advanced Analytics
+Machine Learning | Predictive Analytics | NLP | Explainable AI (SHAP, LIME)
 
-Currently, I’m sharpening my analytics sword through an MS in Business Analytics, specializing in:
+🔹 Development & Workflow
+Git | GitHub | Agile/Scrum | AngularJS | Maven | KPI Development
 
-- Crafting narratives with data visualization & business intelligence  
-- Engineering AI solutions that explain themselves (yes, XAI is a thing!)  
-- Turning raw data into actionable insights that humanize complexity  
+💼 Professional Experience
+Data Analytics Specialist Intern
+NSIC – Hyderabad, India
+📅 May 2022 – Mar 2023
 
-My mission? To partner with visionary teams and build smarter, fairer, and more transparent AI-powered solutions.
+Collected, cleaned, and analyzed datasets from 50+ SMEs, identifying seasonal demand trends using Excel and SQL.
 
----
+Built 5 financial feasibility and forecasting models, improving revenue projections by 20%.
 
-## 🧰 My Toolbox
+Designed KPI-driven Power BI dashboards for operational and market intelligence.
 
-**Languages & Frameworks:**  
-Python | R | Java | JavaScript | SQL | HTML/CSS | AngularJS | Maven  
+Automated monthly reporting workflows, reducing processing time from hours to under 10 minutes.
 
-**Platforms & Tools:**  
-Excel | Tableau | Power BI | MySQL | MongoDB | BigQuery | GCP | Azure | Streamlit | Jupyter  
+Monitoring & Evaluation Intern
+Voice 4 Girls – Hyderabad, India
+📅 Aug 2021 – Mar 2022
 
-**Data Science & AI:**  
-Pandas | NumPy | Scikit-learn | SHAP | LIME | NLP  
+Conducted 25+ counseling sessions and analyzed feedback from 100+ students using Python, SQL, and Excel.
 
-**Workflow & Collaboration:**  
-Git | GitHub | Agile / Scrum  
+Developed Tableau dashboards tracking engagement, retention, and learning outcomes.
 
-**Analytics Expertise:**  
-Data Modeling | Predictive Forecasting | Statistical Testing | Explainable AI | Resume AI  
+Improved participation rates and curriculum effectiveness by 30% through data-driven insights.
 
-**Human Skills:**  
-Storytelling with Data | Business Insight Design | Cross-team Collaboration | Creative Problem Solving | Clear Communication  
+🔍 Featured Projects
+🛡️ Data-Driven Campus Safety Decision Support System
+Tools: Power BI | SQL | Excel | Predictive Analytics
 
----
+Developed enterprise-level Power BI dashboards covering Offenses, Calls for Service, and Community Engagement.
 
-## 💼 What I’ve Built & Done
+Built automated Power Query ETL pipelines for 2023–2025 datasets with real-time refresh.
 
-### NSIC – Business Development Intern  
-*Hyderabad, India | May 2022 – Mar 2023*  
-Translated complex market data into clear growth strategies — helping startups dream bigger and scale smarter.
+Conducted EDA to identify temporal, spatial, and seasonal crime patterns.
 
-### Voice 4 Girls – Data Mentor & Counselor  
-*India | Aug 2021 – Mar 2022*  
-Mentored young changemakers, blending empathy with analytics to unlock their potential and sharpen their critical thinking.
+Implemented predictive models for staffing optimization, resource allocation, and outreach planning.
 
----
+Reduced reporting cycles from hours to minutes through automation.
 
-## 🔍 Spotlight Projects
+🌍 Visualizing Global Trends in Child Malnutrition
+Tools: Tableau | Excel | SQL
 
-- **Global Child Malnutrition Dashboard:** Illuminated vital health trends with interactive, impactful visual storytelling.  
-- **AI-Powered Resume Screener:** Built a private, offline AI assistant to revolutionize hiring with fairness and precision.  
-- **Banking Fraud Detection:** Designed explainable ML models that safeguard transactions and reduce false alarms.  
+Built interactive dashboards analyzing global malnutrition trends by region, age group, and gender.
 
-Curious? Dive deeper at my [Portfolio](#) or [GitHub](https://github.com/harshi1744).
+Cleaned and normalized multi-source datasets.
 
----
+Applied geospatial maps, box plots, and dual-axis charts to uncover health disparities.
 
-## 🎯 What’s Next?
+🤖 Agentic AI Resume Screening System
+Tools: Python | NLP | LLMs | Streamlit
 
-I’m on a quest to:  
-- Blend human intuition with machine intelligence  
-- Build AI systems you can trust — transparent, ethical, and effective  
-- Join a team that values creativity, collaboration, and constant learning  
+Developed an offline AI resume screening assistant using RAG and Light-Agent architecture.
 
----
+Implemented semantic matching with SentenceTransformers and vector similarity search.
 
-## 📬 Let’s Talk
+Built a Streamlit interface providing explainable candidate scoring for fair hiring decisions.
 
-Data, AI, or just great coffee chats — I’m all ears.  
-Connect with me on [LinkedIn](https://www.linkedin.com/in/harshithasreiya) or shoot an email: **harshithasrieya@gmail.com**  
+💳 AI-Based Fraud Detection System in Banking
+Tools: Python | Machine Learning | GCP
 
----
+Developed real-time fraud detection using supervised and unsupervised ML models.
 
-*Together, let’s turn data into decisions that make a difference.*
+Applied SHAP and LIME for explainability and regulatory transparency.
+
+Ensured secure data handling using AES-256 encryption and compliance with GDPR / PCI DSS standards.
+
+🎯 Career Goals
+Build scalable, explainable, and ethical AI solutions
+
+Deliver data-driven insights that influence strategic decisions
+
+Collaborate with innovative teams that value learning, impact, and transparency
+
+📬 Let’s Connect
+I’m always open to discussions around data analytics, AI, business intelligence, and impactful problem-solving.
+
+📧 Email: harshithasrieya@gmail.com
+🔗 LinkedIn: linkedin.com/in/harshithasrieya
+
+Turning data into decisions — one insight at a time.
