@@ -622,6 +622,116 @@ blockquote {
     font-size: 0.6rem;
   }
 }
+    /* ======================= 🌌 CONSTELLATION MAP ======================= */
+
+.constellation-map {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    ". cloud ."
+    "it core ai"
+    ". prog ."
+    ". research .";
+  gap: 3.5rem;
+}
+
+/* ===== NODES ===== */
+.node {
+  background: #0f172a;
+  padding: 1.6rem 1.8rem;
+  border-radius: 1rem;
+  border: 1px solid #334155;
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.node:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 35px rgba(139, 92, 246, 0.35);
+}
+
+.node h3 {
+  color: #a78bfa;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+}
+
+.node p {
+  font-size: 0.95rem;
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+/* ===== POSITIONING ===== */
+.core { grid-area: core; border-color:#8b5cf6; }
+.ai { grid-area: ai; }
+.prog { grid-area: prog; }
+.cloud { grid-area: cloud; }
+.it { grid-area: it; }
+.research { grid-area: research; }
+
+/* ===== CONNECTION LINES ===== */
+.line {
+  position: absolute;
+  background: linear-gradient(to right, transparent, #8b5cf6, transparent);
+  height: 1px;
+  opacity: 0.6;
+}
+
+.core-ai {
+  top: 50%;
+  left: 50%;
+  width: 220px;
+}
+
+.core-prog {
+  left: 50%;
+  top: 58%;
+  width: 1px;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, #8b5cf6, transparent);
+}
+
+.core-cloud {
+  left: 50%;
+  top: 28%;
+  width: 1px;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, #8b5cf6, transparent);
+}
+
+.core-it {
+  top: 50%;
+  right: 50%;
+  width: 220px;
+}
+
+.core-research {
+  left: 50%;
+  top: 70%;
+  width: 1px;
+  height: 150px;
+  background: linear-gradient(to bottom, transparent, #8b5cf6, transparent);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .constellation-map {
+    grid-template-areas:
+      "core"
+      "ai"
+      "prog"
+      "cloud"
+      "it"
+      "research";
+  }
+
+  .line {
+    display: none;
+  }
+}
   </style>
 
 <body class="min-h-screen flex flex-col">
@@ -1222,6 +1332,93 @@ blockquote {
 </section>
 
 <!-- ========== 🧠 PROJECTS SECTION END ========== -->
+  <!-- ========== 🧩 SKILLS SECTION START ========== -->
+  
+<!-- ======================= 🌌 SKILL CONSTELLATION MAP ======================= -->
+<section id="skill-constellation" class="bg-black text-white py-28 px-6">
+
+  <h2 class="text-4xl font-extrabold text-violet-400 text-center mb-6">
+    🌌 Skill Constellation Map
+  </h2>
+
+  <p class="text-gray-400 text-center max-w-3xl mx-auto mb-20">
+    My skills represented as constellations — structured, interconnected,
+    and designed around how systems actually work together.
+  </p>
+
+  <div class="constellation-map">
+
+    <!-- ================= CORE ================= -->
+    <div class="node core">
+      <h3>📊 Data & Business Analytics</h3>
+      <p>
+        Data Analysis · Trend Analysis · Business Intelligence · KPI Tracking ·
+        KPI Engineering · Operational Analytics · Decision Support Systems ·
+        Predictive Analytics · EDA · Data Cleaning · ETL
+      </p>
+    </div>
+
+    <!-- ================= AI ================= -->
+    <div class="node ai">
+      <h3>🤖 AI, ML & NLP</h3>
+      <p>
+        Artificial Intelligence · Machine Learning · NLP · Large Language Models ·
+        GPT-4 · SHAP · LIME · Sentence Transformers · Mistral-7B-Instruct · Streamlit
+      </p>
+    </div>
+
+    <!-- ================= PROGRAMMING ================= -->
+    <div class="node prog">
+      <h3>💻 Programming & Databases</h3>
+      <p>
+        Python · R · SQL · Java · JavaScript · HTML · CSS ·
+        MySQL · MongoDB · DBMS
+      </p>
+    </div>
+
+    <!-- ================= CLOUD ================= -->
+    <div class="node cloud">
+      <h3>☁️ Cloud & Platforms</h3>
+      <p>
+        Google Cloud Platform (GCP) · BigQuery
+      </p>
+    </div>
+
+    <!-- ================= IT ================= -->
+    <div class="node it">
+      <h3>🌐 IT, Network & Infrastructure</h3>
+      <p>
+        Network Performance Analysis · Network & Systems Analysis ·
+        Connectivity Validation · Infrastructure Monitoring · Capacity Planning ·
+        Asset Management · Compliance Management · IT Documentation ·
+        Network Operations Analytics
+      </p>
+    </div>
+
+    <!-- ================= RESEARCH ================= -->
+    <div class="node research">
+      <h3>🤝 Research & Professional Skills</h3>
+      <p>
+        Qualitative & Quantitative Research · Monitoring & Evaluation ·
+        Program Evaluation (PERT) · Public Health Analytics · Public Safety Analytics ·
+        Student Engagement & Risk Prediction · Agile Methodologies ·
+        Project Management · UML · Critical Thinking · Problem Solving ·
+        Stakeholder Collaboration · Reporting & Presentation ·
+        Mentoring & Student Engagement
+      </p>
+    </div>
+
+    <!-- CONNECTION LINES -->
+    <div class="line core-ai"></div>
+    <div class="line core-prog"></div>
+    <div class="line core-cloud"></div>
+    <div class="line core-it"></div>
+    <div class="line core-research"></div>
+
+  </div>
+</section>
+  <!-- ========== 🧩 SKILLS SECTION END ========== -->
+  <!-- ========== 🧩 SKILLS SECTION START ========== -->
 
 
  <!-- ======================= 🌌 CLEAN SKILL ORBIT ======================= -->
