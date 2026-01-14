@@ -530,7 +530,98 @@ blockquote {
   visibility: visible;
   opacity: 1;
 }
-    
+    /* ======================= 🌌 SKILL ORBIT ======================= */
+
+.orbit-container {
+  position: relative;
+  width: 520px;
+  height: 520px;
+  margin: 0 auto;
+}
+
+/* ===== CORE ===== */
+.orbit-core {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #a78bfa, #7c3aed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: #fff;
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.8);
+  z-index: 3;
+}
+
+/* ===== ORBITS ===== */
+.orbit {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  animation: spin linear infinite;
+}
+
+.orbit span {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.45rem 0.85rem;
+  background: #020617;
+  border: 1px solid #8b5cf6;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  color: #c7d2fe;
+  white-space: nowrap;
+}
+
+/* Orbit sizes + speeds */
+.orbit-inner {
+  animation-duration: 40s;
+}
+
+.orbit-middle {
+  animation-duration: 70s;
+  transform: scale(1.25);
+}
+
+.orbit-outer {
+  animation-duration: 110s;
+  transform: scale(1.55);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .orbit-container {
+    width: 360px;
+    height: 360px;
+  }
+
+  .orbit-core {
+    width: 100px;
+    height: 100px;
+    font-size: 0.85rem;
+  }
+
+  .orbit span {
+    font-size: 0.6rem;
+  }
+}
   </style>
 
 <body class="min-h-screen flex flex-col">
@@ -1133,7 +1224,83 @@ blockquote {
 <!-- ========== 🧠 PROJECTS SECTION END ========== -->
 
 
- 
+ <!-- ======================= 🌌 CLEAN SKILL ORBIT ======================= -->
+<section id="skill-orbit" class="bg-black text-white py-28 px-6">
+
+  <h2 class="text-4xl font-extrabold text-violet-400 text-center mb-6">
+    🌌 Skill Orbit
+  </h2>
+
+  <p class="text-gray-400 text-center max-w-2xl mx-auto mb-20">
+    A clean, ecosystem-style view of my skills — organized by how they interact,
+    not by rank or self-scoring.
+  </p>
+
+  <div class="orbit-container">
+
+    <!-- ===== CORE ===== -->
+    <div class="orbit-core">
+      ANALYTICS
+    </div>
+
+    <!-- ===== INNER ORBIT : CORE EXECUTION ===== -->
+    <div class="orbit orbit-inner">
+      <span>Python</span>
+      <span>SQL</span>
+      <span>Power BI</span>
+      <span>Tableau</span>
+      <span>Excel</span>
+      <span>Data Analysis</span>
+      <span>KPI Engineering</span>
+      <span>ETL</span>
+      <span>Data Visualization</span>
+    </div>
+
+    <!-- ===== MIDDLE ORBIT : ADVANCED & APPLIED ===== -->
+    <div class="orbit orbit-middle">
+      <span>Machine Learning</span>
+      <span>Predictive Analytics</span>
+      <span>NLP</span>
+      <span>Large Language Models</span>
+      <span>GPT-4</span>
+      <span>SHAP</span>
+      <span>LIME</span>
+      <span>Sentence Transformers</span>
+      <span>Mistral-7B-Instruct</span>
+      <span>Streamlit</span>
+      <span>Decision Support Systems</span>
+      <span>Operational Analytics</span>
+    </div>
+
+    <!-- ===== OUTER ORBIT : SYSTEMS, CLOUD, RESEARCH ===== -->
+    <div class="orbit orbit-outer">
+      <span>Google Cloud Platform (GCP)</span>
+      <span>BigQuery</span>
+      <span>MySQL</span>
+      <span>MongoDB</span>
+      <span>DBMS</span>
+      <span>Network Performance Analysis</span>
+      <span>Infrastructure Monitoring</span>
+      <span>Capacity Planning</span>
+      <span>Asset Management</span>
+      <span>Compliance Management</span>
+      <span>IT Documentation</span>
+      <span>Public Health Analytics</span>
+      <span>Public Safety Analytics</span>
+      <span>Monitoring & Evaluation</span>
+      <span>Program Evaluation (PERT)</span>
+      <span>Agile Methodologies</span>
+      <span>Project Management</span>
+      <span>UML</span>
+      <span>Stakeholder Collaboration</span>
+      <span>Reporting & Presentation</span>
+      <span>Mentoring & Student Engagement</span>
+    </div>
+
+  </div>
+</section>
+  <!-- ========== 🧩 SKILLS SECTION END ========== -->
+
   <!-- ========== 🧩 SKILLS SECTION START ========== -->
 <section id="skills" class="min-h-screen px-6 py-20 bg-black text-white">
 
@@ -1262,150 +1429,7 @@ blockquote {
 
 </section>
 <!-- ========== 🧩 SKILLS SECTION END ========== -->
-<!-- ========== 🧩 SKILLS SECTION START ========== -->
 
-  <!-- ======================= 🌌 SKILLS ECOSYSTEM ======================= -->
-<section id="skills-ecosystem" class="bg-black text-white py-28 px-6">
-
-  <!-- ======================= 🧭 SKILL RADAR (CAPABILITY DOMAINS) ======================= -->
-  <div class="max-w-4xl mx-auto text-center mb-32">
-    <h2 class="text-4xl font-extrabold text-violet-400 mb-6">
-      🧭 Capability Radar
-    </h2>
-    <p class="text-gray-400 mb-10">
-      A holistic view of the domains I work across — without ranking or self-scoring
-    </p>
-
-    <div class="bg-[#0f172a] p-10 rounded-xl border border-violet-500 shadow-2xl">
-      <canvas id="capabilityRadar"></canvas>
-    </div>
-  </div>
-
-  <!-- ======================= 🌐 SKILL GALAXY ======================= -->
-  <div class="text-center mb-32">
-    <h2 class="text-4xl font-extrabold text-violet-400 mb-6">
-      🌐 Skill Galaxy
-    </h2>
-    <p class="text-gray-400 mb-16 max-w-2xl mx-auto">
-      Skills represented as an interconnected ecosystem rather than a hierarchy
-    </p>
-
-    <div class="galaxy">
-      <div class="core">ANALYTICS</div>
-
-      <div class="orbit inner">
-        <span>Python</span>
-        <span>SQL</span>
-        <span>Power BI</span>
-        <span>Tableau</span>
-        <span>Excel</span>
-        <span>Data Analysis</span>
-        <span>KPI Engineering</span>
-        <span>ETL</span>
-      </div>
-
-      <div class="orbit outer">
-        <span>Machine Learning</span>
-        <span>NLP</span>
-        <span>Large Language Models</span>
-        <span>SHAP</span>
-        <span>LIME</span>
-        <span>Sentence Transformers</span>
-        <span>Mistral-7B</span>
-        <span>Streamlit</span>
-        <span>GCP</span>
-        <span>BigQuery</span>
-        <span>Network Analytics</span>
-        <span>Infrastructure Monitoring</span>
-        <span>Capacity Planning</span>
-        <span>Asset Management</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ======================= 🧩 SKILL LATTICE (FULL INVENTORY) ======================= -->
-  <div class="max-w-7xl mx-auto">
-    <h2 class="text-4xl font-extrabold text-center text-violet-400 mb-16">
-      🧩 Skill Lattice
-    </h2>
-
-    <div class="grid lg:grid-cols-3 gap-12">
-
-      <!-- Data & Analytics -->
-      <div class="skill-card">
-        <h3>📊 Data & Business Analytics</h3>
-        <p>
-          Data Analysis · Trend Analysis · Business Intelligence · KPI Tracking ·
-          KPI Engineering · Operational Analytics · Decision Support Systems ·
-          Predictive Analytics · Exploratory Data Analysis · Data Cleaning · ETL
-        </p>
-      </div>
-
-      <!-- Visualization -->
-      <div class="skill-card">
-        <h3>📈 Visualization & Reporting</h3>
-        <p>
-          Power BI · Tableau · Microsoft Excel · Power Query ·
-          Excel Automation (VBA) · Dashboard Design · Data Visualization · Reporting
-        </p>
-      </div>
-
-      <!-- AI & ML -->
-      <div class="skill-card">
-        <h3>🤖 AI, ML & NLP</h3>
-        <p>
-          Artificial Intelligence · Machine Learning · NLP ·
-          Large Language Models · GPT-4 · SHAP · LIME ·
-          Sentence Transformers · Mistral-7B-Instruct · Streamlit
-        </p>
-      </div>
-
-      <!-- Programming -->
-      <div class="skill-card">
-        <h3>💻 Programming & Databases</h3>
-        <p>
-          Python · R · SQL · Java · JavaScript · HTML · CSS ·
-          MySQL · MongoDB · DBMS
-        </p>
-      </div>
-
-      <!-- Cloud -->
-      <div class="skill-card">
-        <h3>☁️ Cloud & Platforms</h3>
-        <p>
-          Google Cloud Platform (GCP) · BigQuery
-        </p>
-      </div>
-
-      <!-- IT & Network -->
-      <div class="skill-card">
-        <h3>🌐 IT, Network & Infrastructure</h3>
-        <p>
-          Network Performance Analysis · Network & Systems Analysis ·
-          Connectivity Validation · Infrastructure Monitoring ·
-          Capacity Planning · Asset Management · Compliance Management ·
-          IT Documentation · Network Operations Analytics
-        </p>
-      </div>
-
-      <!-- Research & Professional -->
-      <div class="skill-card lg:col-span-3">
-        <h3>🤝 Research, Project & Professional Skills</h3>
-        <p>
-          Qualitative & Quantitative Research · Monitoring & Evaluation ·
-          Program Evaluation (PERT) · Public Health Analytics ·
-          Public Safety Analytics · Student Engagement & Risk Prediction ·
-          Agile Methodologies · Agile Project Management · Project Management · UML ·
-          Critical Thinking · Problem Solving · Stakeholder Collaboration ·
-          Reporting & Presentation · Mentoring & Student Engagement
-        </p>
-      </div>
-
-    </div>
-  </div>
-
-</section>
-  <!-- ========== 🧩 SKILLS SECTION END ========== -->
 
 
    <!-- ========== 📞 CONTACT SECTION START ========== -->
@@ -1648,79 +1672,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, appearOptions);
   faders.forEach(el => appearOnScroll.observe(el));
 });
-new Chart(document.getElementById("skillRadar"), {
-  type: "radar",
-  data: {
-    labels: [
-      "Data Analytics & BI",
-      "Visualization",
-      "AI / ML / NLP",
-      "Programming & Databases",
-      "Cloud Platforms",
-      "IT & Network Analytics",
-      "Business & Decision Skills"
-    ],
-    datasets: [{
-      data: [5,5,4,5,4,4,5],
-      backgroundColor: "rgba(139,92,246,0.25)",
-      borderColor: "#8b5cf6",
-      borderWidth: 2,
-      pointBackgroundColor: "#a78bfa"
-    }]
-  },
-  options: {
-    plugins: { legend: { display: false } },
-    scales: {
-      r: {
-        min: 0,
-        max: 5,
-        ticks: { stepSize: 1 },
-        pointLabels: {
-          color: "#e5e7eb",
-          font: { size: 13, weight: "600" }
-        }
-      }
-    }
-  }
-});
-    const ctx = document.getElementById('capabilityRadar').getContext('2d');
-
-new Chart(ctx, {
-  type: 'radar',
-  data: {
-    labels: [
-      'Data Analytics',
-      'Visualization',
-      'AI & ML',
-      'Programming',
-      'Cloud Platforms',
-      'IT & Systems',
-      'Business Strategy'
-    ],
-    datasets: [{
-      data: [1,1,1,1,1,1,1], // neutral presence indicator
-      backgroundColor: 'rgba(139,92,246,0.15)',
-      borderColor: '#8b5cf6',
-      borderWidth: 2,
-      pointRadius: 0
-    }]
-  },
-  options: {
-    scales: {
-      r: {
-        min: 0,
-        max: 1,
-        ticks: { display: false },
-        grid: { color: 'rgba(255,255,255,0.15)' },
-        angleLines: { color: 'rgba(255,255,255,0.15)' },
-        pointLabels: { color: '#e5e7eb', font: { size: 13, weight: '600' } }
-      }
-    },
-    plugins: {
-      legend: { display: false }
-    }
-  }
-});
+    
  </script>
 </body>
 </html>
