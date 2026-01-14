@@ -1,5 +1,4 @@
-# 🚀 Where Data Meets Impact  
-### Designing Analytics, Intelligence, and Explainable AI for Better Decisions
+# 🚀 Where Data Meets Impact Designing Analytics, Intelligence, and Explainable AI for Better Decisions
 
 > I don’t just analyze data — I design systems that help people make smarter, faster, and fairer decisions.
 
