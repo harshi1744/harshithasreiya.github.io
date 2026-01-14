@@ -562,6 +562,72 @@ blockquote {
   opacity: 0.8;
 }
 
+.skill-box {
+  background: #0f172a;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  border: 2px solid;
+  box-shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+
+.skill-box h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #e5e7eb;
+}
+
+.skill-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+
+.skill {
+  padding: .45rem .9rem;
+  border-radius: 9999px;
+  font-size: .75rem;
+  white-space: nowrap;
+}
+
+.skill.core {
+  background: linear-gradient(135deg,#7c3aed,#a78bfa);
+  color: white;
+  box-shadow: 0 0 12px rgba(167,139,250,.6);
+}
+
+.skill.mid {
+  background: linear-gradient(135deg,#06b6d4,#22d3ee);
+  color: white;
+}
+
+.border-violet{border-color:#8b5cf6}
+.border-pink{border-color:#ec4899}
+.border-cyan{border-color:#22d3ee}
+.border-green{border-color:#22c55e}
+.border-yellow{border-color:#facc15}
+.border-gray{border-color:#9ca3af}
+
+.confidence-card {
+  background: #020617;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 2px solid;
+  box-shadow: 0 15px 40px rgba(0,0,0,.6);
+}
+
+.confidence-card h3 {
+  font-weight: 800;
+  margin-bottom: .75rem;
+}
+
+.confidence-card p {
+  font-size: .95rem;
+  color: #cbd5f5;
+}
+
+.confidence-card.violet{border-color:#8b5cf6}
+.confidence-card.cyan{border-color:#22d3ee}
+.confidence-card.gray{border-color:#9ca3af}
 
   </style>
 
@@ -956,88 +1022,6 @@ blockquote {
 
 <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
 
-  <!-- ========== 🧠 SKILL CONFIDENCE MAP START ========== -->
-<section class="mt-20 max-w-6xl mx-auto">
-
-  <h2 class="text-3xl font-bold text-center text-violet-400 mb-12">
-    🧠 Skill Confidence Map
-  </h2>
-
-  <div class="grid md:grid-cols-3 gap-10">
-
-    <!-- ================= CORE STRENGTHS ================= -->
-    <div class="bg-[#0f172a] p-8 rounded-xl border-2 border-violet-500 shadow-lg hover:scale-105 transition">
-      <h3 class="text-xl font-bold text-violet-400 mb-4 flex items-center gap-2">
-        🔥 Core Strengths
-      </h3>
-      <p class="text-sm text-gray-400 mb-4">
-        Skills I use confidently to deliver end-to-end solutions
-      </p>
-      <div class="flex flex-wrap gap-3">
-        <span class="skill-core">Python</span>
-        <span class="skill-core">SQL</span>
-        <span class="skill-core">Power BI</span>
-        <span class="skill-core">Tableau</span>
-        <span class="skill-core">Data Analysis</span>
-        <span class="skill-core">KPI Dashboards</span>
-        <span class="skill-core">Predictive Analytics</span>
-        <span class="skill-core">ETL</span>
-        <span class="skill-core">Data Visualization</span>
-      </div>
-    </div>
-
-    <!-- ================= STRONG WORKING KNOWLEDGE ================= -->
-    <div class="bg-[#0b1f2a] p-8 rounded-xl border-2 border-cyan-500 shadow-lg hover:scale-105 transition">
-      <h3 class="text-xl font-bold text-cyan-400 mb-4 flex items-center gap-2">
-        ⚙️ Strong Working Knowledge
-      </h3>
-      <p class="text-sm text-gray-400 mb-4">
-        Skills applied in real projects with growing depth
-      </p>
-      <div class="flex flex-wrap gap-3">
-        <span class="skill-mid">Machine Learning</span>
-        <span class="skill-mid">NLP</span>
-        <span class="skill-mid">SHAP</span>
-        <span class="skill-mid">LIME</span>
-        <span class="skill-mid">Large Language Models</span>
-        <span class="skill-mid">Sentence Transformers</span>
-        <span class="skill-mid">Mistral-7B-Instruct</span>
-        <span class="skill-mid">Streamlit</span>
-        <span class="skill-mid">Google Cloud Platform</span>
-        <span class="skill-mid">Network & Systems Analytics</span>
-        <span class="skill-mid">Infrastructure Monitoring</span>
-      </div>
-    </div>
-
-    <!-- ================= LEARNING / FAMILIAR ================= -->
-    <div class="bg-[#111827] p-8 rounded-xl border-2 border-gray-500 shadow-lg hover:scale-105 transition">
-      <h3 class="text-xl font-bold text-gray-300 mb-4 flex items-center gap-2">
-        📚 Familiar / Actively Learning
-      </h3>
-      <p class="text-sm text-gray-400 mb-4">
-        Skills explored academically or in limited scope
-      </p>
-      <div class="flex flex-wrap gap-3">
-        <span class="skill-low">R</span>
-        <span class="skill-low">UML</span>
-        <span class="skill-low">Advanced Cloud Services</span>
-        <span class="skill-low">Docker</span>
-        <span class="skill-low">Kafka</span>
-        <span class="skill-low">Advanced Statistical Modeling</span>
-        <span class="skill-low">Deep Learning Architectures</span>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Optional Legend -->
-  <div class="mt-10 text-center text-sm text-gray-400">
-    <p>🔥 High Confidence &nbsp;|&nbsp; ⚙️ Applied Experience &nbsp;|&nbsp; 📚 Learning & Exploration</p>
-  </div>
-
-</section>
-<!-- ========== 🧠 SKILL CONFIDENCE MAP END ========== -->
-
 
   <!-- ========== 🧠 PROJECTS SECTION START ========== -->
 
@@ -1245,6 +1229,182 @@ blockquote {
 </section>
 
 <!-- ========== 🧠 PROJECTS SECTION END ========== -->
+
+
+  <!-- ========== 🧩 SKILLS SECTION START ========== -->
+  <!-- ========================================================= -->
+<!-- 🧠 ADVANCED SKILLS SHOWCASE (RADAR + LANDSCAPE + CONFIDENCE) -->
+<!-- ========================================================= -->
+
+<section id="advanced-skills" class="min-h-screen px-6 py-24 bg-black text-white">
+
+  <!-- ===================== 1️⃣ SKILL RADAR ===================== -->
+  <div class="max-w-4xl mx-auto text-center mb-28">
+    <h2 class="text-4xl font-bold text-violet-400 mb-4">🕸️ Skill Radar</h2>
+    <p class="text-gray-400 mb-10">
+      High-level snapshot of my technical and analytical strengths
+    </p>
+
+    <div class="bg-[#0f172a] p-10 rounded-xl border-2 border-violet-500 shadow-2xl">
+      <canvas id="skillRadar"></canvas>
+    </div>
+  </div>
+
+  <!-- ===================== 2️⃣ SKILL LANDSCAPE ===================== -->
+  <div class="max-w-7xl mx-auto mb-32">
+    <h2 class="text-4xl font-bold text-center text-violet-400 mb-14">
+      🧭 Skill Landscape
+    </h2>
+
+    <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+      <!-- DATA & BI -->
+      <div class="skill-box border-violet">
+        <h3>📊 Data & BI</h3>
+        <div class="skill-cloud">
+          <span class="skill core">Data Analysis</span>
+          <span class="skill core">Business Intelligence</span>
+          <span class="skill core">KPI Tracking</span>
+          <span class="skill core">KPI Engineering</span>
+          <span class="skill mid">Operational Analytics</span>
+          <span class="skill mid">Decision Support Systems</span>
+          <span class="skill mid">EDA</span>
+          <span class="skill mid">Data Cleaning</span>
+          <span class="skill mid">ETL</span>
+        </div>
+      </div>
+
+      <!-- VISUALIZATION -->
+      <div class="skill-box border-pink">
+        <h3>📈 Visualization</h3>
+        <div class="skill-cloud">
+          <span class="skill core">Power BI</span>
+          <span class="skill core">Tableau</span>
+          <span class="skill core">Dashboard Design</span>
+          <span class="skill core">Data Visualization</span>
+          <span class="skill mid">Excel</span>
+          <span class="skill mid">Power Query</span>
+          <span class="skill mid">Excel VBA Automation</span>
+        </div>
+      </div>
+
+      <!-- AI / ML -->
+      <div class="skill-box border-cyan">
+        <h3>🤖 AI / ML / NLP</h3>
+        <div class="skill-cloud">
+          <span class="skill core">Predictive Analytics</span>
+          <span class="skill mid">Artificial Intelligence</span>
+          <span class="skill mid">Machine Learning</span>
+          <span class="skill mid">NLP</span>
+          <span class="skill mid">Large Language Models</span>
+          <span class="skill mid">GPT-4</span>
+          <span class="skill mid">Sentence Transformers</span>
+          <span class="skill mid">Mistral-7B-Instruct</span>
+          <span class="skill mid">SHAP</span>
+          <span class="skill mid">LIME</span>
+          <span class="skill mid">Streamlit</span>
+        </div>
+      </div>
+
+      <!-- PROGRAMMING & CLOUD -->
+      <div class="skill-box border-green">
+        <h3>💻 Programming & Cloud</h3>
+        <div class="skill-cloud">
+          <span class="skill core">Python</span>
+          <span class="skill mid">SQL</span>
+          <span class="skill mid">R</span>
+          <span class="skill mid">Java</span>
+          <span class="skill mid">JavaScript</span>
+          <span class="skill mid">HTML</span>
+          <span class="skill mid">CSS</span>
+          <span class="skill mid">MySQL</span>
+          <span class="skill mid">MongoDB</span>
+          <span class="skill mid">DBMS</span>
+          <span class="skill mid">Google Cloud Platform</span>
+          <span class="skill mid">BigQuery</span>
+        </div>
+      </div>
+
+      <!-- IT & NETWORK -->
+      <div class="skill-box border-yellow md:col-span-2">
+        <h3>🌐 IT & Network Analytics</h3>
+        <div class="skill-cloud">
+          <span class="skill core">Network Performance Analysis</span>
+          <span class="skill core">Network & Systems Analysis</span>
+          <span class="skill mid">Connectivity Validation</span>
+          <span class="skill mid">Infrastructure Monitoring</span>
+          <span class="skill mid">Capacity Planning</span>
+          <span class="skill mid">Asset Management</span>
+          <span class="skill mid">Compliance Management</span>
+          <span class="skill mid">IT Documentation</span>
+          <span class="skill mid">Network Operations Analytics</span>
+        </div>
+      </div>
+
+      <!-- RESEARCH & PROFESSIONAL -->
+      <div class="skill-box border-gray md:col-span-2">
+        <h3>📚 Research & Professional Skills</h3>
+        <div class="skill-cloud">
+          <span class="skill mid">Qualitative & Quantitative Research</span>
+          <span class="skill mid">Monitoring & Evaluation</span>
+          <span class="skill mid">Program Evaluation (PERT)</span>
+          <span class="skill mid">Public Health Analytics</span>
+          <span class="skill mid">Public Safety Analytics</span>
+          <span class="skill mid">Student Engagement & Risk Prediction</span>
+          <span class="skill mid">Agile Methodologies</span>
+          <span class="skill mid">Agile Project Management</span>
+          <span class="skill mid">Project Management</span>
+          <span class="skill mid">UML</span>
+          <span class="skill mid">Stakeholder Collaboration</span>
+          <span class="skill mid">Reporting & Presentation</span>
+          <span class="skill mid">Mentoring & Student Engagement</span>
+          <span class="skill mid">Critical Thinking</span>
+          <span class="skill mid">Problem Solving</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================== 3️⃣ SKILL CONFIDENCE MAP ===================== -->
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl font-bold text-violet-400 mb-12">
+      🧠 Skill Confidence Map
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <div class="confidence-card violet">
+        <h3>🔥 Core Strengths</h3>
+        <p>
+          Python, SQL, Power BI, Tableau, Data Analysis, KPI Engineering,
+          Predictive Analytics, ETL, Data Visualization
+        </p>
+      </div>
+
+      <div class="confidence-card cyan">
+        <h3>⚙️ Strong Working Knowledge</h3>
+        <p>
+          Machine Learning, NLP, LLMs, SHAP, LIME, GCP, BigQuery,
+          Network & Systems Analytics, Infrastructure Monitoring, Streamlit
+        </p>
+      </div>
+
+      <div class="confidence-card gray">
+        <h3>📚 Actively Learning</h3>
+        <p>
+          Advanced Cloud Services, Docker, Kafka,
+          Deep Learning Architectures, Advanced Statistical Modeling
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+  <!-- ========== 🧩 SKILLS SECTION END ========== -->
 
   <!-- ========== 🧩 SKILLS SECTION START ========== -->
 <section id="skills" class="min-h-screen px-6 py-20 bg-black text-white">
@@ -1615,7 +1775,41 @@ document.addEventListener('DOMContentLoaded', () => {
   }, appearOptions);
   faders.forEach(el => appearOnScroll.observe(el));
 });
-
+new Chart(document.getElementById("skillRadar"), {
+  type: "radar",
+  data: {
+    labels: [
+      "Data Analytics & BI",
+      "Visualization",
+      "AI / ML / NLP",
+      "Programming & Databases",
+      "Cloud Platforms",
+      "IT & Network Analytics",
+      "Business & Decision Skills"
+    ],
+    datasets: [{
+      data: [5,5,4,5,4,4,5],
+      backgroundColor: "rgba(139,92,246,0.25)",
+      borderColor: "#8b5cf6",
+      borderWidth: 2,
+      pointBackgroundColor: "#a78bfa"
+    }]
+  },
+  options: {
+    plugins: { legend: { display: false } },
+    scales: {
+      r: {
+        min: 0,
+        max: 5,
+        ticks: { stepSize: 1 },
+        pointLabels: {
+          color: "#e5e7eb",
+          font: { size: 13, weight: "600" }
+        }
+      }
+    }
+  }
+});
  </script>
 </body>
 </html>
