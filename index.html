@@ -336,6 +336,56 @@ nav ul li a:hover {
   border-radius: 50%;
   animation: pulseDot 2s infinite;
 }
+/* ======================= 🧠 SKILL ARCHITECTURE ======================= */
+
+.architecture-stack {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+/* ===== LAYERS ===== */
+.layer {
+  background: #0f172a;
+  padding: 1.8rem 2rem;
+  border-radius: 0.75rem;
+  border-left: 6px solid;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.layer:hover {
+  transform: translateX(8px);
+  box-shadow: 0 0 35px rgba(139,92,246,0.35);
+}
+
+.layer h3 {
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+}
+
+.layer p {
+  font-size: 0.95rem;
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+/* ===== COLOR CODING ===== */
+.foundation { border-color:#64748b; }
+.platform   { border-color:#22c55e; }
+.data       { border-color:#06b6d4; }
+.analytics  { border-color:#ec4899; }
+.ai         { border-color:#8b5cf6; }
+.impact     { border-color:#facc15; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .layer:hover {
+    transform: none;
+  }
+}
 
 /* ====================== 🧩 SKILLS ====================== */
 .skills-grid {
@@ -415,6 +465,56 @@ nav ul li a:hover {
   color: #fff;
   font-size: 0.9rem;
   box-shadow: 0 0 3px #9ca3af;
+}
+/* ======================= 🧠 SKILL ARCHITECTURE ======================= */
+
+.architecture-stack {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+/* ===== LAYERS ===== */
+.layer {
+  background: #0f172a;
+  padding: 1.8rem 2rem;
+  border-radius: 0.75rem;
+  border-left: 6px solid;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.layer:hover {
+  transform: translateX(8px);
+  box-shadow: 0 0 35px rgba(139,92,246,0.35);
+}
+
+.layer h3 {
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+}
+
+.layer p {
+  font-size: 0.95rem;
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+/* ===== COLOR CODING ===== */
+.foundation { border-color:#64748b; }
+.platform   { border-color:#22c55e; }
+.data       { border-color:#06b6d4; }
+.analytics  { border-color:#ec4899; }
+.ai         { border-color:#8b5cf6; }
+.impact     { border-color:#facc15; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .layer:hover {
+    transform: none;
+  }
 }
 
 /* ====================== ⚡ EFFECTS & ANIMATIONS ====================== */
@@ -530,208 +630,7 @@ blockquote {
   visibility: visible;
   opacity: 1;
 }
-    /* ======================= 🌌 SKILL ORBIT ======================= */
-
-.orbit-container {
-  position: relative;
-  width: 520px;
-  height: 520px;
-  margin: 0 auto;
-}
-
-/* ===== CORE ===== */
-.orbit-core {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #a78bfa, #7c3aed);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
-  letter-spacing: 0.12em;
-  color: #fff;
-  box-shadow: 0 0 40px rgba(139, 92, 246, 0.8);
-  z-index: 3;
-}
-
-/* ===== ORBITS ===== */
-.orbit {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  animation: spin linear infinite;
-}
-
-.orbit span {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0.45rem 0.85rem;
-  background: #020617;
-  border: 1px solid #8b5cf6;
-  border-radius: 999px;
-  font-size: 0.7rem;
-  color: #c7d2fe;
-  white-space: nowrap;
-}
-
-/* Orbit sizes + speeds */
-.orbit-inner {
-  animation-duration: 40s;
-}
-
-.orbit-middle {
-  animation-duration: 70s;
-  transform: scale(1.25);
-}
-
-.orbit-outer {
-  animation-duration: 110s;
-  transform: scale(1.55);
-}
-
-/* ===== ANIMATION ===== */
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 640px) {
-  .orbit-container {
-    width: 360px;
-    height: 360px;
-  }
-
-  .orbit-core {
-    width: 100px;
-    height: 100px;
-    font-size: 0.85rem;
-  }
-
-  .orbit span {
-    font-size: 0.6rem;
-  }
-}
-    /* ======================= 🌌 CONSTELLATION MAP ======================= */
-
-.constellation-map {
-  position: relative;
-  max-width: 1000px;
-  margin: auto;
-  display: grid;
-  grid-template-areas:
-    ". cloud ."
-    "it core ai"
-    ". prog ."
-    ". research .";
-  gap: 3.5rem;
-}
-
-/* ===== NODES ===== */
-.node {
-  background: #0f172a;
-  padding: 1.6rem 1.8rem;
-  border-radius: 1rem;
-  border: 1px solid #334155;
-  box-shadow: 0 0 25px rgba(139, 92, 246, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.node:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 35px rgba(139, 92, 246, 0.35);
-}
-
-.node h3 {
-  color: #a78bfa;
-  font-weight: 800;
-  margin-bottom: 0.6rem;
-}
-
-.node p {
-  font-size: 0.95rem;
-  color: #cbd5f5;
-  line-height: 1.6;
-}
-
-/* ===== POSITIONING ===== */
-.core { grid-area: core; border-color:#8b5cf6; }
-.ai { grid-area: ai; }
-.prog { grid-area: prog; }
-.cloud { grid-area: cloud; }
-.it { grid-area: it; }
-.research { grid-area: research; }
-
-/* ===== CONNECTION LINES ===== */
-.line {
-  position: absolute;
-  background: linear-gradient(to right, transparent, #8b5cf6, transparent);
-  height: 1px;
-  opacity: 0.6;
-}
-
-.core-ai {
-  top: 50%;
-  left: 50%;
-  width: 220px;
-}
-
-.core-prog {
-  left: 50%;
-  top: 58%;
-  width: 1px;
-  height: 120px;
-  background: linear-gradient(to bottom, transparent, #8b5cf6, transparent);
-}
-
-.core-cloud {
-  left: 50%;
-  top: 28%;
-  width: 1px;
-  height: 120px;
-  background: linear-gradient(to bottom, transparent, #8b5cf6, transparent);
-}
-
-.core-it {
-  top: 50%;
-  right: 50%;
-  width: 220px;
-}
-
-.core-research {
-  left: 50%;
-  top: 70%;
-  width: 1px;
-  height: 150px;
-  background: linear-gradient(to bottom, transparent, #8b5cf6, transparent);
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .constellation-map {
-    grid-template-areas:
-      "core"
-      "ai"
-      "prog"
-      "cloud"
-      "it"
-      "research";
-  }
-
-  .line {
-    display: none;
-  }
-}
+  
   </style>
 
 <body class="min-h-screen flex flex-col">
@@ -1333,169 +1232,90 @@ blockquote {
 
 <!-- ========== 🧠 PROJECTS SECTION END ========== -->
   <!-- ========== 🧩 SKILLS SECTION START ========== -->
-  
-<!-- ======================= 🌌 SKILL CONSTELLATION MAP ======================= -->
-<section id="skillS" class="bg-black text-white py-28 px-6">
+
+  <!-- ======================= 🧠 SKILL ARCHITECTURE MAP ======================= -->
+<section id="skill-architecture" class="bg-black text-white py-28 px-6">
 
   <h2 class="text-4xl font-extrabold text-violet-400 text-center mb-6">
-    🌌 Skill Constellation Map
+    🧠 Skill Architecture Blueprint
   </h2>
 
   <p class="text-gray-400 text-center max-w-3xl mx-auto mb-20">
-    My skills represented as constellations — structured, interconnected,
-    and designed around how systems actually work together.
+    Skills organized as a system architecture — showing how foundations,
+    platforms, analytics, and decision layers work together.
   </p>
 
-  <div class="constellation-map">
+  <div class="architecture-stack">
 
-    <!-- ================= CORE ================= -->
-    <div class="node core">
-      <h3>📊 Data & Business Analytics</h3>
-      <p>
-        Data Analysis · Trend Analysis · Business Intelligence · KPI Tracking ·
-        KPI Engineering · Operational Analytics · Decision Support Systems ·
-        Predictive Analytics · EDA · Data Cleaning · ETL
-      </p>
-    </div>
-
-    <!-- ================= AI ================= -->
-    <div class="node ai">
-      <h3>🤖 AI, ML & NLP</h3>
-      <p>
-        Artificial Intelligence · Machine Learning · NLP · Large Language Models ·
-        GPT-4 · SHAP · LIME · Sentence Transformers · Mistral-7B-Instruct · Streamlit
-      </p>
-    </div>
-
-    <!-- ================= PROGRAMMING ================= -->
-    <div class="node prog">
-      <h3>💻 Programming & Databases</h3>
+    <!-- ================= FOUNDATION ================= -->
+    <div class="layer foundation">
+      <h3>💻 Programming & Data Foundations</h3>
       <p>
         Python · R · SQL · Java · JavaScript · HTML · CSS ·
         MySQL · MongoDB · DBMS
       </p>
     </div>
 
-    <!-- ================= CLOUD ================= -->
-    <div class="node cloud">
-      <h3>☁️ Cloud & Platforms</h3>
+    <!-- ================= PLATFORM ================= -->
+    <div class="layer platform">
+      <h3>☁️ Platforms & Infrastructure</h3>
       <p>
-        Google Cloud Platform (GCP) · BigQuery
-      </p>
-    </div>
-
-    <!-- ================= IT ================= -->
-    <div class="node it">
-      <h3>🌐 IT, Network & Infrastructure</h3>
-      <p>
+        Google Cloud Platform (GCP) · BigQuery ·
         Network Performance Analysis · Network & Systems Analysis ·
-        Connectivity Validation · Infrastructure Monitoring · Capacity Planning ·
-        Asset Management · Compliance Management · IT Documentation ·
-        Network Operations Analytics
+        Connectivity Validation · Infrastructure Monitoring ·
+        Capacity Planning · Asset Management · Compliance Management ·
+        IT Documentation · Network Operations Analytics
       </p>
     </div>
 
-    <!-- ================= RESEARCH ================= -->
-    <div class="node research">
-      <h3>🤝 Research & Professional Skills</h3>
+    <!-- ================= DATA ================= -->
+    <div class="layer data">
+      <h3>📦 Data Processing & Engineering</h3>
       <p>
-        Qualitative & Quantitative Research · Monitoring & Evaluation ·
-        Program Evaluation (PERT) · Public Health Analytics · Public Safety Analytics ·
-        Student Engagement & Risk Prediction · Agile Methodologies ·
-        Project Management · UML · Critical Thinking · Problem Solving ·
-        Stakeholder Collaboration · Reporting & Presentation ·
-        Mentoring & Student Engagement
+        Data Cleaning · ETL (Extract, Transform, Load) ·
+        Exploratory Data Analysis · Feature Preparation ·
+        Operational Analytics · Decision Support Systems
       </p>
     </div>
 
-    <!-- CONNECTION LINES -->
-    <div class="line core-ai"></div>
-    <div class="line core-prog"></div>
-    <div class="line core-cloud"></div>
-    <div class="line core-it"></div>
-    <div class="line core-research"></div>
-
-  </div>
-</section>
-  <!-- ========== 🧩 SKILLS SECTION END ========== -->
-  <!-- ========== 🧩 SKILLS SECTION START ========== -->
-
-
- <!-- ======================= 🌌 CLEAN SKILL ORBIT ======================= -->
-<section id="skills" class="bg-black text-white py-28 px-6">
-
-  <h2 class="text-4xl font-extrabold text-violet-400 text-center mb-6">
-    🌌 Skill Orbit
-  </h2>
-
-  <p class="text-gray-400 text-center max-w-2xl mx-auto mb-20">
-    A clean, ecosystem-style view of my skills — organized by how they interact,
-    not by rank or self-scoring.
-  </p>
-
-  <div class="orbit-container">
-
-    <!-- ===== CORE ===== -->
-    <div class="orbit-core">
-      ANALYTICS
+    <!-- ================= ANALYTICS ================= -->
+    <div class="layer analytics">
+      <h3>📊 Analytics, BI & Intelligence</h3>
+      <p>
+        Data Analysis · Trend Analysis · Business Intelligence ·
+        KPI Tracking · KPI Engineering · Predictive Analytics ·
+        Power BI · Tableau · Microsoft Excel · Power Query ·
+        Excel Automation (VBA)
+      </p>
     </div>
 
-    <!-- ===== INNER ORBIT : CORE EXECUTION ===== -->
-    <div class="orbit orbit-inner">
-      <span>Python</span>
-      <span>SQL</span>
-      <span>Power BI</span>
-      <span>Tableau</span>
-      <span>Excel</span>
-      <span>Data Analysis</span>
-      <span>KPI Engineering</span>
-      <span>ETL</span>
-      <span>Data Visualization</span>
+    <!-- ================= AI ================= -->
+    <div class="layer ai">
+      <h3>🤖 AI, ML & Explainability</h3>
+      <p>
+        Artificial Intelligence · Machine Learning · NLP ·
+        Large Language Models · GPT-4 · SHAP · LIME ·
+        Sentence Transformers · Mistral-7B-Instruct · Streamlit
+      </p>
     </div>
 
-    <!-- ===== MIDDLE ORBIT : ADVANCED & APPLIED ===== -->
-    <div class="orbit orbit-middle">
-      <span>Machine Learning</span>
-      <span>Predictive Analytics</span>
-      <span>NLP</span>
-      <span>Large Language Models</span>
-      <span>GPT-4</span>
-      <span>SHAP</span>
-      <span>LIME</span>
-      <span>Sentence Transformers</span>
-      <span>Mistral-7B-Instruct</span>
-      <span>Streamlit</span>
-      <span>Decision Support Systems</span>
-      <span>Operational Analytics</span>
-    </div>
-
-    <!-- ===== OUTER ORBIT : SYSTEMS, CLOUD, RESEARCH ===== -->
-    <div class="orbit orbit-outer">
-      <span>Google Cloud Platform (GCP)</span>
-      <span>BigQuery</span>
-      <span>MySQL</span>
-      <span>MongoDB</span>
-      <span>DBMS</span>
-      <span>Network Performance Analysis</span>
-      <span>Infrastructure Monitoring</span>
-      <span>Capacity Planning</span>
-      <span>Asset Management</span>
-      <span>Compliance Management</span>
-      <span>IT Documentation</span>
-      <span>Public Health Analytics</span>
-      <span>Public Safety Analytics</span>
-      <span>Monitoring & Evaluation</span>
-      <span>Program Evaluation (PERT)</span>
-      <span>Agile Methodologies</span>
-      <span>Project Management</span>
-      <span>UML</span>
-      <span>Stakeholder Collaboration</span>
-      <span>Reporting & Presentation</span>
-      <span>Mentoring & Student Engagement</span>
+    <!-- ================= IMPACT ================= -->
+    <div class="layer impact">
+      <h3>🎯 Decision, Research & Impact</h3>
+      <p>
+        Public Health Analytics · Public Safety Analytics ·
+        Student Engagement & Risk Prediction ·
+        Qualitative & Quantitative Research · Monitoring & Evaluation ·
+        Program Evaluation (PERT) · Agile Methodologies ·
+        Project Management · UML · Critical Thinking ·
+        Problem Solving · Stakeholder Collaboration ·
+        Reporting & Presentation · Mentoring & Student Engagement
+      </p>
     </div>
 
   </div>
 </section>
+
   <!-- ========== 🧩 SKILLS SECTION END ========== -->
 
    <!-- ========== 📞 CONTACT SECTION START ========== -->
