@@ -516,6 +516,69 @@ nav ul li a:hover {
     transform: none;
   }
 }
+/* ======================= 🧬 SKILL GENOME ======================= */
+
+.genome {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.strand {
+  border-left: 3px solid #8b5cf6;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.strand::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background: #8b5cf6;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #8b5cf6;
+}
+
+.strand-title {
+  font-weight: 800;
+  color: #a78bfa;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.05em;
+}
+
+.gene-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.gene {
+  padding: 0.45rem 0.9rem;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  color: #cbd5f5;
+  transition: all 0.25s ease;
+}
+
+.gene:hover {
+  background: #1e293b;
+  box-shadow: 0 0 12px rgba(139,92,246,0.4);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .strand {
+    padding-left: 1.4rem;
+  }
+}
 
 /* ====================== ⚡ EFFECTS & ANIMATIONS ====================== */
 .glitch-heading {
@@ -912,7 +975,7 @@ blockquote {
         </div>
 
         <p class="italic text-base md:text-lg text-blue-100 mb-2">
-          Genpact Global Tech · Frisco, TX (Hybrid)
+          Genpact Global Tech · Frisco, TX 
         </p>
 
         <ul class="list-disc pl-5 text-sm md:text-base leading-relaxed text-gray-300 space-y-2">
@@ -1023,6 +1086,112 @@ blockquote {
 </section>
 
 <!-- ========== 💼 EXPERIENCE SECTION END ========== -->
+
+  <!-- ======================= 🧬 SKILL GENOME ======================= -->
+<section id="skill-genome" class="bg-black text-white py-28 px-6">
+
+  <h2 class="text-4xl font-extrabold text-violet-400 text-center mb-6">
+    🧬 Skill Genome
+  </h2>
+
+  <p class="text-gray-400 text-center max-w-3xl mx-auto mb-20">
+    Skills encoded as a genome — each strand represents a domain,
+    each segment a capability that works together as a system.
+  </p>
+
+  <div class="genome">
+
+    <!-- ================= ANALYTICS STRAND ================= -->
+    <div class="strand">
+      <div class="strand-title">📊 Analytics & BI</div>
+      <div class="gene-row">
+        <span class="gene">Data Analysis</span>
+        <span class="gene">Trend Analysis</span>
+        <span class="gene">Business Intelligence</span>
+        <span class="gene">KPI Tracking</span>
+        <span class="gene">KPI Engineering</span>
+        <span class="gene">Operational Analytics</span>
+        <span class="gene">Decision Support Systems</span>
+        <span class="gene">Predictive Analytics</span>
+        <span class="gene">EDA</span>
+        <span class="gene">ETL</span>
+      </div>
+    </div>
+
+    <!-- ================= AI STRAND ================= -->
+    <div class="strand">
+      <div class="strand-title">🤖 AI & Intelligence</div>
+      <div class="gene-row">
+        <span class="gene">Artificial Intelligence</span>
+        <span class="gene">Machine Learning</span>
+        <span class="gene">NLP</span>
+        <span class="gene">Large Language Models</span>
+        <span class="gene">GPT-4</span>
+        <span class="gene">SHAP</span>
+        <span class="gene">LIME</span>
+        <span class="gene">Sentence Transformers</span>
+        <span class="gene">Mistral-7B-Instruct</span>
+        <span class="gene">Streamlit</span>
+      </div>
+    </div>
+
+    <!-- ================= PROGRAMMING STRAND ================= -->
+    <div class="strand">
+      <div class="strand-title">💻 Programming & Databases</div>
+      <div class="gene-row">
+        <span class="gene">Python</span>
+        <span class="gene">R</span>
+        <span class="gene">SQL</span>
+        <span class="gene">Java</span>
+        <span class="gene">JavaScript</span>
+        <span class="gene">HTML</span>
+        <span class="gene">CSS</span>
+        <span class="gene">MySQL</span>
+        <span class="gene">MongoDB</span>
+        <span class="gene">DBMS</span>
+      </div>
+    </div>
+
+    <!-- ================= SYSTEMS STRAND ================= -->
+    <div class="strand">
+      <div class="strand-title">🌐 Systems & Infrastructure</div>
+      <div class="gene-row">
+        <span class="gene">Network Performance Analysis</span>
+        <span class="gene">Network & Systems Analysis</span>
+        <span class="gene">Connectivity Validation</span>
+        <span class="gene">Infrastructure Monitoring</span>
+        <span class="gene">Capacity Planning</span>
+        <span class="gene">Asset Management</span>
+        <span class="gene">Compliance Management</span>
+        <span class="gene">IT Documentation</span>
+        <span class="gene">Network Operations Analytics</span>
+        <span class="gene">GCP</span>
+        <span class="gene">BigQuery</span>
+      </div>
+    </div>
+
+    <!-- ================= IMPACT STRAND ================= -->
+    <div class="strand">
+      <div class="strand-title">🎯 Research, Impact & Delivery</div>
+      <div class="gene-row">
+        <span class="gene">Public Health Analytics</span>
+        <span class="gene">Public Safety Analytics</span>
+        <span class="gene">Student Engagement & Risk Prediction</span>
+        <span class="gene">Qualitative & Quantitative Research</span>
+        <span class="gene">Monitoring & Evaluation</span>
+        <span class="gene">Program Evaluation (PERT)</span>
+        <span class="gene">Agile Methodologies</span>
+        <span class="gene">Project Management</span>
+        <span class="gene">UML</span>
+        <span class="gene">Critical Thinking</span>
+        <span class="gene">Stakeholder Collaboration</span>
+        <span class="gene">Reporting & Presentation</span>
+        <span class="gene">Mentoring & Student Engagement</span>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
   <!-- ========== 🧠 PROJECTS SECTION START ========== -->
@@ -1237,11 +1406,11 @@ blockquote {
 <section id="skill-architecture" class="bg-black text-white py-28 px-6">
 
   <h2 class="text-4xl font-extrabold text-violet-400 text-center mb-6">
-    🧠 Skill Architecture Blueprint
+    🧠 Skill Architecture
   </h2>
 
   <p class="text-gray-400 text-center max-w-3xl mx-auto mb-20">
-    Skills organized as a system architecture — showing how foundations,
+    Skills organized as a system architecture showing how foundations,
     platforms, analytics, and decision layers work together.
   </p>
 
