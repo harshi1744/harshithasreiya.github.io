@@ -693,56 +693,6 @@ blockquote {
   visibility: visible;
   opacity: 1;
 }
-  /* ===== Visual Identity ===== */
-:root {
-  --primary: #8b5cf6;
-  --glow: rgba(139, 92, 246, 0.6);
-  --glass: rgba(255, 255, 255, 0.05);
-}
-
-/* Glass Card */
-.glass {
-  background: var(--glass);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 16px;
-}
-
-/* Glow Effect */
-.glow-hover:hover {
-  box-shadow: 0 0 30px var(--glow);
-  transform: translateY(-6px) scale(1.02);
-}
-
-/* Fade + Slide Animation */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.9s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Floating Profile */
-.float {
-  animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
-
-/* Gradient Text */
-.gradient-text {
-  background: linear-gradient(90deg, #8b5cf6, #ec4899);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
   </style>
 
 <body class="min-h-screen flex flex-col">
@@ -855,53 +805,6 @@ blockquote {
   </div>
 </section>
 <!-- ========== 🏠 HOME SECTION END ========== -->
-  <!-- ========== 👤 ABOUT SECTION START ========== -->
-
-  <section id="about" class="min-h-screen px-6 py-20 bg-black text-white">
-  <h1 class="section-title gradient-text mb-12 text-center text-4xl">About Me</h1>
-
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-
-    <!-- Text -->
-    <div class="space-y-6 text-lg reveal glass p-8 glow-hover">
-      <p>
-        Hi, I’m <strong class="gradient-text">Harshitha Sreiya Palaparthi</strong>,  
-        a Business Analytics graduate student at the University of North Texas.
-      </p>
-
-      <p>
-        I specialize in <span class="text-violet-400 font-semibold">AI, Data Visualization</span>,  
-        and <span class="text-violet-400 font-semibold">Business Intelligence</span> using  
-        Python, SQL, Tableau, and Google Cloud.
-      </p>
-
-      <p>
-        I’ve built:
-        <ul class="list-disc list-inside text-gray-300 mt-2">
-          <li>AI resume screening assistant</li>
-          <li>Fraud detection systems</li>
-          <li>Interactive analytics dashboards</li>
-        </ul>
-      </p>
-
-      <p class="text-violet-300 font-semibold">
-        Open to internships & full-time roles starting Dec 2025 (USA).
-      </p>
-    </div>
-
-    <!-- Image -->
-    <div class="flex justify-center reveal">
-      <div class="relative">
-        <div class="absolute inset-0 rounded-full blur-2xl bg-violet-500 opacity-40"></div>
-        <img 
-          src="https://avatars.githubusercontent.com/u/197736111?v=4"
-          class="w-64 h-64 object-cover rounded-full border-4 border-violet-500 shadow-xl float"
-        >
-      </div>
-    </div>
-
-  </div>
-</section>
 
 <!-- ========== 👤 ABOUT SECTION START ========== -->
   
@@ -932,61 +835,7 @@ blockquote {
     </div>
   </section>
 <!-- ========== 👤 ABOUT SECTION END ========== -->
-  <!-- ========== 🎓 EDUCATION SECTION START ========== -->
-<section id="education" class="bg-black text-white py-24 px-6">
-  <h1 class="section-title gradient-text mb-16 text-center text-4xl">Education</h1>
-
-  <div class="relative max-w-4xl mx-auto">
-
-    <!-- Timeline Line -->
-    <div class="absolute left-6 top-0 bottom-0 w-1 bg-violet-500 rounded-full"></div>
-
-    <!-- Card -->
-    <div class="relative mb-20 pl-20 reveal">
-      <div class="absolute left-0 top-6 w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center text-black text-xl shadow-lg">
-        🎓
-      </div>
-
-      <div class="glass p-8 glow-hover">
-        <h4 class="text-2xl font-semibold">University of North Texas</h4>
-        <p class="text-gray-300">MS in Business Analytics | Jan 2024 – Dec 2025</p>
-        <p class="mt-4 text-gray-400">
-          Specialized in AI, Data Engineering, and Business Strategy with cloud-based analytics.
-        </p>
-      </div>
-    </div>
-
-    <div class="relative mb-20 pl-20 reveal">
-      <div class="absolute left-0 top-6 w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center text-black text-xl shadow-lg">
-        💻
-      </div>
-
-      <div class="glass p-8 glow-hover">
-        <h4 class="text-2xl font-semibold">Osmania University</h4>
-        <p class="text-gray-300">B.Com in Computer Science | 2020 – 2023</p>
-        <p class="mt-4 text-gray-400">
-          Focused on databases, Python, system analysis, and early analytics projects.
-        </p>
-      </div>
-    </div>
-
-    <div class="relative mb-20 pl-20 reveal">
-      <div class="absolute left-0 top-6 w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center text-black text-xl shadow-lg">
-        🏫
-      </div>
-
-      <div class="glass p-8 glow-hover">
-        <h4 class="text-2xl font-semibold">Johnson Grammar School</h4>
-        <p class="text-gray-300">High School | 2005 – 2018</p>
-        <p class="mt-4 text-gray-400">
-          Strong foundation in academics, discipline, and critical thinking.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
+  
   <!-- ========== 🎓 EDUCATION SECTION START ========== -->
 <section id="education" class="bg-black text-white py-20 px-6">
 <!--  <h1 class="text-3xl font-bold text-center text-violet-400 mb-16">Education</h1> -->
@@ -1737,16 +1586,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }, appearOptions);
   faders.forEach(el => appearOnScroll.observe(el));
 });
-      const reveals = document.querySelectorAll(".reveal");
-  window.addEventListener("scroll", () => {
-    reveals.forEach(el => {
-      const top = el.getBoundingClientRect().top;
-      const visible = 120;
-      if (top < window.innerHeight - visible) {
-        el.classList.add("active");
-      }
-    });
-  });
     
  </script>
 </body>
