@@ -1,7 +1,7 @@
 # 🧠 Where Data Becomes Decisions Designing Analytics, Intelligence & Explainable AI Systems
 
 > I don’t analyze data to explain the past.  
-> I design systems that help people make better decisions — and trust them.
+> I design systems that help people make better decisions and trust them.
 
 ---
 
@@ -10,7 +10,7 @@
 I’m a **Business Analytics graduate student** who works at the intersection of  
 **data, systems, and real-world impact**.
 
-What excites me most isn’t discovering insights —  
+What excites me most isn’t discovering insights 
 it’s **building decision systems** that are:
 
 - understandable  
